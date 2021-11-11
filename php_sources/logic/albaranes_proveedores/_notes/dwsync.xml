@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="comprobarproveedor.php" server="192.168.3.131//root/php/logic/" local="128240641500000000" remote="129877071770000000" />
+<file name="comprobarproveedor_ini.php" server="192.168.3.131//root/php/logic/" local="128287672300000000" remote="129877071780000000" />
+<file name="convertir_albaran.php" server="192.168.3.131//root/php/logic/" local="129865730378552516" remote="129877071780000000" />
+<file name="eliminar_albaran.php" server="192.168.3.131//root/php/logic/" local="129865730701150968" remote="129877071780000000" />
+<file name="eliminar_linea.php" server="192.168.3.131//root/php/logic/" local="129865730068614789" remote="129877071780000000" />
+<file name="frame_articulos.php" server="192.168.3.131//root/php/logic/" local="128287581880000000" remote="129877071780000000" />
+<file name="frame_lineas.php" server="192.168.3.131//root/php/logic/" local="128221939860000000" remote="129877071790000000" />
+<file name="frame_proveedores.php" server="192.168.3.131//root/php/logic/" local="128287580680000000" remote="129877071790000000" />
+<file name="frame_proveedores_ini.php" server="192.168.3.131//root/php/logic/" local="128287672300000000" remote="129877071790000000" />
+<file name="guardar_albaran.php" server="192.168.3.131//root/php/logic/" local="129865729430368283" remote="129877071790000000" />
+<file name="index.php" server="192.168.3.131//root/php/logic/" local="129865725880945268" remote="129877071800000000" />
+<file name="modificar_albaran.php" server="192.168.3.131//root/php/logic/" local="129866181886953347" remote="129877071800000000" />
+<file name="nuevo_albaran.php" server="192.168.3.131//root/php/logic/" local="129866183337587555" remote="129877071800000000" />
+<file name="rejilla.php" server="192.168.3.131//root/php/logic/" local="129865724532498141" remote="129877071800000000" />
+<file name="validarproveedor.php" server="192.168.3.131//root/php/logic/" local="128170120740000000" remote="129877071810000000" />
+<file name="ventana_proveedores.php" server="192.168.3.131//root/php/logic/" local="128287672300000000" remote="129877071810000000" />
+<file name="ver_albaran.php" server="192.168.3.131//root/php/logic/" local="129866183799856255" remote="129877071810000000" />
+<file name="ver_articulos.php" server="192.168.3.131//root/php/logic/" local="128287610820000000" remote="129877071810000000" />
+<file name="ver_proveedores.php" server="192.168.3.131//root/php/logic/" local="128287610940000000" remote="129877071810000000" />
+</dwsync>

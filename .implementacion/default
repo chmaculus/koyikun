@@ -1,0 +1,225 @@
+<VirtualHost *:80>
+	ServerAdmin webmaster@localhost
+
+	DocumentRoot /var/www
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+	CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+#---------------------------------------------------------------
+#koyi
+
+        Alias "/sucursal" "/home/php/KoyiKun0.30/http_share_dirs/sucursal"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/sucursal/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/kontrolalfa" "/home/php/KoyiKun0.30/http_share_dirs/aalpha"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/aalpha/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/431439961725759846903039362761215744" "/home/php/KoyiKun0.30/http_share_dirs/abeta"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/abeta/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+
+   Alias "/granmazinger" "/home/php/KoyiKun0.30/http_share_dirs/granmazinger"
+   <Directory "/home/php/KoyiKun0.30/http_share_dirs/granmazinger/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride All
+     Order allow,deny
+     allow from all
+    </Directory>
+
+   Alias "/qr" "/home/php/KoyiKun0.30/http_share_dirs/qr"
+   <Directory "/home/php/KoyiKun0.30/http_share_dirs/qr/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride None
+     Order allow,deny
+     allow from all
+    </Directory>
+    
+
+   Alias "/stock" "/home/php/KoyiKun0.30/http_share_dirs/stock"
+   <Directory "/home/php/KoyiKun0.30/http_share_dirs/stock/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride None
+     Order allow,deny
+     allow from all
+    </Directory>
+
+
+  Alias "/data" "/home/php/KoyiKun0.30/http_share_dirs/data"
+   <Directory "/home/php/KoyiKun0.30/http_share_dirs/megatron/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride All
+     Order allow,deny
+     allow from all
+    </Directory>
+
+   Alias "/DarthVader" "/home/php/KoyiKun0.30/http_share_dirs/DarthVader"
+   <Directory "/home/php/KoyiKun0.30/http_share_dirs/DarthVader/">
+     Options Indexes FollowSymLinks MultiViews
+     AllowOverride None
+     Order allow,deny
+     allow from all
+    </Directory>
+
+
+       Alias "/ga2" "/home/php/KoyiKun0.30/http_share_dirs/megatron2"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/megatron2/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/tron3" "/home/php/KoyiKun0.30/http_share_dirs/megatron3"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/megatron3/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/deposito" "/home/php/KoyiKun0.30/http_share_dirs/encargado_nuevo3"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/encargado_nuevo3/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/granmazinger" "/home/php/KoyiKun0.30/http_share_dirs/granmazinger"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/granmazinger/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/pedidos" "/home/php/KoyiKun0.30/http_share_dirs/pedidos
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/pedidos/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/minmax" "/home/php/KoyiKun0.30/http_share_dirs/minmax"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/minmax/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+#---------------------------------------------------
+#koyi devel
+        Alias "/koyidev1" "/home/php/KoyiKun0.30/php_sources"
+        <Directory "/home/php/KoyiKun0.30/php_sources/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/koyidev2" "/home/php/KoyiKun0.30/http_share_dirs"
+        <Directory "/home/php/KoyiKun0.30/http_share_dirs/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+#---------------------------------------------------
+
+        Alias "/logic" "/home/php/logic"
+        <Directory "/home/php/logic/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride None
+                Order allow,deny
+                allow from all
+        </Directory>
+
+#end koyi
+#---------------------------------------------------------------
+
+
+
+
+#---------------------------------------
+#gastos
+        Alias "/mazinkaiserpilder" "/home/php/mazinkaiserpilder"
+        <Directory "/home/php/mazinkaiserpilder/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        Alias "/mazinkaiser" "/home/php/mazinkaiser"
+        <Directory "/home/php/mazinkaiser/">
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+#end gastos
+#---------------------------------------
+
+
+
+
+
+
+
+
+</virtualhost>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

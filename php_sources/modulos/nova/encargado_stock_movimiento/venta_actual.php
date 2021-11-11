@@ -1,0 +1,95 @@
+<?php 
+include_once("../includes/connect.php");
+include_once("../login/login_verifica.inc.php");
+include_once("seguridad.inc.php");
+include("cabecera.inc.php");
+
+
+?>
+<body>
+<center>
+<table class="t1">
+<tr>
+	<th>ID</th>
+	<th>Codigo interno</th>
+	<th>Cantidad</th>
+	<th>Marca</th>
+	<th>descripcion</th>
+	<th>Contenido</th>
+	<th>Presentacion</th>
+	<th>Clasificacion</th>
+	<th>Sub clasificacion</th>
+	<th>Codigo barra</th>
+</tr>
+
+<form action="ventas_update.php" method="post">
+<?php
+include_once("../includes/funciones.php");
+
+$id_session=$_COOKIE["id_session"];
+$id_sucursal=$_COOKIE["id_sucursal"];
+
+$query='select * from ventas_temp where id_session="'.$id_session.'"';
+$result=mysql_query($query) or die(mysql_error());
+
+while($row=mysql_fetch_array($result)){
+	$array_articulos=detalle_articulo($row["id_articulos"]);
+	$array_precios=precio_sucursal($row["id_articulos"], $id_sucursal);
+
+	//$contado=$array_precios["precio_base"] * ( $array_precios["porcentaje_contado"] / 100 ) + $array_precios["precio_base"];
+	$contado=$array_precios["precio_base"];
+	$tarjeta=$array_precios["precio_base"] * ( $array_precios["porcentaje_tarjeta"] / 100 ) + $array_precios["precio_base"];
+
+	$promocion="";
+	$tr='<tr>';
+
+	if($array_precios["promocion"]=="S"){
+		$promo=verifica_promo( $row["id_articulos"], $id_sucursal, $contado );
+		if($promo != "NO"){
+			$contado = $promo;
+			$tarjeta=$promo * ( $array_precios["porcentaje_tarjeta"] / 100 ) + $promo;
+			$promocion="**PROMO AF**";
+			$tr='<tr class="special">';
+		}
+	}
+
+	echo $tr;
+	echo "<td>".$array_articulos["id"]."</td>";
+	echo "<td>".$array_articulos["codigo_interno"]."</td>";
+	echo '<td><input type="text" name="cantidad'.$row["id"].'" value="'.$row["cantidad"].'" size="3" maxlength="3"></td>';
+	echo "<td>".$array_articulos["marca"]."</td>";
+	echo "<td>".$array_articulos["descripcion"]."</td>";
+	echo "<td>".$array_articulos["contenido"]."</td>";
+	echo "<td>".$array_articulos["presentacion"]."</td>";
+	echo "<td>".$array_articulos["clasificacion"]."</td>";
+	echo "<td>".$array_articulos["subclasificacion"]."</td>";
+	echo "<td>".$array_articulos["codigo_barra"]."</td>";
+	echo "</tr>".chr(13);
+}
+echo '</table>';
+
+echo '<br><alerta1>Para eliminar un articulo colocar 0 en la cantidad</alerta1><br><br>';
+
+
+
+#-----------------------------------------
+#funcion codigo muerto por ahora
+function accion($id_ventastemp){
+#devuelve 2 columnas en la tabla
+	echo '<td><a href="ventas_update.php">
+			<input type="hidden" name="id_ventastemp" value="'.$id_ventastemp.'">
+			<input type="hidden" name="accion" value="eliminar">
+			<button>eliminar</button></a></td>';
+}
+#-----------------------------------------
+
+
+?>
+<input type="submit" name="accion" value="ACTUALIZAR">
+<input type="submit" name="accion" value="FINALIZAR">
+<input type="submit" name="accion" value="CANCELAR">
+</form>
+</center>
+</body>
+</html>
+

@@ -1,0 +1,14 @@
+sh bb.sh articulos_listado
+sh bb.sh costos
+sh bb.sh costos_detalle
+sh bb.sh costos_incremento
+sh bb.sh costos_modificacion
+sh bb.sh export
+sh bb.sh listas
+sh bb.sh listas2
+sh bb.sh margenes
+sh bb.sh pdf-php
+sh bb.sh precios_compara
+sh bb.sh precios_diferencia
+sh bb.sh promociones
+sh bb.sh ventas

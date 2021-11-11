@@ -1,0 +1,25 @@
+#!/bin/sh
+
+path='/var/www/';
+
+
+rm -f $path"backup_hora.sql"
+rm -f $path"backup_hora.sql.gz"
+
+
+echo articulos
+/usr/bin/mysqldump -u root -pmaculuss koyikun articulos >$path"backup_hora.sql"
+echo precios
+/usr/bin/mysqldump -u root -pmaculuss koyikun precios >>$path"backup_hora.sql"
+echo stock
+/usr/bin/mysqldump -u root -pmaculuss koyikun stock >>$path"backup_hora.sql"
+echo costos
+/usr/bin/mysqldump -u root -pmaculuss koyikun costos >>$path"backup_hora.sql"
+echo pedidos
+/usr/bin/mysqldump -u root -pmaculuss koyikun pedidos >>$path"backup_hora.sql"
+
+echo gzip
+gzip -9 $path"backup_hora.sql"
+chmod 644 $path"backup_hora.sql.gz"
+
+

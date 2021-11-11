@@ -1,0 +1,16 @@
+<img src="./botones/ARTICULOS.png">
+<img src="./botones/ASISTENCIA.png">
+<img src="./botones/CARGA_STOCK_INDIVIDUAL.png">
+<img src="./botones/CERRAR_SESION.png">
+<img src="./botones/COSTOS.png">
+<img src="./botones/GENERADOR_DE_PEDIDOS_POR_ROTACION.png">
+<img src="./botones/GENERADOR_PEDIDO_CLASIFICADO.png">
+<img src="./botones/INGRESO_STOCK_POR_COMPRA.png">
+<img src="./botones/PEDIDOS_PROVEEDORES.png">
+<img src="./botones/PEDIDOS_RECEPCION.png">
+<img src="./botones/PEDIDOS_RECIBIDOS.png">
+<img src="./botones/PEDIDOS_SUCURSALES.png">
+<img src="./botones/RESET_STOCK.png">
+<img src="./botones/SEGUIMIENTO_STOCK.png">
+<img src="./botones/STOCK_FIJOS.png">
+<img src="./botones/STOCK_POR_MARCA.png">

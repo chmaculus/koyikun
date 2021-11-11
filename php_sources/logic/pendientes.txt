@@ -1,0 +1,12 @@
+Listado de tareas pendientes
+
+agregar boton para agregar un articulo cuando no existe
+eliminar burocracia a la hora de agregar un articulo, campos absurdos precios c/iva / precio s/iva
+referencia = campo absurdo
+cambiar imagen de boton albaran x presupuesto
+cambiar familia x clasificacion
+descripcion x varchar x 255
+
+
+
+&#8364; $

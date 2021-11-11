@@ -1,0 +1,144 @@
+body {
+  background-color: #DEDEDE;
+  position: fixed;
+  visibility: visible;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.divarriba {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 22%;
+	float: center;
+}
+
+.divcuerpo {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 78%;
+	float: center;
+}
+
+.framecentro {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+titulo {
+	color: #ffffff;
+	font-size: 40px;
+}
+font1 {color: #ffffff;
+	font-size: 12px;
+}
+
+font2 {
+	color: #BE5D5D;
+	font-size: 12px;
+}
+font3 {color: #32CB52;
+	font-size: 12px;
+}
+alerta1 {color: #E33939;
+	font-size: 20px;
+}
+
+
+
+#----------------------------------------------
+.table1 {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+}
+
+
+.td_column {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+	top: fixed;
+}
+
+.td100x100 {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+}
+.tr100x100 {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+}
+#----------------------------------------------
+
+
+
+
+
+
+
+table.t1 {
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 2px;
+    border-style: outset outset outset outset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    border-collapse: separate;
+    background-color: #000000;
+    font-size: 15px;
+    color: #ffffff;
+}
+table.t1 th {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #ffffff;
+}
+table.t1 tr td  {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #ffffff;
+}
+table.t1 tr.special td  {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #BE5D5D;
+}
+table.t1 tr.special2 td  {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #32CB52;
+}
+table.t1 td {
+    border-width: 1px 1px 1px 1px;
+    padding: 2px 2px 2px 2px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #ffffff;
+}

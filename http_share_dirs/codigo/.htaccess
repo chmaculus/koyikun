@@ -1,0 +1,15 @@
+
+
+
+    RewriteEngine on 
+#    RewriteRule ^$ /devel/ [L,QSA] 
+#RewriteRule aaaa devel [R=301,L]
+#    RewriteCond %{REQUEST_FILENAME} !-f 
+#    RewriteCond %{REQUEST_FILENAME} !-d 
+#    RewriteRule ^(.*)$ /carpeta/$1 [L,QSA])
+
+AuthType Basic
+AuthName "Password Required"
+AuthUserFile /etc/htaccess/devel.htaccess
+Require User tron
+

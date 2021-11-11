@@ -1,0 +1,3452 @@
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALL IN ONE",
+						descripcion="CIRCUITO IMPRESO ALL IN ONE",
+						codigo_interno="PUB3-9855-0005"
+    
+id_a: 1
+insert into costos set id_articulos="1", precio_costo="162",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALL IN ONE",
+						descripcion="CIRCUITO, MOTOR Y BAT ALL IN O",
+						codigo_interno="PUB3-9855-0007"
+    
+id_a: 2
+insert into costos set id_articulos="2", precio_costo="422",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="BASE CARGADOR ALPHA",
+						codigo_interno="PRO3-8741-0000"
+    
+id_a: 3
+insert into costos set id_articulos="3", precio_costo="350",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="TAPA SUPERIOR ALPHA",
+						codigo_interno="PRO3-88300-060"
+    
+id_a: 4
+insert into costos set id_articulos="4", precio_costo="388",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="CARCASA INFERIOR ALPHA",
+						codigo_interno="PRO3-88350-000"
+    
+id_a: 5
+insert into costos set id_articulos="5", precio_costo="140",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="SWITCH ALPHA",
+						codigo_interno="PRO3-88370-000"
+    
+id_a: 6
+insert into costos set id_articulos="6", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="CIRCUITO IMPRESO ALPHA",
+						codigo_interno="PRO3-90617-000"
+    
+id_a: 7
+insert into costos set id_articulos="7", precio_costo="464",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="MOTOR ALPHA SIN LEVA",
+						codigo_interno="PRO3-95368-200"
+    
+id_a: 8
+insert into costos set id_articulos="8", precio_costo="490",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="RES.  ESTABILIZADOR MOTOR ALPH",
+						codigo_interno="PRO3-96474-000"
+    
+id_a: 9
+insert into costos set id_articulos="9", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="CONTACTO TRASERO BATERIA ALPHA",
+						codigo_interno="PRO3-97001-103"
+    
+id_a: 10
+insert into costos set id_articulos="10", precio_costo="128",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA",
+						descripcion="TRANSFORMADOR ALPHA -NUEVO-",
+						codigo_interno="PRO3-97618-6000"
+    
+id_a: 11
+insert into costos set id_articulos="11", precio_costo="720",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / AMBASSADOR",
+						descripcion="GUIA PLAST CUCH.ALPHA/AMBASSAD",
+						codigo_interno="PRO3-8707-0020"
+    
+id_a: 12
+insert into costos set id_articulos="12", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / AMBASSADOR",
+						descripcion="LEVA DE MOTOR AMBASSADOR",
+						codigo_interno="PRO3-93177-000"
+    
+id_a: 13
+insert into costos set id_articulos="13", precio_costo="50",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / AMBASSADOR",
+						descripcion="RETEN DE CUCHILLA AMBASSADOR",
+						codigo_interno="PRO3-96332-100"
+    
+id_a: 14
+insert into costos set id_articulos="14", precio_costo="68",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / AMBASSADOR",
+						descripcion="TRABA METAL.CUCH.AMBASS/ALPHA",
+						codigo_interno="PRO3-96488-001"
+    
+id_a: 15
+insert into costos set id_articulos="15", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / AMBASSADOR",
+						descripcion="RESORTE TENSION CUCH.AMBASSADO",
+						codigo_interno="PRO3-96489-002"
+    
+id_a: 16
+insert into costos set id_articulos="16", precio_costo="80",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ALPHA / FLAIR",
+						descripcion="BATERIA ALPHA/FLAIR 1.2 V 1600",
+						codigo_interno="PRO3-93154-101"
+    
+id_a: 17
+insert into costos set id_articulos="17", precio_costo="306",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR",
+						descripcion="TORNILLO DE CARC..AMBASS/ALPHA",
+						codigo_interno="PRO3-496-00000"
+    
+id_a: 18
+insert into costos set id_articulos="18", precio_costo="32",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR",
+						descripcion="SWITCH AMBASSADOR",
+						codigo_interno="PRO3-8706-2000"
+    
+id_a: 19
+insert into costos set id_articulos="19", precio_costo="35",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR",
+						descripcion="CIRCUITO IMPR.CARG.AMBASSADOR",
+						codigo_interno="PRO3-90607-300"
+    
+id_a: 20
+insert into costos set id_articulos="20", precio_costo="379",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR",
+						descripcion="CTO.  IMPRESO AMBASSADOR LITHI",
+						codigo_interno="PRO3-93593-216"
+    
+id_a: 21
+insert into costos set id_articulos="21", precio_costo="295",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR",
+						descripcion="CONTACTO TRASERO AMBASSADOR",
+						codigo_interno="PRO3-93794-000"
+    
+id_a: 22
+insert into costos set id_articulos="22", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="GUIA PLAST CUCH.ALPHA/AMBASSAD",
+						codigo_interno="PRO3-8707-0020"
+    
+id_a: 23
+insert into costos set id_articulos="23", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="TAPA SUPERIOR AMBASSADOR",
+						codigo_interno="PRO3-8733-0620"
+    
+id_a: 24
+insert into costos set id_articulos="24", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="LEVA DE MOTOR AMBASSADOR",
+						codigo_interno="PRO3-93177-000"
+    
+id_a: 25
+insert into costos set id_articulos="25", precio_costo="50",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="RETEN DE CUCHILLA AMBASSADOR",
+						codigo_interno="PRO3-96332-100"
+    
+id_a: 26
+insert into costos set id_articulos="26", precio_costo="68",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="TRABA METAL.CUCH.AMBASS/ALPHA",
+						codigo_interno="PRO3-96488-001"
+    
+id_a: 27
+insert into costos set id_articulos="27", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="AMBASSADOR / ALPHA",
+						descripcion="RESORTE TENSION CUCH.AMBASSADO",
+						codigo_interno="PRO3-96489-002"
+    
+id_a: 28
+insert into costos set id_articulos="28", precio_costo="80",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="CARCASA INFERIOR ANNIVERSARY",
+						codigo_interno="PRO3-8902-0060"
+    
+id_a: 29
+insert into costos set id_articulos="29", precio_costo="190",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="TAPA SUPERIOR ANNIVERSARY",
+						codigo_interno="PRO3-8930-0040"
+    
+id_a: 30
+insert into costos set id_articulos="30", precio_costo="74",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="CONTACTO TRASERO ANNIVERSARY",
+						codigo_interno="PRO3-8947-0000"
+    
+id_a: 31
+insert into costos set id_articulos="31", precio_costo="90",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="LEVA MOTOR ANNIVERSARY",
+						codigo_interno="PRO3-93398-001"
+    
+id_a: 32
+insert into costos set id_articulos="32", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="LEVA MOTOR STERLING",
+						codigo_interno="PRO3-93399-001"
+    
+id_a: 33
+insert into costos set id_articulos="33", precio_costo="125",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="ARANDELA MOTOR ANNIVERSARY",
+						codigo_interno="PRO3-9922-0010"
+    
+id_a: 34
+insert into costos set id_articulos="34", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ANNIVERSARY   ",
+						descripcion="RESORTE GROOMSMAN AMERICANA",
+						codigo_interno="PUB3-1547-0000"
+    
+id_a: 35
+insert into costos set id_articulos="35", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ARCO",
+						descripcion="TRANSFORMADOR UNIVERSAL",
+						codigo_interno="PRO3-1881-1671"
+    
+id_a: 36
+insert into costos set id_articulos="36", precio_costo="688",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ARCO",
+						descripcion="CIRCUITO IMPRESO ARCO",
+						codigo_interno="VET3-1854-7070"
+    
+id_a: 37
+insert into costos set id_articulos="37", precio_costo="400",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ARCO",
+						descripcion="JGO. CARCASAS ARCO",
+						codigo_interno="VET3-1854-7201"
+    
+id_a: 38
+insert into costos set id_articulos="38", precio_costo="529",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ARCO",
+						descripcion="MOTOR ARCO",
+						codigo_interno="VET3-1854-7280"
+    
+id_a: 39
+insert into costos set id_articulos="39", precio_costo="256",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ARCO  / POWER + / GENIO PLUS",
+						descripcion="BATERIA GENIO PLUS/ARCO/POWER+",
+						codigo_interno="PRO3-1854-7988"
+    
+id_a: 40
+insert into costos set id_articulos="40", precio_costo="785",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO  BASTIDOR  DE CUCHILLA",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 41
+insert into costos set id_articulos="41", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO TAPA",
+						codigo_interno="PRO3-495-2000"
+    
+id_a: 42
+insert into costos set id_articulos="42", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="SWITCH SUPER TAPER - W400",
+						codigo_interno="PRO3-8108-0010"
+    
+id_a: 43
+insert into costos set id_articulos="43", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="CARCASA INFERIOR",
+						codigo_interno="PRO3-8404-1000"
+    
+id_a: 44
+insert into costos set id_articulos="44", precio_costo="281",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="BOBINA SHUNT ",
+						codigo_interno="PRO3-8424-0000"
+    
+id_a: 45
+insert into costos set id_articulos="45", precio_costo="418",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="BRAZO SHUNT SUPER TAPER",
+						codigo_interno="PRO3-8505-2010"
+    
+id_a: 46
+insert into costos set id_articulos="46", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TAPA BALDING",
+						codigo_interno="PRO3-89600-3520"
+    
+id_a: 47
+insert into costos set id_articulos="47", precio_costo="241",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="BASTIDOR METALICO BALDING",
+						codigo_interno="PRO3-9214-5000"
+    
+id_a: 48
+insert into costos set id_articulos="48", precio_costo="190",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="ALMOHADILLA CUCHILLA",
+						codigo_interno="PRO3-94104-400"
+    
+id_a: 49
+insert into costos set id_articulos="49", precio_costo="36",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO SWITCH",
+						codigo_interno="PUB3-491-00100"
+    
+id_a: 50
+insert into costos set id_articulos="50", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO DE BOBINA",
+						codigo_interno="PUB3-503-00000"
+    
+id_a: 51
+insert into costos set id_articulos="51", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 52
+insert into costos set id_articulos="52", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="RESORT BOBINA ",
+						codigo_interno="VET3-1177-3000"
+    
+id_a: 53
+insert into costos set id_articulos="53", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO BRAZO BOBINA",
+						codigo_interno="VET3-1567-2010"
+    
+id_a: 54
+insert into costos set id_articulos="54", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="TORNILLO CUCHILLA",
+						codigo_interno="VET3-508-40000"
+    
+id_a: 55
+insert into costos set id_articulos="55", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BALDING",
+						descripcion="BASTIDOR PLASTICO",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 56
+insert into costos set id_articulos="56", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA",
+						descripcion="TORNILLO DE CARCASA BELLA",
+						codigo_interno="PRO3-1590-7010"
+    
+id_a: 57
+insert into costos set id_articulos="57", precio_costo="19",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA",
+						descripcion="CTO C/ BAT PIN NUEVO BELLA/MIN",
+						codigo_interno="PRO3-1590-7280"
+    
+id_a: 58
+insert into costos set id_articulos="58", precio_costo="446",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA",
+						descripcion="BASE CARGADOR S/TRAFO NUEVO",
+						codigo_interno="PRO3-1590-7430"
+    
+id_a: 59
+insert into costos set id_articulos="59", precio_costo="283",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA",
+						descripcion="CTO IMP C/BAT BELLA/CHR NUEVO",
+						codigo_interno="PRO3-1590-7490"
+    
+id_a: 60
+insert into costos set id_articulos="60", precio_costo="368",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA",
+						descripcion="JGO. CARCASAS BELLA ROJA",
+						codigo_interno="PRO3-1590-7720"
+    
+id_a: 61
+insert into costos set id_articulos="61", precio_costo="785",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="TRABA CUCHI IZQ. CHROMINI",
+						codigo_interno="PRO3-1565-1031"
+    
+id_a: 62
+insert into costos set id_articulos="62", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="TRABA CUCH. DER CHROMINI",
+						codigo_interno="PRO3-1565-1041"
+    
+id_a: 63
+insert into costos set id_articulos="63", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="MOTOR BELLA/CHROMINI",
+						codigo_interno="PRO3-1590-7020"
+    
+id_a: 64
+insert into costos set id_articulos="64", precio_costo="427",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="BATERIA CHROMINI / BELLA/GENIO",
+						codigo_interno="PRO3-1590-7040"
+    
+id_a: 65
+insert into costos set id_articulos="65", precio_costo="349",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="LEVA MOTOR BELLA / CHROMINI",
+						codigo_interno="PRO3-1590-7500"
+    
+id_a: 66
+insert into costos set id_articulos="66", precio_costo="48",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLA / CHROMINI",
+						descripcion="TRANSFORMADOR UNIVERSAL",
+						codigo_interno="PRO3-1881-1671"
+    
+id_a: 67
+insert into costos set id_articulos="67", precio_costo="688",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="TORNILLOS CARCAZA BELLISSIMA",
+						codigo_interno="PRO3-1565-7270"
+    
+id_a: 68
+insert into costos set id_articulos="68", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="MOTOR BELLINA LITHIUM",
+						codigo_interno="PRO3-1870-7020"
+    
+id_a: 69
+insert into costos set id_articulos="69", precio_costo="360",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="MOTOR BELLINA",
+						codigo_interno="PRO3-1870-7110"
+    
+id_a: 70
+insert into costos set id_articulos="70", precio_costo="576",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="BATERIA BELLINA",
+						codigo_interno="PRO3-1870-7130"
+    
+id_a: 71
+insert into costos set id_articulos="71", precio_costo="886",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="CONTACTOS DE BELLINA",
+						codigo_interno="PRO3-1870-7160"
+    
+id_a: 72
+insert into costos set id_articulos="72", precio_costo="137",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="CTO. IMP. C/ BAT BELLIS. NUEVO",
+						codigo_interno="PRO3-1870-7460"
+    
+id_a: 73
+insert into costos set id_articulos="73", precio_costo="2",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="BASE CARGADOR BELLISSIMA NUEVA",
+						codigo_interno="PRO3-1870-7620"
+    
+id_a: 74
+insert into costos set id_articulos="74", precio_costo="470",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="JGO. CARCASAS BELLINA  ROJA",
+						codigo_interno="PRO3-1870-7800"
+    
+id_a: 75
+insert into costos set id_articulos="75", precio_costo="2",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="CTO. IMPRESO LITHIUM BELLINA",
+						codigo_interno="PRO3-1870-7880"
+    
+id_a: 76
+insert into costos set id_articulos="76", precio_costo="2",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA",
+						descripcion="BATERIA LITHIUM BELLINA",
+						codigo_interno="PRO3-1870-7900"
+    
+id_a: 77
+insert into costos set id_articulos="77", precio_costo="785",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="RESORTE TENSION CUCHILLA ",
+						codigo_interno="PRO3-1854-1270"
+    
+id_a: 78
+insert into costos set id_articulos="78", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="BASTIDOR PLAS CUCH-CHRO/ BELLI",
+						codigo_interno="PRO3-1854-1387"
+    
+id_a: 79
+insert into costos set id_articulos="79", precio_costo="121",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="LEVA MOTOR BELLISSIMA/CHROMSTY",
+						codigo_interno="PRO3-1854-5121"
+    
+id_a: 80
+insert into costos set id_articulos="80", precio_costo="94",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="TRABA CUCHI.DER CHROMSTYL",
+						codigo_interno="PRO3-1871-1031"
+    
+id_a: 81
+insert into costos set id_articulos="81", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="TRABA CUCHI.IZQ CHROMSTY",
+						codigo_interno="PRO3-1871-1041"
+    
+id_a: 82
+insert into costos set id_articulos="82", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLINA / CHROMSTYLE",
+						descripcion="TRANSFORMADOR UNIVERSAL",
+						codigo_interno="PRO3-1881-1671"
+    
+id_a: 83
+insert into costos set id_articulos="83", precio_costo="688",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BELLISSIMA",
+						descripcion="JUEGO DE CARCAZAS BELLISSIMA",
+						codigo_interno="PRO3-1870-7300"
+    
+id_a: 84
+insert into costos set id_articulos="84", precio_costo="983",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="TORNILLO CARGADOR BERETTO",
+						codigo_interno="PRO3-465-00000"
+    
+id_a: 85
+insert into costos set id_articulos="85", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="TOR.BDE CUCH.COLORP/CARC BERET",
+						codigo_interno="PRO3-492-20000"
+    
+id_a: 86
+insert into costos set id_articulos="86", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="BASTIDOR CUCHILLA BERET",
+						codigo_interno="PRO3-8054-0020"
+    
+id_a: 87
+insert into costos set id_articulos="87", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="CARCASA CUNA CARGADOR BERET",
+						codigo_interno="PRO3-8544-2010"
+    
+id_a: 88
+insert into costos set id_articulos="88", precio_costo="280",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="SWITCH BERET",
+						codigo_interno="PRO3-8705-0030"
+    
+id_a: 89
+insert into costos set id_articulos="89", precio_costo="32",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="MOTOR BERET",
+						codigo_interno="PRO3-8723-1301"
+    
+id_a: 90
+insert into costos set id_articulos="90", precio_costo="540",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="CONTACTOS TRASEROS BERET",
+						codigo_interno="PRO3-8724-0000"
+    
+id_a: 91
+insert into costos set id_articulos="91", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="GUIA DE CUCHILLA BERET",
+						codigo_interno="PRO3-8734-0010"
+    
+id_a: 92
+insert into costos set id_articulos="92", precio_costo="35",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="MONTURA TRASERA MOTOR BERET",
+						codigo_interno="PRO3-8736-1000"
+    
+id_a: 93
+insert into costos set id_articulos="93", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="TAPA BERET",
+						codigo_interno="PRO3-8821-3630"
+    
+id_a: 94
+insert into costos set id_articulos="94", precio_costo="480",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="CARCASA BERET",
+						codigo_interno="PRO3-8828-1551"
+    
+id_a: 95
+insert into costos set id_articulos="95", precio_costo="443",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="INSERTO TAPA BERET",
+						codigo_interno="PRO3-8829-5020"
+    
+id_a: 96
+insert into costos set id_articulos="96", precio_costo="35",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="SOPORTE CIRCUITO IMPRESO BERET",
+						codigo_interno="PRO3-8936-0000"
+    
+id_a: 97
+insert into costos set id_articulos="97", precio_costo="54",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="BASE CARGADOR COMPLETO BERET",
+						codigo_interno="PRO3-8973-1801"
+    
+id_a: 98
+insert into costos set id_articulos="98", precio_costo="443",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="CTO. IMPRESO CARGADOR BERET",
+						codigo_interno="PRO3-90608-000"
+    
+id_a: 99
+insert into costos set id_articulos="99", precio_costo="228",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="CIRCUITO Y BATERIA BERET",
+						codigo_interno="PRO3-93780-400"
+    
+id_a: 100
+insert into costos set id_articulos="100", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="ESPUMA P/MOTOR BERET",
+						codigo_interno="PRO3-94104-700"
+    
+id_a: 101
+insert into costos set id_articulos="101", precio_costo="19",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET",
+						descripcion="TORNILLO CUCHILLA BERET/ POEME",
+						codigo_interno="PRO3-96406-201"
+    
+id_a: 102
+insert into costos set id_articulos="102", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET / BERETTO",
+						descripcion="LED TESTIGO DE CARGA",
+						codigo_interno="PRO3-8729-0000"
+    
+id_a: 103
+insert into costos set id_articulos="103", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET / BERETTO",
+						descripcion="MAGNETO BERET - BERETTO",
+						codigo_interno="PRO3-90594-000"
+    
+id_a: 104
+insert into costos set id_articulos="104", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERET / BERETTO",
+						descripcion="TRANSFORMADOR BERET / BERETTO",
+						codigo_interno="PRO3-97581-5305"
+    
+id_a: 105
+insert into costos set id_articulos="105", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CUNA CARGADOR BERETTO",
+						codigo_interno="PRO3-8662-1000"
+    
+id_a: 106
+insert into costos set id_articulos="106", precio_costo="565",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CARCASA CARGADOR BERETTO",
+						codigo_interno="PRO3-8772-0000"
+    
+id_a: 107
+insert into costos set id_articulos="107", precio_costo="90",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="BASE CARGADOR BERETTO",
+						codigo_interno="PRO3-8773-0600"
+    
+id_a: 108
+insert into costos set id_articulos="108", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="TAPA EXTERNA BERETTO",
+						codigo_interno="PRO3-88906-170"
+    
+id_a: 109
+insert into costos set id_articulos="109", precio_costo="734",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="TAPA INTERIOR BERETTO",
+						codigo_interno="PRO3-88907-000"
+    
+id_a: 110
+insert into costos set id_articulos="110", precio_costo="124",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CARCASA  BERETTO",
+						codigo_interno="PRO3-88912-190"
+    
+id_a: 111
+insert into costos set id_articulos="111", precio_costo="613",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="SWITCH BERETTO",
+						codigo_interno="PRO3-88936-000"
+    
+id_a: 112
+insert into costos set id_articulos="112", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CUBRE CONTACTOS BERETTO",
+						codigo_interno="PRO3-88937-000"
+    
+id_a: 113
+insert into costos set id_articulos="113", precio_costo="61",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="AISLANTE DEL CIRCUITO IMPRESO",
+						codigo_interno="PRO3-90064-000"
+    
+id_a: 114
+insert into costos set id_articulos="114", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CTO.  IMPRESO CARGADOR BERETTO",
+						codigo_interno="PRO3-90608-200"
+    
+id_a: 115
+insert into costos set id_articulos="115", precio_costo="228",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="BATERIA BERETTO",
+						codigo_interno="PRO3-93837-000"
+    
+id_a: 116
+insert into costos set id_articulos="116", precio_costo="737",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="TRABA CUCHILLA BERETTO",
+						codigo_interno="PRO3-94219-100"
+    
+id_a: 117
+insert into costos set id_articulos="117", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="TRABA CUCHILLA BERETTO",
+						codigo_interno="PRO3-94219-100"
+    
+id_a: 118
+insert into costos set id_articulos="118", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="ARANDELA GOMA MOTOR BERETTO",
+						codigo_interno="PRO3-95302-000"
+    
+id_a: 119
+insert into costos set id_articulos="119", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="ARANDELA GOMA MOTOR BERETTO",
+						codigo_interno="PRO3-95302-000"
+    
+id_a: 120
+insert into costos set id_articulos="120", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="MOTOR BERETTO",
+						codigo_interno="PRO3-95368-500"
+    
+id_a: 121
+insert into costos set id_articulos="121", precio_costo="343",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO",
+						descripcion="CIRCUITO IMPRESO BERETTO",
+						codigo_interno="PRO3-97836-001"
+    
+id_a: 122
+insert into costos set id_articulos="122", precio_costo="884",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO / BERET",
+						descripcion="TORNILLO CARGADOR BERETTO",
+						codigo_interno="PRO3-465-00000"
+    
+id_a: 123
+insert into costos set id_articulos="123", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO / BERET",
+						descripcion="TOR TAPA S TAPER/BERET/BERETTO",
+						codigo_interno="PRO3-495-2000"
+    
+id_a: 124
+insert into costos set id_articulos="124", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO / BERET",
+						descripcion="LED TESTIGO DE CARGA",
+						codigo_interno="PRO3-8729-0000"
+    
+id_a: 125
+insert into costos set id_articulos="125", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO / BERET",
+						descripcion="MAGNETO BERET - BERETTO",
+						codigo_interno="PRO3-90594-000"
+    
+id_a: 126
+insert into costos set id_articulos="126", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BERETTO / BERET",
+						descripcion="TRANSFORMADOR BERET / BERETTO",
+						codigo_interno="PRO3-97581-5305"
+    
+id_a: 127
+insert into costos set id_articulos="127", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="TAPA SUPERIOR BLING",
+						codigo_interno="PRO3-88102-070"
+    
+id_a: 128
+insert into costos set id_articulos="128", precio_costo="326",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="TAPA BATERIA BLING",
+						codigo_interno="PRO3-88140-100"
+    
+id_a: 129
+insert into costos set id_articulos="129", precio_costo="175",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CARCASA INFERIOR BLING",
+						codigo_interno="PRO3-88152-100"
+    
+id_a: 130
+insert into costos set id_articulos="130", precio_costo="295",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="SWITCH BLING",
+						codigo_interno="PRO3-88171-000"
+    
+id_a: 131
+insert into costos set id_articulos="131", precio_costo="48",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="GUIA DE CUCHILLA BLING",
+						codigo_interno="PRO3-88183-000"
+    
+id_a: 132
+insert into costos set id_articulos="132", precio_costo="66",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CORDON BLING",
+						codigo_interno="PRO3-90120-000"
+    
+id_a: 133
+insert into costos set id_articulos="133", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CONTACTO DEL SWITCH - BLING",
+						codigo_interno="PRO3-93768-001"
+    
+id_a: 134
+insert into costos set id_articulos="134", precio_costo="62",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CONTACTO TRASERO BLING",
+						codigo_interno="PRO3-93774-000"
+    
+id_a: 135
+insert into costos set id_articulos="135", precio_costo="43",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CONTACTO DELANTERO BLING",
+						codigo_interno="PRO3-93775-000"
+    
+id_a: 136
+insert into costos set id_articulos="136", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="CABLE MOTOR BLING",
+						codigo_interno="PRO3-9926-4000"
+    
+id_a: 137
+insert into costos set id_articulos="137", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="BLING",
+						descripcion="MOTOR DODDLE / BLING",
+						codigo_interno="PUB3-1669-0000"
+    
+id_a: 138
+insert into costos set id_articulos="138", precio_costo="312",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI",
+						descripcion="TAPA SUPERIOR CHROMINI",
+						codigo_interno="PRO3-1591-7000"
+    
+id_a: 139
+insert into costos set id_articulos="139", precio_costo="427",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI",
+						descripcion="CARCASA INFERIOR CHROMINI",
+						codigo_interno="PRO3-1591-7010"
+    
+id_a: 140
+insert into costos set id_articulos="140", precio_costo="361",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI",
+						descripcion="BASE CHROMINI P.TRA UNIVERSAL",
+						codigo_interno="PRO3-1591-7540"
+    
+id_a: 141
+insert into costos set id_articulos="141", precio_costo="283",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI",
+						descripcion="CARGADOR CHROMIN NUEVOCOMPLETO",
+						codigo_interno="PRO3-1592-7080"
+    
+id_a: 142
+insert into costos set id_articulos="142", precio_costo="847",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="TRABA CUCHI IZQ. CHROMINI",
+						codigo_interno="PRO3-1565-1031"
+    
+id_a: 143
+insert into costos set id_articulos="143", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="TRABA CUCH. DER CHROMINI",
+						codigo_interno="PRO3-1565-1041"
+    
+id_a: 144
+insert into costos set id_articulos="144", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="MOTOR BELLA/CHROMINI",
+						codigo_interno="PRO3-1590-7020"
+    
+id_a: 145
+insert into costos set id_articulos="145", precio_costo="427",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="BATERIA CHROMINI / BELLA/GENIO",
+						codigo_interno="PRO3-1590-7040"
+    
+id_a: 146
+insert into costos set id_articulos="146", precio_costo="349",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="LEVA MOTOR BELLA / CHROMINI",
+						codigo_interno="PRO3-1590-7500"
+    
+id_a: 147
+insert into costos set id_articulos="147", precio_costo="48",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMINI / BELLA",
+						descripcion="TRANSFORMADOR UNIVERSAL",
+						codigo_interno="PRO3-1881-1671"
+    
+id_a: 148
+insert into costos set id_articulos="148", precio_costo="688",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="TAPA SUPERIOR CHROMSTYLE",
+						codigo_interno="PRO3-1871-7180"
+    
+id_a: 149
+insert into costos set id_articulos="149", precio_costo="535",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="SWITCH CHROMSTYLE",
+						codigo_interno="PRO3-1871-7200"
+    
+id_a: 150
+insert into costos set id_articulos="150", precio_costo="168",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="BASE CARGADOR CHROMST  "VIEJO"",
+						codigo_interno="PRO3-1871-7250"
+    
+You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'VIEJO"",
+						codigo_interno="PRO3-1871-7250"' at line 3id_a: 150
+insert into costos set id_articulos="150", precio_costo="212",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="CUERPO CDOR. COMP S/TRAFO NUEV",
+						codigo_interno="PRO3-1871-7300"
+    
+id_a: 151
+insert into costos set id_articulos="151", precio_costo="370",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="CARCASA INFERIOR CHROMSTYLE",
+						codigo_interno="PRO3-1871-7540"
+    
+id_a: 152
+insert into costos set id_articulos="152", precio_costo="460",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="MOTOR CHROMSTYLE LITHIUM",
+						codigo_interno="PRO3-1871-7700"
+    
+id_a: 153
+insert into costos set id_articulos="153", precio_costo="360",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="CTO. IMPRESO C/BATER -CHROMST.",
+						codigo_interno="PRO3-1871-7740"
+    
+id_a: 154
+insert into costos set id_articulos="154", precio_costo="2",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="BASE CARGADOR CHROMSTYLE NUEVO",
+						codigo_interno="PRO3-1871-7750"
+    
+id_a: 155
+insert into costos set id_articulos="155", precio_costo="490",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="JUEGO CARCAZAS CHROMSTYLE 7896",
+						codigo_interno="PRO3-1871-7760"
+    
+id_a: 156
+insert into costos set id_articulos="156", precio_costo="908",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="CTO. IMPRESO LITHIUM CHROMSTYL",
+						codigo_interno="PRO3-1871-7950"
+    
+id_a: 157
+insert into costos set id_articulos="157", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE",
+						descripcion="BATERIA LITHIUM CHROMSTYLE",
+						codigo_interno="PRO3-1871-7960"
+    
+id_a: 158
+insert into costos set id_articulos="158", precio_costo="785",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="GUIA DE CUCHILLA CHROMSTYLE",
+						codigo_interno="PRO3-1854-1015"
+    
+id_a: 159
+insert into costos set id_articulos="159", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="RESORTE TENSION CUCHILLA ",
+						codigo_interno="PRO3-1854-1270"
+    
+id_a: 160
+insert into costos set id_articulos="160", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="BASTIDOR PLAS CUCH-CHRO/ BELLI",
+						codigo_interno="PRO3-1854-1387"
+    
+id_a: 161
+insert into costos set id_articulos="161", precio_costo="121",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="LEVA MOTOR BELLISSIMA/CHROMSTY",
+						codigo_interno="PRO3-1854-5121"
+    
+id_a: 162
+insert into costos set id_articulos="162", precio_costo="94",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="TRABA CUCHI.DER CHROMSTYL",
+						codigo_interno="PRO3-1871-1031"
+    
+id_a: 163
+insert into costos set id_articulos="163", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="TRABA CUCHI.IZQ CHROMSTY",
+						codigo_interno="PRO3-1871-1041"
+    
+id_a: 164
+insert into costos set id_articulos="164", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="CHROMSTYLE / BELLINA",
+						descripcion="TRANSFORMADOR UNIVERSAL",
+						codigo_interno="PRO3-1881-1671"
+    
+id_a: 165
+insert into costos set id_articulos="165", precio_costo="688",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLOR CODE",
+						descripcion="BOBINA Y BRAZO COLOR CODE",
+						codigo_interno="PUB3-9155-0001"
+    
+id_a: 166
+insert into costos set id_articulos="166", precio_costo="192",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="TORILLO DE CUCHILLA",
+						codigo_interno="PRO3-492-20000"
+    
+id_a: 167
+insert into costos set id_articulos="167", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="TORNILLO PALANCA CUCHILLA",
+						codigo_interno="PRO3-512-10000"
+    
+id_a: 168
+insert into costos set id_articulos="168", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="RESORTE BOBINA COLORPRO",
+						codigo_interno="PRO3-521-00000"
+    
+id_a: 169
+insert into costos set id_articulos="169", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="TORNILLO BRAZO DE BOBINA COLOR",
+						codigo_interno="PUB3-1567-2000"
+    
+id_a: 170
+insert into costos set id_articulos="170", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="CABLE CON ENCHUFE COLORPRO",
+						codigo_interno="PUB3-621-40000"
+    
+id_a: 171
+insert into costos set id_articulos="171", precio_costo="431",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 172
+insert into costos set id_articulos="172", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="SWITCH COLORPRO",
+						codigo_interno="PUB3-8140-0000"
+    
+id_a: 173
+insert into costos set id_articulos="173", precio_costo="31",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="BOBINA  COLORPRO",
+						codigo_interno="PUB3-8524-200"
+    
+id_a: 174
+insert into costos set id_articulos="174", precio_costo="346",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="CARCASA INF. COLORPRO / U CLIP",
+						codigo_interno="PUB3-87000-000"
+    
+id_a: 175
+insert into costos set id_articulos="175", precio_costo="167",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="TAPA COMPLETA COLORPRO",
+						codigo_interno="PUB3-9067-0700"
+    
+id_a: 176
+insert into costos set id_articulos="176", precio_costo="161",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="INSERTO AZUL TAPA COLORPRO",
+						codigo_interno="PUB3-92401-000"
+    
+id_a: 177
+insert into costos set id_articulos="177", precio_costo="90",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="CABLE BOBINA COLORPRO",
+						codigo_interno="PUB3-97699-200"
+    
+id_a: 178
+insert into costos set id_articulos="178", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="PALANCA CUCHILLA",
+						codigo_interno="VET3-8227-1001"
+    
+id_a: 179
+insert into costos set id_articulos="179", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO (USA)",
+						descripcion="BASTIDOR PLASTICO",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 180
+insert into costos set id_articulos="180", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO REC / ERGO TRIM",
+						descripcion="BATERIA ERGO TRIM/COLORPRO REC",
+						codigo_interno="PRO3-1458-1100"
+    
+id_a: 181
+insert into costos set id_articulos="181", precio_costo="265",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO REC / ERGO TRIM",
+						descripcion="TRANSF ERGO TRIM/COLORPRO REC",
+						codigo_interno="PRO3-1460-1390"
+    
+id_a: 182
+insert into costos set id_articulos="182", precio_costo="613",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO RECARGABLE (HUNGRIA)",
+						descripcion="CTO.IMPRESO, MOTOR Y BAT COLOR",
+						codigo_interno="PRO3-1461-7140"
+    
+id_a: 183
+insert into costos set id_articulos="183", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO RECARGABLE (HUNGRIA)",
+						descripcion="JGO. CARCASAS COLORPRO RECARG.",
+						codigo_interno="PRO3-1461-7190"
+    
+id_a: 184
+insert into costos set id_articulos="184", precio_costo="422",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="COLORPRO RECARGABLE (HUNGRIA)",
+						descripcion="MOTOR COLORPRO RECARGABLE",
+						codigo_interno="PRO3-1467-2000"
+    
+id_a: 185
+insert into costos set id_articulos="185", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DELUXE GROOM PRO",
+						descripcion="BOBINA Y BRAZO DELUXE GROOMPRO",
+						codigo_interno="PUB3-79305-001"
+    
+id_a: 186
+insert into costos set id_articulos="186", precio_costo="202",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="MOTOR DETAILER",
+						codigo_interno="PRO3-8723-7000"
+    
+id_a: 187
+insert into costos set id_articulos="187", precio_costo="764",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="TAPA NEGRA DETAILER",
+						codigo_interno="PRO3-88120-104"
+    
+id_a: 188
+insert into costos set id_articulos="188", precio_costo="110",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="TAPA DETAILER",
+						codigo_interno="PRO3-88121-081"
+    
+id_a: 189
+insert into costos set id_articulos="189", precio_costo="384",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="INSERTO TAPA DETAILER",
+						codigo_interno="PRO3-88122-161"
+    
+id_a: 190
+insert into costos set id_articulos="190", precio_costo="90",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="CARCASA DETAILER",
+						codigo_interno="PRO3-88160-1892"
+    
+id_a: 191
+insert into costos set id_articulos="191", precio_costo="490",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="GUIA DE CUCHILLA DETAILER",
+						codigo_interno="PRO3-88182-002"
+    
+id_a: 192
+insert into costos set id_articulos="192", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="GUIA PATIN DE CUCH. DETAILER",
+						codigo_interno="PRO3-8907-3050"
+    
+id_a: 193
+insert into costos set id_articulos="193", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="CIRCUITO IMPRESO",
+						codigo_interno="PRO3-90620-101"
+    
+id_a: 194
+insert into costos set id_articulos="194", precio_costo="743",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="SOPORTE TRASERO DETAILER",
+						codigo_interno="PRO3-94284-001"
+    
+id_a: 195
+insert into costos set id_articulos="195", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="INSERTO TORNILLOS BAST. DETAIL",
+						codigo_interno="PRO3-96380-000"
+    
+id_a: 196
+insert into costos set id_articulos="196", precio_costo="180",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="TORNILLOS GUIA DE CUCH. DETAIL",
+						codigo_interno="PRO3-96437-100"
+    
+id_a: 197
+insert into costos set id_articulos="197", precio_costo="40",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="RESORTE GUIA DE CUCH. DETAILER",
+						codigo_interno="PRO3-96471-100"
+    
+id_a: 198
+insert into costos set id_articulos="198", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="TRANSFORMADOR SIGMA/DET/PEA",
+						codigo_interno="PRO3-97615-005"
+    
+id_a: 199
+insert into costos set id_articulos="199", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER",
+						descripcion="TORNILLOS CUCHILLA DETAILER",
+						codigo_interno="PRO3-99719-000"
+    
+id_a: 200
+insert into costos set id_articulos="200", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DETAILER INALAMBRICA",
+						descripcion="TRANSFORMADOR DETAILER INALAMB",
+						codigo_interno="PRO3-97618-601"
+    
+id_a: 201
+insert into costos set id_articulos="201", precio_costo="600",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DOODLES",
+						descripcion="MOTOR DODDLE / BLING",
+						codigo_interno="PUB3-1669-0000"
+    
+id_a: 202
+insert into costos set id_articulos="202", precio_costo="312",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DOODLES",
+						descripcion="CARCASA INFERIOR DODDLE",
+						codigo_interno="PUB3-9902-9040"
+    
+id_a: 203
+insert into costos set id_articulos="203", precio_costo="58",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DOODLES",
+						descripcion="TAPA DE BATERIA DODDLE",
+						codigo_interno="PUB3-9903-9000"
+    
+id_a: 204
+insert into costos set id_articulos="204", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DOODLES",
+						descripcion="CABLE MOTOR DODDLE",
+						codigo_interno="PUB3-9926-3000"
+    
+id_a: 205
+insert into costos set id_articulos="205", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="DOODLES",
+						descripcion="TAPA SUPERIOR DODDLE",
+						codigo_interno="PUB3-9930-9010"
+    
+id_a: 206
+insert into costos set id_articulos="206", precio_costo="35",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ERGO TRIM",
+						descripcion="CIRCUITO, MOTOR, BATERIA ERGO",
+						codigo_interno="PRO3-1460-7040"
+    
+id_a: 207
+insert into costos set id_articulos="207", precio_costo="737",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ERGO TRIM",
+						descripcion="MOTOR ERGO TRIM",
+						codigo_interno="PRO3-1461-2000"
+    
+id_a: 208
+insert into costos set id_articulos="208", precio_costo="296",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ERGO TRIM / COLORPRO REC.",
+						descripcion="BATERIA ERGO TRIM/COLORPRO REC",
+						codigo_interno="PRO3-1458-1100"
+    
+id_a: 209
+insert into costos set id_articulos="209", precio_costo="265",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ERGO TRIM / COLORPRO REC.",
+						descripcion="TRANSF ERGO TRIM/COLORPRO REC",
+						codigo_interno="PRO3-1460-1390"
+    
+id_a: 210
+insert into costos set id_articulos="210", precio_costo="613",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="TAPA SUPERIOR FINALE",
+						codigo_interno="PRO3-7315-4061"
+    
+id_a: 211
+insert into costos set id_articulos="211", precio_costo="180",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="CHASIS CARCAZA FINALE",
+						codigo_interno="PRO3-7316-1202"
+    
+id_a: 212
+insert into costos set id_articulos="212", precio_costo="583",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="SOPORTE CABEZAL FINALE",
+						codigo_interno="PRO3-7321-0030"
+    
+id_a: 213
+insert into costos set id_articulos="213", precio_costo="70",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="PALANCA CABEZAL FINALE",
+						codigo_interno="PRO3-7322-0010"
+    
+id_a: 214
+insert into costos set id_articulos="214", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="BOTON CABEZAL FINALE",
+						codigo_interno="PRO3-7323-1001"
+    
+id_a: 215
+insert into costos set id_articulos="215", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="SWITCH FINALE",
+						codigo_interno="PRO3-7324-7010"
+    
+id_a: 216
+insert into costos set id_articulos="216", precio_costo="58",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="ZOCALO PIN FINALE",
+						codigo_interno="PRO3-7326-1001"
+    
+id_a: 217
+insert into costos set id_articulos="217", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="CONTACTO MOTOR FINALE",
+						codigo_interno="PRO3-7331-0010"
+    
+id_a: 218
+insert into costos set id_articulos="218", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="RESORTE CABEZAL FINALE",
+						codigo_interno="PRO3-7332-1001"
+    
+id_a: 219
+insert into costos set id_articulos="219", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="PORTA CABEZAL FINALE",
+						codigo_interno="PRO3-7342-4801"
+    
+id_a: 220
+insert into costos set id_articulos="220", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="PORTA BATERIA FINALE",
+						codigo_interno="PRO3-7611-0000"
+    
+id_a: 221
+insert into costos set id_articulos="221", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="SOPORTE BATERIA FINALE",
+						codigo_interno="PRO3-7612-0000"
+    
+id_a: 222
+insert into costos set id_articulos="222", precio_costo="36",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="BATERIA LITHIUM FINALE",
+						codigo_interno="PRO3-93838-100"
+    
+id_a: 223
+insert into costos set id_articulos="223", precio_costo="809",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="CIRCUITO IMPRESO SWITCH FINALE",
+						codigo_interno="PRO3-95297-000"
+    
+id_a: 224
+insert into costos set id_articulos="224", precio_costo="521",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="CIRCUITO IMP. TERMINAL FINALE",
+						codigo_interno="PRO3-95298-000"
+    
+id_a: 225
+insert into costos set id_articulos="225", precio_costo="432",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="MOTOR FINALE",
+						codigo_interno="PRO3-95305-000"
+    
+id_a: 226
+insert into costos set id_articulos="226", precio_costo="342",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="TORNILLO DE MOTOR FINALE",
+						codigo_interno="PRO3-96423-100"
+    
+id_a: 227
+insert into costos set id_articulos="227", precio_costo="40",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="LEVA DE MOTOR FINALE",
+						codigo_interno="PRO3-97393-001"
+    
+id_a: 228
+insert into costos set id_articulos="228", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="JUNTA CABEZAL FINALE",
+						codigo_interno="PRO3-97394-000"
+    
+id_a: 229
+insert into costos set id_articulos="229", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="TRABA CABEZAL FINALE",
+						codigo_interno="PRO3-97395-000"
+    
+id_a: 230
+insert into costos set id_articulos="230", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="RESORTE TRABA CABEZAL FINALE",
+						codigo_interno="PRO3-97396-000"
+    
+id_a: 231
+insert into costos set id_articulos="231", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE",
+						descripcion="RESORTE CABEZAL FINALE",
+						codigo_interno="PRO3-97398-100"
+    
+id_a: 232
+insert into costos set id_articulos="232", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FINALE / MAGIC CLIP / SENIOR",
+						descripcion="TRANSFORMADOR",
+						codigo_interno="PRO3-97225-002"
+    
+id_a: 233
+insert into costos set id_articulos="233", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FLAIR",
+						descripcion="CARCASA INFERIOR FLAIR  AZUL, ROJO, VIOLETA",
+						codigo_interno="PRO3-8721-6000"
+    
+id_a: 234
+insert into costos set id_articulos="234", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FLAIR",
+						descripcion="SWITCH FLAIR AZUL, ROJO, VIOLETA",
+						codigo_interno="PRO3-8722-6000"
+    
+id_a: 235
+insert into costos set id_articulos="235", precio_costo="54",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FLAIR",
+						descripcion="TAPA SUPERIOR FLAIR AZUL, ROJO, VIOLETA",
+						codigo_interno="PRO3-8730-6600"
+    
+id_a: 236
+insert into costos set id_articulos="236", precio_costo="96",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FLAIR",
+						descripcion="CIRCUITO IMPRESO FLAIR",
+						codigo_interno="PRO3-90600-002"
+    
+id_a: 237
+insert into costos set id_articulos="237", precio_costo="376",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="FLAIR / ALPHA",
+						descripcion="BATERIA ALPHA/FLAIR 1.2 V 1600",
+						codigo_interno="PRO3-93154-101"
+    
+id_a: 238
+insert into costos set id_articulos="238", precio_costo="306",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GENIO   ",
+						descripcion="BASTIDOR PLAS CUCH GENIO",
+						codigo_interno="PRO3-1450-7370"
+    
+id_a: 239
+insert into costos set id_articulos="239", precio_costo="169",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GENIO PLUS / POWER + / ARCO",
+						descripcion="BATERIA GENIO PLUS/ARCO/POWER+",
+						codigo_interno="PRO3-1854-7988"
+    
+id_a: 240
+insert into costos set id_articulos="240", precio_costo="785",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="RESORTE GROOMSMAN AMERICANA",
+						codigo_interno="PUB3-1547-0000"
+    
+id_a: 241
+insert into costos set id_articulos="241", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="SUPLEMENTO  CUCHILLA GROOMSMAN",
+						codigo_interno="PUB3-8907-1000"
+    
+id_a: 242
+insert into costos set id_articulos="242", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="SUPLEMENTO LEVA MOTOR GROOMS",
+						codigo_interno="PUB3-8910-0000"
+    
+id_a: 243
+insert into costos set id_articulos="243", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="TORNILLO CUCHILLA GROOMSMAN",
+						codigo_interno="PUB3-96406-000"
+    
+id_a: 244
+insert into costos set id_articulos="244", precio_costo="12",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="CARCASA INFERIOR GROOMSMAN",
+						codigo_interno="PUB3-9902-1004"
+    
+id_a: 245
+insert into costos set id_articulos="245", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="TAPA BATERIA GROOMSMAN",
+						codigo_interno="PUB3-9903-1001"
+    
+id_a: 246
+insert into costos set id_articulos="246", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="TAPA SUPERIOR GROOMSMAN",
+						codigo_interno="PUB3-9932-8010"
+    
+id_a: 247
+insert into costos set id_articulos="247", precio_costo="66",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="CONTACTO DELANTERO GROOMSMAN",
+						codigo_interno="PUB3-9941-0010"
+    
+id_a: 248
+insert into costos set id_articulos="248", precio_costo="32",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="CONTACTO BATERIA GROOMSMAN",
+						codigo_interno="PUB3-9942-0010"
+    
+id_a: 249
+insert into costos set id_articulos="249", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN (USA)",
+						descripcion="CONTACTO TRASERO GROOMSMAN",
+						codigo_interno="PUB3-9943-0000"
+    
+id_a: 250
+insert into costos set id_articulos="250", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN PRO",
+						descripcion="TRANSFORMADOR GROOMSMAN PRO",
+						codigo_interno="PUB3-9893-0001"
+    
+id_a: 251
+insert into costos set id_articulos="251", precio_costo="307",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN RECARGABLE",
+						descripcion="TRANSFORMADOR GROOMSMAN REC.",
+						codigo_interno="PRO3-9918-6281"
+    
+id_a: 252
+insert into costos set id_articulos="252", precio_costo="432",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN RECARGABLE",
+						descripcion="MOTOR GROOMSMAN RECARGABLE",
+						codigo_interno="PUB3-9918-0001"
+    
+id_a: 253
+insert into costos set id_articulos="253", precio_costo="257",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN RECARGABLE",
+						descripcion="JGO. CARCASAS GROOMS RECARGAB.",
+						codigo_interno="PUB3-9918-0002"
+    
+id_a: 254
+insert into costos set id_articulos="254", precio_costo="172",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN RECARGABLE",
+						descripcion="CTO. IMPRESO GROOM. RECARGABLE",
+						codigo_interno="PUB3-9918-0004"
+    
+id_a: 255
+insert into costos set id_articulos="255", precio_costo="121",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN RECARGABLE",
+						descripcion="MOTOR,CIRCUITO,BATERIA GROO RE",
+						codigo_interno="PUB3-9918-0006"
+    
+id_a: 256
+insert into costos set id_articulos="256", precio_costo="592",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN SPORT",
+						descripcion="TRANSFORMADOR GROOMSMAN SPORT",
+						codigo_interno="PUB3-9953-0001"
+    
+id_a: 257
+insert into costos set id_articulos="257", precio_costo="269",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN SPORT",
+						descripcion="FUNDA DE GOMA GROOMSMAN SPORT",
+						codigo_interno="PUB3-9953-0002"
+    
+id_a: 258
+insert into costos set id_articulos="258", precio_costo="54",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN SPORT",
+						descripcion="TAPA GROOMSMAN SPORT",
+						codigo_interno="PUB3-9953-0003"
+    
+id_a: 259
+insert into costos set id_articulos="259", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="GROOMSMAN SPORT",
+						descripcion="CARCASA GROOMSMAN SPORT",
+						codigo_interno="PUB3-9953-0004"
+    
+id_a: 260
+insert into costos set id_articulos="260", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT 16 & 20 pcs.",
+						descripcion="CARCASA HOMECUT 16 / 20 PCS.",
+						codigo_interno="PUB3-9243-0000"
+    
+id_a: 261
+insert into costos set id_articulos="261", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT 16 & 20 pcs.",
+						descripcion="BOBINA HOMEC BAS, 16 Y 20",
+						codigo_interno="PUB3-9243-0009"
+    
+id_a: 262
+insert into costos set id_articulos="262", precio_costo="127",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT 16 & 20 pcs.",
+						descripcion="BRAZO BOBINA HOMECUT16 Y 20",
+						codigo_interno="PUB3-9243-0010"
+    
+id_a: 263
+insert into costos set id_articulos="263", precio_costo="43",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT 16 pcs.",
+						descripcion="TAPA HOMECUT 16 PCS.",
+						codigo_interno="PUB3-9243-0016"
+    
+id_a: 264
+insert into costos set id_articulos="264", precio_costo="80",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT 20 pcs.",
+						descripcion="TAPA HOMECUT 20 PCS.",
+						codigo_interno="PUB3-9243-0020"
+    
+id_a: 265
+insert into costos set id_articulos="265", precio_costo="80",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT BASIC",
+						descripcion="TAPA SUPERIOR HOMEPRO BASIC",
+						codigo_interno="PUB3-9155-0050"
+    
+id_a: 266
+insert into costos set id_articulos="266", precio_costo="70",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT BASIC",
+						descripcion="CARCASA HOMEPRO BASIC",
+						codigo_interno="PUB3-9155-0090"
+    
+id_a: 267
+insert into costos set id_articulos="267", precio_costo="79",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="HOMECUT BASIC",
+						descripcion="INSERTO TAPA HOMECUT BASIC",
+						codigo_interno="PUB3-9155-5900"
+    
+id_a: 268
+insert into costos set id_articulos="268", precio_costo="40",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 5",
+						descripcion="MOTOR KM 5",
+						codigo_interno="VET3-1250-7070"
+    
+id_a: 269
+insert into costos set id_articulos="269", precio_costo="2",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 5",
+						descripcion="CIRCUITO IMPRESO KM 5",
+						codigo_interno="VET3-1260-7020"
+    
+id_a: 270
+insert into costos set id_articulos="270", precio_costo="538",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="LEVA MOTOR KM10",
+						codigo_interno="VET3-1250-7000"
+    
+id_a: 271
+insert into costos set id_articulos="271", precio_costo="170",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="SOPORTE TRASERO KM 10",
+						codigo_interno="VET3-1250-7080"
+    
+id_a: 272
+insert into costos set id_articulos="272", precio_costo="78",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="BOTON TRABA CUCHILLA KM 10",
+						codigo_interno="VET3-1260-7010"
+    
+id_a: 273
+insert into costos set id_articulos="273", precio_costo="151",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="SOPORTE MOTOR KM 10",
+						codigo_interno="VET3-1261-7010"
+    
+id_a: 274
+insert into costos set id_articulos="274", precio_costo="198",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="MOTOR KM 10",
+						codigo_interno="VET3-1261-7020"
+    
+id_a: 275
+insert into costos set id_articulos="275", precio_costo="3",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="CIRCUITO IMPRESO KM 10",
+						codigo_interno="VET3-1261-7131"
+    
+id_a: 276
+insert into costos set id_articulos="276", precio_costo="899",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="CABLE KM 10",
+						codigo_interno="VET3-1261-7200"
+    
+id_a: 277
+insert into costos set id_articulos="277", precio_costo="198",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10",
+						descripcion="JGO. CARCASAS KM10 TURQUESA",
+						codigo_interno="VET3-1261-7210"
+    
+id_a: 278
+insert into costos set id_articulos="278", precio_costo="989",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10 / KM5",
+						descripcion="CABLE CON TRANSFORMADOR  KM 10",
+						codigo_interno="VET3-1260-7210"
+    
+id_a: 279
+insert into costos set id_articulos="279", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="KM 10 / KM 5",
+						descripcion="TORNILLOS CARCASA KM10",
+						codigo_interno="VET3-1250-7020"
+    
+id_a: 280
+insert into costos set id_articulos="280", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO  BASTIDOR  DE CUCHILLA",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 281
+insert into costos set id_articulos="281", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO TAPA",
+						codigo_interno="PRO3-495-2000"
+    
+id_a: 282
+insert into costos set id_articulos="282", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO CUCHILLA",
+						codigo_interno="PRO3-508-30000"
+    
+id_a: 283
+insert into costos set id_articulos="283", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO PALANCA CUCHILLA",
+						codigo_interno="PRO3-512-10000"
+    
+id_a: 284
+insert into costos set id_articulos="284", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="SWITCH SUPER TAPER - W400",
+						codigo_interno="PRO3-8108-0010"
+    
+id_a: 285
+insert into costos set id_articulos="285", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="CARCASA INFERIOR",
+						codigo_interno="PRO3-8404-1000"
+    
+id_a: 286
+insert into costos set id_articulos="286", precio_costo="281",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="BOBINA SHUNT LEGEND, UCLIP",
+						codigo_interno="PRO3-8859-3300"
+    
+id_a: 287
+insert into costos set id_articulos="287", precio_costo="493",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TAPA LEGEND",
+						codigo_interno="PRO3-89605-310"
+    
+id_a: 288
+insert into costos set id_articulos="288", precio_costo="476",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="BASTIDOR METALICO LEGEND",
+						codigo_interno="PRO3-9214-6000"
+    
+id_a: 289
+insert into costos set id_articulos="289", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="ALMOHADILLA CUCHILLA",
+						codigo_interno="PRO3-94104-400"
+    
+id_a: 290
+insert into costos set id_articulos="290", precio_costo="36",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO SWITCH",
+						codigo_interno="PUB3-491-00100"
+    
+id_a: 291
+insert into costos set id_articulos="291", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO DE BOBINA",
+						codigo_interno="PUB3-503-00000"
+    
+id_a: 292
+insert into costos set id_articulos="292", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 293
+insert into costos set id_articulos="293", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO INTERNO DE REGULACIÓN",
+						codigo_interno="VET3-1177-2000"
+    
+id_a: 294
+insert into costos set id_articulos="294", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="RESORT BOBINA ",
+						codigo_interno="VET3-1177-3000"
+    
+id_a: 295
+insert into costos set id_articulos="295", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="TORNILLO BRAZO BOBINA",
+						codigo_interno="VET3-1567-2010"
+    
+id_a: 296
+insert into costos set id_articulos="296", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="PALANCA CUCHILLA",
+						codigo_interno="VET3-8227-1001"
+    
+id_a: 297
+insert into costos set id_articulos="297", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND",
+						descripcion="BASTIDOR PLASTICO",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 298
+insert into costos set id_articulos="298", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="LEGEND / MAGIC CLIP",
+						descripcion="BRAZO SHUNT",
+						codigo_interno="PRO3-8505-2010"
+    
+id_a: 299
+insert into costos set id_articulos="299", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO  BASTIDOR  DE CUCHILLA",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 300
+insert into costos set id_articulos="300", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO TAPA",
+						codigo_interno="PRO3-495-2000"
+    
+id_a: 301
+insert into costos set id_articulos="301", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO CUCHILLA",
+						codigo_interno="PRO3-508-30000"
+    
+id_a: 302
+insert into costos set id_articulos="302", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO PALANCA CUCHILLA",
+						codigo_interno="PRO3-512-10000"
+    
+id_a: 303
+insert into costos set id_articulos="303", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="SWITCH SUPER TAPER - W400",
+						codigo_interno="PRO3-8108-0010"
+    
+id_a: 304
+insert into costos set id_articulos="304", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="CARCASA INFERIOR",
+						codigo_interno="PRO3-8404-1000"
+    
+id_a: 305
+insert into costos set id_articulos="305", precio_costo="281",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="BOBINA SHUNT ",
+						codigo_interno="PRO3-8424-0000"
+    
+id_a: 306
+insert into costos set id_articulos="306", precio_costo="418",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TAPA MAGIC CLIP C/CABLE",
+						codigo_interno="PRO3-9122-1181K"
+    
+id_a: 307
+insert into costos set id_articulos="307", precio_costo="432",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="BASTIDOR METALICO",
+						codigo_interno="PRO3-9214-400K"
+    
+id_a: 308
+insert into costos set id_articulos="308", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="ALMOHADILLA CUCHILLA",
+						codigo_interno="PRO3-94104-400"
+    
+id_a: 309
+insert into costos set id_articulos="309", precio_costo="36",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO SWITCH",
+						codigo_interno="PUB3-491-00100"
+    
+id_a: 310
+insert into costos set id_articulos="310", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO DE BOBINA",
+						codigo_interno="PUB3-503-00000"
+    
+id_a: 311
+insert into costos set id_articulos="311", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 312
+insert into costos set id_articulos="312", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="RESORT BOBINA ",
+						codigo_interno="VET3-1177-3000"
+    
+id_a: 313
+insert into costos set id_articulos="313", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="TORNILLO BRAZO BOBINA",
+						codigo_interno="VET3-1567-2010"
+    
+id_a: 314
+insert into costos set id_articulos="314", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="PALANCA CUCHILLA",
+						codigo_interno="VET3-8227-1001"
+    
+id_a: 315
+insert into costos set id_articulos="315", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP",
+						descripcion="BASTIDOR PLASTICO",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 316
+insert into costos set id_articulos="316", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP / FINALE / SENIOR",
+						descripcion="TRANSFORMADOR",
+						codigo_interno="PRO3-97225-002"
+    
+id_a: 317
+insert into costos set id_articulos="317", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP / LEGEND",
+						descripcion="BRAZO SHUNT",
+						codigo_interno="PRO3-8505-2010"
+    
+id_a: 318
+insert into costos set id_articulos="318", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="CUBIERTA SUP. MOTOR M.CLIP",
+						codigo_interno="PRO3-8844-0000"
+    
+id_a: 319
+insert into costos set id_articulos="319", precio_costo="48",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="MOTOR MAGIC CLIP C/C  SIN LEVA",
+						codigo_interno="PRO3-95368-300"
+    
+id_a: 320
+insert into costos set id_articulos="320", precio_costo="624",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="TORNILLO TAPA MAGIC CLIP C/C",
+						codigo_interno="PRO3-495-6000"
+    
+id_a: 321
+insert into costos set id_articulos="321", precio_costo="19",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="PALANCA CUCHI. M.CLIP C/C",
+						codigo_interno="PRO3-8225-0000"
+    
+id_a: 322
+insert into costos set id_articulos="322", precio_costo="36",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="LED DE CARGA M.CLIP C/C",
+						codigo_interno="PRO3-8651-2000"
+    
+id_a: 323
+insert into costos set id_articulos="323", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="MOTOR MAGIC CLIP C/C",
+						codigo_interno="PRO3-8723-100R"
+    
+id_a: 324
+insert into costos set id_articulos="324", precio_costo="583",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="CARCASA MAGIC CLIP C/C",
+						codigo_interno="PRO3-8835-2001"
+    
+id_a: 325
+insert into costos set id_articulos="325", precio_costo="296",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="GUIA LEVA MAGIC CLIP C/C",
+						codigo_interno="PRO3-8846-0000"
+    
+id_a: 326
+insert into costos set id_articulos="326", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="GUIA PLAST CUCH. SENIOR  C/C",
+						codigo_interno="PRO3-8846-1000"
+    
+id_a: 327
+insert into costos set id_articulos="327", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="GUIA CUCHI. MAGIC CLIP C/C",
+						codigo_interno="PRO3-8848-0000"
+    
+id_a: 328
+insert into costos set id_articulos="328", precio_costo="32",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="CUBIERTA SUP. MOTOR M.CLIP C/C",
+						codigo_interno="PRO3-8851-0000"
+    
+id_a: 329
+insert into costos set id_articulos="329", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="TAPA BORDEAUX M.CLIP C/C",
+						codigo_interno="PRO3-8861-1610"
+    
+id_a: 330
+insert into costos set id_articulos="330", precio_costo="216",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="INSERTO TAPA  M.CLIP C/C",
+						codigo_interno="PRO3-8862-1710"
+    
+id_a: 331
+insert into costos set id_articulos="331", precio_costo="220",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="BASTIDOR METALICO",
+						codigo_interno="PRO3-9214-400K"
+    
+id_a: 332
+insert into costos set id_articulos="332", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="BATERIA BERETTO/MAGIC/SENIOR",
+						codigo_interno="PRO3-93837-000"
+    
+id_a: 333
+insert into costos set id_articulos="333", precio_costo="737",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="TOR. PALANCA CUCHI. M.CLIP C/C",
+						codigo_interno="PRO3-96292-000"
+    
+id_a: 334
+insert into costos set id_articulos="334", precio_costo="35",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE",
+						descripcion="RESORTE GUIA CUCH. M.CLIP C/C",
+						codigo_interno="PRO3-96833-000"
+    
+id_a: 335
+insert into costos set id_articulos="335", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAGIC CLIP RECARGABLE / SENIOR",
+						descripcion="CIRCUITO IMPRESO SENIOR C/C",
+						codigo_interno="PRO3-90302-001"
+    
+id_a: 336
+insert into costos set id_articulos="336", precio_costo="674",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="SOPORTE TRASERO MAX 45 (7915)",
+						codigo_interno="VET3-1245-1040"
+    
+id_a: 337
+insert into costos set id_articulos="337", precio_costo="66",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="TAPA SUPERIOR MAX 45",
+						codigo_interno="VET3-1245-7000"
+    
+id_a: 338
+insert into costos set id_articulos="338", precio_costo="245",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="CARCASA INFERIOR MAX 45",
+						codigo_interno="VET3-1245-7010"
+    
+id_a: 339
+insert into costos set id_articulos="339", precio_costo="420",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="TRABA CUCHILLA MAX 45",
+						codigo_interno="VET3-1245-7020"
+    
+id_a: 340
+insert into costos set id_articulos="340", precio_costo="66",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="SUJETA CUCHILLA MAX 45",
+						codigo_interno="VET3-1245-7030"
+    
+id_a: 341
+insert into costos set id_articulos="341", precio_costo="263",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="LEVA MOTOR MAX 45 -BLANCAS",
+						codigo_interno="VET3-1245-7040"
+    
+id_a: 342
+insert into costos set id_articulos="342", precio_costo="86",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="ENGRANAJE MAX 45",
+						codigo_interno="VET3-1245-7050"
+    
+id_a: 343
+insert into costos set id_articulos="343", precio_costo="460",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="CIRCUITO IMPRESO MAX 45",
+						codigo_interno="VET3-1245-7070"
+    
+id_a: 344
+insert into costos set id_articulos="344", precio_costo="815",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="MOTOR MAX 45 (1245-7060)",
+						codigo_interno="VET3-1245-7160"
+    
+id_a: 345
+insert into costos set id_articulos="345", precio_costo="983",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="SWITCH MAX 45",
+						codigo_interno="VET3-1245-7220"
+    
+id_a: 346
+insert into costos set id_articulos="346", precio_costo="116",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="ARANDELA MAX 45",
+						codigo_interno="VET3-1245-7430"
+    
+id_a: 347
+insert into costos set id_articulos="347", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="GUIA Y RESORTE DE CUCHILLA",
+						codigo_interno="VET3-1245-7680"
+    
+id_a: 348
+insert into costos set id_articulos="348", precio_costo="402",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="FILTRO TRASERO MAX 45",
+						codigo_interno="VET3-1245-7905"
+    
+id_a: 349
+insert into costos set id_articulos="349", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="CABLE MAX 45",
+						codigo_interno="VET3-1245-7970"
+    
+id_a: 350
+insert into costos set id_articulos="350", precio_costo="366",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="TORNILLOS DEL CABLE - MAX 45",
+						codigo_interno="VET3-1247-7940"
+    
+id_a: 351
+insert into costos set id_articulos="351", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="TORNILLOS CARCASA  MAX 45",
+						codigo_interno="VET3-1247-7945"
+    
+id_a: 352
+insert into costos set id_articulos="352", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MAX 45",
+						descripcion="CAPUCHON LEVA MAX 45",
+						codigo_interno="VET3-1291-7050"
+    
+id_a: 353
+insert into costos set id_articulos="353", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MEN´S METHOD",
+						descripcion="TAPA MEN´S METHOD",
+						codigo_interno="PRO3-9122-3901"
+    
+id_a: 354
+insert into costos set id_articulos="354", precio_costo="450",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1225",
+						descripcion="PLACA SUJETA CUCHILLA M.1225",
+						codigo_interno="VET3-1221-7080"
+    
+id_a: 355
+insert into costos set id_articulos="355", precio_costo="322",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1225",
+						descripcion="SWITCH MOSER 1225",
+						codigo_interno="VET3-1221-7350"
+    
+id_a: 356
+insert into costos set id_articulos="356", precio_costo="180",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1225",
+						descripcion="SUJETA CUCHILLA MOSER 1225",
+						codigo_interno="VET3-1225-7040"
+    
+id_a: 357
+insert into costos set id_articulos="357", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1225",
+						descripcion="LEVA MOTOR MOSER 1225",
+						codigo_interno="VET3-1225-7050"
+    
+id_a: 358
+insert into costos set id_articulos="358", precio_costo="143",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="ABRAZADERA CABLE MOSER 1400",
+						codigo_interno="PRO3-1400-7945"
+    
+id_a: 359
+insert into costos set id_articulos="359", precio_costo="19",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="RESORTE Y TOR.DE REG.MOSER1400",
+						codigo_interno="PRO3-1403-7040"
+    
+id_a: 360
+insert into costos set id_articulos="360", precio_costo="18",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="BASTIDOR METALICO MOSER 1400",
+						codigo_interno="PRO3-1403-7050"
+    
+id_a: 361
+insert into costos set id_articulos="361", precio_costo="85",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="INSERTO - MOSER 1400",
+						codigo_interno="PRO3-1403-7060"
+    
+id_a: 362
+insert into costos set id_articulos="362", precio_costo="11",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="BASTIDOR NEGRO - MOSER 1400",
+						codigo_interno="PRO3-1403-7090"
+    
+id_a: 363
+insert into costos set id_articulos="363", precio_costo="86",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="CABLE MOSER 1400",
+						codigo_interno="PRO3-1403-7255"
+    
+id_a: 364
+insert into costos set id_articulos="364", precio_costo="212",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="BOBINA MOSER 1400 (NUEVA)",
+						codigo_interno="PRO3-1406-7010"
+    
+id_a: 365
+insert into costos set id_articulos="365", precio_costo="493",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="BRAZO DE BOBINA  MOSER 1400",
+						codigo_interno="PRO3-1406-7020"
+    
+id_a: 366
+insert into costos set id_articulos="366", precio_costo="226",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="TORNILLO REGULACION MOSER 1400",
+						codigo_interno="PRO3-1406-7060"
+    
+id_a: 367
+insert into costos set id_articulos="367", precio_costo="52",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="JGO. CARCASAS MOSER 1400 GRIS/",
+						codigo_interno="PRO3-1406-7100"
+    
+id_a: 368
+insert into costos set id_articulos="368", precio_costo="361",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="MOSER 1400",
+						descripcion="SWITCH MOSER 1400",
+						codigo_interno="PRO3-1406-7590"
+    
+id_a: 369
+insert into costos set id_articulos="369", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="TAPA SUPERIOR OMEGA",
+						codigo_interno="PRO3-88100-101"
+    
+id_a: 370
+insert into costos set id_articulos="370", precio_costo="372",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="CARCASA INFERIOR OMEGA",
+						codigo_interno="PRO3-88150-100"
+    
+id_a: 371
+insert into costos set id_articulos="371", precio_costo="198",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="SWITCH OMEGA",
+						codigo_interno="PRO3-88170-000"
+    
+id_a: 372
+insert into costos set id_articulos="372", precio_costo="66",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="GUIA DE CUCHILLA OMEGA",
+						codigo_interno="PRO3-88180-000"
+    
+id_a: 373
+insert into costos set id_articulos="373", precio_costo="50",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="BASTIDOR DE CUCHILLA OMEGA",
+						codigo_interno="PRO3-88190-001"
+    
+id_a: 374
+insert into costos set id_articulos="374", precio_costo="50",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="CONTACTO TRASERO DEL MOTOR",
+						codigo_interno="PRO3-8919-0000"
+    
+id_a: 375
+insert into costos set id_articulos="375", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="BASE CARGADOR OMEGA",
+						codigo_interno="PRO3-8979-0000"
+    
+id_a: 376
+insert into costos set id_articulos="376", precio_costo="288",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="CIRCUITO IMPRESO OMEGA",
+						codigo_interno="PRO3-90618-100"
+    
+id_a: 377
+insert into costos set id_articulos="377", precio_costo="460",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="LEVA DE MOTOR OMEGA",
+						codigo_interno="PRO3-93176-200"
+    
+id_a: 378
+insert into costos set id_articulos="378", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="ARANDELA DELANTERA MOTOR OMEGA",
+						codigo_interno="PRO3-95379-100"
+    
+id_a: 379
+insert into costos set id_articulos="379", precio_costo="12",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="OMEGA",
+						descripcion="RESORTE DE TENSION DE CUCHILLA",
+						codigo_interno="PRO3-96494-000"
+    
+id_a: 380
+insert into costos set id_articulos="380", precio_costo="102",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="PEANUT",
+						descripcion="TORNILLO CARCASA PEANUT",
+						codigo_interno="PRO3-433-00000"
+    
+id_a: 381
+insert into costos set id_articulos="381", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="PEANUT",
+						descripcion="TAPA PEANUT BLANCA",
+						codigo_interno="PRO3-88101-160"
+    
+id_a: 382
+insert into costos set id_articulos="382", precio_costo="136",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="PEANUT",
+						descripcion="CARCASA PEANUT BLANCA",
+						codigo_interno="PRO3-88151-200"
+    
+id_a: 383
+insert into costos set id_articulos="383", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="PEANUT",
+						descripcion="PLAQUETA COMPLETA PEANUT",
+						codigo_interno="PRO3-93594-102"
+    
+id_a: 384
+insert into costos set id_articulos="384", precio_costo="288",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="CARCASA INFERIOR POEME",
+						codigo_interno="PRO3-8905-2000"
+    
+id_a: 385
+insert into costos set id_articulos="385", precio_costo="94",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="GUIA DE CUCHILLA POEME",
+						codigo_interno="PRO3-8916-0000"
+    
+id_a: 386
+insert into costos set id_articulos="386", precio_costo="46",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="TAPA TRASERA POEME",
+						codigo_interno="PRO3-8917-0010"
+    
+id_a: 387
+insert into costos set id_articulos="387", precio_costo="54",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="SWITCH POEME",
+						codigo_interno="PRO3-8918-2000"
+    
+id_a: 388
+insert into costos set id_articulos="388", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="TAPA SUPERIOR POEME",
+						codigo_interno="PRO3-8929-3620"
+    
+id_a: 389
+insert into costos set id_articulos="389", precio_costo="217",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="BATERIA POEME",
+						codigo_interno="PRO3-93156-100"
+    
+id_a: 390
+insert into costos set id_articulos="390", precio_costo="278",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="LEVA DE MOTOR POEME",
+						codigo_interno="PRO3-93173-001"
+    
+id_a: 391
+insert into costos set id_articulos="391", precio_costo="133",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="TORNILLO CUCHILLA BERET/ POEME",
+						codigo_interno="PRO3-96406-201"
+    
+id_a: 392
+insert into costos set id_articulos="392", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="POEME",
+						descripcion="RESORTE CUCHILLA BERET/POEME",
+						codigo_interno="PRO3-96492-000"
+    
+id_a: 393
+insert into costos set id_articulos="393", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="QUICK CUT",
+						descripcion="BOBINA Y BRAZO QUICK CUT",
+						codigo_interno="PUB3-9314-0001"
+    
+id_a: 394
+insert into costos set id_articulos="394", precio_costo="192",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="RINSEABLE",
+						descripcion="TRANSFORMADOR RINSEABLE",
+						codigo_interno="PUB3-9639-0001"
+    
+id_a: 395
+insert into costos set id_articulos="395", precio_costo="416",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="RINSEABLE",
+						descripcion="JUEGO DE CARCASAS RINSEABLE",
+						codigo_interno="PUB3-9639-0005"
+    
+id_a: 396
+insert into costos set id_articulos="396", precio_costo="163",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="RINSEABLE",
+						descripcion="CIRCUITO,MOTOR,  BAT RINSEABLE",
+						codigo_interno="PUB3-9639-0006"
+    
+id_a: 397
+insert into costos set id_articulos="397", precio_costo="413",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR / MAGIC CLIP / FINALE ",
+						descripcion="TRANSFORMADOR",
+						codigo_interno="PRO3-97225-002"
+    
+id_a: 398
+insert into costos set id_articulos="398", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="ALMOHADILLA MOTOR SENIOR C/C",
+						codigo_interno="PRO3-30417-000"
+    
+id_a: 399
+insert into costos set id_articulos="399", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="TORNILLO CARCASA SENIOR C/C",
+						codigo_interno="PRO3-494-00100"
+    
+id_a: 400
+insert into costos set id_articulos="400", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="MOTOR SENIOR C/C",
+						codigo_interno="PRO3-8723-2701"
+    
+id_a: 401
+insert into costos set id_articulos="401", precio_costo="674",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="CUERPO INFERIOR SENIOR",
+						codigo_interno="PRO3-8838-1102"
+    
+id_a: 402
+insert into costos set id_articulos="402", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="CUBIERTA INF. MOTOR SENIOR",
+						codigo_interno="PRO3-8844-1000"
+    
+id_a: 403
+insert into costos set id_articulos="403", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="GUIA LEVA SENIOR C/C",
+						codigo_interno="PRO3-8846-1000"
+    
+id_a: 404
+insert into costos set id_articulos="404", precio_costo="71",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="TAPA SENIOR C/C",
+						codigo_interno="PRO3-89607-060"
+    
+id_a: 405
+insert into costos set id_articulos="405", precio_costo="450",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="BATERIA BERETTO/MAGIC/SENIOR",
+						codigo_interno="PRO3-93837-000"
+    
+id_a: 406
+insert into costos set id_articulos="406", precio_costo="737",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C",
+						descripcion="RESORTE GUIA CUCH.MAGIC/SENIOR",
+						codigo_interno="PRO3-96833-000"
+    
+id_a: 407
+insert into costos set id_articulos="407", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SENIOR C/C / MAGIC CLIP CC",
+						descripcion="CIRCUITO IMPRESO SENIOR C/C",
+						codigo_interno="PRO3-90302-001"
+    
+id_a: 408
+insert into costos set id_articulos="408", precio_costo="674",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="CONTACTO DEL SWITCH SIGMA",
+						codigo_interno="PRO3-7329-1000"
+    
+id_a: 409
+insert into costos set id_articulos="409", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="BASTIDOR DE CUCHILLA SIGMA",
+						codigo_interno="PRO3-8079-1003"
+    
+id_a: 410
+insert into costos set id_articulos="410", precio_costo="32",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="MOTOR SIGMA CON LEVA",
+						codigo_interno="PRO3-8623-0000"
+    
+id_a: 411
+insert into costos set id_articulos="411", precio_costo="402",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="TAPA SUPERIOR SIGMA",
+						codigo_interno="PRO3-8669-2600"
+    
+id_a: 412
+insert into costos set id_articulos="412", precio_costo="187",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="ANILLO PLASTICO SIGMA",
+						codigo_interno="PRO3-8674-1000"
+    
+id_a: 413
+insert into costos set id_articulos="413", precio_costo="19",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="CARCASA INFERIOR SIGMA",
+						codigo_interno="PRO3-8677-2000"
+    
+id_a: 414
+insert into costos set id_articulos="414", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="SWITCH SIGMA",
+						codigo_interno="PRO3-8679-0000"
+    
+id_a: 415
+insert into costos set id_articulos="415", precio_costo="58",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="LEVA DE MOTOR SIGMA",
+						codigo_interno="PRO3-93176-000"
+    
+id_a: 416
+insert into costos set id_articulos="416", precio_costo="180",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="CIRCUITO IMPRESO SIGMA",
+						codigo_interno="PRO3-93594-504"
+    
+id_a: 417
+insert into costos set id_articulos="417", precio_costo="343",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="RESORTE TENSION CUCHI. SIGMA",
+						codigo_interno="PRO3-96485-002"
+    
+id_a: 418
+insert into costos set id_articulos="418", precio_costo="89",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="MOTOR SIGMA / PEANUT - SIN LEVA",
+						codigo_interno="PRO3-96701-000"
+    
+id_a: 419
+insert into costos set id_articulos="419", precio_costo="432",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SIGMA",
+						descripcion="TRANSFORMADOR SIGMA/DET/PEA",
+						codigo_interno="PRO3-97615-005"
+    
+id_a: 420
+insert into costos set id_articulos="420", precio_costo="1",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="TOR BAST DE CUCHI Y CORTO STER",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 421
+insert into costos set id_articulos="421", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="BATERIA STERLING/ANNIVERSARY",
+						codigo_interno="PRO3-745-20000"
+    
+id_a: 422
+insert into costos set id_articulos="422", precio_costo="360",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="GUIA PLAST.CUC. STERLING/SIGMA",
+						codigo_interno="PRO3-8011-0010"
+    
+id_a: 423
+insert into costos set id_articulos="423", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="PORTA DEDO STERLING",
+						codigo_interno="PRO3-8038-3000"
+    
+id_a: 424
+insert into costos set id_articulos="424", precio_costo="58",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="BASTIDOR PLASTICO STERLING",
+						codigo_interno="PRO3-8079-1020"
+    
+id_a: 425
+insert into costos set id_articulos="425", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="BASE CARGADOR STERLING",
+						codigo_interno="PRO3-8082-1920"
+    
+id_a: 426
+insert into costos set id_articulos="426", precio_costo="79",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="CUERPO CARGADOR STERLING",
+						codigo_interno="PRO3-8091-0000"
+    
+id_a: 427
+insert into costos set id_articulos="427", precio_costo="360",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="TAPA SUPERIOR STERLING",
+						codigo_interno="PRO3-8093-1840"
+    
+id_a: 428
+insert into costos set id_articulos="428", precio_costo="236",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="CARCASA INFERIOR STERLING",
+						codigo_interno="PRO3-8094-1550"
+    
+id_a: 429
+insert into costos set id_articulos="429", precio_costo="295",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="CIRCUITO IMPR CARG. STERLING",
+						codigo_interno="PRO3-90591-101"
+    
+id_a: 430
+insert into costos set id_articulos="430", precio_costo="932",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="CONTACTO POSITIVO STERLING",
+						codigo_interno="PRO3-93791-000"
+    
+id_a: 431
+insert into costos set id_articulos="431", precio_costo="97",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="CONTACTO NEGATIVO STERLING",
+						codigo_interno="PRO3-93792-000"
+    
+id_a: 432
+insert into costos set id_articulos="432", precio_costo="97",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="ARANDELA CUCHILLA STERLING",
+						codigo_interno="PRO3-96331-000"
+    
+id_a: 433
+insert into costos set id_articulos="433", precio_costo="8",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="STERLING",
+						descripcion="RESORTE TENSION CUCHI.STERLING",
+						codigo_interno="PRO3-96485-000"
+    
+id_a: 434
+insert into costos set id_articulos="434", precio_costo="89",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TOR BAST DE CUCHI Y CORTO STER",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 435
+insert into costos set id_articulos="435", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TOR TAPA S TAPER/BERET/BERETTO",
+						codigo_interno="PRO3-495-2000"
+    
+id_a: 436
+insert into costos set id_articulos="436", precio_costo="24",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TORNILLO PALANCA CUCH SUPER TA",
+						codigo_interno="PRO3-512-10000"
+    
+id_a: 437
+insert into costos set id_articulos="437", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="RESORTE BOBINA SUPER TAPER",
+						codigo_interno="PRO3-520-00000"
+    
+id_a: 438
+insert into costos set id_articulos="438", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="SWITCH SUPER TAPER - W400",
+						codigo_interno="PRO3-8108-0010"
+    
+id_a: 439
+insert into costos set id_articulos="439", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="CARCASA INF.  SUPER TAPER 8442",
+						codigo_interno="PRO3-8404-1000"
+    
+id_a: 440
+insert into costos set id_articulos="440", precio_costo="281",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BOBINA SHUNT SUPER TAPER",
+						codigo_interno="PRO3-8424-0000"
+    
+id_a: 441
+insert into costos set id_articulos="441", precio_costo="418",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TAPA  SUPER TAPER (89600-211)",
+						codigo_interno="PRO3-8432-7620"
+    
+id_a: 442
+insert into costos set id_articulos="442", precio_costo="190",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BRAZO BOBINA S TAPER/ COLORPRO",
+						codigo_interno="PRO3-8505-2000"
+    
+id_a: 443
+insert into costos set id_articulos="443", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BRAZO BOBINA SHUNT ",
+						codigo_interno="PRO3-8505-2010"
+    
+id_a: 444
+insert into costos set id_articulos="444", precio_costo="330",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BRAZO SHUNT SUPER TAPER",
+						codigo_interno="PRO3-8857K-000"
+    
+id_a: 445
+insert into costos set id_articulos="445", precio_costo="144",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BASTIDOR MET.CUCH STAPER/W400",
+						codigo_interno="PRO3-9214-0000"
+    
+id_a: 446
+insert into costos set id_articulos="446", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="CABLE C/ENCH Y SUJ. C SUPER T.",
+						codigo_interno="PRO3-93810-001"
+    
+id_a: 447
+insert into costos set id_articulos="447", precio_costo="338",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TORNILLO BRAZO DE BOBINA",
+						codigo_interno="PUB3-1567-0000"
+    
+id_a: 448
+insert into costos set id_articulos="448", precio_costo="8",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TORNILLO SWITCH SUPER TAPER",
+						codigo_interno="PUB3-491-00100"
+    
+id_a: 449
+insert into costos set id_articulos="449", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TORNILLO DE BOBINA",
+						codigo_interno="PUB3-503-00000"
+    
+id_a: 450
+insert into costos set id_articulos="450", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 451
+insert into costos set id_articulos="451", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="PALANCA CUC S TAPER/400/HOMECU",
+						codigo_interno="PUB3-8227-0000"
+    
+id_a: 452
+insert into costos set id_articulos="452", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER",
+						descripcion="BASTIDOR PLASTICO",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 453
+insert into costos set id_articulos="453", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER - DRAGON",
+						descripcion="TAPA SUPERIOR DRAGON",
+						codigo_interno="PRO3-89600-3780"
+    
+id_a: 454
+insert into costos set id_articulos="454", precio_costo="404",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="SUPER TAPER - TATTOO",
+						descripcion="TAPA SUPERIOR TATTOO",
+						codigo_interno="PRO3-89600-4340"
+    
+id_a: 455
+insert into costos set id_articulos="455", precio_costo="404",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TORNILLO PALANCA CUCHILLA",
+						codigo_interno="PRO3-512-10000"
+    
+id_a: 456
+insert into costos set id_articulos="456", precio_costo="23",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TORNILLO SWITCH",
+						codigo_interno="PUB3-491-00100"
+    
+id_a: 457
+insert into costos set id_articulos="457", precio_costo="17",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="RESORTE DE REGULACION U CLIP",
+						codigo_interno="VET3-1177-2000"
+    
+id_a: 458
+insert into costos set id_articulos="458", precio_costo="30",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TORNILLO CARCASA  UCLIP ACTUAL",
+						codigo_interno="VET3-495-20000"
+    
+id_a: 459
+insert into costos set id_articulos="459", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TORNILLO CUCHILLA UCLIP ACTUAL",
+						codigo_interno="VET3-508-40000"
+    
+id_a: 460
+insert into costos set id_articulos="460", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="CARCASA UCLIP MOD. ACTUAL",
+						codigo_interno="VET3-87000-333"
+    
+id_a: 461
+insert into costos set id_articulos="461", precio_costo="149",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="BRAZO BOBINA SUPER SHUNT",
+						codigo_interno="VET3-8857-0000"
+    
+id_a: 462
+insert into costos set id_articulos="462", precio_costo="125",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="BRAZO BOBINA UCLIP MOD. ACTUAL",
+						codigo_interno="VET3-8857-0000"
+    
+id_a: 463
+insert into costos set id_articulos="463", precio_costo="125",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="BOBINA SHUNT UCLIP MOD. ACTUAL",
+						codigo_interno="VET3-8859-3300"
+    
+id_a: 464
+insert into costos set id_articulos="464", precio_costo="544",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TAPA AZUL UCLIP MOD. ACTUAL",
+						codigo_interno="VET3-9064-3000"
+    
+id_a: 465
+insert into costos set id_articulos="465", precio_costo="125",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="TAPA NEGRA UCLIP MOD. ACTUAL",
+						codigo_interno="VET3-9065-3600"
+    
+id_a: 466
+insert into costos set id_articulos="466", precio_costo="109",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="BASTIDOR DE CUCHILLA UCLIP ACT",
+						codigo_interno="VET3-9214-0000"
+    
+id_a: 467
+insert into costos set id_articulos="467", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="LAMINA BOBINA U CLIP",
+						codigo_interno="VET3-93139-001"
+    
+id_a: 468
+insert into costos set id_articulos="468", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP",
+						descripcion="CABLE DE BOBINA UCLIP MOD. ACT",
+						codigo_interno="VET3-97699-2000"
+    
+id_a: 469
+insert into costos set id_articulos="469", precio_costo="38",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="RESORT BOBINA UCL/LEG/BAL/MCLI",
+						codigo_interno="VET3-1177-3000"
+    
+id_a: 470
+insert into costos set id_articulos="470", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="TORNILLO BRAZO BOBINA U CLIP",
+						codigo_interno="VET3-1567-2010"
+    
+id_a: 471
+insert into costos set id_articulos="471", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="TORNILLOS CARCASA U CLIP",
+						codigo_interno="VET3-495-10000"
+    
+id_a: 472
+insert into costos set id_articulos="472", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="TORNILLO DE REGULACION U CLIP",
+						codigo_interno="VET3-8117-1000"
+    
+id_a: 473
+insert into costos set id_articulos="473", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="PALANCA DE CUCHILLA U CLIP",
+						codigo_interno="VET3-8227-1001"
+    
+id_a: 474
+insert into costos set id_articulos="474", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="BASTIDOR PLASTICO U CLIP",
+						codigo_interno="VET3-8409-2701"
+    
+id_a: 475
+insert into costos set id_articulos="475", precio_costo="28",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="BOBINA SHUNT U CLIP",
+						codigo_interno="VET3-8424-6000"
+    
+id_a: 476
+insert into costos set id_articulos="476", precio_costo="563",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="TAPA U CLIP (MOD. ANTERIOR)",
+						codigo_interno="VET3-9147-7010"
+    
+id_a: 477
+insert into costos set id_articulos="477", precio_costo="100",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="TAPA COMPL. U CLIP (MOD. ANT)",
+						codigo_interno="VET3-9148-3971"
+    
+id_a: 478
+insert into costos set id_articulos="478", precio_costo="120",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="CARCASA U CLIP (MOD.ANT)",
+						codigo_interno="VET3-9202-3433"
+    
+id_a: 479
+insert into costos set id_articulos="479", precio_costo="224",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="U CLIP (Modelo anterior)",
+						descripcion="CABLE DE BOBINA U CLIP",
+						codigo_interno="VET3-97699-050"
+    
+id_a: 480
+insert into costos set id_articulos="480", precio_costo="42",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="TOR BAST DE CUCHI Y CORTO STER",
+						codigo_interno="PRO3-492-30000"
+    
+id_a: 481
+insert into costos set id_articulos="481", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="SWITCH SUPER TAPER - W400",
+						codigo_interno="PRO3-8108-0010"
+    
+id_a: 482
+insert into costos set id_articulos="482", precio_costo="118",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="BASTIDOR MET.CUCH STAPER/W400",
+						codigo_interno="PRO3-9214-0000"
+    
+id_a: 483
+insert into costos set id_articulos="483", precio_costo="14",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="TORNILLO BRAZO DE BOBINA",
+						codigo_interno="PUB3-1567-0000"
+    
+id_a: 484
+insert into costos set id_articulos="484", precio_costo="8",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="TORNILLO DE BOBINA",
+						codigo_interno="PUB3-503-00000"
+    
+id_a: 485
+insert into costos set id_articulos="485", precio_costo="20",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="BRAZO BOBINA HOMECUT/W400/STUD",
+						codigo_interno="PUB3-8105-0000"
+    
+id_a: 486
+insert into costos set id_articulos="486", precio_costo="245",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="TORNILLO DE REGULACION COMPLE",
+						codigo_interno="PUB3-8117-8115"
+    
+id_a: 487
+insert into costos set id_articulos="487", precio_costo="26",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="PALANCA CUC S TAPER/400/HOMECU",
+						codigo_interno="PUB3-8227-0000"
+    
+id_a: 488
+insert into costos set id_articulos="488", precio_costo="73",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="BOBINA HOMEC/W400/STUD/SUPER V",
+						codigo_interno="PUB3-8522-0000"
+    
+id_a: 489
+insert into costos set id_articulos="489", precio_costo="385",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="TAPA SUPERIOR WAHL 400",
+						codigo_interno="PUB3-9142-7600"
+    
+id_a: 490
+insert into costos set id_articulos="490", precio_costo="74",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="WAHL 400",
+						descripcion="CARCASA INFERIOR HOMECUT/W 400",
+						codigo_interno="PUB3-9225-1000"
+    
+id_a: 491
+insert into costos set id_articulos="491", precio_costo="281",iva="21", margen="200"
+insert into articulos set marca="WHAL", clasificacion="REPUESTOS",
+						subclasificacion="ADICIONALES",
+						descripcion="PROTECTOR PLASTICO CUCHILLA",
+						codigo_interno="PRO3-8019-1000"
+    
+id_a: 492
+insert into costos set id_articulos="492", precio_costo="28",iva="21", margen="200"

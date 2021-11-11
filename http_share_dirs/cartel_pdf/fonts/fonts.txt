@@ -1,0 +1,20 @@
+
+<option value="Courier-Bold.afm">Courier-Bold</option>
+<option value="Courier-BoldOblique.afm">Courier-BoldOblique</option>
+<option value="Courier-Oblique.afm">Courier-Oblique</option>
+<option value="Courier.afm">Courier</option>
+<option value="Helvetica-Bold.afm">Helvetica-Bold</option>
+<option value="Helvetica-BoldOblique.afm"></option>
+<option value="Helvetica-Oblique.afm">Helvetica-Oblique</option>
+<option value="Helvetica.afm">Helvetica</option>
+<option value="php_Courier-Bold.afm">php_Courier-Bold</option>
+<option value="php_Courier-BoldOblique.afm">php_Courier-BoldOblique</option>
+<option value="php_Courier-Oblique.afm">php_Courier-Oblique</option>
+<option value="php_Courier.afm">php_Courier</option>
+<option value="php_Helvetica-Bold.afm">php_Helvetica-Bold</option>
+<option value="php_Helvetica-BoldOblique.afm">php_Helvetica-BoldOblique</option>
+<option value="php_Helvetica-Oblique.afm">php_Helvetica-Oblique</option>
+<option value="php_Helvetica.afm">php_Helvetica</option>
+<option value="php_Symbol.afm">php_Symbol</option>
+<option value="php_a0100131.afm">php_a0100131</option>
+<option value="php_a010013l.afm">php_a010013l</option>

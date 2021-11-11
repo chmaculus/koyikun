@@ -1,0 +1,3 @@
+[05-Jun-2012 22:21:26 UTC] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: Filename cannot be empty in /home/logicagl/public_html/9923fact/articulos/guardar_articulo.php on line 58
+[05-Jun-2012 22:27:40 UTC] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: Filename cannot be empty in /home/logicagl/public_html/9923fact/articulos/guardar_articulo.php on line 58
+[05-Jun-2012 22:52:26 UTC] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: Filename cannot be empty in /home/logicagl/public_html/9923fact/articulos/guardar_articulo.php on line 58

@@ -1,0 +1,11 @@
+./admin_stock_salida_x_venta/fecha_desde_hasta.inc.php
+./includes/fecha_desde_hasta.inc.php
+./nova/megatron_datos_caja/fecha_desde_hasta.inc.php
+./admin_reportes_caja/fecha_desde_hasta.inc.php
+./admin_compras_listado/fecha_desde_hasta.inc.php
+./encargado_pedidos_proveedor/fecha_desde_hasta.inc.php
+./admin_reportes/fecha_desde_hasta.inc.php
+./encargado_pedidos/fecha_desde_hasta.inc.php
+./admin_novedades/fecha_desde_hasta.inc.php
+./admin_promociones/fecha_desde_hasta.inc.php
+./sucursal_pedidos/fecha_desde_hasta.inc.php
