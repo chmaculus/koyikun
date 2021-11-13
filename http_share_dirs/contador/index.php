@@ -21,7 +21,7 @@ $dias=cal_days_in_month(CAL_GREGORIAN, 11, 2021);
 
 
 
-$q='select * from sucursales where suc_reales=1 order by sucursal';
+$q='select sucursal from sucursales where suc_reales=1 order by sucursal';
 $res=mysql_query($q);
 while($row=mysql_fetch_array($res)){
 	$array[]=$row;
@@ -30,10 +30,34 @@ while($row=mysql_fetch_array($res)){
 
 echo '<table border="1">';
 
+$fecha="2021-11-01";
+
+
 foreach($array as $sucursal){
 	echo $sucursal[1]."<br>";
+	echo trae_tarjeta($sucursal[0], $fecha);
+
 }
 
+
+
+#-----------------------------------
+function trae_tarjeta($sucursal, $fecha){
+	$q='select sum(cantidad * precio_unitario) from ventas where scucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="ta"';
+	$total=mysql_result(mysql_query($q),0,0);
+	return $total;	
+}
+#-----------------------------------
+
+
+
+#-----------------------------------
+function trae_debito($sucursal, $fecha){
+	$q='select sum(cantidad * precio_unitario) from ventas where scucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="de"';
+	$total=mysql_result(mysql_query($q),0,0);
+	return $total;	
+}
+#-----------------------------------
 
 
 
