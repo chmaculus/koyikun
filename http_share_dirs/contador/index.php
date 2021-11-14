@@ -28,17 +28,19 @@ while($row=mysql_fetch_array($res)){
 }
 
 
-echo '<table border="1">';
 
 $fecha="2021-11-01";
 
 
+echo '<table border="1">';
+echo '<tr>';
 foreach($array as $sucursal){
-	echo $sucursal[0]."<br>";
-	echo "de:".trae_debito($sucursal[0], $fecha)."<br>";
-	echo "ta:".trae_tarjeta($sucursal[0], $fecha)."<br>";
-
+	//echo $sucursal[0]."<br>";
+	echo "<td>".trae_debito($sucursal[0], $fecha)."</td>";
+	echo "<td>".trae_credito($sucursal[0], $fecha)."</td>";
 }
+echo "</tr>";
+echo '</table>';
 
 
 
