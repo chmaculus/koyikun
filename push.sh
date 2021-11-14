@@ -1,4 +1,4 @@
 git add .
-git commit -a
+git commit -am"`date`"
 git push origin HEAD:main
 
