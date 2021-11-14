@@ -35,7 +35,7 @@ $fecha="2021-11-01";
 
 foreach($array as $sucursal){
 	echo $sucursal[0]."<br>";
-	echo trae_tarjeta($sucursal[0], $fecha);
+	echo trae_tarjeta($sucursal[0], $fecha)."<br>";
 
 }
 
