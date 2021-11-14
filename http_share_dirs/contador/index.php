@@ -39,19 +39,17 @@ echo '<tr>';
 foreach($array as $sucursal){
 	//echo $sucursal[0]."<br>";
 	echo "<td>".$sucursal[0]."</td>";
-	//echo "<table><tr>";
-	//echo "	<td>de</td>";
-	//echo "	<td>ta</td>";
-	//echo "</tr>";
 }
 echo "</tr>";
 
 
 echo '<tr>';
 foreach($array as $sucursal){
-	//echo $sucursal[0]."<br>";
-	echo "<td>".trae_debito($sucursal[0], $fecha)."</td>";
-	echo "<td>".trae_tarjeta($sucursal[0], $fecha)."</td>";
+	echo "<table><tr>";
+	//echo "</tr>";
+	echo "<td>de: ".trae_debito($sucursal[0], $fecha)."</td>";
+	echo "<td>ta: ".trae_tarjeta($sucursal[0], $fecha)."</td>";
+	echo "</tr></table>";
 }
 echo "</tr>";
 
