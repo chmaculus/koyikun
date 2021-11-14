@@ -33,6 +33,18 @@ $fecha="2021-11-01";
 
 
 echo '<table border="1">';
+
+
+echo '<tr>';
+foreach($array as $sucursal){
+	//echo $sucursal[0]."<br>";
+	echo "<td>".$sucursal[0]."</td>";
+	echo "<td>de</td>";
+	echo "<td>ta</td>";
+}
+echo "</tr>";
+
+
 echo '<tr>';
 foreach($array as $sucursal){
 	//echo $sucursal[0]."<br>";
@@ -40,6 +52,8 @@ foreach($array as $sucursal){
 	echo "<td>".trae_tarjeta($sucursal[0], $fecha)."</td>";
 }
 echo "</tr>";
+
+
 echo '</table>';
 
 
