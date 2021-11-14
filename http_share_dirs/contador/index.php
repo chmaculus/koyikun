@@ -43,7 +43,7 @@ foreach($array as $sucursal){
 
 #-----------------------------------
 function trae_tarjeta($sucursal, $fecha){
-	$q='select sum(cantidad * precio_unitario) from ventas where scucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="ta"';
+	$q='select sum(cantidad * precio_unitario) from ventas where sucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="ta"';
 	echo $q."<br>";
 	$total=mysql_result(mysql_query($q),0,0);
 	return $total;	
