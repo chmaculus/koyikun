@@ -55,7 +55,7 @@ function trae_tarjeta($sucursal, $fecha){
 
 #-----------------------------------
 function trae_debito($sucursal, $fecha){
-	$q='select sum(cantidad * precio_unitario) from ventas where scucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="de"';
+	$q='select sum(cantidad * precio_unitario) from ventas where sucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="de"';
 	$total=mysql_result(mysql_query($q),0,0);
 	return $total;	
 }
