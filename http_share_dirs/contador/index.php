@@ -38,11 +38,11 @@ echo '<table border="1">';
 echo '<tr>';
 foreach($array as $sucursal){
 	//echo $sucursal[0]."<br>";
-	echo "<td>".$sucursal[0]."</td>";
+	echo "<td>".$sucursal[0];
 	echo "<table><tr>";
 	echo "	<td>de</td>";
 	echo "	<td>ta</td>";
-	echo "</tr></table>";
+	echo "</tr></table></td>";
 }
 echo "</tr>";
 
