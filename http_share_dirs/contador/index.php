@@ -39,8 +39,10 @@ echo '<tr>';
 foreach($array as $sucursal){
 	//echo $sucursal[0]."<br>";
 	echo "<td>".$sucursal[0]."</td>";
-	echo "<td>de</td>";
-	echo "<td>ta</td>";
+	echo "<table><tr>";
+	echo "	<td>de</td>";
+	echo "	<td>ta</td>";
+	echo "</tr><table>";
 }
 echo "</tr>";
 
@@ -61,7 +63,7 @@ echo '</table>';
 #-----------------------------------
 function trae_tarjeta($sucursal, $fecha){
 	$q='select sum(cantidad * precio_unitario) from ventas where sucursal="'.$sucursal.'" and fecha="'.$fecha.'" and tipo_pago="ta"';
-	echo $q."<br>";
+	//echo $q."<br>";
 	$total=mysql_result(mysql_query($q),0,0);
 	return $total;	
 }
