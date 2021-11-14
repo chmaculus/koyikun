@@ -37,7 +37,7 @@ echo '<tr>';
 foreach($array as $sucursal){
 	//echo $sucursal[0]."<br>";
 	echo "<td>".trae_debito($sucursal[0], $fecha)."</td>";
-	echo "<td>".trae_credito($sucursal[0], $fecha)."</td>";
+	echo "<td>".trae_tarjeta($sucursal[0], $fecha)."</td>";
 }
 echo "</tr>";
 echo '</table>';
