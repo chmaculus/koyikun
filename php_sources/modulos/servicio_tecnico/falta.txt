@@ -1,0 +1,13 @@
+arreglar hora desfasada
+php.ini informacion de depuracion
+
+falta sucursal
+tomar numero de sucursal de cookie
+boton aceptar presupuesto
+boton entregar servicio
+
+pendientes 
+finalizados
+
+codigo servicio no es igual en ingreso de servicio y dato almacenado en tabla
+

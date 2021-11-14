@@ -1,0 +1,1 @@
+no se deben poder poner descuento en articulos en promocion

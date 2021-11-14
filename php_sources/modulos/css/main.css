@@ -1,0 +1,60 @@
+div { 
+	border:0; 
+	border-width: 0;
+}
+
+body { 
+	overflow:auto; 
+	background-position:16px 25%; 
+}
+
+html>body  { 
+	overflow:visible; 
+}
+
+#divbusqueda { 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	width:100%; 
+	height:60%; 
+	overflow:none; 
+	background-color:#CEC; 
+}
+
+#divventa { 
+	position:absolute; 
+	top:60%; 
+	left:0; 
+	width:100%; 
+	height:40%; 
+	overflow:none; 
+	background-color:#666666; 
+}
+
+
+
+.FrameBusqueda {
+	border: 1px #000000 solid;
+	border-width: 1;
+	background-color:#777777;
+	width: 100%;
+	height: 99%;
+  overflow: auto;
+}
+.FrameVenta {
+	border: 1px #000000 solid;
+	border-width: 1;
+	background-color:#ffffff;
+	width: 100%;
+	height: 100%;
+  overflow: auto;
+}
+
+.FrameArriba {
+	border:0; 
+	background-color:#CC99DC;
+	width: 100%;
+	height: 100%;
+  overflow: hidden;
+}

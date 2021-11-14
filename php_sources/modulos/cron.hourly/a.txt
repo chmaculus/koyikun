@@ -1,0 +1,348 @@
+id_articulo: 25517suc: prueba
+insert into pedidos_sucursal_estadistica set id_articulo="25517", id_sucursal="18", mes="", tres="", seis="" 
+id_articulo: 33094suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33094", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 33093suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33093", id_sucursal="4", mes="", tres="4", seis="6" 
+id_articulo: 32152suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32152", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 20876suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="20876", id_sucursal="4", mes="3", tres="6", seis="6" 
+id_articulo: 32149suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32149", id_sucursal="4", mes="4", tres="4", seis="5" 
+id_articulo: 32546suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32546", id_sucursal="4", mes="5", tres="14", seis="16" 
+id_articulo: 25488suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="25488", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 24929suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="24929", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 1234suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="1234", id_sucursal="4", mes="", tres="3", seis="3" 
+id_articulo: 1233suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="1233", id_sucursal="4", mes="5", tres="11", seis="11" 
+id_articulo: 1232suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="1232", id_sucursal="4", mes="1", tres="2", seis="2" 
+id_articulo: 26201suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="26201", id_sucursal="4", mes="2", tres="2", seis="2" 
+id_articulo: 1260suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="1260", id_sucursal="4", mes="", tres="1", seis="1" 
+id_articulo: 33715suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33715", id_sucursal="4", mes="2", tres="3", seis="4" 
+id_articulo: 35650suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="35650", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 20819suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="20819", id_sucursal="4", mes="4", tres="10", seis="15" 
+id_articulo: 32470suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32470", id_sucursal="4", mes="", tres="12", seis="12" 
+id_articulo: 32517suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32517", id_sucursal="4", mes="1", tres="2", seis="3" 
+id_articulo: 32146suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32146", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32513suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32513", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32516suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32516", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32147suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32147", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 15193suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="15193", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 33256suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33256", id_sucursal="4", mes="", tres="3", seis="8" 
+id_articulo: 32507suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32507", id_sucursal="4", mes="", tres="3", seis="4" 
+id_articulo: 25516suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="25516", id_sucursal="4", mes="", tres="10", seis="10" 
+id_articulo: 32503suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32503", id_sucursal="4", mes="1", tres="3", seis="17" 
+id_articulo: 32505suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32505", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 36985suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="36985", id_sucursal="4", mes="", tres="2", seis="2" 
+id_articulo: 15168suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="15168", id_sucursal="4", mes="4", tres="12", seis="29" 
+id_articulo: 22684suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22684", id_sucursal="4", mes="", tres="", seis="3" 
+id_articulo: 20816suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="20816", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32464suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32464", id_sucursal="4", mes="", tres="1", seis="11" 
+id_articulo: 33239suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33239", id_sucursal="4", mes="", tres="1", seis="1" 
+id_articulo: 32562suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32562", id_sucursal="4", mes="", tres="2", seis="10" 
+id_articulo: 31099suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="31099", id_sucursal="4", mes="", tres="4", seis="9" 
+id_articulo: 31098suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="31098", id_sucursal="4", mes="", tres="1", seis="8" 
+id_articulo: 33531suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33531", id_sucursal="4", mes="", tres="", seis="1" 
+id_articulo: 29528suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="29528", id_sucursal="4", mes="1", tres="1", seis="1" 
+id_articulo: 37059suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="37059", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 22692suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22692", id_sucursal="4", mes="", tres="", seis="2" 
+id_articulo: 22669suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22669", id_sucursal="4", mes="", tres="1", seis="2" 
+id_articulo: 14908suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="14908", id_sucursal="4", mes="", tres="1", seis="3" 
+id_articulo: 29529suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="29529", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 22629suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22629", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32707suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32707", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 15169suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="15169", id_sucursal="4", mes="2", tres="8", seis="15" 
+id_articulo: 32514suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32514", id_sucursal="4", mes="", tres="1", seis="1" 
+id_articulo: 32145suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32145", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 29543suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="29543", id_sucursal="4", mes="", tres="2", seis="6" 
+id_articulo: 22683suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22683", id_sucursal="4", mes="", tres="1", seis="1" 
+id_articulo: 29895suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="29895", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 25171suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="25171", id_sucursal="4", mes="2", tres="5", seis="8" 
+id_articulo: 34438suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="34438", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 33257suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="33257", id_sucursal="4", mes="1", tres="5", seis="10" 
+id_articulo: 32407suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32407", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 32724suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32724", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 20904suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="20904", id_sucursal="4", mes="", tres="", seis="4" 
+id_articulo: 8673suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="8673", id_sucursal="4", mes="", tres="", seis="1" 
+id_articulo: 35649suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="35649", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 22661suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="22661", id_sucursal="4", mes="", tres="3", seis="5" 
+id_articulo: 20643suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="20643", id_sucursal="3", mes="8", tres="19", seis="34" 
+id_articulo: 16768suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="16768", id_sucursal="3", mes="2", tres="4", seis="10" 
+id_articulo: 28561suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="28561", id_sucursal="3", mes="2", tres="10", seis="24" 
+id_articulo: 32364suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="32364", id_sucursal="3", mes="", tres="", seis="" 
+id_articulo: 35471suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="35471", id_sucursal="3", mes="2", tres="3", seis="3" 
+id_articulo: 32641suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="32641", id_sucursal="3", mes="3", tres="6", seis="14" 
+id_articulo: 31244suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="31244", id_sucursal="3", mes="1", tres="3", seis="5" 
+id_articulo: 8702suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="8702", id_sucursal="3", mes="", tres="1", seis="2" 
+id_articulo: 35470suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="35470", id_sucursal="3", mes="1", tres="1", seis="2" 
+id_articulo: 11772suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="11772", id_sucursal="3", mes="7", tres="18", seis="52" 
+id_articulo: 20663suc: 47
+insert into pedidos_sucursal_estadistica set id_articulo="20663", id_sucursal="3", mes="3", tres="3", seis="7" 
+id_articulo: 25866suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25866", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 37081suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="37081", id_sucursal="2", mes="2", tres="2", seis="2" 
+id_articulo: 30651suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="30651", id_sucursal="2", mes="", tres="", seis="1" 
+id_articulo: 25868suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25868", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 4569suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="4569", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25869suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25869", id_sucursal="2", mes="1", tres="1", seis="1" 
+id_articulo: 25861suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25861", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 4567suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="4567", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25872suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25872", id_sucursal="2", mes="", tres="1", seis="1" 
+id_articulo: 25646suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25646", id_sucursal="2", mes="", tres="4", seis="5" 
+id_articulo: 25871suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25871", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25644suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25644", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 4538suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="4538", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25859suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25859", id_sucursal="2", mes="1", tres="1", seis="2" 
+id_articulo: 25846suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25846", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 24548suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="24548", id_sucursal="2", mes="2", tres="2", seis="3" 
+id_articulo: 25642suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25642", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25839suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25839", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 4547suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="4547", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25847suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25847", id_sucursal="2", mes="", tres="", seis="" 
+id_articulo: 25842suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25842", id_sucursal="2", mes="", tres="", seis="1" 
+id_articulo: 25851suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="25851", id_sucursal="2", mes="7", tres="8", seis="9" 
+id_articulo: 1241suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="1241", id_sucursal="2", mes="", tres="", seis="9" 
+id_articulo: 15342suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="15342", id_sucursal="2", mes="8", tres="15", seis="16" 
+id_articulo: 1240suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="1240", id_sucursal="2", mes="4", tres="16", seis="24" 
+id_articulo: 15341suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="15341", id_sucursal="2", mes="7", tres="11", seis="24" 
+id_articulo: 1220suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="1220", id_sucursal="2", mes="3", tres="6", seis="9" 
+id_articulo: 15791suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="15791", id_sucursal="2", mes="7", tres="10", seis="10" 
+id_articulo: 24621suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="24621", id_sucursal="2", mes="4", tres="5", seis="9" 
+id_articulo: 19716suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="19716", id_sucursal="2", mes="5", tres="5", seis="9" 
+id_articulo: 19714suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="19714", id_sucursal="2", mes="3", tres="7", seis="11" 
+id_articulo: 19715suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="19715", id_sucursal="2", mes="1", tres="4", seis="10" 
+id_articulo: 19713suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="19713", id_sucursal="2", mes="3", tres="5", seis="9" 
+id_articulo: 19711suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="19711", id_sucursal="2", mes="8", tres="8", seis="11" 
+id_articulo: 15788suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="15788", id_sucursal="2", mes="3", tres="4", seis="10" 
+id_articulo: 29453suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="29453", id_sucursal="2", mes="", tres="2", seis="18" 
+id_articulo: 24556suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="24556", id_sucursal="2", mes="2", tres="7", seis="11" 
+id_articulo: 37000suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="37000", id_sucursal="2", mes="4", tres="5", seis="5" 
+id_articulo: 37001suc: 49
+insert into pedidos_sucursal_estadistica set id_articulo="37001", id_sucursal="2", mes="3", tres="5", seis="5" 
+id_articulo: 2725suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2725", id_sucursal="9", mes="6", tres="18", seis="44" 
+id_articulo: 2729suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2729", id_sucursal="9", mes="8", tres="23", seis="55" 
+id_articulo: 32750suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="32750", id_sucursal="9", mes="", tres="39", seis="213" 
+id_articulo: 32809suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="32809", id_sucursal="9", mes="54", tres="89", seis="93" 
+id_articulo: 2727suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2727", id_sucursal="9", mes="2", tres="3", seis="25" 
+id_articulo: 24981suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="24981", id_sucursal="9", mes="15", tres="51", seis="59" 
+id_articulo: 34453suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="34453", id_sucursal="9", mes="15", tres="21", seis="39" 
+id_articulo: 34297suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="34297", id_sucursal="9", mes="19", tres="110", seis="172" 
+id_articulo: 2733suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2733", id_sucursal="9", mes="4", tres="6", seis="8" 
+id_articulo: 2737suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2737", id_sucursal="9", mes="6", tres="19", seis="38" 
+id_articulo: 35335suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="35335", id_sucursal="9", mes="", tres="", seis="" 
+id_articulo: 33851suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="33851", id_sucursal="9", mes="5", tres="13", seis="21" 
+id_articulo: 2735suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="2735", id_sucursal="9", mes="1", tres="9", seis="24" 
+id_articulo: 33707suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33707", id_sucursal="5", mes="", tres="4", seis="7" 
+id_articulo: 34604suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="34604", id_sucursal="5", mes="1", tres="3", seis="4" 
+id_articulo: 33717suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33717", id_sucursal="5", mes="", tres="", seis="" 
+id_articulo: 33720suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33720", id_sucursal="5", mes="", tres="", seis="11" 
+id_articulo: 34239suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="34239", id_sucursal="5", mes="", tres="", seis="2" 
+id_articulo: 33708suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33708", id_sucursal="5", mes="", tres="", seis="" 
+id_articulo: 33705suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33705", id_sucursal="5", mes="", tres="", seis="" 
+id_articulo: 33686suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33686", id_sucursal="5", mes="1", tres="1", seis="1" 
+id_articulo: 33719suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="33719", id_sucursal="5", mes="", tres="", seis="1" 
+id_articulo: 34603suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="34603", id_sucursal="5", mes="", tres="", seis="" 
+id_articulo: 35580suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="35580", id_sucursal="5", mes="1", tres="4", seis="5" 
+id_articulo: 34597suc: 66
+insert into pedidos_sucursal_estadistica set id_articulo="34597", id_sucursal="5", mes="", tres="", seis="" 
+id_articulo: 24906suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="24906", id_sucursal="9", mes="", tres="", seis="1" 
+id_articulo: 7318suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7318", id_sucursal="9", mes="", tres="2", seis="3" 
+id_articulo: 7311suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7311", id_sucursal="9", mes="", tres="2", seis="2" 
+id_articulo: 26054suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="26054", id_sucursal="9", mes="", tres="2", seis="2" 
+id_articulo: 7280suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7280", id_sucursal="9", mes="", tres="1", seis="1" 
+id_articulo: 7278suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7278", id_sucursal="9", mes="2", tres="3", seis="6" 
+id_articulo: 7266suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7266", id_sucursal="9", mes="", tres="1", seis="1" 
+id_articulo: 7274suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7274", id_sucursal="9", mes="1", tres="1", seis="2" 
+id_articulo: 32957suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="32957", id_sucursal="9", mes="1", tres="1", seis="3" 
+id_articulo: 7263suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7263", id_sucursal="9", mes="", tres="", seis="1" 
+id_articulo: 23480suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="23480", id_sucursal="9", mes="3", tres="10", seis="14" 
+id_articulo: 18760suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="18760", id_sucursal="9", mes="", tres="1", seis="1" 
+id_articulo: 18755suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="18755", id_sucursal="9", mes="1", tres="1", seis="2" 
+id_articulo: 26057suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="26057", id_sucursal="9", mes="2", tres="5", seis="12" 
+id_articulo: 7283suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7283", id_sucursal="9", mes="2", tres="2", seis="2" 
+id_articulo: 7286suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7286", id_sucursal="9", mes="", tres="1", seis="1" 
+id_articulo: 7295suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7295", id_sucursal="9", mes="", tres="", seis="" 
+id_articulo: 7267suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7267", id_sucursal="9", mes="", tres="13", seis="17" 
+id_articulo: 7323suc: 59
+insert into pedidos_sucursal_estadistica set id_articulo="7323", id_sucursal="9", mes="", tres="", seis="" 
+id_articulo: 10903suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10903", id_sucursal="4", mes="1", tres="2", seis="6" 
+id_articulo: 34727suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="34727", id_sucursal="4", mes="", tres="4", seis="9" 
+id_articulo: 10906suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10906", id_sucursal="4", mes="1", tres="8", seis="12" 
+id_articulo: 10900suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10900", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 10914suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10914", id_sucursal="4", mes="4", tres="17", seis="20" 
+id_articulo: 37137suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="37137", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 12938suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="12938", id_sucursal="4", mes="3", tres="14", seis="18" 
+id_articulo: 35053suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="35053", id_sucursal="4", mes="", tres="3", seis="4" 
+id_articulo: 10905suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10905", id_sucursal="4", mes="1", tres="9", seis="16" 
+id_articulo: 10909suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10909", id_sucursal="4", mes="", tres="5", seis="12" 
+id_articulo: 34604suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="34604", id_sucursal="4", mes="", tres="", seis="1" 
+id_articulo: 10913suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10913", id_sucursal="4", mes="2", tres="14", seis="20" 
+id_articulo: 32866suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="32866", id_sucursal="4", mes="1", tres="1", seis="1" 
+id_articulo: 10902suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10902", id_sucursal="4", mes="2", tres="4", seis="7" 
+id_articulo: 10899suc: 56
+insert into pedidos_sucursal_estadistica set id_articulo="10899", id_sucursal="4", mes="", tres="", seis="" 
+id_articulo: 25280suc: prueba
+insert into pedidos_sucursal_estadistica set id_articulo="25280", id_sucursal="18", mes="", tres="", seis="" 
+id_articulo: 25517suc: prueba
+insert into pedidos_sucursal_estadistica set id_articulo="25517", id_sucursal="18", mes="", tres="", seis="" 
+id_articulo: 25517suc: prueba
+insert into pedidos_sucursal_estadistica set id_articulo="25517", id_sucursal="18", mes="", tres="", seis="" 

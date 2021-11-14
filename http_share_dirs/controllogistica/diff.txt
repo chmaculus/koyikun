@@ -1,0 +1,25 @@
+45,46d44
+< 
+< 
+51,58c49,55
+< 
+< slides[1] = new Array(15, "control", "control.php");
+< slides[2] = new Array(15, "1", "reparto1.php");
+< slides[3] = new Array(15, "2", "reparto2.php");
+< slides[4] = new Array(15, "3", "reparto3.php");
+< slides[5] = new Array(15, "4", "reparto4.php");
+< 
+< 
+---
+> slides[1] = new Array(15, "WAMP HOWTO", "http://www.troywolf.com/articles/wamp_howto.htm");
+> slides[2] = new Array(15, "PHP Proxy", "http://www.troywolf.com/articles/php/class_http/proxy.phps");
+> slides[3] = new Array(15, "HTTP class", "http://www.troywolf.com/articles/php/class_http/");
+> slides[4] = new Array(15, "Session class", "http://www.troywolf.com/articles/php/class_session/");
+> slides[5] = new Array(15, "RSS Consumption", "http://www.troywolf.com/articles/php/class_xml/rss_example.php");
+> slides[6] = new Array(15, "PHP Exchange WebDAV", "http://www.troywolf.com/articles/php/exchange_webdav_examples.php");
+> slides[7] = new Array(15, "vCard class", "http://www.troywolf.com/articles/php/class_vcard/");
+194,197d190
+< 
+< <!-- 
+< <iframe id="content" name="content" style="width:100%; height:100%;" frameborder="no" scrolling="auto" src="" onload="FadeInContent();" ></iframe>
+<  -->

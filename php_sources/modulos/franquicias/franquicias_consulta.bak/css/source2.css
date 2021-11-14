@@ -1,0 +1,113 @@
+body {
+  background-color: #DEDEDE;
+  position: fixed;
+  visibility: visible;
+  overflow: hidden;
+  width: 99%;
+  height: 99%;
+}
+
+
+.divarriba {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 20%;
+}
+
+.divcuerpo {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 80%;
+	float: center;
+}
+
+.framecentralleft {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 100%;
+  overflow: auto;
+}
+.framecentralright {
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 100%;
+  overflow: auto;
+}
+
+.table1 {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+}
+
+.TableCuerpo {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 100%;
+}
+
+
+.TdColumnleft {
+	background-color:#E6E6FA;
+	width: 15%;
+	height: 100%;
+	top: fixed;
+}
+.td_columnright {
+	background-color:#E6E6FA;
+	width: 69%;
+	height: 100%;
+	top: fixed;
+}
+
+/*left*/
+.TablePanelLeft {
+	background-color:#DADADA;
+	width: 100%;
+	height: 100%;
+}
+
+.TdPanelLeft {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 50%;
+	top: fixed;
+}
+
+.TrPanelLeft {
+	background-color:#E6E6FA;
+	width: 100%;
+	height: 50%;
+	top: fixed;
+}
+.FramePanelLeftUp {
+	background-color:#E6E6FA;
+	width: 100%;
+	height:50%;
+	top: fixed;
+	border: 1;
+}
+.FramePanelLeftDown {
+	background-color:#E6E6FA;
+	width: 100%;
+	height:50%;
+	top: fixed;
+	border: 1;
+}
+
+/* fin left */
+
+.FrameCuerpoIzq {
+	background-color:#E6E6FA;
+	width: 100%;
+	height:100%;
+	top: fixed;
+	border: 1;
+}
+.FrameCuerpoDer {
+	background-color:#E6E6FA;
+	width: 100%;
+	height:100%;
+	top: fixed;
+	border: 1;
+}

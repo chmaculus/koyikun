@@ -1,0 +1,522 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css">
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <title>Sucursal control administrativo</title>
+</head>
+<center>
+<table>
+<tr>
+<td><a class="heading" target="centro" href="articulos_busqueda.php"><button>BUSQUEDA</button></a></td>
+<td><a class="heading" target="centro" href="venta_actual.php"><button>MOVIMIENTO ACTUAL</button></a></td>
+<td><a class="heading" target="centro" href="listado2.php"><button>LISTADO</button></a></td>
+</tr></table>
+
+
+
+
+<center>
+<table class="t1"><tr><td>Numero envio</td><td>0</td></tr><tr><td>Fecha</td><td>2010-02-10</td></tr><tr><td>Hora</td><td>16:10:00</td></tr><tr><td>Origen</td><td></td></tr><tr><td>Destino</td><td></td></tr></table><br>select * from stock_movimiento where numero_envio="" order by fecha desc, hora desc limit 0,500<br><table class="t1"><tr><th>id_articulos</th><th>marca</th><th>descripcion</th><th>contenido</th><th>presentacion</th><th>clasificacion</th><th>subclasificacion</th><th>cantidad</th></tr><tr><td>9453</td><td>COSMETICA CIENTIFICA</td><td>LOCION TONICA ASTRINGENTE SIN ALCOHOL CUTIS MIXTO A GRASO</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>2</td></tr>
+<tr><td>25239</td><td>COSMETICA CIENTIFICA</td><td>CREMA DE LIMPIEZA PROFUNDA</td><td>50 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>1</td></tr>
+<tr><td>9452</td><td>COSMETICA CIENTIFICA</td><td>LOCION ESTIMULANTE Y REFRESCANTE S/ALCOHOL CUTIS NORMAL A SE</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>2</td></tr>
+<tr><td>9477</td><td>COSMETICA CIENTIFICA</td><td>EMULSIÓN HIDRATANTE CON ENZIMA Q10</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>1</td></tr>
+<tr><td>9471</td><td>COSMETICA CIENTIFICA</td><td>LOCION TONICA ESTIMULANTE SIN ALCOHOL</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>3</td></tr>
+<tr><td>14352</td><td>ALFAPARF</td><td>7.4</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>1</td></tr>
+<tr><td>18132</td><td>ARTEZ WESTERLEY</td><td>CREMA BASE OM BEIGE BEIGE</td><td>22 GR</td><td></td><td>MAQUILLAJE ROSTRO</td><td>CREMA BASE O.M.</td><td>1</td></tr>
+<tr><td>26023</td><td>USO COTIDIANO</td><td>ESPUMA AFEITAR GILLETE FOAMY S.SKI</td><td>311 GR</td><td></td><td>CREMA DE AFEITAR</td><td>GILLETTE</td><td>1</td></tr>
+<tr><td>20460</td><td>USO COTIDIANO</td><td>KOLYNOS TRIPLE FRESCURA</td><td>90 GR</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td></td><td>1</td></tr>
+<tr><td>23400</td><td>USO COTIDIANO</td><td>DES.REXONA GINSENG </td><td>113 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>21682</td><td>USO COTIDIANO</td><td>DESODORANTE OLD SPICE PURE SPORT</td><td>113 GR</td><td></td><td>OLD SPICE</td><td></td><td>1</td></tr>
+<tr><td>514</td><td>USO COTIDIANO</td><td>REXONA aer Cobalt </td><td>105 gr</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>577</td><td>USO COTIDIANO</td><td>EFICIENT pol. Ped </td><td>100 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>EFICIENT</td><td>1</td></tr>
+<tr><td>21988</td><td>USO COTIDIANO</td><td>ANTITRANSPIRANTES DOVE BOLILLA </td><td></td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td></td><td>1</td></tr>
+<tr><td>23209</td><td>USO COTIDIANO</td><td>ALGODON ESTRELLA CLASICA</td><td>200 GR</td><td></td><td>ALGODON</td><td>ESTRELLA</td><td>2</td></tr>
+<tr><td>26021</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA V8 TUN. BARRA</td><td>50 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>23405</td><td>USO COTIDIANO</td><td>DES.EFFICIENT P/PIES</td><td>102 GR</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td></td><td>1</td></tr>
+<tr><td>21674</td><td>USO COTIDIANO</td><td>ALGODON</td><td>100 GR</td><td></td><td>ALGODON</td><td>ESTRELLA</td><td>3</td></tr>
+<tr><td>24987</td><td>USO COTIDIANO</td><td>DESODOR.IMPULSE DYNAMIQUE</td><td>107 GR</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>IMPULSE</td><td>1</td></tr>
+<tr><td>521</td><td>USO COTIDIANO</td><td>REXONA Sensitive Men</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>23401</td><td>USO COTIDIANO</td><td>DES.REXONA TRIPLE MINT</td><td>113 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>21676</td><td>USO COTIDIANO</td><td>GILLETTE CREMA DE AFEITAR BLANCA</td><td>130 GR</td><td></td><td>CREMA DE AFEITAR</td><td>GILLETTE</td><td>1</td></tr>
+<tr><td>25038</td><td>USO COTIDIANO</td><td>LUX REFRESCANTE </td><td>125 GRS</td><td></td><td>JABON DE TOCADOR</td><td></td><td>2</td></tr>
+<tr><td>26020</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA ADVENTURE BARRA</td><td>50 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>24986</td><td>USO COTIDIANO</td><td>JABON ESPADOL FRESH</td><td>90 GR</td><td></td><td>JABON DE TOCADOR</td><td></td><td>1</td></tr>
+<tr><td>21987</td><td>USO COTIDIANO</td><td>ANTITRANSPIRANTE REXONA COBALT BOLILLA</td><td></td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>25035</td><td>USO COTIDIANO</td><td>JABON ESPADOL COOL </td><td>90 GR</td><td></td><td>JABON DE TOCADOR</td><td></td><td>1</td></tr>
+<tr><td>25037</td><td>USO COTIDIANO</td><td>COLGATE TRIPLE ACCION C/ CALCIO HORTELA </td><td>90 GRS</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td>COLGATE</td><td>1</td></tr>
+<tr><td>21678</td><td>USO COTIDIANO</td><td>DESODORANTE OLD SPICE PURE SPORT BOLILLA </td><td></td><td></td><td>OLD SPICE</td><td></td><td>1</td></tr>
+<tr><td>23410</td><td>USO COTIDIANO</td><td>ANTITR.REXONA /HOMBRE</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>585</td><td>USO COTIDIANO</td><td>TALCO VERITAS PEDICO </td><td>160 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>VERITAS</td><td>1</td></tr>
+<tr><td>625</td><td>USO COTIDIANO</td><td>HINDS x 350 ml</td><td>350 ml</td><td></td><td>CREMAS CORPORALES</td><td></td><td>1</td></tr>
+<tr><td>542</td><td>USO COTIDIANO</td><td>DOVE Barra  AZUL</td><td>50 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>DOVE</td><td>1</td></tr>
+<tr><td>20458</td><td>USO COTIDIANO</td><td>COLGATE HERBAL BLANCO</td><td>90 GR</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td></td><td>1</td></tr>
+<tr><td>22182</td><td>USO COTIDIANO</td><td>HISOPOS ESTRELLA</td><td></td><td>100 UNIDADES</td><td></td><td>ESTRELLA</td><td>1</td></tr>
+<tr><td>23397</td><td>USO COTIDIANO</td><td>SIEMPRE LIBRE ESPEC. C/ALAS</td><td>16 UNI.</td><td></td><td>TOALLAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>23411</td><td>USO COTIDIANO</td><td>ANTITR.REXONA /ORGANICS</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTE - MUJER</td><td></td><td>1</td></tr>
+<tr><td>624</td><td>USO COTIDIANO</td><td>HINDS x 250 ml</td><td>250 ml</td><td></td><td>CREMAS CORPORALES</td><td></td><td>1</td></tr>
+<tr><td>26019</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA V8 TUN.ROL.</td><td>50 ML</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>409</td><td>USO COTIDIANO</td><td>ALWAYS  nocturna c/alas </td><td></td><td>8 unidades</td><td>TOALLAS FEMENINAS		 </td><td>ALWAYS</td><td>2</td></tr>
+<tr><td>580</td><td>USO COTIDIANO</td><td>VERITAS talco AZUL C . MASCULINO</td><td>160 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>VERITAS</td><td>1</td></tr>
+<tr><td>23407</td><td>USO COTIDIANO</td><td>MAQ.PRESTOBARBA EXCEL HOMBRE</td><td>2 UNI.</td><td></td><td>MAQUINAS P/AFEITAR</td><td></td><td>2</td></tr>
+<tr><td>506</td><td>USO COTIDIANO</td><td>ODORONO desodor crema </td><td>60 gr</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>ODORONO  </td><td>2</td></tr>
+<tr><td>537</td><td>USO COTIDIANO</td><td>DOVE Aerosol  AZUL </td><td>103 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>DOVE</td><td>1</td></tr>
+<tr><td>626</td><td>USO COTIDIANO</td><td>HINDS x 75 ml</td><td>75 ml</td><td></td><td>CREMAS CORPORALES</td><td></td><td>1</td></tr>
+<tr><td>21680</td><td>USO COTIDIANO</td><td>DESODORANTE OLD SPICE PURE SPORT BARRA</td><td></td><td></td><td>OLD SPICE</td><td></td><td>1</td></tr>
+<tr><td>23398</td><td>USO COTIDIANO</td><td>SIEMPRE LIBRE TANGA C/ALAS</td><td>8 UNI.</td><td></td><td>TOALLAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>552</td><td>USO COTIDIANO</td><td>REXONA Aerosol Mujer  BAMBOO </td><td></td><td>105 g</td><td>ANTITRANSPIRANTES - MUJER</td><td>REXONA</td><td>1</td></tr>
+<tr><td>9450</td><td>COSMETICA CIENTIFICA</td><td>LECHE DE LIMPIEZA OIL FREE CUTIS NORMAL A SECO</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>5</td></tr>
+<tr><td>9478</td><td>COSMETICA CIENTIFICA</td><td>CREMA MANOS/CUERPO  NUEVO</td><td></td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGENICA</td><td>1</td></tr>
+<tr><td>9451</td><td>COSMETICA CIENTIFICA</td><td>LECHE DE LIMPIEZA OIL FREE CUTIS MIXTO A GRASO</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>5</td></tr>
+<tr><td>14664</td><td>LOREAL</td><td> 60 CAPUCCINO Rubio Oscuro</td><td></td><td>KIT</td><td>NUTRISSE</td><td>COLORACION</td><td>1</td></tr>
+<tr><td>18588</td><td>CERAS COLLAGE</td><td>ACEITE NEUTRO P/MASAJES</td><td>500 GR</td><td></td><td>FACIALES - GELES - ACEITES</td><td>ACEITES PARA MASAJES</td><td>1</td></tr>
+<tr><td>10909</td><td>CERAS COLLAGE</td><td>CERA MIEL CALENDULA</td><td>800 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>1</td></tr>
+<tr><td>20449</td><td>ARCAMETAL</td><td>STANDARD PLASTIC </td><td>1,000 KG</td><td></td><td>CERA TERMIC</td><td></td><td>1</td></tr>
+<tr><td>9454</td><td>COSMETICA CIENTIFICA</td><td>MASCARA NUTRITIVA Y REFRESCANTE</td><td>50 CC</td><td></td><td>TRATAMIENTOS</td><td>ESTELAR</td><td>2</td></tr>
+<tr><td>9475</td><td>COSMETICA CIENTIFICA</td><td>CREMA PARA MANOS Y CUERPO</td><td>250 CC</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>3</td></tr>
+<tr><td>9470</td><td>COSMETICA CIENTIFICA</td><td>LECHE DE LIMPIEZA PURIFICANTE</td><td>170 CC</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>1</td></tr>
+<tr><td>9473</td><td>COSMETICA CIENTIFICA</td><td>GEL HIDRATANTE - SUPER ACTIVO</td><td>35 GRS</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>4</td></tr>
+<tr><td>9474</td><td>COSMETICA CIENTIFICA</td><td>GEL CONTRONO DE OJOS</td><td>35 GRS</td><td></td><td>TRATAMIENTOS</td><td>D'ACUA HIPOALERGÉNICA</td><td>4</td></tr>
+<tr><td>22264</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA MONO ROMANTIC ROSE 03</td><td>1.5 GR</td><td></td><td>LINEA BASICA</td><td>TONIFICACION</td><td>3</td></tr>
+<tr><td>22272</td><td>ANDRE LATOUR</td><td>POLVO COMPACTO ROMANTIC ROSE</td><td>7 GR</td><td></td><td>LINEA BASICA</td><td>POLVOS</td><td>4</td></tr>
+<tr><td>22262</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA MONO ROMANTIC ROSE 01</td><td>1.5 GR</td><td></td><td>LINEA BASICA</td><td>SOMBRAS</td><td>5</td></tr>
+<tr><td>22250</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECTANTE ROMANTIC ROSE 01</td><td>4 GR</td><td></td><td>LINEA BASICA</td><td>LABIALES</td><td>2</td></tr>
+<tr><td>22251</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECTANTE ROMANTIC ROSE 02</td><td>4 GR</td><td></td><td>LINEA BASICA</td><td>LABIALES</td><td>2</td></tr>
+<tr><td>22252</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECTANTE ROMANTIC ROSE 03</td><td>4 GR</td><td></td><td>LINEA BASICA</td><td>LABIALES</td><td>1</td></tr>
+<tr><td>22966</td><td>ANDRE LATOUR</td><td>MASCARA REVITAL C/ KERATINA ROMANTIC ROSE</td><td>3 ML</td><td>ESTUCHE</td><td>LINEA BASICA</td><td>MASCARAS DE PESTAÑAS</td><td>8</td></tr>
+<tr><td>22256</td><td>ANDRE LATOUR</td><td>LAPIZ DELINEADOR LABIOS RETRACTIL ROMANTIC ROSE 03</td><td>0.2 GR</td><td></td><td>LINEA BASICA</td><td>BRILLOS/DELINEADORES</td><td>4</td></tr>
+<tr><td>22263</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA MONO ROMANTIC ROSE 02</td><td>1.5 GR</td><td></td><td>LINEA BASICA</td><td>SOMBRAS</td><td>1</td></tr>
+<tr><td>22254</td><td>ANDRE LATOUR</td><td>LAPIZ DELINEADOR LABIOS RETRACTIL ROMANTIC ROSE 01</td><td>0.2 GR</td><td></td><td>LINEA BASICA</td><td>BRILLOS/DELINEADORES</td><td>2</td></tr>
+<tr><td>7128</td><td>FULTON</td><td>JABON V.L.</td><td>160 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7175</td><td>FULTON</td><td>COLONIA NATURAL</td><td>150 CC</td><td></td><td>LINEA NATURAL</td><td></td><td>2</td></tr>
+<tr><td>7219</td><td>FULTON</td><td>JABON VIOLETA</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7166</td><td>FULTON</td><td>COLONIA DESODORANTE INGLESA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7169</td><td>FULTON</td><td>COLONIA DESODORANTE LAVANDA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>1</td></tr>
+<tr><td>7141</td><td>FULTON</td><td>AFTER LOCION</td><td>120 CM3</td><td>S/ESTUCHE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7165</td><td>FULTON</td><td>COLONIA DESODORANTE CITRICA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>22912</td><td>FULTON</td><td>COLONIA DESOD. ARTESANIAS</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>1</td></tr>
+<tr><td>7164</td><td>FULTON</td><td>COLONIA DESODORANTE MELROSE AMBRE</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7138</td><td>FULTON</td><td>AFTER LOCION</td><td>60 CM3</td><td>S/ESTUCHE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>22913</td><td>FULTON</td><td>COLONIA DESOD. JAZMIN</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7142</td><td>FULTON</td><td>AFTER CREMA V.L.</td><td>130 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>22911</td><td>FULTON</td><td>AFTER EN CREMA C/ ALOE Y MENTOL</td><td>130 GR.</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>22040</td><td>FULTON</td><td>COLONIA DE ROSAS</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7167</td><td>FULTON</td><td>COLONIA DESODORANTE FLORAL</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7129</td><td>FULTON</td><td>JABONES  V.L</td><td>100 GR</td><td>2 UNIDADES</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7140</td><td>FULTON</td><td>AFTER LOCION</td><td>120 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7137</td><td>FULTON</td><td>AFTER LOCION</td><td>60 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7168</td><td>FULTON</td><td>COLONIA DESODORANTE MARINA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7131</td><td>FULTON</td><td>DESODORANTE AEROSOL V.L </td><td>250 ML</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>3</td></tr>
+<tr><td>7135</td><td>FULTON</td><td>LOCION</td><td>120 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7181</td><td>FULTON</td><td>JABON JAZMIN</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7220</td><td>FULTON</td><td>POLVO PARA CUERPO VIOLETAS</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>1</td></tr>
+<tr><td>7192</td><td>FULTON</td><td>POLVO PARA CUERPO JAZMIN</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7184</td><td>FULTON</td><td>JABON JAZMIN</td><td>100 GR</td><td>CAJA X 2 UN</td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>1</td></tr>
+<tr><td>7276</td><td>FRENCH CAPITAL</td><td>LA VIE EST. LIBERTE - CHANEL N° 5</td><td>50 ML</td><td></td><td>FRAGANCIAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>7298</td><td>FRENCH CAPITAL</td><td>LA VIE EST. ESPLENDEUR - VERY IRRESISTIBLE</td><td>50 ML</td><td></td><td>FRAGANCIAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>21767</td><td>SINGLE PUBLICO</td><td>SINGLE CARE TRATAMIENTO PARA PUNTAS</td><td>30 CC</td><td></td><td>LINEA PUBLICO</td><td>PEINADO Y TERMINACION</td><td>6</td></tr>
+<tr><td>24988</td><td>USO COTIDIANO</td><td>DESODOR.IMPULSE ROMA/SPAR.</td><td>53 GR</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>IMPULSE</td><td>1</td></tr>
+<tr><td>23209</td><td>USO COTIDIANO</td><td>ALGODON ESTRELLA CLASICA</td><td>200 GR</td><td></td><td>ALGODON</td><td>ESTRELLA</td><td>2</td></tr>
+<tr><td>26025</td><td>USO COTIDIANO</td><td>DESODORANTE VERITAS PEDICO</td><td>92 GR</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>VERITAS</td><td>1</td></tr>
+<tr><td>21673</td><td>USO COTIDIANO</td><td>DISCOS DEMAQUILLANTES</td><td>80 UNIDADES</td><td></td><td>ALGODON</td><td>ESTRELLA</td><td>2</td></tr>
+<tr><td>521</td><td>USO COTIDIANO</td><td>REXONA Sensitive Men</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>20458</td><td>USO COTIDIANO</td><td>COLGATE HERBAL BLANCO</td><td>90 GR</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td></td><td>1</td></tr>
+<tr><td>23408</td><td>USO COTIDIANO</td><td>ANTITR.REXONA INVISIBLE</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>542</td><td>USO COTIDIANO</td><td>DOVE Barra  AZUL</td><td>50 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>DOVE</td><td>1</td></tr>
+<tr><td>24987</td><td>USO COTIDIANO</td><td>DESODOR.IMPULSE DYNAMIQUE</td><td>107 GR</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>IMPULSE</td><td>1</td></tr>
+<tr><td>21682</td><td>USO COTIDIANO</td><td>DESODORANTE OLD SPICE PURE SPORT</td><td>113 GR</td><td></td><td>OLD SPICE</td><td></td><td>1</td></tr>
+<tr><td>506</td><td>USO COTIDIANO</td><td>ODORONO desodor crema </td><td>60 gr</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>ODORONO  </td><td>2</td></tr>
+<tr><td>26023</td><td>USO COTIDIANO</td><td>ESPUMA AFEITAR GILLETE FOAMY S.SKI</td><td>311 GR</td><td></td><td>CREMA DE AFEITAR</td><td>GILLETTE</td><td>2</td></tr>
+<tr><td>26021</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA V8 TUN. BARRA</td><td>50 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>23398</td><td>USO COTIDIANO</td><td>SIEMPRE LIBRE TANGA C/ALAS</td><td>8 UNI.</td><td></td><td>TOALLAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>20456</td><td>USO COTIDIANO</td><td>SIEMPRE LIBRE LINEA NOCTURNA C/ALAS</td><td></td><td>8 UNIDADES</td><td>TOALLAS FEMENINAS		 </td><td></td><td>1</td></tr>
+<tr><td>580</td><td>USO COTIDIANO</td><td>VERITAS talco AZUL C . MASCULINO</td><td>160 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>VERITAS</td><td>1</td></tr>
+<tr><td>26020</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA ADVENTURE BARRA</td><td>50 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>26018</td><td>USO COTIDIANO</td><td>ANTITRANSP. FEM. REXONA NUTRITIVE</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>REXONA</td><td>1</td></tr>
+<tr><td>21680</td><td>USO COTIDIANO</td><td>DESODORANTE OLD SPICE PURE SPORT BARRA</td><td></td><td></td><td>OLD SPICE</td><td></td><td>1</td></tr>
+<tr><td>21986</td><td>USO COTIDIANO</td><td>ANTITRANSPIRANTE REXONA NEUTRAL BOLILLA  BALANCE</td><td>50 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td></td><td>1</td></tr>
+<tr><td>22182</td><td>USO COTIDIANO</td><td>HISOPOS ESTRELLA</td><td></td><td>100 UNIDADES</td><td></td><td>ESTRELLA</td><td>2</td></tr>
+<tr><td>23407</td><td>USO COTIDIANO</td><td>MAQ.PRESTOBARBA EXCEL HOMBRE</td><td>2 UNI.</td><td></td><td>MAQUINAS P/AFEITAR</td><td></td><td>2</td></tr>
+<tr><td>25037</td><td>USO COTIDIANO</td><td>COLGATE TRIPLE ACCION C/ CALCIO HORTELA </td><td>90 GRS</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td>COLGATE</td><td>1</td></tr>
+<tr><td>23397</td><td>USO COTIDIANO</td><td>SIEMPRE LIBRE ESPEC. C/ALAS</td><td>16 UNI.</td><td></td><td>TOALLAS FEMENINAS</td><td></td><td>1</td></tr>
+<tr><td>21676</td><td>USO COTIDIANO</td><td>GILLETTE CREMA DE AFEITAR BLANCA</td><td>130 GR</td><td></td><td>CREMA DE AFEITAR</td><td>GILLETTE</td><td>1</td></tr>
+<tr><td>21983</td><td>USO COTIDIANO</td><td>JABON VERITAS COCO</td><td>100 GR</td><td></td><td>JABON DE TOCADOR</td><td></td><td>1</td></tr>
+<tr><td>409</td><td>USO COTIDIANO</td><td>ALWAYS  nocturna c/alas </td><td></td><td>8 unidades</td><td>TOALLAS FEMENINAS		 </td><td>ALWAYS</td><td>2</td></tr>
+<tr><td>577</td><td>USO COTIDIANO</td><td>EFICIENT pol. Ped </td><td>100 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>EFICIENT</td><td>1</td></tr>
+<tr><td>21674</td><td>USO COTIDIANO</td><td>ALGODON</td><td>100 GR</td><td></td><td>ALGODON</td><td>ESTRELLA</td><td>3</td></tr>
+<tr><td>23405</td><td>USO COTIDIANO</td><td>DES.EFFICIENT P/PIES</td><td>102 GR</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td></td><td>1</td></tr>
+<tr><td>537</td><td>USO COTIDIANO</td><td>DOVE Aerosol  AZUL </td><td>103 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>DOVE</td><td>1</td></tr>
+<tr><td>20460</td><td>USO COTIDIANO</td><td>KOLYNOS TRIPLE FRESCURA</td><td>90 GR</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td></td><td>1</td></tr>
+<tr><td>26019</td><td>USO COTIDIANO</td><td>ANTITRANSP. MASC. REXONA V8 TUN.ROL.</td><td>50 ML</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>557</td><td>USO COTIDIANO</td><td>REXONA ant. Aer. Cotton  = 9984</td><td>105 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>REXONA</td><td>1</td></tr>
+<tr><td>21988</td><td>USO COTIDIANO</td><td>ANTITRANSPIRANTES DOVE BOLILLA </td><td></td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td></td><td>1</td></tr>
+<tr><td>585</td><td>USO COTIDIANO</td><td>TALCO VERITAS PEDICO </td><td>160 gr</td><td></td><td>TALCOS Y POLVOS PEDICOS</td><td>VERITAS</td><td>1</td></tr>
+<tr><td>23412</td><td>USO COTIDIANO</td><td>ANTITR.REXONA /V12</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>20457</td><td>USO COTIDIANO</td><td>COLGATE TRIPLE ACCION</td><td>90 GR</td><td></td><td>PASTAS DE DIENTES / DENTRIFICO</td><td></td><td>1</td></tr>
+<tr><td>552</td><td>USO COTIDIANO</td><td>REXONA Aerosol Mujer  BAMBOO </td><td></td><td>105 g</td><td>ANTITRANSPIRANTES - MUJER</td><td>REXONA</td><td>1</td></tr>
+<tr><td>559</td><td>USO COTIDIANO</td><td>REXONA ANT. CRYSTAL </td><td>105 gr</td><td></td><td>ANTITRANSPIRANTES - MUJER</td><td>REXONA</td><td>1</td></tr>
+<tr><td>23401</td><td>USO COTIDIANO</td><td>DES.REXONA TRIPLE MINT</td><td>113 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>23400</td><td>USO COTIDIANO</td><td>DES.REXONA GINSENG </td><td>113 GR</td><td></td><td>ANTITRANSPIRANTE - HOMBRE</td><td></td><td>1</td></tr>
+<tr><td>23411</td><td>USO COTIDIANO</td><td>ANTITR.REXONA /ORGANICS</td><td>105 GR</td><td></td><td>ANTITRANSPIRANTE - MUJER</td><td></td><td>1</td></tr>
+<tr><td>531</td><td>USO COTIDIANO</td><td>REXONA SPORT FAN </td><td>105 GR</td><td></td><td>ANTITRANSPIRANTES - HOMBRE</td><td>REXONA</td><td>1</td></tr>
+<tr><td>1102</td><td>SPIRITUAL HENNA</td><td>HENNA CASTAÑO OSCURO   </td><td>80 GR</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>11776</td><td>ARTEZ WESTERLEY</td><td>CREMA GERMINAL NOCHE</td><td>50 GR</td><td></td><td>LINEA CLASICA</td><td>NUTRICION/HIDRATACION</td><td>1</td></tr>
+<tr><td>11780</td><td>ARTEZ WESTERLEY</td><td>GERMINAL DIA</td><td>50 GR</td><td></td><td>LINEA CLASICA</td><td>NUTRICION/HIDRATACION</td><td>1</td></tr>
+<tr><td>7135</td><td>FULTON</td><td>LOCION</td><td>120 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7135</td><td>FULTON</td><td>LOCION</td><td>120 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>4</td></tr>
+<tr><td>19729</td><td>GOOD HAIR</td><td>AMPOLLA SHOCK DE KERATINA</td><td>125 CC</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>8148</td><td>ELIZABETH ARDEN</td><td>RED DOOR EAU DE TOILETTE</td><td>100 ML</td><td>VAPO</td><td>Red Door</td><td></td><td>1</td></tr>
+<tr><td>24610</td><td>SOLINGEN</td><td>ESP.8X AZUL DIA.17.5</td><td></td><td></td><td>ESPEJO DE USO PROFESIONAL CON Y SIN LUZ</td><td></td><td>1</td></tr>
+<tr><td>24081</td><td>DOROTHY GRAY</td><td>BRILLO PINK ADDICT</td><td>7 ML</td><td></td><td>ESMALTE UÑAS c/KERAT.SEDA</td><td>ESMALTES UÑAS</td><td>32</td></tr>
+<tr><td>24080</td><td>DOROTHY GRAY</td><td>BRILLO LABIAL CHERRY BLOSSOM</td><td>7 ML</td><td></td><td>LABIOS</td><td></td><td>14</td></tr>
+<tr><td>21468</td><td>FRAMESI LISTA SALON</td><td>1 NP NEGRO</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>3</td></tr>
+<tr><td>21472</td><td>FRAMESI LISTA SALON</td><td>5 NP  CASTAÑO CLARO</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>4</td></tr>
+<tr><td>21474</td><td>FRAMESI LISTA SALON</td><td>7NP RUBIO MEDIO</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>2</td></tr>
+<tr><td>21554</td><td>FRAMESI LISTA SALON</td><td>7 NC RUBIO MEDIO NATURAL CENIZA</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>4</td></tr>
+<tr><td>21553</td><td>FRAMESI LISTA SALON</td><td>6 NC RUBIO OSCURO NATURAL CENIZA</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>6</td></tr>
+<tr><td>21555</td><td>FRAMESI LISTA SALON</td><td>8 NC RUBIO CLARO NATURAL CENIZA</td><td></td><td></td><td>FRAMCOLOR</td><td></td><td>4</td></tr>
+<tr><td>303</td><td>WAHL</td><td>Student cliper p/ cort.cab.</td><td></td><td></td><td>PROFESIONAL</td><td>CLIPPER</td><td>2</td></tr>
+<tr><td>344</td><td>WAHL</td><td>Wall Cutek Plus - para alisar con regulador</td><td></td><td></td><td>PUBLICO</td><td>PLANCHAS</td><td>12</td></tr>
+<tr><td>10944</td><td>CARGOLET</td><td>LECHE DE PEPINOS POST DEPILATORIO </td><td>70 ML</td><td></td><td>VARIOS</td><td></td><td>6</td></tr>
+<tr><td>10903</td><td>CERAS COLLAGE</td><td>CERA VEGETAL ALOE VERA</td><td>200 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>3</td></tr>
+<tr><td>13579</td><td>ALFAPARF</td><td> THE SHAMPOO</td><td>250 ML</td><td></td><td>HAIR ANTI AGE</td><td></td><td>3</td></tr>
+<tr><td>17276</td><td>ALFAPARF</td><td>SHAMPOO DI CRISTALLI</td><td>250 ML</td><td></td><td>SEMI DI LINO</td><td></td><td>3</td></tr>
+<tr><td>3879</td><td>NATURAO</td><td>KIT ENCERADO</td><td>500 CC</td><td></td><td>lineas VARIAS</td><td></td><td>2</td></tr>
+<tr><td>19729</td><td>GOOD HAIR</td><td>AMPOLLA SHOCK DE KERATINA</td><td>125 CC</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>13535</td><td>ALFAPARF</td><td>CREME PARA PENTEAR</td><td>250 GR</td><td></td><td>CHOCOLATE</td><td></td><td>1</td></tr>
+<tr><td>21863</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 10.1 ACLARANTE CENIZA</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>4</td></tr>
+<tr><td>14037</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 5.3</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>21838</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 7 RUBIO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>14103</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2  547</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>21861</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 9.3 RUBIO CLARO CLARO DORADO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>14045</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 7.1</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>21859</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 9.1 RUBIO CLARO CLARO CENIZA</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>4</td></tr>
+<tr><td>21820</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 1 NEGRO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>14606</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 7.47</td><td>50 ML</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>21829</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE  6 RUBIO OSCURO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>21868</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE CENIZA</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>4</td></tr>
+<tr><td>21844</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 8 RUBIO CLARO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>14046</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 8.1</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>21990</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 7.43 RUBIO MARRON DORADO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>6</td></tr>
+<tr><td>21858</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 9 RUBIO CLARO CLARO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>5</td></tr>
+<tr><td>14025</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 7</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>14026</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 8</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>1276</td><td>SOLINGEN</td><td>DORADO</td><td></td><td></td><td>ESPEJOS DE TOCADOR  V I P</td><td></td><td>1</td></tr>
+<tr><td>14282</td><td>ALFAPARF</td><td>8.01</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14278</td><td>ALFAPARF</td><td>7.01</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>2783</td><td>PRODAVA</td><td>AMPOLLA PARA TRATAMIENTO DE CABELLO GRASO</td><td>10 ML</td><td>XUNIDAD</td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>CAIDA DEL CABELLO</td><td>12</td></tr>
+<tr><td>14258</td><td>ALFAPARF</td><td>4</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14048</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 10.1</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>14259</td><td>ALFAPARF</td><td>5</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14104</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 647</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>14335</td><td>ALFAPARF</td><td>6.66</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>13997</td><td>ALFAPARF</td><td>1</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14318</td><td>ALFAPARF</td><td>5.35</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14024</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 6</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>14027</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 9</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>12</td></tr>
+<tr><td>14306</td><td>ALFAPARF</td><td>7.1</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>17226</td><td>ALFAPARF</td><td>5.32</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>17227</td><td>ALFAPARF</td><td>6.32</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>14300</td><td>ALFAPARF</td><td>7NI</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>19662</td><td>NATURAO</td><td>SHAMPOO ACIDO</td><td>5000 CC</td><td>BIDON</td><td>LINEA FRUTAL</td><td>CABELLOS TE&#65533;IDOS Y DECOLORADOS</td><td>6</td></tr>
+<tr><td>14367</td><td>ALFAPARF</td><td>8.31</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>4</td></tr>
+<tr><td>23248</td><td>FRAMESI LISTA SALON</td><td>MORPHOSIS VOLUME RICH MOUSSE</td><td>150 ML</td><td></td><td>MORPHOSIS</td><td></td><td>1</td></tr>
+<tr><td>7331</td><td>FRENCH CAPITAL</td><td>31E - COOL WATER -  DAVIDOFF</td><td>52 ML</td><td></td><td>FRAGANCIAS MASCULINAS</td><td></td><td>1</td></tr>
+<tr><td>21602</td><td>FRAMESI LISTA SALON</td><td>OSSIDORR FLOWER 30 VOL</td><td>946 ML</td><td></td><td>OSSIDANTI</td><td></td><td>2</td></tr>
+<tr><td>24411</td><td>CERAS COLLAGE</td><td>ACEITE DE ALOE VERA P/MASAJES</td><td>1000 CC</td><td></td><td>FACIALES - GELES - ACEITES</td><td>ACEITES PARA MASAJES</td><td>1</td></tr>
+<tr><td>14087</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 23 10C</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>1</td></tr>
+<tr><td>21575</td><td>FRAMESI LISTA SALON</td><td>MIST HAIR SPRAY LIGHT</td><td>300 ML</td><td></td><td>LINEA BY</td><td></td><td>1</td></tr>
+<tr><td>14026</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 8</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>1</td></tr>
+<tr><td>21593</td><td>FRAMESI LISTA SALON</td><td>POST COLOR</td><td>150 ML</td><td></td><td>COLOR METHOD</td><td></td><td>2</td></tr>
+<tr><td>14147</td><td>BONMETIQUE</td><td>6 RUBIO OSCURO</td><td>50 GR</td><td></td><td>COLORACION</td><td>TINTURA CREMA</td><td>2</td></tr>
+<tr><td>14052</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 9.01</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>1</td></tr>
+<tr><td>14093</td><td>BONMETIQUE</td><td>TINTURA JALEA 1 + 2 3 10R</td><td>50 CM</td><td></td><td>COLORACION</td><td></td><td>1</td></tr>
+<tr><td>2781</td><td>PRODAVA</td><td>AMPOLLAS PARA TRATAMIENTO DE CABELLO SECO</td><td>10 ML</td><td>XUNIDAD</td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>CAIDA DEL CABELLO</td><td>12</td></tr>
+<tr><td>2785</td><td>PRODAVA</td><td>AMPOLLAS PARA CABELLO ONDULADO</td><td>10 ML</td><td>XUNIDAD</td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>CAIDA DEL CABELLO</td><td>12</td></tr>
+<tr><td>23689</td><td>GOOD HAIR</td><td>LECHE CAUTERIZADORA</td><td>120 ML</td><td></td><td></td><td></td><td>4</td></tr>
+<tr><td>21810</td><td>SINGLE PUBLICO</td><td>SOLSTAR CREMA CAPILAR HIDRATANTE</td><td>1000 CC</td><td></td><td>SOLSTAR   </td><td>NUTRICION</td><td>3</td></tr>
+<tr><td>1110</td><td>SPIRITUAL HENNA</td><td>HENNA RUBIO OSCURO CENIZA</td><td>80 GR</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>1102</td><td>SPIRITUAL HENNA</td><td>HENNA CASTAÑO OSCURO   </td><td>80 GR</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>1099</td><td>SPIRITUAL HENNA</td><td>HENNA CAOBA</td><td>80 GR</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>24641</td><td>SPIRITUAL HENNA</td><td>HENNA CHOCOLATE</td><td>80 GR</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>1094</td><td>SPIRITUAL HENNA</td><td>HENNA DORADO                               </td><td>80 GR</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>19730</td><td>GOOD HAIR</td><td>AMPOLLA DE RECOMPONEDOR CAUTERIZADOR MOLECULAR </td><td>70 CC</td><td></td><td></td><td></td><td>26</td></tr>
+<tr><td>10903</td><td>CERAS COLLAGE</td><td>CERA VEGETAL ALOE VERA</td><td>200 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>2</td></tr>
+<tr><td>23689</td><td>GOOD HAIR</td><td>LECHE CAUTERIZADORA</td><td>120 ML</td><td></td><td></td><td></td><td>12</td></tr>
+<tr><td>2734</td><td>PRODAVA</td><td>ENJUAGUE TECNICO CAPILAR CON ALOE VERA</td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>3</td></tr>
+<tr><td>10901</td><td>CERAS COLLAGE</td><td>CERA DEPILATORA HIPOALERGENICA ROSA MOSQUETA</td><td>200 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>1</td></tr>
+<tr><td>10904</td><td>CERAS COLLAGE</td><td>CERA ROSA MOSQUETA</td><td>400 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>5</td></tr>
+<tr><td>2736</td><td>PRODAVA</td><td>ENJUAGUE TECNICO CAPILAR CON ALGAS</td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>3</td></tr>
+<tr><td>20449</td><td>ARCAMETAL</td><td>STANDARD PLASTIC </td><td>1,000 KG</td><td></td><td>CERA TERMIC</td><td></td><td>7</td></tr>
+<tr><td>10945</td><td>CARGOLET</td><td>TELAS DE MANTA</td><td></td><td>30 PZAS</td><td>VARIOS</td><td></td><td>6</td></tr>
+<tr><td>11608</td><td>GOOD HAIR</td><td>Intensidad REFORZADORA  (COLOR AMARILLO) </td><td>1000 CC</td><td></td><td></td><td></td><td>3</td></tr>
+<tr><td>22032</td><td>SINGLE PUBLICO</td><td>VEGEPROT VID ROJA</td><td>200 GR</td><td></td><td>LINEA PUBLICO</td><td>EMULSIONES ACONDICIONADORAS</td><td>6</td></tr>
+<tr><td>21786</td><td>SINGLE PUBLICO</td><td>VEGEPROT MIRTILLO</td><td>200 GR</td><td></td><td>LINEA PUBLICO</td><td>EMULSIONES ACONDICIONADORAS</td><td>6</td></tr>
+<tr><td>3880</td><td>NATURAO</td><td>KIT ENCERADO</td><td>250 CC</td><td></td><td>lineas VARIAS</td><td></td><td>2</td></tr>
+<tr><td>21787</td><td>SINGLE PUBLICO</td><td>VEGEPROT HIBISCO</td><td>200 GR</td><td></td><td>LINEA PUBLICO</td><td>EMULSIONES ACONDICIONADORAS</td><td>6</td></tr>
+<tr><td>21810</td><td>SINGLE PUBLICO</td><td>SOLSTAR CREMA CAPILAR HIDRATANTE</td><td>1000 CC</td><td></td><td>SOLSTAR   </td><td>NUTRICION</td><td>1</td></tr>
+<tr><td>2724</td><td>PRODAVA</td><td>SHAMPOO GINSENG PELO DEBIL </td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>3</td></tr>
+<tr><td>21759</td><td>SINGLE PUBLICO</td><td>SINGLE OXIDANTE 20 VOL.</td><td>920 CC</td><td></td><td>LINEA PUBLICO</td><td>OXIDANTES - ACLARANTES</td><td>2</td></tr>
+<tr><td>24991</td><td>PRODAVA</td><td>SHAMPOO CALENDULA PELO NORMAL</td><td>960 CC</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>3</td></tr>
+<tr><td>21603</td><td>FRAMESI LISTA SALON</td><td>OSSIDORR FLOWER 40 VOL</td><td>946 ML</td><td></td><td>OSSIDANTI</td><td></td><td>4</td></tr>
+<tr><td>10911</td><td>CERAS COLLAGE</td><td>CERA MIEL CALENDULA</td><td>1000 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>5</td></tr>
+<tr><td>2732</td><td>PRODAVA</td><td>ENJUAGUE TECNICO CAPILAR CON CALENDULA</td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>3</td></tr>
+<tr><td>19934</td><td>BONMETIQUE</td><td>CARINA DEBIL</td><td>800 CC</td><td></td><td>PERMANENTES</td><td></td><td>3</td></tr>
+<tr><td>21638</td><td>FRAMESI LISTA SALON</td><td>EXTREME CARE SHAMPOO</td><td>1000 ML</td><td></td><td>LINEA OPTIONS</td><td></td><td>3</td></tr>
+<tr><td>10917</td><td>CERAS COLLAGE</td><td>JALEA DESCARTABLE P/ESPATULA</td><td>800 GR</td><td></td><td>SISTEMA DESCARTABLE</td><td></td><td>3</td></tr>
+<tr><td>11710</td><td>BONMETIQUE</td><td>RESTAURADOR 2 MINUTOS </td><td>400 CC</td><td></td><td>TRATAMIENTOS</td><td></td><td>4</td></tr>
+<tr><td>21600</td><td>FRAMESI LISTA SALON</td><td>OSSIDORR FLOWER 20 VOL</td><td>946 ML</td><td></td><td>OSSIDANTI</td><td></td><td>4</td></tr>
+<tr><td>19933</td><td>BONMETIQUE</td><td>CARINA NORMAL</td><td>800 CC</td><td></td><td>PERMANENTES</td><td></td><td>3</td></tr>
+<tr><td>21810</td><td>SINGLE PUBLICO</td><td>SOLSTAR CREMA CAPILAR HIDRATANTE</td><td>1000 CC</td><td></td><td>SOLSTAR   </td><td>NUTRICION</td><td>1</td></tr>
+<tr><td>20203</td><td>CAPILATIS</td><td>SHAMPOO COLOR DEFENSE</td><td>420 ML</td><td>FRASCO</td><td>NUEVA LINEA PROTECCION</td><td></td><td>1</td></tr>
+<tr><td>21810</td><td>SINGLE PUBLICO</td><td>SOLSTAR CREMA CAPILAR HIDRATANTE</td><td>1000 CC</td><td></td><td>SOLSTAR   </td><td>NUTRICION</td><td>1</td></tr>
+<tr><td>14428</td><td>WELLA PROFESIONAL</td><td>Nature fashion 701 Rubio cza natural mediano</td><td></td><td></td><td>Color Perfect x 60 grs.</td><td></td><td>1</td></tr>
+<tr><td>10942</td><td>CARGOLET</td><td>TALCO LIQUIDO PRE-DEPILATORIO </td><td>250 ML</td><td></td><td>VARIOS</td><td></td><td>5</td></tr>
+<tr><td>21761</td><td>SINGLE PUBLICO</td><td>SINGLE OXIDANTE 30 VOL.</td><td>920 CC</td><td></td><td>LINEA PUBLICO</td><td>OXIDANTES - ACLARANTES</td><td>4</td></tr>
+<tr><td>23530</td><td>SINGLE PUBLICO</td><td>SHAMPOO PH7 NEUTRO</td><td>380 C.C</td><td></td><td>LINEA PUBLICO</td><td>LAVADO-ENJUAGUE</td><td>3</td></tr>
+<tr><td>10921</td><td>CERAS COLLAGE</td><td>BANDAS DEPILATORIAS</td><td>50 UNIDADES</td><td></td><td>SISTEMA DESCARTABLE</td><td></td><td>5</td></tr>
+<tr><td>21809</td><td>SINGLE PUBLICO</td><td>SOLSTAR CREMA CAPILAR HIDRATANTE</td><td>250 GR</td><td></td><td>SOLSTAR   </td><td>NUTRICION</td><td>12</td></tr>
+<tr><td>10933</td><td>CARGOLET</td><td>BRILLO AL INSTANTE </td><td>120 ML</td><td></td><td>SILICA</td><td></td><td>17</td></tr>
+<tr><td>21811</td><td>SINGLE PUBLICO</td><td>KERATINA HIDROLIZED HAIR - AMPOLLA x UNIDAD</td><td>15 ML</td><td>12 UNIDADES</td><td>SOLSTAR   </td><td>NUTRICION</td><td>24</td></tr>
+<tr><td>25790</td><td>FRAMESI LISTA SALON</td><td>MASCARA DRENCH HIDRATANTE</td><td>1000 CC</td><td></td><td>LINEA OPTIONS</td><td></td><td>3</td></tr>
+<tr><td>21779</td><td>SINGLE PUBLICO</td><td>BRILLO THE END</td><td>240 ML</td><td></td><td>LINEA PUBLICO</td><td>PEINADO Y TERMINACION</td><td>6</td></tr>
+<tr><td>10935</td><td>CARGOLET</td><td>CERA CALIENTE TIPO ESPAÑOL </td><td>140 GRS</td><td></td><td>CERAS DEPILATORIAS</td><td></td><td>6</td></tr>
+<tr><td>17176</td><td>ARCAMETAL</td><td>FUTURA MULTI ROLL ON  (CALIENTA 4 CARTUCHOS CERA)</td><td></td><td></td><td>CERA TERMIC</td><td></td><td>12</td></tr>
+<tr><td>10932</td><td>CARGOLET</td><td>SILICA GRUESA </td><td>70 ML</td><td></td><td>SILICA</td><td></td><td>24</td></tr>
+<tr><td>10934</td><td>CARGOLET</td><td>KIT DE CERA FRIA </td><td>150 GRS</td><td></td><td>CERAS DEPILATORIAS</td><td></td><td>6</td></tr>
+<tr><td>21759</td><td>SINGLE PUBLICO</td><td>SINGLE OXIDANTE 20 VOL.</td><td>920 CC</td><td></td><td>LINEA PUBLICO</td><td>OXIDANTES - ACLARANTES</td><td>2</td></tr>
+<tr><td>15716</td><td>ALFAPARF</td><td>EQUIPMENT SOOTHING INFUSION XUNIDAD</td><td>15 ML</td><td>CAJAX12UNIDADES</td><td>EQUIPMENT</td><td></td><td>12</td></tr>
+<tr><td>11608</td><td>GOOD HAIR</td><td>Intensidad REFORZADORA  (COLOR AMARILLO) </td><td>1000 CC</td><td></td><td></td><td></td><td>6</td></tr>
+<tr><td>3742</td><td>NATURAO</td><td>SHAMPOO ROMERO</td><td>450 CC</td><td></td><td>LINEA FRUTAL</td><td>CABELLOS GRASOS</td><td>3</td></tr>
+<tr><td>17967</td><td>EURO STIL PROFESIONAL</td><td>PINCEL DE TINTURA PEQUEÑO</td><td></td><td>XUNIDAD</td><td>NACIONAL</td><td></td><td>20</td></tr>
+<tr><td>3765</td><td>NATURAO</td><td>SHAMPOO TILO</td><td>450 CC</td><td></td><td>LINEA FRUTAL</td><td>CABELLOS TEÑIDOS </td><td>3</td></tr>
+<tr><td>3753</td><td>NATURAO</td><td>SHAMPOO GERMEN DE TRIGO</td><td>450 CC</td><td></td><td>LINEA FRUTAL</td><td>CABELLOS NORMALES</td><td>3</td></tr>
+<tr><td>3882</td><td>NATURAO</td><td>KIT ENCERADO CON SHAMPOO</td><td>250 CC</td><td></td><td>lineas VARIAS</td><td></td><td>1</td></tr>
+<tr><td>3880</td><td>NATURAO</td><td>KIT ENCERADO</td><td>250 CC</td><td></td><td>lineas VARIAS</td><td></td><td>1</td></tr>
+<tr><td>2730</td><td>PRODAVA</td><td>SHAMPOO CON TILO PELO GRASO</td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>1</td></tr>
+<tr><td>2732</td><td>PRODAVA</td><td>ENJUAGUE TECNICO CAPILAR CON CALENDULA</td><td>960 ML</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>SHAMPOO Y ENJUAGUES</td><td>1</td></tr>
+<tr><td>20154</td><td>CANNON</td><td>EDT CIEL D´ETE C/VAPO</td><td>50 ML</td><td></td><td>PRODUCTOS FEMENINOS</td><td>LINEA CIEL D´ETE</td><td>1</td></tr>
+<tr><td>20155</td><td>CANNON</td><td>EDT CIEL D´ETE C/VAPO</td><td>80 ML</td><td></td><td>PRODUCTOS FEMENINOS</td><td>LINEA CIEL D´ETE</td><td>1</td></tr>
+<tr><td>12961</td><td>ARCAMETAL</td><td>ARIEN ION </td><td>2000 WATS</td><td></td><td>SECADORES DE MANO PROFESIONALES  DE MANO</td><td></td><td>1</td></tr>
+<tr><td>26023</td><td>USO COTIDIANO</td><td>ESPUMA AFEITAR GILLETE FOAMY S.SKI</td><td>311 GR</td><td></td><td>CREMA DE AFEITAR</td><td>GILLETTE</td><td>2</td></tr>
+<tr><td>21079</td><td>FIORELA PUBLICO</td><td>LOCIÓN con VITAM. B6</td><td></td><td></td><td>LINEAS</td><td>VITAMINA B6</td><td>1</td></tr>
+<tr><td>21099</td><td>FIORELA PUBLICO</td><td>HUMECTANTE DE PEPINOS</td><td>250 ML</td><td></td><td>LOCIONES</td><td></td><td>1</td></tr>
+<tr><td>21104</td><td>FIORELA PUBLICO</td><td>TONIFICANTE LAUREL - CEREZO</td><td>250 ML</td><td></td><td>LOCIONES</td><td></td><td>1</td></tr>
+<tr><td>14529</td><td>WELLA PROFESIONAL</td><td>CT.NATURE/FASHION 80 Rubio claro</td><td>60 GR</td><td></td><td>COLOR TOUCH</td><td></td><td>1</td></tr>
+<tr><td>10906</td><td>CERAS COLLAGE</td><td>CERA VEGETAL ALOE VERA</td><td>400 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>1</td></tr>
+<tr><td>10904</td><td>CERAS COLLAGE</td><td>CERA ROSA MOSQUETA</td><td>400 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>1</td></tr>
+<tr><td>38</td><td>WELLA PROFESIONAL</td><td>C.TOUCH EMUL NORMAL </td><td>120 ML</td><td></td><td>EMULSIONES</td><td></td><td>1</td></tr>
+<tr><td>25128</td><td>SINGLE PUBLICO</td><td>VIEW TONE - TONO SOBRE TONO 8</td><td>35 GR</td><td></td><td></td><td>VIEW TONE</td><td>1</td></tr>
+<tr><td>21928</td><td>SINGLE PUBLICO</td><td>VIEW TONE - TONO SOBRE TONO 7 RUBIO</td><td>35 GR</td><td></td><td></td><td>VIEW TONE</td><td>1</td></tr>
+<tr><td>21811</td><td>SINGLE PUBLICO</td><td>KERATINA HIDROLIZED HAIR - AMPOLLA x UNIDAD</td><td>15 ML</td><td>12 UNIDADES</td><td>SOLSTAR   </td><td>NUTRICION</td><td>3</td></tr>
+<tr><td>17614</td><td>FAS EXTENSIONES</td><td>Cortinas de 60 cm. De largo COLOR N / 9</td><td></td><td></td><td>Cortinas con micropeinetas</td><td></td><td>1</td></tr>
+<tr><td>17606</td><td>FAS EXTENSIONES</td><td>Cortinas de 50 cm. De largo COLOR N / 8</td><td></td><td></td><td>Cortinas con micropeinetas</td><td></td><td>1</td></tr>
+<tr><td>17607</td><td>FAS EXTENSIONES</td><td>Cortinas de 50 cm. De largo COLOR N / 9 </td><td></td><td></td><td>Cortinas con micropeinetas</td><td></td><td>1</td></tr>
+<tr><td>9719</td><td>CORTASSA</td><td>CK BE  EDT</td><td>200v</td><td></td><td>CALVIN KLEIN  </td><td>CK BE UNISEX</td><td>1</td></tr>
+<tr><td>14528</td><td>WELLA PROFESIONAL</td><td>CT.NATURE/FASHION  70 Rubio mediano</td><td>60 GR</td><td></td><td>COLOR TOUCH</td><td></td><td>1</td></tr>
+<tr><td>14529</td><td>WELLA PROFESIONAL</td><td>CT.NATURE/FASHION 80 Rubio claro</td><td>60 GR</td><td></td><td>COLOR TOUCH</td><td></td><td>1</td></tr>
+<tr><td>14354</td><td>ALFAPARF</td><td>7.43</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>1</td></tr>
+<tr><td>12060</td><td>ARIMEX</td><td>MASAJEADOR PARA PIE CON INFRAROJO PMF-111/A</td><td></td><td></td><td>LINEA BIENESTAR</td><td>SPA</td><td>1</td></tr>
+<tr><td>14528</td><td>WELLA PROFESIONAL</td><td>CT.NATURE/FASHION  70 Rubio mediano</td><td>60 GR</td><td></td><td>COLOR TOUCH</td><td></td><td>2</td></tr>
+<tr><td>11774</td><td>ARTEZ WESTERLEY</td><td>CREMA ACTHINA EXTRACTO</td><td>50 GR</td><td></td><td>LINEA CLASICA</td><td>TRATAMIENTO ACTHINA</td><td>1</td></tr>
+<tr><td>16544</td><td>ANDRE LATOUR</td><td>CREMA ESENCIAL</td><td>50 GR</td><td>POTE</td><td>LINEA BASICA</td><td>NUTRICION</td><td>1</td></tr>
+<tr><td>8585</td><td>DOROTHY GRAY</td><td>COLONIA MARINE</td><td>460 ML</td><td></td><td>LINEA CORPORAL</td><td>EAU DE TOILETTE</td><td>1</td></tr>
+<tr><td>24529</td><td>ESENCIAS NATURALES</td><td>SET CHOCOLATE (EMULSION + TOALLA + QUITAESMALTE)</td><td></td><td>SET</td><td>ESTUCHES DE REGALO</td><td></td><td>1</td></tr>
+<tr><td>5298</td><td>LA TOJA</td><td>DENTIFRICO, CALCIO/FLUOR/MAGNESIO LICOR DEL POLO</td><td>75 ML</td><td></td><td>LINEA HIGIENE BUCAL- LICOR DEL POLO</td><td></td><td>1</td></tr>
+<tr><td>24355</td><td>ARTEZ WESTERLEY</td><td>ESMALTE PARA UÑAS MILK</td><td>15 CC</td><td></td><td>TRATAMIENTO PARA MANOS</td><td>ESMALTE PARA UÑAS</td><td>1</td></tr>
+<tr><td>11772</td><td>ARTEZ WESTERLEY</td><td>ACTHINA CREMA FLUIDA</td><td>110 CC</td><td></td><td>LINEA CLASICA</td><td>TRATAMIENTO ACTHINA</td><td>1</td></tr>
+<tr><td>14268</td><td>ALFAPARF</td><td>8</td><td>60 ML</td><td>POMO</td><td>EVOLUTION OF THE COLOR</td><td></td><td>1</td></tr>
+<tr><td>10909</td><td>CERAS COLLAGE</td><td>CERA MIEL CALENDULA</td><td>800 GR</td><td></td><td>SISTEMA   ESPAÑOL</td><td></td><td>1</td></tr>
+<tr><td>20449</td><td>ARCAMETAL</td><td>STANDARD PLASTIC </td><td>1,000 KG</td><td></td><td>CERA TERMIC</td><td></td><td>1</td></tr>
+<tr><td>23689</td><td>GOOD HAIR</td><td>LECHE CAUTERIZADORA</td><td>120 ML</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>19729</td><td>GOOD HAIR</td><td>AMPOLLA SHOCK DE KERATINA</td><td>125 CC</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>17191</td><td>SPIRITUAL HENNA</td><td>HENNA TIZIANO INTENSO</td><td>500 GR</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>23238</td><td>FRAMESI LISTA SALON</td><td>MIRTILLO- HIGH POTENCY SHAMPOO</td><td>250 ML</td><td></td><td>MORPHOSIS</td><td></td><td>1</td></tr>
+<tr><td>12988</td><td>ARCAMETAL</td><td>VIBRO MATIC </td><td></td><td></td><td>APARATOS VARIOS</td><td></td><td>1</td></tr>
+<tr><td>23534</td><td>ANDRE LATOUR</td><td>DELINEADOR RETRACTIL </td><td>20 G</td><td></td><td>LINEA BASICA</td><td>BRILLOS/DELINEADORES</td><td>1</td></tr>
+<tr><td>18271</td><td>ARTEZ WESTERLEY</td><td>ESMALTE PARA UÑAS ROSA ETERNO</td><td>15 CC</td><td></td><td>TRATAMIENTO PARA MANOS</td><td>ESMALTE PARA UÑAS</td><td>1</td></tr>
+<tr><td>7221</td><td>FULTON</td><td>COLONIA VIOLETAS</td><td>250 CC</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>8059</td><td>FAS EXTENSIONES</td><td>KERATINA NEGRA LARGA 21 CM</td><td></td><td></td><td>PRODUCTO</td><td></td><td>1</td></tr>
+<tr><td>8055</td><td>FAS EXTENSIONES</td><td>KERATINA NEGRA DE 10.5 CM</td><td></td><td></td><td>PRODUCTO</td><td></td><td>1</td></tr>
+<tr><td>13132</td><td>ANDRE LATOUR</td><td>ORTIGA PARA LA CAIDA DEL CABELLO SHAMPOO</td><td>300 ML</td><td>FRASCO</td><td>CUIDADO CAPILAR</td><td>SHAMPUES & ACONDICIONADORES</td><td>1</td></tr>
+<tr><td>19729</td><td>GOOD HAIR</td><td>AMPOLLA SHOCK DE KERATINA</td><td>125 CC</td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>21844</td><td>SINGLE PUBLICO</td><td>SINGLE COLOR INTENSIVE 8 RUBIO CLARO</td><td>60 GR</td><td></td><td></td><td>COLOR INTENSIVE</td><td>2</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26073</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 02</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>24687</td><td>ANDRE LATOUR</td><td>PROBADORES</td><td></td><td></td><td>LINEA BASICA</td><td>PROBADORES</td><td>1</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>16719</td><td>ANDRE LATOUR</td><td>DELINEADOR DE OJOS CRAYON COBRE</td><td></td><td></td><td>LINEA BASICA</td><td>OJOS/DELINEADORES</td><td>1</td></tr>
+<tr><td>16708</td><td>ANDRE LATOUR</td><td>DELINEADOR LABIAL CRAYON NATURAL</td><td></td><td></td><td>LINEA BASICA</td><td>BRILLOS/DELINEADORES</td><td>1</td></tr>
+<tr><td>16706</td><td>ANDRE LATOUR</td><td>DELINEADOR LABIAL CRAYON MALVA</td><td></td><td></td><td>LINEA BASICA</td><td>BRILLOS/DELINEADORES</td><td>1</td></tr>
+<tr><td>16780</td><td>ANDRE LATOUR</td><td>DELINEADOR CRAYON MARRON MEDIO</td><td></td><td></td><td>LINEA BASICA</td><td>OJOS/DELINEADORES</td><td>1</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26081</td><td>ANDRE LATOUR</td><td>DISPLAYS/CARGA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26076</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 02</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26069</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 02</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>26072</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 01</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26081</td><td>ANDRE LATOUR</td><td>DISPLAYS/CARGA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26069</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 02</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26072</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 01</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26073</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 02</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26076</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 02</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26076</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 02</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26073</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 02</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26072</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 01</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26069</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 02</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26081</td><td>ANDRE LATOUR</td><td>DISPLAYS/CARGA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>6110</td><td>INECTO</td><td>INECTO CREMA  20 VOL.</td><td>100 ML</td><td>15 UNIDADES</td><td>OXIDANTES</td><td></td><td>1</td></tr>
+<tr><td>26076</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 02</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26073</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 02</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26081</td><td>ANDRE LATOUR</td><td>DISPLAYS/CARGA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26072</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 01</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26069</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 02</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>18940</td><td>DOROTHY GRAY</td><td>BAÑO DE CREMA COLOR BRILLANTE</td><td>200 G</td><td></td><td>LINEA CAPILAR</td><td>CUIDADOS ADICIONALES</td><td>1</td></tr>
+<tr><td>17062</td><td>NATURALISTA </td><td>MASC. PEST. ALARGADORA- AZUL CIELO</td><td>10GR</td><td></td><td>LINEA DE MAQUILLAJE</td><td>OJOS</td><td>3</td></tr>
+<tr><td>26071</td><td>ANDRE LATOUR</td><td>MAQUILLAJE SKIN HIPOAL. S&S 02</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26067</td><td>ANDRE LATOUR</td><td>RUBOR COMPACTO HIPOALERGENICO</td><td>4.5 GR</td><td></td><td>URBANA ROSTRO</td><td>RUBORES</td><td>6</td></tr>
+<tr><td>26081</td><td>ANDRE LATOUR</td><td>DISPLAYS/CARGA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26077</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 03</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26078</td><td>ANDRE LATOUR</td><td>OBSEQUI CREMA CORPORAL AL WOMEN</td><td>90 ML</td><td></td><td>LINEA URBANA</td><td></td><td>15</td></tr>
+<tr><td>26073</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 02</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26070</td><td>ANDRE LATOUR</td><td>MAQUILLAJE  SKIN HIPOAL. S&S 01</td><td>30 ML</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26074</td><td>ANDRE LATOUR</td><td>SOMBRA COMPACTA DUO S&S 03</td><td>3 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26076</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 02</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26079</td><td>ANDRE LATOUR</td><td>PROBADOR</td><td></td><td></td><td></td><td></td><td>16</td></tr>
+<tr><td>26075</td><td>ANDRE LATOUR</td><td>LAPIZ LABIAL HUMECT. S&S 01</td><td>4 GR</td><td></td><td>URBANA LABIOS</td><td></td><td>6</td></tr>
+<tr><td>26068</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 01</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26062</td><td>ANDRE LATOUR</td><td>BRILLO LABIAL S&S</td><td>3 ML</td><td></td><td>LABIALES</td><td></td><td>6</td></tr>
+<tr><td>26065</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS S&S 03</td><td>0.5 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26069</td><td>ANDRE LATOUR</td><td>ESMALTE + CALCIO S&S 02</td><td>15 ML</td><td></td><td>URBANA U&#65533;AS</td><td></td><td>6</td></tr>
+<tr><td>26064</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 02</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>26066</td><td>ANDRE LATOUR</td><td>TONALIZADOR COMPACTO S &S</td><td>8 GR</td><td></td><td>URBANA ROSTRO</td><td></td><td>6</td></tr>
+<tr><td>26080</td><td>ANDRE LATOUR</td><td>PANCARTA</td><td></td><td></td><td></td><td></td><td>1</td></tr>
+<tr><td>26063</td><td>ANDRE LATOUR</td><td>LAPIZ DELIN. DE OJOS RETRACTIL S&S 01</td><td>0.2 GR</td><td></td><td>URBANA OJOS</td><td></td><td>6</td></tr>
+<tr><td>7140</td><td>FULTON</td><td>AFTER LOCION</td><td>120 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7230</td><td>FULTON</td><td>POLVO DE FECULAS</td><td></td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>2</td></tr>
+<tr><td>7141</td><td>FULTON</td><td>AFTER LOCION</td><td>120 CM3</td><td>S/ESTUCHE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>4</td></tr>
+<tr><td>7130</td><td>FULTON</td><td>TALCO V.L </td><td>100 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>22040</td><td>FULTON</td><td>COLONIA DE ROSAS</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>1</td></tr>
+<tr><td>7175</td><td>FULTON</td><td>COLONIA NATURAL</td><td>150 CC</td><td></td><td>LINEA NATURAL</td><td></td><td>2</td></tr>
+<tr><td>7134</td><td>FULTON</td><td>LOCION  V.L</td><td>60 CM3</td><td>S/ENVASE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7137</td><td>FULTON</td><td>AFTER LOCION</td><td>60 CM3</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7129</td><td>FULTON</td><td>JABONES  V.L</td><td>100 GR</td><td>2 UNIDADES</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7166</td><td>FULTON</td><td>COLONIA DESODORANTE INGLESA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>3</td></tr>
+<tr><td>22912</td><td>FULTON</td><td>COLONIA DESOD. ARTESANIAS</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7165</td><td>FULTON</td><td>COLONIA DESODORANTE CITRICA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>1</td></tr>
+<tr><td>7225</td><td>FULTON</td><td>COLONIA CP </td><td>280 CC</td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>3</td></tr>
+<tr><td>7128</td><td>FULTON</td><td>JABON V.L.</td><td>160 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>1</td></tr>
+<tr><td>7191</td><td>FULTON</td><td>POLVO PARA CUERPO ROSAS</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>1</td></tr>
+<tr><td>22913</td><td>FULTON</td><td>COLONIA DESOD. JAZMIN</td><td>250 ML</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7220</td><td>FULTON</td><td>POLVO PARA CUERPO VIOLETAS</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7168</td><td>FULTON</td><td>COLONIA DESODORANTE MARINA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>22911</td><td>FULTON</td><td>AFTER EN CREMA C/ ALOE Y MENTOL</td><td>130 GR.</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7224</td><td>FULTON</td><td>JABON BEBE</td><td>100 GR</td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>4</td></tr>
+<tr><td>7167</td><td>FULTON</td><td>COLONIA DESODORANTE FLORAL</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7169</td><td>FULTON</td><td>COLONIA DESODORANTE LAVANDA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>2</td></tr>
+<tr><td>7127</td><td>FULTON</td><td>JABON V.L</td><td>100 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>4</td></tr>
+<tr><td>7164</td><td>FULTON</td><td>COLONIA DESODORANTE MELROSE AMBRE</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>4</td></tr>
+<tr><td>7131</td><td>FULTON</td><td>DESODORANTE AEROSOL V.L </td><td>250 ML</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>3</td></tr>
+<tr><td>7230</td><td>FULTON</td><td>POLVO DE FECULAS</td><td></td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>3</td></tr>
+<tr><td>7129</td><td>FULTON</td><td>JABONES  V.L</td><td>100 GR</td><td>2 UNIDADES</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>3</td></tr>
+<tr><td>7166</td><td>FULTON</td><td>COLONIA DESODORANTE INGLESA</td><td>500 CC</td><td></td><td>LINEA MELROSE</td><td></td><td>4</td></tr>
+<tr><td>7138</td><td>FULTON</td><td>AFTER LOCION</td><td>60 CM3</td><td>S/ESTUCHE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>4</td></tr>
+<tr><td>7128</td><td>FULTON</td><td>JABON V.L.</td><td>160 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>4</td></tr>
+<tr><td>7130</td><td>FULTON</td><td>TALCO V.L </td><td>100 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>3</td></tr>
+<tr><td>7226</td><td>FULTON</td><td>COLONIA BEBE</td><td>245 CC</td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>4</td></tr>
+<tr><td>7175</td><td>FULTON</td><td>COLONIA NATURAL</td><td>150 CC</td><td></td><td>LINEA NATURAL</td><td></td><td>1</td></tr>
+<tr><td>7228</td><td>FULTON</td><td>CREMA ENJUAGUE BEBE N</td><td></td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>3</td></tr>
+<tr><td>7227</td><td>FULTON</td><td>CHAMPU BEBE N</td><td>280 CC</td><td></td><td>LINEA NUEVA BEBE</td><td></td><td>4</td></tr>
+<tr><td>7220</td><td>FULTON</td><td>POLVO PARA CUERPO VIOLETAS</td><td>100 GR</td><td></td><td>LINEA ARTESANIA DE FULTON</td><td></td><td>2</td></tr>
+<tr><td>7142</td><td>FULTON</td><td>AFTER CREMA V.L.</td><td>130 GR</td><td></td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>7136</td><td>FULTON</td><td>LOCION</td><td>120 CM3</td><td>S/ENVASE</td><td>LINEA VIEJA LAVANDA FULTON</td><td></td><td>2</td></tr>
+<tr><td>3819</td><td>NATURAO</td><td>POLVO DECOLORANTE SOBRE</td><td>20 GR</td><td></td><td>LINEA DECOLORACIÓN</td><td></td><td>15</td></tr>
+<tr><td>931</td><td>SWAN</td><td>CEPILLO NEUM. CON PTA PROTEGIADA (GDE)</td><td></td><td></td><td>CEPILLOS, PEINES Y BROCHAS</td><td></td><td>3</td></tr>
+<tr><td>3833</td><td>NATURAO</td><td>CREMA OXIGENADA 30 VOL</td><td>100 CC</td><td></td><td>LINEA OXIDANTES </td><td></td><td>6</td></tr>
+<tr><td>20819</td><td>DISWALD</td><td>PALOS PARA DEPILACION</td><td></td><td></td><td>DEPILACION</td><td></td><td>5</td></tr>
+<tr><td>22535</td><td>DISWALD</td><td>ESPATULA CURVA</td><td></td><td></td><td>ESPATULA </td><td></td><td>3</td></tr>
+<tr><td>22533</td><td>DISWALD</td><td>ESPATULA RECTA</td><td></td><td></td><td>ESPATULA </td><td></td><td>4</td></tr>
+<tr><td>25584</td><td>CELESTAL</td><td>JUEGO C/3 PEINES PARA CORTAR</td><td>3 U</td><td></td><td>PEINES VENADO PROFESIONAL PELUQUERIA</td><td>COLOR</td><td>3</td></tr>
+<tr><td>893</td><td>SWAN</td><td>BANDAS DE PAPEL ALUMINIO Tiritas (POR PAQUETE)</td><td></td><td>24 UNIDADES</td><td>PAPELES ALUMINIO/ FILM/ PERMANENTE/ TERM</td><td></td><td>3</td></tr>
+<tr><td>20662</td><td>AURIL</td><td>GEL LIQUIDO</td><td>165 CC</td><td></td><td>GELES Y FIJADORES</td><td></td><td>3</td></tr>
+<tr><td>25295</td><td>CELESTAL</td><td>PEINE DE COLA</td><td></td><td></td><td>PEINES  VENADO</td><td>CEPILLO VENADO</td><td>3</td></tr>
+<tr><td>2707</td><td>PRODAVA</td><td>POLVO DECOLORANTE PRODAVA</td><td>25 GR</td><td></td><td>LINEA PRODAVA FORMULA PROFESIONAL </td><td>DECOLORANTE Y OXIDANTES</td><td>12</td></tr>
+<tr><td>20449</td><td>ARCAMETAL</td><td>STANDARD PLASTIC </td><td>1,000 KG</td><td></td><td>CERA TERMIC</td><td></td><td>3</td></tr>
+<tr><td>892</td><td>SWAN</td><td>BANDAS DE PAPEL ALUMINIO Tiritas )POR PAQUETE)</td><td></td><td>12 UNIDADES</td><td>PAPELES ALUMINIO/ FILM/ PERMANENTE/ TERM</td><td></td><td>2</td></tr>
+<tr><td>19662</td><td>NATURAO</td><td>SHAMPOO ACIDO</td><td>5000 CC</td><td>BIDON</td><td>LINEA FRUTAL</td><td>CABELLOS TE&#65533;IDOS Y DECOLORADOS</td><td>5</td></tr>
+<tr><td>22481</td><td>DISWALD</td><td>CEP. POCKET 235-068</td><td></td><td></td><td>CEPILLOS</td><td></td><td>2</td></tr>
+<tr><td>15168</td><td>DISWALD</td><td>GORRA DE DUCHA EST. Y LISA</td><td></td><td></td><td>GORRA</td><td>DUCHA</td><td>1</td></tr>
+</table></center>
+
+

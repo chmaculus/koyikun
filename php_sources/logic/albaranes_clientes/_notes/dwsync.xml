@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="comprobarcliente.php" server="192.168.3.131//root/php/logic/" local="128240641000000000" remote="129877071530000000" />
+<file name="comprobarcliente_ini.php" server="192.168.3.131//root/php/logic/" local="128287668700000000" remote="129877071530000000" />
+<file name="convertir_albaran.php" server="192.168.3.131//root/php/logic/" local="128286651220000000" remote="129877071530000000" />
+<file name="eliminar_albaran.php" server="192.168.3.131//root/php/logic/" local="129865723574083323" remote="129877071540000000" />
+<file name="eliminar_linea.php" server="192.168.3.131//root/php/logic/" local="128183010580000000" remote="129877071540000000" />
+<file name="frame_articulos.php" server="192.168.3.131//root/php/logic/" local="128287549000000000" remote="129877071540000000" />
+<file name="frame_clientes.php" server="192.168.3.131//root/php/logic/" local="128286636180000000" remote="129877071540000000" />
+<file name="frame_clientes_ini.php" server="192.168.3.131//root/php/logic/" local="128287668700000000" remote="129877071540000000" />
+<file name="frame_lineas.php" server="192.168.3.131//root/php/logic/" local="128266819820000000" remote="129877071540000000" />
+<file name="guardar_albaran.php" server="192.168.3.131//root/php/logic/" local="129865723067824367" remote="129877071540000000" />
+<file name="index.php" server="192.168.3.131//root/php/logic/" local="129865718748637323" remote="129877071550000000" />
+<file name="modificar_albaran.php" server="192.168.3.131//root/php/logic/" local="129865719008502187" remote="129877071550000000" />
+<file name="nuevo_albaran.php" server="192.168.3.131//root/php/logic/" local="129866174571314379" remote="129877071560000000" />
+<file name="rejilla.php" server="192.168.3.131//root/php/logic/" local="128526850160000000" remote="129877071560000000" />
+<file name="validarcliente.php" server="192.168.3.131//root/php/logic/" local="128170120740000000" remote="129877071570000000" />
+<file name="ventana_clientes.php" server="192.168.3.131//root/php/logic/" local="128287668700000000" remote="129877071570000000" />
+<file name="ver_albaran.php" server="192.168.3.131//root/php/logic/" local="129865721830803613" remote="129877071570000000" />
+<file name="ver_articulos.php" server="192.168.3.131//root/php/logic/" local="128287610420000000" remote="129877071570000000" />
+<file name="ver_clientes.php" server="192.168.3.131//root/php/logic/" local="128287610320000000" remote="129877071570000000" />
+</dwsync>

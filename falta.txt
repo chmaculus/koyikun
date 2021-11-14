@@ -1,0 +1,138 @@
+reformular pedidos sucursales
+
+
+
+|       264137 | 49       | 2018-04-17 | 17:31:03 |
+|       107333 | 47       | 2018-04-17 | 17:33:25 |
+|       110156 | 66       | 2018-04-17 | 17:34:57 |
+|       108019 | 51       | 2018-04-17 | 17:37:12 |
+|       124488 | 59       | 2018-04-17 | 17:37:32 |
+|       108020 | 51       | 2018-04-17 | 17:38:55 |
+|       108021 | 51       | 2018-04-17 | 17:39:47 |
+|       110157 | 66       | 2018-04-17 | 17:39:47 |
++--------------+----------+------------+----------+
+
+
+nuevo sistema de ventas
+    promociones
+    clientes
+    tarjeta, debito 
+    dif x financiacion
+    registro promocion
+    
+
+
+
+
+articulos asociados, se vende una promocion y se deben descontar dos articulos
+
+
+crear cuentas corrientes para individualizar clientes
+
+
+ingreso cantidades fijas de stock
+
+unificar iso8859 y utf8
+
+#------------------
+tracking pedidos
+estado pedido
+    pendiente
+    en reparto
+    finalizado
+
+control pedido en sucursal
+#------------------------
+
+
+hoja de ruta
+    n pedido
+    bultos
+    ubicacion / cajon
+    sucursal
+
+
+
+filtro por fecha en pedidos finalizados sucursal y deposito
+
+admin articulos modifica, funcion js no calcula total venta
+
+
+en venta una senia un articulo vario deberia pedir precio
+agregar una columna en precios para agregar articulo
+
+unificar porcentaje de tarjeta
+
+unificar tabla de codigo UTF-8
+
+
+
+pedidos_eliminar.php
+
+revisar
+KoyiKun0.29/public_html/modulos/sucursal_consulta/listas.php
+	verifica promociones
+	
+megatron datos caja no pide clave
+
+productos asociados, descuenta stock, 2 articulos, diferenciar en rotacion articulo vendido en  promocion
+columnas para la web
+ 
+
+
+encargado para modificar minimos y maximos
+
+cierre de session enc 3
+
+listas porcentaje listado
+
+listado para seguimiento de costos
+
+///////////////////////////
+verificar registro existente en tabla de promociones para decidir insertar o actualizar
+
+
+logica precios
+precio_cucursal($id,$sucursal)
+if($rows=1){
+	verifica_promo();
+}else{
+	$sucursal=1;
+}
+
+falta bonos billetes;
+
+logistica
+listas de precios
+jerarquia
+	costos > precio
+
+modificacion de costo
+obtiene el cost anterior
+actualiza el precio de costo
+mantiene una variable con el costo nuevo y el anterior
+guarda tabla costos
+actualiza tabla precios
+almacena seguimiento de costos costo ant/nuevo
+
+
+salida stock x venta
+    exportar excel
+
+consulta precios con sistema caido
+
+
+sucursal clientes verificacion de datos correctos
+
+sucursal clientes 
+1 ingreso de cliente
+cliente en proceso de verificacion
+
+definir grupos de articulos para descuentos
+asignar cliente a grupo
+
+
+
+
+
+movimiento de stock entre sucursales no registra en siguimiento de stock

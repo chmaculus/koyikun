@@ -1,0 +1,40 @@
+body {
+  background-color: #DEDEDE;
+  position: fixed;
+  visibility: visible;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+#DivArriba {
+	border:0; 
+	position:absolute; 
+	top:0; 
+	left:0; 
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 50%;
+}
+#DivAbajo {
+	border:0; 
+	position:absolute; 
+	top:50%; 
+	left:0; 
+	background-color:#DEDEDE;
+	width: 100%;
+	height: 50%;
+}
+
+.FramePanelLeftDown {
+	background-color:#9692FF;
+	top:50%; 
+	width: 100%;
+	height:100%;
+	border: 0;
+  overflow: auto;
+}
+
+/* fin left */
+

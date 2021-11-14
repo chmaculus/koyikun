@@ -1,0 +1,6 @@
+id	id_articulo	numero_pedido	marca	descripcion	contenido	presentacion	clasificacion	subclasificacion	cantidad_solicitada	cantidad_recibida	sucursal	fecha	hora	finalizado	fecha_envio	hora_envio	tipo	fecha_ped_prep	fecha_ped_tran	fecha_ped_rec	hora_ped_rec	hora_ped_prep	hora_ped_tran	responsable	bultos	estado	zona	color	codigo_af
+573625	41018	4082	BELKYS	NAVA METAL BARBERIA BELKYS	1 UNIDAD	ESTUCHE PLASTICA	NAVAJAS		2	NULL	7	2020-01-27	22:22:01	NULL	NULL	NULL	MANUAL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	NULL	5	NULL	NULL
+
+
+id	id_articulo	numero_pedido	marca	descripcion	contenido	presentacion	clasificacion	subclasificacion	cantidad_solicitada	cantidad_recibida	sucursal	fecha	hora	finalizado	fecha_envio	hora_envio	tipo	fecha_ped_prep	fecha_ped_tran	fecha_ped_rec	hora_ped_rec	hora_ped_prep	hora_ped_tran	responsable	bultos	estado	zona	color	codigo_af
+611599	40428	3485	EURO STIL PROFESIONAL	PINCEL TINTURA GRANDE TRANSPARENTE	1UNIDAD		NACIONAL	PINCELES TINTURA	10	7	4	2020-06-19	22:22:01	S	2020-07-07	16:56:56	MANUAL	NULL	NULL	NULL	NULL	NULL	NULL	MATIAS	0	Preparado	3	NULL	NULL
