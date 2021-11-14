@@ -15,6 +15,7 @@ echo '<tr>';
 echo '<form action="'.$_SERVER["SCRIPT_NAME"].'" method="post">';
 
 echo '<td><select name="mes">';
+echo '<option value="" label="Seleccione">Seleccione</option>';
 for($i=1;$i<=12;$i++){
 	if($_POST["mes"]==$i){
 		echo '<option value="'.$i.'" label="'.$i.'" selected>'.$i.'</option>';
@@ -29,6 +30,7 @@ echo '</select></td>';
 
 #---------------------------------------
 echo '<td><select name="anio">';
+echo '<option value="" label="Seleccione">Seleccione</option>';
 for($i=2008;$i<=2030;$i++){
 	if($_POST["anio"]==$i){
 		echo '<option value="'.$i.'" label="'.$i.'" selected>'.$i.'</option>';
