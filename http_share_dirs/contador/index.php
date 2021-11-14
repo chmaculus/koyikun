@@ -42,7 +42,7 @@ foreach($array as $sucursal){
 	echo "<table><tr>";
 	echo "	<td>de</td>";
 	echo "	<td>ta</td>";
-	echo "</tr><table>";
+	echo "</tr></table>";
 }
 echo "</tr>";
 
