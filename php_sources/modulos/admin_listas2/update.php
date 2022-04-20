@@ -33,7 +33,7 @@ if ($_POST["marca"]=="TODAS" or $_POST["marca"]==""){
 $result=mysql_query( base64_decode($_POST["query"]) );
 $rows=mysql_num_rows($result);
 while($row=mysql_fetch_array($result)){
-	lista_porcentaje($row["id"], $_POST["porcentaje"], $_POST["porcentaje"] );
+	lista_porcentaje($row["id"], $_POST["listas"], $_POST["porcentaje"] );
 }
 
 

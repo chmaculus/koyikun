@@ -37,15 +37,17 @@ echo '<table class="t1"';
 		$result2=mysql_query($query2);
 		if(mysql_error()){echo mysql_error();}
 		echo '<option value="">Seleccione</option>';
+
 		while($row=mysql_fetch_array($result2)){
 			if($_POST["listas"]==$row["id"]){
-				echo '<option value="'.$row["id"].'" selected>'.$row["nombre"].'</option>';
+				echo '<option value="'.$row["id"].'" selected>'.$row["nombre"].'</option>'.chr(10);
 			}else{
-				echo '<option value="'.$row["id"].'">'.$row["nombre"].'</option>';
+				echo '<option value="'.$row["id"].'">'.$row["nombre"].'</option>'.chr(10);
 			}
 		}	
-		echo '</select></td>';
-	echo '</tr>';
+
+		echo '</select></td>'.chr(10);
+	echo '</tr>'.chr(10);
 	#--------------------------------------------------------------
 
 
@@ -143,6 +145,7 @@ echo "</form>";
 </form>
 <table class="t1">
 <tr>
+	<th>ID</th>
 	<th>descripcion</th>
 	<th>clasificacion</th>
 	<th>subclasificacion</th>
@@ -158,6 +161,7 @@ echo "</form>";
 <?php
 while($row=mysql_fetch_array($result)){
 	echo "<tr>";
+	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["descripcion"].'</td>';
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
@@ -195,6 +199,8 @@ while($row=mysql_fetch_array($result)){
 	
 	echo "</tr>";
 }
+
+
 
 function precio_sucursal($id_articulo,$id_sucursal){
 	$query='select * from precios where id_articulo="'.$id_articulo.'" and id_sucursal="'.$id_sucursal.'"';
