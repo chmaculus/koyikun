@@ -53,14 +53,15 @@ function lista_porcentaje($id_articulos, $id_lista, $porcentaje ){
 															id_lista="'.$id_lista.'", 
 															porcentaje="'.$porcentaje.'" ';
 	}
-	if($rows==1){
+	if($rows>=1){
 		$q='update listas_porcentaje set porcentaje="'.$porcentaje.'" 
 															where id_articulos="'.$id_articulos.'" and 
 																id_lista="'.$id_lista.'"
 																';
 	}
 	echo "q: ".$q."<br>".chr(13);
-	mysql_query($q)or die(mysql_error());
+	mysql_query($q);
+	if(mysql_error()){ echo mysql_error()."<br>";}
 
 }
 #---------------------------------------------------------------------
