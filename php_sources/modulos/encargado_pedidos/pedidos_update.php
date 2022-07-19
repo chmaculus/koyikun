@@ -11,6 +11,8 @@ if($jerarquia!="1"){
 	exit;
 } 
 
+$id_sucursal=$_POST["id_sucursal"];
+
 echo "<center>";
 echo "Sucursal: ".nombre_sucursal($id_sucursal)."<br>";
 
@@ -31,6 +33,10 @@ if($rows<1){
 	exit;
 }
 
+
+/*
+update pedidos set cantidad_recibida="", cantidad_enviada="", cajon="", finalizado="S", fecha_envio="2022-7-14", hora_envio="21:06:32", fecha_ped_prep="2022-7-14", hora_ped_prep="21:06:32", responsable="VICTOR", bultos="1", estado="Finalizado" where id="785898"
+*/
 
 
 
@@ -67,9 +73,18 @@ while($row=mysql_fetch_array($result)){
 	$array_stock=array_stock($row["id_articulo"],$id_sucursal);
 
 	if($cajon==0){
+		if($_POST["cantidad".$row["id_articulo"]]==""){
+			$catrr=0;
+		}
+		if($cajon==""){
+			$cajon=0;
+		}
+		if($bultos==""){
+			$bultos=0;
+		}
 		$query='update pedidos set
-        cantidad_recibida="'.$_POST["cantidad".$row["id_articulo"]].'",
-        cantidad_enviada="'.$_POST["cantidad".$row["id_articulo"]].'",
+        cantidad_recibida="'.$catrr.'",
+        cantidad_enviada="'.$catrr.'",
         cajon="'.$cajon.'",
         finalizado="S",
          fecha_envio="'.$fecha.'",
@@ -77,15 +92,24 @@ while($row=mysql_fetch_array($result)){
          fecha_ped_prep="'.$fecha.'",
         	hora_ped_prep="'.$hora.'",
         	responsable="'.$_POST["responsable"].'",
-        	bultos="'.$_POST["bultos"].'",
+        	bultos="'.$bultos.'",
         	estado="Finalizado"
                 where id="'.$row["id"].'"
             ';
 	}else{
+		if($_POST["cantidad".$row["id_articulo"]]==""){
+			$catrr=0;
+		}
+		if($cajon==""){
+			$cajon=0;
+		}
+		if($bultos==""){
+			$bultos=0;
+		}
 
 		$query='update pedidos set
-        cantidad_recibida="'.$_POST["cantidad".$row["id_articulo"]].'",
-        cantidad_enviada="'.$_POST["cantidad".$row["id_articulo"]].'",
+        cantidad_recibida="'.$catrr.'",
+        cantidad_enviada="'.$catrr.'",
         cajon="'.$cajon.'",
         finalizado="S",
          fecha_envio="'.$fecha.'",

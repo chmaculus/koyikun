@@ -23,6 +23,7 @@ $porcentaje_tarjeta=get_valor(7);
 
 $query='select * from ventas_temp2 where id_session="'.$id_session.'" order by marca, clasificacion, subclasificacion, descripcion, contenido, presentacion';
 $result=mysql_query($query) or die(mysql_error());
+if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 //echo $query;
 $rows=mysql_num_rows($result);
 if($rows<1){ exit; }
@@ -55,6 +56,7 @@ if($_GET["rango"]=="NO"){
 
 $query='select * from ventas_temp2 where id_session="'.$id_session.'" and promocion="S"';
 $res2=mysql_query($query);
+if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 $rows2=mysql_num_rows($res2);
 if($rows2>0){
         $promaa1=1;

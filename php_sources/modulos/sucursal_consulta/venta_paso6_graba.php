@@ -18,7 +18,8 @@ include_once("../../includes/funciones_stock.php");
 include_once("../../includes/funciones_articulos.php");
 
 $query='select * from ventas_temp2 where id_session="'.$id_session.'" order by marca, clasificacion, subclasificacion, contenido, presentacion';
-$result=mysql_query($query) or die(mysql_error());
+$result=mysql_query($query);
+if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 $rows=mysql_num_rows($result);
 if($rows<1){
 	Header ("location: index.php");
@@ -156,6 +157,7 @@ if($_POST["descuento"]!="" OR $_POST["descuento"]!=0){
 			$cod_nuevo=$cod_descuento+3;
 			$q='update valores set valor="'.$cod_nuevo.'" where id=8';
 			mysql_query($q);
+			if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 	
 		}
 }
@@ -176,6 +178,7 @@ $numero_venta=incrementa_n_venta($id_sucursal);
 //total venta
 $q='select sum(cantidad * precio) from ventas_temp2 where id_session="'.$id_session.'"';
 $arrayab=mysql_fetch_array(mysql_query($q));
+if(mysql_error()){echo mysql_error()."<br>".$q."<br>";}
 $total_venta=$arrayab[0];
 #---------------------------------------------------------------------------
 
@@ -186,7 +189,8 @@ $total_venta=$arrayab[0];
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #---------------------------------------------------------------------------
 $query='select * from ventas_temp2 where id_session="'.$id_session.'"';
-$result=mysql_query($query) or die(mysql_error()." ".$query);
+$result=mysql_query($query);
+if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 $rows=mysql_num_rows($result);
 if($rows<1){ exit; }
 
@@ -204,6 +208,7 @@ if($tipo_pago=="ta"){
 	
 $q='select * from  tarjetas_coeficientes where id_tarjeta="'.$id_tarjeta.'" and cantidad_pagos="'.$pagos.'"';
 $r=mysql_query($q);
+if(mysql_error()){echo mysql_error()."<br>".$q."<br>";}
 $rows=mysql_num_rows($r);
 if($rows==1){
 	$array1=mysql_fetch_array($r);
@@ -294,7 +299,7 @@ if($tipo_pago=="ta"){
 							//echo $query."<br><br>";
 
 	mysql_query($query);
-	if(mysql_error()){ 	echo mysql_error(); exit; }
+	if(mysql_error()){ 	echo "venta_paso6_graba.php<br>".mysql_error()."<br>".$query; exit; }
 		
 
 		
@@ -452,7 +457,8 @@ if( $_POST["descuento"] ){
 													fecha="'.$fecha.'",
 													hora="'.$hora.'"
 		';
-		mysql_query($query) or die(mysql_error()." ".$query);
+		mysql_query($query);
+		if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 	}
 	#-----------------------------------------------------
 	
@@ -475,7 +481,8 @@ if( $_POST["descuento"] ){
 													fecha="'.$fecha.'",
 													hora="'.$hora.'"
 		';
-		mysql_query($query) or die(mysql_error()." ".$query);
+		mysql_query($query);
+		if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 	}
 	#-----------------------------------------------------
 
@@ -485,10 +492,12 @@ if( $_POST["descuento"] ){
 	
 	
 	$query='delete from ventas_temp where id_session="'.$id_session.'"';
-	mysql_query($query) or die(mysql_error()." ".$query);
+	mysql_query($query);
+	if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 
 	$query='delete from ventas_temp2 where id_session="'.$id_session.'"';
-	mysql_query($query) or die(mysql_error()." ".$query);
+	mysql_query($query);
+	if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
 
 
 	

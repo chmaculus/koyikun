@@ -28,6 +28,8 @@ $array_articulos=detalle_articulo($id_articulos);
 $array_precios=precio_sucursal2($id_articulos,$id_sucursal);
 
 
+echo "id_articulos: ".$id_articulos."<br>";
+echo "id_sucursal: ".$id_sucursal."<br>";
 
 
 
@@ -59,12 +61,9 @@ $array_precios=precio_sucursal2($id_articulos,$id_sucursal);
 				mysql_query($qq);
 			}
 		}
-
-
-
-
-
-	}	
+	}else{
+		$contado=$array_precios["precio_base"];
+	}
 	#------------------------------------------------------------
 
 
@@ -106,20 +105,20 @@ $query='insert into ventas_temp2 set id_session="'.$id_session.'",
 
 
 echo $query."<br>";
+
+
 mysql_query($query)or die(mysql_error()." - ".$query);
 
 elimina_duplicados($id_session);
 
 
-/*
 echo "aa:".$array_precios["precio_base"]."<br>";
 echo "aa:".$contado."<br>";
 
 echo "id_articulos: ".$id_articulos."<br>";
 echo "contado: ".$contado."<br>";
 echo "query: ".$query."<br>";
-exit;
-*/
+//exit;
 
 Header ("location: venta_actual.php");
 exit;

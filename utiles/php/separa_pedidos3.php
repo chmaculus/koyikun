@@ -12,7 +12,7 @@ $fecha=date("Y-n-d");
 $hora=date("H:i:s");
 
 $exec=1;
-$show=0;
+$show=1;
 
 
 
@@ -45,7 +45,7 @@ while($arr_art=mysql_fetch_array($r)){
 
 		if($show==1){echo $q.";\n\n";}
 		if($exec==1){mysql_query($q);}
-		if(mysql_error()){echo mysql_error().chr(10);}
+		if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 }
 #-----------------------------------------------------------------------------------
 
@@ -77,7 +77,7 @@ while($row=mysql_fetch_array($r)){
 		$q='delete from pedidos_temp_nuevo where id_articulos="'.$row[0].'" and id_sucursal="'.$row[1].'"';
 		if($show==1){echo $q.";".chr(10);}
 		if($exec==1){mysql_query($q);}
-		if(mysql_error()){echo mysql_error().chr(10);}
+		if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 		
 		$q='insert into pedidos_temp_nuevo set marca="'.$array["marca"].'", 
 															clasificacion="'.$array["clasificacion"].'", 
@@ -96,7 +96,7 @@ while($row=mysql_fetch_array($r)){
 															';
 		if($show==1){echo $q.";".chr(10);}
 		if($exec==1){mysql_query($q);}
-		if(mysql_error()){echo mysql_error().chr(10);}
+		if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 															
 	}
 	
@@ -172,7 +172,7 @@ while($row=mysql_fetch_array($res)){
 
         if($show==1){echo $q.";#".$count1.chr(10);}
         if($exec==1){mysql_query($q);}
-        if(mysql_error()){echo mysql_error().chr(10);}
+        if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 
 
         $count1++;
@@ -208,7 +208,7 @@ while($row=mysql_fetch_array($res)){
 
         if($show==1){echo $q.";#".$count1.chr(10);}
         if($exec==1){mysql_query($q);}
-        if(mysql_error()){echo mysql_error().chr(10);}
+        if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 
 
         $count1++;
@@ -244,7 +244,7 @@ while($row=mysql_fetch_array($res)){
 
         if($show==1){echo $q.";#".$count1.chr(10);}
         if($exec==1){mysql_query($q);}
-        if(mysql_error()){echo mysql_error().chr(10);}
+        if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 
 
         $count1++;
@@ -280,7 +280,7 @@ while($row=mysql_fetch_array($res)){
 
         if($show==1){echo $q.";#".$count1.chr(10);}
         if($exec==1){mysql_query($q);}
-        if(mysql_error()){echo mysql_error().chr(10);}
+        if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 
 
         $count1++;
@@ -317,7 +317,7 @@ while($row=mysql_fetch_array($res)){
 
         if($show==1){echo $q.";#".$count1.chr(10);}
         if($exec==1){mysql_query($q);}
-        if(mysql_error()){echo mysql_error().chr(10);}
+        if(mysql_error()){echo mysql_error().chr(10).$q.chr(10);}
 
 
         $count1++;
@@ -398,7 +398,8 @@ function get_numero_pedido($id_sucursal){
 	if($rows<"1"){
 		$numero_venta="1";
 		$q1='insert into pedido_numero set numero="1", id_sucursal="'.$id_sucursal.'"';
-		mysql_query($q1)or die(mysql_error());
+		mysql_query($q1);
+		if(mysql_error()){echo mysql_error()."\n".$q1."\n";}
 	}else{
 		$array_nventa=mysql_fetch_array($result);
 		$numero_venta=$array_nventa["numero"];
@@ -412,11 +413,12 @@ return $numero_venta;
 #-----------------------------------------
 function incrementa_n_pedido($id_sucursal){
 	$query='select * from pedido_numero where id_sucursal="'.$id_sucursal.'"';
-	$result=mysql_query($query) or die(mysql_error());
+	$result=mysql_query($query);
 	$array_pedido=mysql_fetch_array($result);
 	$numero_pedido=$array_pedido["numero"];
 	$q1='update pedido_numero set numero="'.( $numero_pedido + 1 ).'" where  id_sucursal="'.$id_sucursal.'"';
-	mysql_query($q1)or die(mysql_error());
+	mysql_query($q1);
+	if(mysql_error()){echo mysql_error()."\n".$q1."\n";}
 }
 #-----------------------------------------
 

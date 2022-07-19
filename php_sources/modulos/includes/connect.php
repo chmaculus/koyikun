@@ -1,7 +1,7 @@
 <?php
 $server="localhost";
-$user="root";
-$passwd="maculuss";
+$user="sistema";
+$passwd="sistema";
 
 
 $base="koyikun";

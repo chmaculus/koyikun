@@ -410,7 +410,7 @@ echo '<br><table class="t1">';
 
 include("responsable.inc.php");
 
-
+echo '<input type="hidden" name="sucursal" value="'.$_GET["id_sucursal"].'">';
 
 
 echo '<td>Bultos</td>';
