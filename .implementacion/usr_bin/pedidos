@@ -1,0 +1,17 @@
+#!/bin/sh
+
+fecha=`date +%G"-"%m"-"%d"_"%H_%M`
+date -R>>/dumps/0pedidos.txt
+
+echo "dump"
+mysqldump -u root -pmaculuss koyikun pedidos_temp_nuevo >/dumps/$fecha.sql
+echo "gzip"
+gzip -9 /dumps/$fecha.sql
+
+cd /home/php/KoyiKun0.30/utiles/php/
+
+echo "sep ped"
+php separa_pedidos3.php >/dumps/logs/$fecha.log
+echo "calc prec"
+php calcula_precio_venta.php
+

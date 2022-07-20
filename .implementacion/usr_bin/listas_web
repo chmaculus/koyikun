@@ -1,0 +1,6 @@
+rm /var/www/temp/listas/*
+rm /var/www/listas/web.zip
+cd /home/php/KoyiKun0.30/php_sources/modulos/listas_export/
+/usr/bin/php web.php
+cd -
+/usr/bin/zip  --junk-paths /var/www/listas/web.zip /var/www/temp/listas/web.html

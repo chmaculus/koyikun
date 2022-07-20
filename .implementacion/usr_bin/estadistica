@@ -1,0 +1,25 @@
+#!/bin/sh
+#php /home/php/KoyiKun0.30/http_share_dirs/minmax/estadisticas/genera_estadisticas.php
+
+fecha=`date +%G"-"%m"-"%d"_"%H_%M`
+date -R>>/dumps/0estadistica.txt
+
+#date --rfc-3339 >>/dumps/0estadistica.txt
+
+echo "Trae Gastos"
+#mysqldump -u root -psulucam -h 190.15.205.132 gastos>/tmp/gastos.sql
+mysqldump -u root -psulucam -h mazinkaiser gastos>/tmp/gastos.sql
+mysql -u root -pmaculuss -D gastos </tmp/gastos.sql
+rm /tmp/gastos.sql
+
+
+cd /home/php/KoyiKun0.30/php_sources/modulos/admin_estadisticas/
+php genera_estadisticas.php
+php gen_estad_suc_hora.php
+cd -
+
+listas
+listas_web
+
+chmod 664 /var/www/listas/*
+chmod 664 /var/www/temp/listas/*

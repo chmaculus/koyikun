@@ -1,0 +1,24 @@
+rm /var/www/temp/listas/*
+rm /var/www/listas/listas.zip
+cd /home/php/KoyiKun0.30/php_sources/modulos/listas_export/
+/usr/bin/php export_listas.php
+cd -
+/usr/bin/zip  --junk-paths /var/www/listas/listas.zip /var/www/temp/listas/*.html
+
+
+nombre_archivo='/var/www/listas/listas_csv_ansi_windows.zip'
+rm /var/www/temp/listas/*
+rm $nombre_archivo
+cd /home/php/KoyiKun0.30/php_sources/modulos/listas_export/
+/usr/bin/php export_listas_csv.php
+cd -
+/usr/bin/zip  --junk-paths $nombre_archivo /var/www/temp/listas/*.csv
+
+nombre_archivo='/var/www/listas/listas_web_general.zip'
+rm /var/www/temp/listas/*
+rm $nombre_archivo
+cd /home/php/KoyiKun0.30/php_sources/modulos/listas_export/
+/usr/bin/php export_listas_todas_csv.php
+cd -
+/usr/bin/zip  --junk-paths $nombre_archivo /var/www/temp/listas/*.csv
+

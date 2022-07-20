@@ -1,0 +1,8 @@
+#!/bin/sh
+
+fecha=`date +%G"-"%m"-"%d"_"%H_%M`
+date -R>>/dumps/0reenumera.txt
+
+cd /home/php/KoyiKun0.30/utiles/php/
+php re_enumera_cdo_codigo_af.php
+
