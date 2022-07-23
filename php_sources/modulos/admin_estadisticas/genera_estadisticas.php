@@ -1,4 +1,5 @@
 <?php
+include("../includes/funciones_varias.php");
 $hora=time();
 
 $ultimo_mes=$hora-(60 * 60 * 24 * 30);
@@ -34,52 +35,58 @@ $q0='create table ventas_estadistica(
 	presentacion varchar(80),
 	descripcion varchar(80),
 	id_articulo mediumint unsigned,
-	mes mediumint,
-	tot_mes double,
-	rent_mes double,
-	tres mediumint,
-	tot_tres double,
-	rent_tres double,
-	seis mediumint,
-	tot_seis double,
-	rent_seis double,
-	nueve mediumint,
-	tot_nueve double,
-	rent_nueve double,
-	doce mediumint,
-	tot_doce double,
-	rent_doce double,
-	costo double,
-	precio double,
+	mes double(20,2),
+	tot_mes double(20,2),
+	rent_mes double(20,2),
+	tres double(20,2),
+	tot_tres double(20,2),
+	rent_tres double(20,2),
+	seis double(20,2),
+	tot_seis double(20,2),
+	rent_seis double(20,2),
+	nueve double(20,2),
+	tot_nueve double(20,2),
+	rent_nueve double(20,2),
+	doce double(20,2),
+	tot_doce double(20,2),
+	rent_doce double(20,2),
+	costo double(20,2),
+	precio double(20,2),
 	stock mediumint,
-	inmovilizado double
+	inmovilizado double(20,2)
 )';
 mysql_query($q0);
 
-	$q='select sum(cantidad), 
-					sum(cantidad * precio_unitario), 
-					sum(cantidad * costo), 
-					sum(cantidad * (precio_unitario - costo)), 
-					sum(cantidad * costo), 
-					sum(cantidad * (precio_unitario - costo)) from ventas 
-								where id_articulos="'.$id.'" and fecha>="'.$fecha.'"';
+$q='select sum(cantidad), 
+				sum(cantidad * precio_unitario), 
+				sum(cantidad * costo), 
+				sum(cantidad * (precio_unitario - costo)), 
+				sum(cantidad * costo), 
+				sum(cantidad * (precio_unitario - costo)) from ventas 
+							where id_articulos="'.$id.'" and fecha>="'.$fecha.'"';
 
 
 echo "elimina datos anteriores 2 ".chr(10);
 $q0='drop table if exists ventas_estadistica_datos';
-mysql_query($q0);
+$res=mysql_query($q0);
+if(mysql_error()){
+	log_this("/tmp/estadistica.log",$q);
+	log_this("/tmp/estadistica.log",mysql_error());
+}
+log_this("/tmp/estadistica.log",$q);
+log_this("/tmp/estadistica.log","rows: ".mysql_num_rows($res));
 
 echo "crea tabla nueva2".chr(10);
 $q0='create table ventas_estadistica_datos(
-    total_mes double,
+    total_mes double(20,2),
     unidades_mes mediumint,
-    total_tres double,
+    total_tres double(20,2),
     unidades_tres mediumint,
-    total_seis double,
+    total_seis double(20,2),
     unidades_seis mediumint,
-    total_nueve double,
+    total_nueve double(20,2),
     unidades_nueve mediumint,
-    total_doce double,
+    total_doce double(20,2),
     unidades_doce mediumint,
     fecha date
 )';
@@ -94,30 +101,41 @@ $t_nueve=tot2($u_nueve);
 $t_doce=tot2($u_doce);
 
 
-$q1='insert into ventas_estadistica_datos set 	
-						total_mes="'.$t_mes[1].'",
-						unidades_mes="'.$t_mes[0].'",
-						total_tres="'.$t_tres[1].'",
-						unidades_tres="'.$t_tres[0].'",
-						total_seis="'.$t_seis[1].'",
-						unidades_seis="'.$t_seis[0].'",
-						total_nueve="'.$t_nueve[1].'",
-						unidades_nueve="'.$t_nueve[0].'",
-						total_doce="'.$t_doce[1].'",
-						unidades_doce="'.$t_doce[0].'",
-						fecha="'.$fecha.'"
-';
-//echo $q1.chr(10);
-mysql_query($q1);
-if(mysql_error()){
-    echo mysql_error().chr(10);
+
+log_this("/tmp/estadistica.log","vacioj: ".verifica_vacio("jejejeje"));
+log_this("/tmp/estadistica.log","vacio: ".verifica_vacio());
+
+if($t_mes[1] != ""){
+
+		$q1='insert into ventas_estadistica_datos set 	
+							total_mes="'.verifica_vacio($t_mes[1]).'",
+							unidades_mes="'.verifica_vacio($t_mes[0]).'",
+							total_tres="'.verifica_vacio($t_tres[1]).'",
+							unidades_tres="'.verifica_vacio($t_tres[0]).'",
+							total_seis="'.verifica_vacio($t_seis[1]).'",
+							unidades_seis="'.verifica_vacio($t_seis[0]).'",
+							total_nueve="'.verifica_vacio($t_nueve[1]).'",
+							unidades_nueve="'.verifica_vacio($t_nueve[0]).'",
+							total_doce="'.verifica_vacio($t_doce[1]).'",
+							unidades_doce="'.verifica_vacio($t_doce[0]).'",
+							fecha="'.verifica_vacio($fecha).'"
+		';
+
+		log_this("/tmp/estadistica.log",$q1);
+		//echo $q1.chr(10);
+		mysql_query($q1);
+		if(mysql_error()){
+			echo mysql_error().chr(10);
+		}
 }
+
 
 echo "genera estadisticas".chr(10);
 
 
 
 $q='select * from articulos where discontinuo!="S" or discontinuo<=>NULL order by marca';
+log_this("/tmp/estadistica.log",$q);
 echo $q0.chr(10);
 $res=mysql_query($q);
 while($row=mysql_fetch_array($res)){
@@ -161,42 +179,53 @@ while($row=mysql_fetch_array($res)){
 	if(!isset($rent_doce)){$rent_doce=0;}
 	if(!isset($tot_doce)){$tot_doce=0;}
 
+	log_this("/tmp/estadistica.log","mes: ".$mes);
+	if($mes!=""){
 
-	$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
-															id_articulo="'.$row["id"].'", 
-															descripcion="'.addslashes($row["descripcion"]).'",
-															clasificacion="'.addslashes($row["clasificacion"]).'",
-															subclasificacion="'.addslashes($row["subclasificacion"]).'",
-															mes="'.$mes.'", 
-															tot_mes="'.$tot_mes.'", 
-															rent_mes="'.$rent_mes.'", 
-															tres="'.$tres.'", 
-															tot_tres="'.$tot_tres.'", 
-															rent_tres="'.$rent_tres.'", 
-															seis="'.$seis.'", 
-															tot_seis="'.$tot_seis.'", 
-															rent_seis="'.$rent_seis.'", 
-															nueve="'.$nueve.'", 
-															tot_nueve="'.$tot_nueve.'", 
-															rent_nueve="'.$rent_nueve.'", 
-															doce="'.$doce.'",
-															tot_doce="'.$tot_doce.'",
-															rent_doce="'.$rent_doce.'",
-															costo="'.$costo.'",
-															stock="'.$stock1.'",
-															inmovilizado="'.$inmovilizado.'"
-															';
-	mysql_query($q2);
-	if(mysql_error()){
-		echo mysql_error();
+			$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
+																	id_articulo="'.$row["id"].'", 
+																	descripcion="'.addslashes($row["descripcion"]).'",
+																	clasificacion="'.addslashes($row["clasificacion"]).'",
+																	subclasificacion="'.addslashes($row["subclasificacion"]).'",
+																	mes="'.verifica_vacio($mes).'", 
+																	tot_mes="'.verifica_vacio($tot_mes).'", 
+																	rent_mes="'.verifica_vacio($rent_mes).'", 
+																	tres="'.verifica_vacio($tres).'", 
+																	tot_tres="'.verifica_vacio($tot_tres).'", 
+																	rent_tres="'.verifica_vacio($rent_tres).'", 
+																	seis="'.verifica_vacio($seis).'", 
+																	tot_seis="'.verifica_vacio($tot_seis).'", 
+																	rent_seis="'.verifica_vacio($rent_seis).'", 
+																	nueve="'.verifica_vacio($nueve).'", 
+																	tot_nueve="'.verifica_vacio($tot_nueve).'", 
+																	rent_nueve="'.verifica_vacio($rent_nueve).'", 
+																	doce="'.verifica_vacio($doce).'",
+																	tot_doce="'.verifica_vacio($tot_doce).'",
+																	rent_doce="'.verifica_vacio($rent_doce).'",
+																	costo="'.verifica_vacio($costo).'",
+																	stock="'.verifica_vacio($stock1).'",
+																	inmovilizado="'.verifica_vacio($inmovilizado).'"
+																	';
+			
+
+
+			
+
+			mysql_query($q2);
+				if(mysql_error()){
+					echo mysql_error();
+					log_this("/tmp/estadistica.log","its here".$q1);
+					log_this("/tmp/estadistica.log",mysql_error());
+				}
+				$count++;
+				if($count>=100){
+					$count2++;
+					echo ($count * $count2).chr(10);
+					$count=0;
+				}
+	//	echo $q2.chr(10);
 	}
-	$count++;
-	if($count>=100){
-	    $count2++;
-	    echo ($count * $count2).chr(10);
-	    $count=0;
-	}
-//	echo $q2.chr(10);
+
 }
 
 echo ($count2 + $count).chr(10);
