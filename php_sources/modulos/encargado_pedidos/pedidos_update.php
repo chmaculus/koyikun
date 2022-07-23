@@ -83,16 +83,16 @@ while($row=mysql_fetch_array($result)){
 			$bultos=0;
 		}
 		$query='update pedidos set
-        cantidad_recibida="'.$catrr.'",
-        cantidad_enviada="'.$catrr.'",
-        cajon="'.$cajon.'",
+        cantidad_recibida="'.verifica_vacio($catrr).'",
+        cantidad_enviada="'.verifica_vacio($catrr).'",
+        cajon="'.verifica_vacio($cajon).'",
         finalizado="S",
          fecha_envio="'.$fecha.'",
         	hora_envio="'.$hora.'",
-         fecha_ped_prep="'.$fecha.'",
-        	hora_ped_prep="'.$hora.'",
-        	responsable="'.$_POST["responsable"].'",
-        	bultos="'.$bultos.'",
+         fecha_ped_prep="'.verifica_vacio($fecha).'",
+        	hora_ped_prep="'.verifica_vacio($hora).'",
+        	responsable="'.verifica_vacio($_POST["responsable"]).'",
+        	bultos="'.verifica_vacio($bultos).'",
         	estado="Finalizado"
                 where id="'.$row["id"].'"
             ';
@@ -108,24 +108,30 @@ while($row=mysql_fetch_array($result)){
 		}
 
 		$query='update pedidos set
-        cantidad_recibida="'.$catrr.'",
-        cantidad_enviada="'.$catrr.'",
-        cajon="'.$cajon.'",
+        cantidad_recibida="'.verifica_vacio($catrr).'",
+        cantidad_enviada="'.verifica_vacio($catrr).'",
+        cajon="'.verifica_vacio($cajon).'",
         finalizado="S",
-         fecha_envio="'.$fecha.'",
-        	hora_envio="'.$hora.'",
-         fecha_ped_prep="'.$fecha.'",
-        	hora_ped_prep="'.$hora.'",
-        	responsable="'.$_POST["responsable"].'",
-        	bultos="'.$_POST["bultos"].'",
+         fecha_envio="'.verifica_vacio($fecha).'",
+        	hora_envio="'.verifica_vacio($hora).'",
+         fecha_ped_prep="'.verifica_vacio($fecha).'",
+        	hora_ped_prep="'.verifica_vacio($hora).'",
+        	responsable="'.verifica_vacio($_POST["responsable"]).'",
+        	bultos="'.verifica_vacio($_POST["bultos"]).'",
         	estado="Preparado"
                 where id="'.$row["id"].'"
             ';
 	}
 	//echo $query."<br>";
+	
     mysql_query($query);
     $numero_pedido=$row["numero_pedido"];
-    if(mysql_error()){echo mysql_error()."<br>".$query."<br>".$_SERVER["SCRIPT_NAME"]."<br>";}
+    if(mysql_error()){
+		echo mysql_error()."<br>".$query."<br>".$_SERVER["SCRIPT_NAME"]."<br>";
+		log_this("/tmp/pedidos.log",$query);
+		log_this("/tmp/pedidos.log",mysql_error());
+
+	}
     
     echo "<tr>";
     echo '<td>'.$row["id_articulo"].'</td>';
@@ -158,20 +164,23 @@ while($row=mysql_fetch_array($result)){
 		$ant1=$array_stock_origen["stock"];
 		$nuevo1=( $ant1 - $row["cantidad"] );
 		$query='insert into seguimiento_stock set
-			id_articulo="'.$row["id_articulo"].'",
-			stock_anterior="'.$array_stock_origen["stock"].'",
-			stock_nuevo="'.$nuevo1.'",
+			id_articulo="'.verifica_vacio($row["id_articulo"]).'",
+			stock_anterior="'.verifica_vacio($array_stock_origen["stock"]).'",
+			stock_nuevo="'.verifica_vacio($nuevo1).'",
 			tipo="Pedido Envia01",
-			origen="'.$id_sucursal.'",
-			destino="'.$row["sucursal"].'",
+			origen="'.verifica_vacio($id_sucursal).'",
+			destino="'.verifica_vacio($row["sucursal"]).'",
 			fecha="'.$fecha.'",
 			hora="'.$hora.'",
-			cantidad="'.$_POST["cantidad".$row["id_articulo"]].'",
-			envio="'.$row["numero_pedido"].'"';
+			cantidad="'.verifica_vacio($_POST["cantidad".$row["id_articulo"]]).'",
+			envio="'.verifica_vacio($row["numero_pedido"]).'"';
 
 		//echo $query."<br>";
 		mysql_query($query);
-		if(mysql_error()){ echo "q1:".$query."<br><br>"; echo mysql_error()."<br><br>"; echo $_SERVER["SCRIPT_NAME"]."<br>"; 	}		
+		if(mysql_error()){ echo "q1:".$query."<br><br>"; echo mysql_error()."<br><br>"; echo $_SERVER["SCRIPT_NAME"]."<br>"; 	
+			log_this("/tmp/pedidos.log",$query);
+			log_this("/tmp/pedidos.log",mysql_error());
+			}		
 		#---------------------------------------------------------------------------------
 
 		
@@ -180,19 +189,22 @@ while($row=mysql_fetch_array($result)){
 		$ant2=$array_stock_destino["stock"];
 		$nuevo2=( $ant2 + $row["cantidad"] );
 		$query='insert into seguimiento_stock set
-			id_articulo="'.$row["id_articulo"].'",
-			stock_anterior="'.$array_stock_destino["stock"].'",
-			stock_nuevo="'.$nuevo2.'",
+			id_articulo="'.verifica_vacio($row["id_articulo"]).'",
+			stock_anterior="'.verifica_vacio($array_stock_destino["stock"]).'",
+			stock_nuevo="'.verifica_vacio($nuevo2).'",
 			tipo="Pedido recibe01",
-			origen="'.$id_sucursal.'",
-			destino="'.$row["sucursal"].'",
+			origen="'.verifica_vacio($id_sucursal).'",
+			destino="'.verifica_vacio($row["sucursal"]).'",
 			fecha="'.$fecha.'",
 			hora="'.$hora.'",
-			cantidad="'.$_POST["cantidad".$row["id_articulo"]].'",
-			envio="'.$row["numero_pedido"].'"';
+			cantidad="'.verifica_vacio($_POST["cantidad".$row["id_articulo"]]).'",
+			envio="'.verifica_vacio($row["numero_pedido"]).'"';
 		//echo $query."<br>";
 		mysql_query($query);
-		if(mysql_error()){ echo "q12:".$query."<br><br>"; echo mysql_error()."<br><br>"; echo $_SERVER["SCRIPT_NAME"]."<br>"; 	}		
+		if(mysql_error()){ echo "q12:".$query."<br><br>"; echo mysql_error()."<br><br>"; echo $_SERVER["SCRIPT_NAME"]."<br>"; 	
+			log_this("/tmp/pedidos.log",$query);
+			log_this("/tmp/pedidos.log",mysql_error());
+	}		
 		#---------------------------------------------------------------------------------
 		
 
@@ -234,6 +246,8 @@ function array_stock($id_articulo,$id_sucursal){
 	if(mysql_error()){
 		$array_stock["error"]=mysql_error();
 		$array_stock["query"]=$query;
+		log_this("/tmp/pedidos.log",$query);
+		log_this("/tmp/pedidos.log",mysql_error());
 		return $array_stock;
 	}
 	$rows=mysql_num_rows($res);
@@ -259,7 +273,13 @@ function array_stock($id_articulo,$id_sucursal){
 #-----------------------------------------------------------------
 function descuenta_stock($cantidad, $id_articulos, $id_sucursal){
 	$query='select * from stock where id_articulo="'.$id_articulos.'" and id_sucursal="'.$id_sucursal.'"';
-	$result=mysql_query($query)or die(mysql_error());
+	$result=mysql_query($query);
+	if(mysql_error()){
+		log_this("/tmp/pedidos.log",$query);
+		log_this("/tmp/pedidos.log",mysql_error());
+ 	
+	}	
+	
 	$rows=mysql_num_rows($result);
 	$array=mysql_fetch_array($result);
 
@@ -280,7 +300,13 @@ function descuenta_stock($cantidad, $id_articulos, $id_sucursal){
 		$q1='update stock  set stock="'.$stock_nuevo.'" where id="'.$array["id"].'"';
 	}
 	//echo $q1."<br>";
-	mysql_query($q1)or die(mysql_error().$_SERVER["script_name"]);
+	mysql_query($q1);
+	if(mysql_error()){
+		log_this("/tmp/pedidos.log",$query);
+		log_this("/tmp/pedidos.log",mysql_error());
+	
+	}	
+
 	
 }
 #-----------------------------------------------------------------

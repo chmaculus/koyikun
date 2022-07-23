@@ -8,8 +8,8 @@
 	echo "<td>Mes</td>";
 	echo "<td>Tres</td>";
 	echo '</tr><tr>';
-    echo '<td>'.$row["mes"].'</td>';
-    echo '<td>'.$row["tres"].'</td>';
+    echo '<td>'.round($row["mes"],0).'</td>';
+    echo '<td>'.round($row["tres"],0).'</td>';
 	echo "</tr>";
 	echo '</table>';
 		    
@@ -21,8 +21,8 @@
 	echo "<td>Seis</td>";
 	echo "<td>Nueve</td>";
 	echo '</tr><tr>';
-    echo '<td>'.$row["seis"].'</td>';
-    echo '<td>'.$row["nueve"].'</td>';
+    echo '<td>'.round($row["seis"],0).'</td>';
+    echo '<td>'.round($row["nueve"],0).'</td>';
 	echo "</tr>";
 	echo '</table>';
 
@@ -34,8 +34,8 @@
 
 	echo '</tr><tr>';
 
-    echo '<td>'.$row["doce"].'</td>';
-    echo '<td>'.$stock["stock"].'</td>';
+    echo '<td>'.round($row["doce"],0).'</td>';
+    echo '<td>'.round($stock["stock"],0).'</td>';
 	echo "</tr>";
 	echo '</table>';
 

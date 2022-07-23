@@ -1,5 +1,6 @@
 <?php
 include_once("../../includes/connect.php");
+include_once("../includes/funciones_varias.php");
 include("../../login/login_verifica2.inc.php");
 include("seguridad.inc.php");
 include_once("cabecera.inc.php");
@@ -38,26 +39,26 @@ $stock_anterior=$array_stock["stock"];
 #----------------------------------------
 if($rows<1){
 	$query='insert into stock set
-							id_articulo="'.$_POST["id_articulos"].'",
-							stock="'.$_POST["stock"].'",
-							maximo="'.$_POST["maximo"].'",
-							minimo="'.$_POST["minimo"].'",
-							fijo="'.$_POST["fijo"].'",
-							id_sucursal="'.$_POST["id_sucursal"].'",
+							id_articulo="'.verifica_vacio($_POST["id_articulos"]).'",
+							stock="'.verifica_vacio($_POST["stock"]).'",
+							maximo="'.verifica_vacio($_POST["maximo"]).'",
+							minimo="'.verifica_vacio($_POST["minimo"]).'",
+							fijo="'.verifica_vacio($_POST["fijo"]).'",
+							id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'",
 							fecha="'.$fecha.'",
 							hora="'.$hora.'"';
 }
 
 if($rows==1){
 	$query='update stock set
-							stock="'.$_POST["stock"].'",
-							maximo="'.$_POST["maximo"].'",
-							minimo="'.$_POST["minimo"].'",
-							fijo="'.$_POST["fijo"].'",
+							stock="'.verifica_vacio($_POST["stock"]).'",
+							maximo="'.verifica_vacio($_POST["maximo"]).'",
+							minimo="'.verifica_vacio($_POST["minimo"]).'",
+							fijo="'.verifica_vacio($_POST["fijo"]).'",
 							fecha="'.$fecha.'",
 							hora="'.$hora.'"
-								where id_articulo="'.$_POST["id_articulos"].'" and 
-									id_sucursal="'.$_POST["id_sucursal"].'"
+								where id_articulo="'.verifica_vacio($_POST["id_articulos"]).'" and 
+									id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'"
 							';
 }
 
@@ -65,12 +66,12 @@ if($rows>1){
 	$q1='delete from stock where id_articulo="'.$_POST["id_articulos"].'" and id_sucursal="'.$_POST["id_sucursal"].'"';
 	mysql_query($q1);
 	$query='insert into stock set
-							id_articulo="'.$_POST["id_articulos"].'",
-							stock="'.$_POST["stock"].'",
-							maximo="'.$_POST["maximo"].'",
-							minimo="'.$_POST["minimo"].'",
-							fijo="'.$_POST["fijo"].'",
-							id_sucursal="'.$_POST["id_sucursal"].'",
+							id_articulo="'.verifica_vacio($_POST["id_articulos"]).'",
+							stock="'.verifica_vacio($_POST["stock"]).'",
+							maximo="'.verifica_vacio($_POST["maximo"]).'",
+							minimo="'.verifica_vacio($_POST["minimo"]).'",
+							fijo="'.verifica_vacio($_POST["fijo"]).'",
+							id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'",
 							fecha="'.$fecha.'",
 							hora="'.$hora.'"';
 }
@@ -98,12 +99,12 @@ mysql_query($query);
 
 if($_POST["stock"]!=$stock_anterior){
     $query='insert into seguimiento_stock  set
-    id_articulo="'.$_POST["id_articulos"].'",
-    stock_anterior="'.$stock_anterior.'",
-    stock_nuevo="'.$_POST["stock"].'",
+    id_articulo="'.verifica_vacio($_POST["id_articulos"]).'",
+    stock_anterior="'.verifica_vacio($stock_anterior).'",
+    stock_nuevo="'.verifica_vacio($_POST["stock"]).'",
     tipo="Mod dep frame",
-    origen="'.$id_sucursal.'",
-    destino="'.$id_sucursal.'",
+    origen="'.verifica_vacio($id_sucursal).'",
+    destino="'.verifica_vacio($id_sucursal).'",
     fecha="'.$fecha.'",
     hora="'.$hora.'"';
 

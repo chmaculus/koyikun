@@ -169,14 +169,14 @@ echo '</tr>';
 	#----------------------
 
 	#----------------------
-	$por_tarj=get_valor(10);
-	$tarj6=((($total_contado * $por_tarj) / 100 ) + $total_contado);
-echo '<tr>';
-echo '<td><input type="radio" name="tipo_pago" value="tarj6" id="radio08"></td>';
-echo '<td><font1>Tarjeta 6 pagos</font1></td>';
-echo '<td><font1>$'.round($tarj6,2).'</font1></td>';
-echo '<td><font1>6 pagos de $'.round(($tarj6 /6),2).'</font1></td>';
-echo '</tr>';
+// 	$por_tarj=get_valor(10);
+// 	$tarj6=((($total_contado * $por_tarj) / 100 ) + $total_contado);
+// echo '<tr>';
+// echo '<td><input type="radio" name="tipo_pago" value="tarj6" id="radio08"></td>';
+// echo '<td><font1>Tarjeta 6 pagos</font1></td>';
+// echo '<td><font1>$'.round($tarj6,2).'</font1></td>';
+// echo '<td><font1>6 pagos de $'.round(($tarj6 /6),2).'</font1></td>';
+// echo '</tr>';
 	#----------------------
 
 echo '</table>';

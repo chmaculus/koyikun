@@ -23,7 +23,6 @@ $hora=date("H:i:s");
 if($_POST["accion"]=="ingreso"){
 
 	$query='insert into vendedores set
-		id_legajo="'.$_POST["id_legajo"].'",
 		numero="'.$_POST["numero"].'",
 		apellido="'.$_POST["apellido"].'",
 		nombres="'.$_POST["nombres"].'",
@@ -48,7 +47,6 @@ if($_POST["accion"]=="modificacion"){
 		$id_vendedores=$_POST["id_vendedores"];
 		
 		$query='update vendedores set
-		id_legajo="'.$_POST["id_legajo"].'",
 		numero="'.$_POST["numero"].'",
 		apellido="'.$_POST["apellido"].'",
 		nombres="'.$_POST["nombres"].'",
