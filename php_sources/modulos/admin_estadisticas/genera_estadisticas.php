@@ -135,9 +135,11 @@ echo "genera estadisticas".chr(10);
 
 
 $q='select * from articulos where discontinuo!="S" or discontinuo<=>NULL order by marca';
-log_this("/tmp/estadistica.log",$q);
+log_this("/tmp/estadistica.log","asdf1".$q);
 echo $q0.chr(10);
 $res=mysql_query($q);
+
+
 while($row=mysql_fetch_array($res)){
 	$stock=stock_sucursal($row["id"],1);
 	$stock1=$stock["stock"];
@@ -180,7 +182,7 @@ while($row=mysql_fetch_array($res)){
 	if(!isset($tot_doce)){$tot_doce=0;}
 
 	log_this("/tmp/estadistica.log","mes: ".$mes);
-	if($mes!=""){
+	if($mes!="" and $mes!=NULL){
 
 			$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
 																	id_articulo="'.$row["id"].'", 
