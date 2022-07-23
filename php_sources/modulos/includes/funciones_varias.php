@@ -126,7 +126,7 @@ function log_this($file, $var) {
 
 #---------------------------------------
 function verifica_vacio($var){
-        if($var=="" or $var=NULL){
+        if($var=="" or $var==NULL){
                 $var=0;
         }
         log_this("/tmp/estadistica.log", "func vacio: ".$var);

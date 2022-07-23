@@ -50,20 +50,20 @@ $q0='create table ventas_estadistica(
 	doce double(20,2),
 	tot_doce double(20,2),
 	rent_doce double(20,2),
-	costo double(20,2),
+	costo double(20,4),
 	precio double(20,2),
 	stock mediumint,
 	inmovilizado double(20,2)
 )';
 mysql_query($q0);
 
-$q='select sum(cantidad), 
-				sum(cantidad * precio_unitario), 
-				sum(cantidad * costo), 
-				sum(cantidad * (precio_unitario - costo)), 
-				sum(cantidad * costo), 
-				sum(cantidad * (precio_unitario - costo)) from ventas 
-							where id_articulos="'.$id.'" and fecha>="'.$fecha.'"';
+// $q='select sum(cantidad), 
+// 				sum(cantidad * precio_unitario), 
+// 				sum(cantidad * costo), 
+// 				sum(cantidad * (precio_unitario - costo)), 
+// 				sum(cantidad * costo), 
+// 				sum(cantidad * (precio_unitario - costo)) from ventas 
+// 							where id_articulos="'.$id.'" and fecha>="'.$fecha.'"';
 
 
 echo "elimina datos anteriores 2 ".chr(10);
@@ -102,8 +102,8 @@ $t_doce=tot2($u_doce);
 
 
 
-log_this("/tmp/estadistica.log","vacioj: ".verifica_vacio("jejejeje"));
-log_this("/tmp/estadistica.log","vacio: ".verifica_vacio());
+// log_this("/tmp/estadistica.log","vacioj: ".verifica_vacio("jejejeje"));
+// log_this("/tmp/estadistica.log","vacio: ".verifica_vacio());
 
 if($t_mes[1] != ""){
 
@@ -136,9 +136,9 @@ echo "genera estadisticas".chr(10);
 
 $q='select * from articulos where discontinuo!="S" or discontinuo<=>NULL order by marca';
 log_this("/tmp/estadistica.log","asdf1".$q);
-echo $q0.chr(10);
+echo $q.chr(10);
 $res=mysql_query($q);
-
+log_this("/tmp/estadistica.log","rows: ".mysql_num_rows($res));
 
 while($row=mysql_fetch_array($res)){
 	$stock=stock_sucursal($row["id"],1);
@@ -182,7 +182,8 @@ while($row=mysql_fetch_array($res)){
 	if(!isset($tot_doce)){$tot_doce=0;}
 
 	log_this("/tmp/estadistica.log","mes: ".$mes);
-	if($mes!="" and $mes!=NULL){
+	log_this("/tmp/estadistica.log","verifica_vacio: ".verifica_vacio("asdf:".$mes));
+	//if($mes!="" and $mes!=NULL){
 
 			$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
 																	id_articulo="'.$row["id"].'", 
@@ -226,7 +227,7 @@ while($row=mysql_fetch_array($res)){
 					$count=0;
 				}
 	//	echo $q2.chr(10);
-	}
+	//}
 
 }
 
@@ -289,7 +290,7 @@ echo $q.chr(10);
 mysql_query($q);
 
 
-
+#--------------------------------------------------
 function tot($id,$fecha){
 	$q='select sum(cantidad), 
 					sum(cantidad * precio_unitario), 
@@ -310,7 +311,10 @@ function tot($id,$fecha){
 	$tot=mysql_fetch_array($res);
 	return $tot;
 }
+#--------------------------------------------------
 
+
+#--------------------------------------------------
 function tot2($fecha){
 	$q='select sum(cantidad), 
 					sum(cantidad * precio_unitario), 
@@ -321,10 +325,11 @@ function tot2($fecha){
 	$tot=mysql_fetch_array($res);
 	return $tot;
 }
+#--------------------------------------------------
 
 
 
-#-----------------------------------------
+#--------------------------------------------------
 function array_articulos($id_articulos){
     $query='select * from articulos where id="'.$id_articulos.'"';
     $res=mysql_query($query);
@@ -342,9 +347,9 @@ function array_articulos($id_articulos){
         return NULL;
     }
 }
-#-----------------------------------------
+#--------------------------------------------------
 
-#-----------------------------------------------------------------
+#--------------------------------------------------
 function stock_sucursal($id_articulo,$id_sucursal){
 	$query='select * from stock where 	id_articulo="'.$id_articulo.'" and id_sucursal="'.$id_sucursal.'"';
 	$res=mysql_query($query) or die(mysql_error()." ".$SCRIPT_NAME);
@@ -363,12 +368,12 @@ function stock_sucursal($id_articulo,$id_sucursal){
 		return $array;		
 	}
 }
-#-----------------------------------------------------------------
+#--------------------------------------------------
 
 
 
 
-#---------------------------------------------------------------------------------------------
+#--------------------------------------------------
 function calcula_precio_costo( $id_articulos ){
 
 	$query='select * from costos where id_articulos="'.$id_articulos.'"';
@@ -391,9 +396,9 @@ function calcula_precio_costo( $id_articulos ){
 	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["iva"] ) ) / 100 )+ $temp1;
-	return str_replace(".",",",round($temp1,2));
+	return round($temp1,2);
 }
-#---------------------------------------------------------------------------------------------
+#--------------------------------------------------
 
 
 
