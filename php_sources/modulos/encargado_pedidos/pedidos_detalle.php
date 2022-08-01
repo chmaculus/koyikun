@@ -8,6 +8,11 @@ include_once("../../includes/funciones_varias.php");
 include_once("../../includes/funciones_articulos.php");
 include_once("../../login/login_verifica.inc.php");
 
+
+echo "sucur: ".$_REQUEST["sucursal"]."<br>";
+
+
+
 #jrarquia 0 coresponde a administrador
 
 /*
@@ -408,10 +413,26 @@ echo "</td>";
 
 echo '<br><table class="t1">';
 
-include("responsable.inc.php");
+#--------------------------------------------------
+//include("responsable.inc.php");
+echo '<tr>';
+echo '<td>Responsable</td>';
+echo '<td><select name="responsable">
+<option value="">SELECCIONE</option>
+<option value="VICTOR">VICTOR</option>
+<option value="MATIAS">MATIAS</option>
+<option value="SANDRA">SANDRA</option>
+<option value="LUCAS">LUCAS</option>
+<option value="OTRO">OTRO</option>
+</select></td>'.chr(10);
+echo '</tr>';
+#--------------------------------------------------
 
-echo '<input type="hidden" name="sucursal" value="'.$_GET["id_sucursal"].'">';
 
+
+echo '<input type="hidden" name="sucursal" value="'.$_REQUEST["sucursal"].'">'.chr(10);
+echo '<input type="hidden" name="numero_pedido" value="'.$_REQUEST["numero_pedido"].'">'.chr(10);
+//$_GET["numero_pedido"]
 
 echo '<td>Bultos</td>';
 echo '<td>';
@@ -430,6 +451,16 @@ echo '</table>';
 
 
 echo '<input type="hidden" name="query" value="'.base64_encode($query).'">';
+
+
+
+echo '</table>';
+//if($finalizado!=1){
+    echo '<button><input type="submit" name="ACEPTAR" value="ACEPTAR"></button>';
+//}
+echo '</form>';
+
+
 
 
 
@@ -461,19 +492,6 @@ function array_stock($id_articulo,$id_sucursal){
 	}
 }
 #-----------------------------------------------------------------
-
-
-echo '</table>';
-//if($finalizado!=1){
-    echo '<button><input type="submit" name="ACEPTAR" value="ACEPTAR"></button>';
-//}
-echo '</form>';
-
-
-
-
-
-
 
 
 

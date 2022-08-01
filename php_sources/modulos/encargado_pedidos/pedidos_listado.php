@@ -31,15 +31,20 @@ include("responsable_preparado.inc.php");
 
 echo "Pedidos pendientes<br>";
 $query='select distinct pedidos.numero_pedido, pedidos.sucursal, pedidos.fecha 
-																							from pedidos 
-																								where pedidos.estado is NULL and 
-																									(pedidos.zona="1" or 
-																									pedidos.zona="2" or 
-																									pedidos.zona="3") 
-																										order by fecha, sucursal';
+from pedidos 
+	where (pedidos.estado is NULL or pedidos.finalizado !="S") and 
+		(pedidos.zona="1" or 
+		pedidos.zona="2" or 
+		pedidos.zona="3") 
+			order by fecha, sucursal';
 
+$query='select distinct pedidos.numero_pedido, pedidos.sucursal, pedidos.fecha 
+from pedidos 
+	where (pedidos.estado is NULL or pedidos.finalizado !="S")  
+			order by fecha, sucursal LIMIT 0,10';
+			
 
-//echo $query."<br>";
+echo $query."<br>";
 
 $result=mysql_query($query);
 if(mysql_error()){echo mysql_error()."<br>".$query."<br>";}
@@ -99,7 +104,8 @@ while($row=mysql_fetch_array($result)){
 		include("marcas.inc.php");
 	echo '</td>';
 	#-----------------------------------------
-$countaa++;
+
+$countaa++;
 	if($countaa<=6){	
 		echo '<td><A HREF="pedidos_detalle.php?numero_pedido='.$row["numero_pedido"].'&sucursal='.$row["sucursal"].'"><button>Detalle</button></A></td>';
 	}else{

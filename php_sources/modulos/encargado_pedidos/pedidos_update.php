@@ -11,10 +11,12 @@ if($jerarquia!="1"){
 	exit;
 } 
 
-$id_sucursal=$_POST["id_sucursal"];
+$id_sucursal=$_POST["sucursal"];
 
 echo "<center>";
 echo "Sucursal: ".nombre_sucursal($id_sucursal)."<br>";
+
+
 
 
 $fecha=date("Y-n-d");
@@ -25,7 +27,13 @@ include_once("pedidos_base.php");
 
 
 $query=base64_decode($_POST["query"]);
-//echo "q:".$query."<br>";
+
+
+// echo "req: ".print_r($_REQUEST,true)."<br>";
+// echo "resp: ".$_POST["responsable"]."<br>";
+// echo "q:".$query."<br>";
+
+
 $result=mysql_query($query);
 $rows=mysql_num_rows($result);
 if($rows<1){
@@ -222,7 +230,7 @@ while($row=mysql_fetch_array($result)){
 
 
 
-if(!$_POST["responsable"] or $_POST["responsable"]){
+if(!$_POST["responsable"] or $_POST["responsable"]==""){
 
 
 	echo '<alerta1>Debe completar el campo responsable</alerta><br>';
@@ -235,6 +243,16 @@ if(!$_POST["responsable"] or $_POST["responsable"]){
 	echo '<INPUT TYPE="SUBMIT" name="ACEPTAR" value="ACEPTAR">';
 	echo '</form>';
 }
+
+
+$q='update pedidos set estado="Finalizado", finalizado="S" where numero_pedido="'.$_REQUEST["numero_pedido"].'"  and sucursal="'.$_REQUEST["sucursal"].'" ';
+mysql_query($q);
+if(mysql_error()){
+	echo $q."<br>";
+	echo mysql_error()."<br>";
+}
+
+
 
 
 
