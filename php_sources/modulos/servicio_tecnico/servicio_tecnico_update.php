@@ -9,9 +9,21 @@ $hora=date("H:i:s");
 
 #---------------------------------------------------------------------------------
 if($_POST["accion"]=="ingreso"){
+	if($_POST["total"]<1){
+		$total=0;
+	}
+	
+	if($_POST["mano_de_obra"]<1){
+		$mano_de_obra=0;
+	}
+	if($_POST["fecha_retiro"]==""){
+		$fecha_retiro="0000-00-00";
+	}
+	if($_POST["hora_retiro"]==""){
+		$_POST["hora_retiro"]="00:00:00";
+	}
 
 	$query='insert into servicio_tecnico set
-		id="'.$_POST["id"].'",
 		apellido="'.$_POST["apellido"].'",
 		nombres="'.$_POST["nombres"].'",
 		direccion="'.$_POST["direccion"].'",
@@ -25,10 +37,10 @@ if($_POST["accion"]=="ingreso"){
 		falla_encontrada="'.$_POST["falla_encontrada"].'",
 		servicio_realizado="'.$_POST["servicio_realizado"].'",
 		estado="pendiente",
-		mano_de_obra="'.$_POST["mano_de_obra"].'",
+		mano_de_obra='.$mano_de_obra.',
 		repuestos="'.$_POST["repuestos"].'",
 		acepta="'.$_POST["acepta"].'",
-		total="'.$_POST["total"].'",
+		total='.$total.',
 		retirado="'.$_POST["retirado"].'",
 		fecha_ingreso="'.$fecha.'",
 		hora_ingreso="'.$hora.'",
@@ -36,7 +48,7 @@ if($_POST["accion"]=="ingreso"){
 		hora_presupuesto="'.$hora.'",
 		fecha_reparacion="'.$fecha.'",
 		hora_reparacion="'.$hora.'",
-		fecha_retiro="'.$_POST["fecha_retiro"].'",
+		fecha_retiro="'.$fecha_retiro.'",
 		hora_retiro="'.$_POST["hora_retiro"].'"';
 	mysql_query($query);
 	if(mysql_error()){echo mysql_error()."<br>".$query."<br>".$_SERVER["SCRIPT_NAME"]."<br>";}
@@ -65,7 +77,17 @@ if($_POST["accion"]=="ingreso"){
 #---------------------------------------------------------------------------------
 if($_POST["accion"]=="modificacion"){
 		$id_servicio_tecnico=$_POST["id_servicio_tecnico"];
+		if($_POST["total"]<1){
+			$total=0;
+		}
 		
+		if($_POST["mano_de_obra"]<1){
+			$mano_de_obra=0;
+		}
+		if(!$_POST["fecha_retiro"]==""){
+			$_POST["fecha_retiro"]="1978-09-22";
+		}
+		echo "ret: ".$_POST["fecha_retiro"]."<br>";
 		$query='update servicio_tecnico set
 		apellido="'.$_POST["apellido"].'",
 		nombres="'.$_POST["nombres"].'",
@@ -79,14 +101,14 @@ if($_POST["accion"]=="modificacion"){
 		falla_encontrada="'.$_POST["falla_encontrada"].'",
 		servicio_realizado="'.$_POST["servicio_realizado"].'",
 		estado="'.$_POST["estado"].'",
-		mano_de_obra="'.$_POST["mano_de_obra"].'",
+		mano_de_obra='.$mano_de_obra.',
 		repuestos="'.$_POST["repuestos"].'",
 		acepta="'.$_POST["acepta"].'",
-		total="'.$_POST["total"].'",
+		total='.$total.',
 		retirado="'.$_POST["retirado"].'",
 		fecha_ingreso="'.$_POST["fecha_ingreso"].'",
 		hora_ingreso="'.$_POST["hora_ingreso"].'",
-		fecha_retiro="'.$_POST["fecha_retiro"].'",
+		fecha_retiro="0000-00-00",
 		hora_retiro="'.$_POST["hora_retiro"].'"
 				where id="'.$_POST["id_servicio_tecnico"].'"
 			';

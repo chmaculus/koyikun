@@ -45,7 +45,11 @@ if($_POST["accion"]=="ingreso"){
 		fecha="'.$fecha.'",
 		hora="'.$hora.'"
 		';
-	mysql_query($query)or die(mysql_error());
+	mysql_query($query);
+	if(mysql_error()){
+		echo mysql_error()."<br>";
+		echo $query."<br>";
+	}
 	$id_asistencias=mysql_insert_id($id_connection);
 }
 
