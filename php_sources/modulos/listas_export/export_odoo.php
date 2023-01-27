@@ -41,7 +41,7 @@ while($arr0=mysql_fetch_array($res0)){
         // Código de barras	
         // Nombre mostrado
 
-	$header = ';"'.convert_charset("Nombre").'"';
+	$header = '"'.convert_charset("Nombre").'"';
 	$header .= ';"'.convert_charset("Referencia interna").'"';
 	$header .= ';"'.convert_charset("Precio de venta").'"';
 	$header .= ';"'.convert_charset("Coste").'"';
@@ -81,7 +81,7 @@ while($arr0=mysql_fetch_array($res0)){
 		$linea.=';"'.$array_articulo["subclasificacion"].'"';
 		$linea.=';"'.$array_articulo["clasificacion"].'"';
 		$linea.=';"'.$array_articulo["subclasificacion"].'"';
-		$linea.='"'.$array_articulo["marca"].'"';
+		$linea.=';"'.$array_articulo["marca"].'"';
 		$linea.=';"'.$array_articulo["codigo_barra"].'"';
 		$linea.=';"'.str_replace('"','',$array_articulo["descripcion"]).' '.$array_articulo["contenido"].' '.$array_articulo["presentacion"].'"';
 //		$linea.=';"'.$array_articulo["id"].'.jpg"';
