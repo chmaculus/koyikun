@@ -189,8 +189,7 @@ echo '</form>';
 
 #-----------------------------------------------------------------
 function accion($id_articulo){
-#devuelve 4 columnas en la tabla
-	echo '<td><A HREF="./articulo_vender.php?id_articulo='.$id_articulo.'"><button>Enviar</button></A></td>';
+	echo '<td><A HREF="./articulo_vender.php?id_articulo='.$id_articulo.'" target="venta_temp"><button>Enviar</button></A></td>';
 }
 #-----------------------------------------------------------------
 

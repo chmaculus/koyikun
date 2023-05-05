@@ -77,7 +77,12 @@ while($row=mysql_fetch_array($result)){
 	echo "<td>".$array_articulos["clasificacion"]."</td>";
 	echo "<td>".$array_articulos["subclasificacion"]."</td>";
 	echo "<td>".$array_articulos["codigo_barra"]."</td>";
-	echo '<td><input type="text" name="descuento'.$row["id"].'" value="'.$row["descuento"].'" size="3" maxlength="6"></td>';
+	if($row["descuento"]<1){
+		$descuento=$array3[0];
+	}else{
+		$descuento=$row["descuento"];
+	}
+	echo '<td><input type="text" name="descuento'.$row["id"].'" value="'.$descuento.'" size="3" maxlength="6"></td>';
 	echo "<td>".$array3[0]."</td>";
 	echo "<td>".$contado."</td>";
 	echo "<td>".($contado-(($contado * $row["descuento"])/100))."</td>";

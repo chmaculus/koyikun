@@ -154,19 +154,24 @@ if($_POST["accion"]=="FINALIZAR"){
 
 	}
 	set_valor(12, ($n_movimiento + 1) );
+
+	if(!$_POST["cuotas"] or $_POST["cuotas"]=="" or $_POST["cuotas"]<1){
+		$cuotas=0;
+	}
 	
 	$query='delete from ventas_temp where id_session="'.$id_session.'"';
 	mysql_query($query) or die(mysql_error()." ".$query);
 
-	$q='insert into stock_movimiento_interno_datos set apellido="'.$_POST["apellido"].'",
-																		nombre="'.$_POST["nombre"].'",
-																		direccion="'.$_POST["direccion"].'",
-																		localidad="'.$_POST["localidad"].'",
-																		cuotas="'.$_POST["cuotas"].'",
-																		numero_movimiento="'.$n_movimiento.'",
-																		fecha="'.$fecha.'",
-																		hora="'.$hora.'"
-																		';
+	$q='insert into stock_movimiento_interno_datos set 
+														apellido="'.$_POST["apellido"].'",
+														nombre="'.$_POST["nombre"].'",
+														direccion="'.$_POST["direccion"].'",
+														localidad="'.$_POST["localidad"].'",
+														cuotas='.$cuotas.',
+														numero_movimiento="'.$n_movimiento.'",
+														fecha="'.$fecha.'",
+														hora="'.$hora.'"
+														';
 	mysql_query($q);
 	//echo $q."<br>";exit;
 	if(mysql_error()){echo mysql_error()."<br>".$q."<br>".$_SERVER["SCRIPT_NAME"]."<br>";exit;}	

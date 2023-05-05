@@ -25,36 +25,21 @@ while($arr0=mysql_fetch_array($res0)){
 	$nombre_archivo=$aa.'.csv';
 	$fopen = fopen($user_path.$nombre_archivo, 'w+');
 
-        // Nombre	
-        // Referencia interna
-        // Precio de venta	
-        // Coste	
-        // Disponible en TPV	
-        // Categoría del TPV/Categoría padre/Categoría padre	
-        // Categoría del TPV/Categoría padre/Categorías hijas	
-        // Categoría del Producto/Categoría padre/Categoría padre
-        // Categoría del Producto/Categoría padre/Categorías hijas
+//	Nombre	
+//	Referencia interna	
+//	Precio de venta	
+//	Coste	
+//	Categoría de producto	
+//	Disponible en TPV
 
-        // Categoría del Producto/Categorías hijas/Categoría padre	
-        // Categoría del Producto/Categorías hijas/Categorías hijas	
-        // Categoría del Producto/Nombre	
-        // Código de barras	
-        // Nombre mostrado
+
 
 	$header = '"'.convert_charset("Nombre").'"';
 	$header .= ';"'.convert_charset("Referencia interna").'"';
 	$header .= ';"'.convert_charset("Precio de venta").'"';
 	$header .= ';"'.convert_charset("Coste").'"';
+	$header .= ';"'.convert_charset("Categoría de Producto").'"';
 	$header .= ';"'.convert_charset("Disponible en TPV").'"';
-	$header .= ';"'.convert_charset("Categoría del Producto/Categoría padre/Categoría padre").'"';
-	$header .= ';"'.convert_charset("Categoría del Producto/Categoría padre/Categorías hijas").'"';
-	$header .= ';"'.convert_charset("Categoría del TPV/Categoría padre/Categoría padre").'"';
-	$header .= ';"'.convert_charset("Categoría del TPV/Categoría padre/Categorías hijas").'"';
-	$header .= ';"'.convert_charset("Categoría del Producto/Categorías hijas/Categoría padre").'"';
-	$header .= ';"'.convert_charset("Categoría del Producto/Categorías hijas/Categorías hijas").'"';
-	$header .= ';"'.convert_charset("Categoría del Producto/Nombre").'"';
-	$header .= ';"'.convert_charset("Código de barras").'"';
-	$header .= ';"'.convert_charset("Descripción").'"';
 	$header .= chr(10);
 
     fwrite($fopen, $header);
@@ -70,20 +55,19 @@ while($arr0=mysql_fetch_array($res0)){
 		$precio=calcula_precio_venta( $array_costo );
 		$costo=calcula_precio_costo( $array_costo );
 	
-       	$linea='"'.$array_articulo["marca"].'"';
+//	Nombre	
+//	Referencia interna	
+//	Precio de venta	
+//	Coste	
+//	Categoría de producto	
+//	Disponible en TPV
+
+$linea='"'.$array_articulo["marca"].' '.str_replace('"','',$array_articulo["descripcion"]).' '.str_replace('"','',$array_articulo["contenido"]).' '.str_replace('"','',$array_articulo["presentacion"]).'"';
 		$linea.=';"'.$array_articulo["codigo_interno"].'"';
 		$linea.=';"'.$precio.'"';
 		$linea.=';"'.$costo.'"';
+		$linea.=';"'.str_replace('"','',$array_articulo["marca"]).' / '.str_replace('"','',$array_articulo["clasificacion"]).' / '.$array_articulo["subclasificacion"].'"';
 		$linea.=';"1"';
-		$linea.=';"'.$array_articulo["clasificacion"].'"';
-		$linea.=';"'.$array_articulo["subclasificacion"].'"';
-		$linea.=';"'.$array_articulo["clasificacion"].'"';
-		$linea.=';"'.$array_articulo["subclasificacion"].'"';
-		$linea.=';"'.$array_articulo["clasificacion"].'"';
-		$linea.=';"'.$array_articulo["subclasificacion"].'"';
-		$linea.=';"'.$array_articulo["marca"].'"';
-		$linea.=';"'.$array_articulo["codigo_barra"].'"';
-		$linea.=';"'.str_replace('"','',$array_articulo["descripcion"]).' '.$array_articulo["contenido"].' '.$array_articulo["presentacion"].'"';
 //		$linea.=';"'.$array_articulo["id"].'.jpg"';
 
 		$linea.=chr(10);

@@ -4,7 +4,7 @@ include_once("../../login/login_verifica.inc.php");
 include_once("seguridad.inc.php");
 include("base.php");
 
-$q='select distinct numero_envio,nombre, fecha, hora from stock_movimiento_interno order by fecha desc, hora desc';
+$q='select distinct numero_envio,nombre, apellido, fecha, hora from stock_movimiento_interno order by fecha desc, hora desc';
 $res=mysql_query($q);
 
 
@@ -21,9 +21,9 @@ echo '	</tr>';
 while($row=mysql_fetch_array($res)){
 	echo '	<tr>';
 	echo '<td>'.$row[0].'</td>';
-	echo '<td>'.$row[1].'</td>';
-	echo '<td>'.$row[2].'</td>';
+	echo '<td>'.$row["nombre"]." ".$row["apellido"].'</td>';
 	echo '<td>'.$row[3].'</td>';
+	echo '<td>'.$row[4].'</td>';
 	echo '<td><A HREF="stock_interno_detalle.php?numero_envio='.$row["0"].'"><button>Detalle</button></A></td>';
 	echo '<td><A HREF="stock_interno_imprimir.php?numero_envio='.$row["0"].'"><button>Imprimir</button></A></td>';
 	echo '	</tr>';

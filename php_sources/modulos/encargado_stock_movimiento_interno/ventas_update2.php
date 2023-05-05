@@ -156,11 +156,16 @@ if($_POST["accion"]=="FINALIZAR"){
 	$query='delete from ventas_temp where id_session="'.$id_session.'"';
 	mysql_query($query) or die(mysql_error()." ".$query);
 
+	if(!$_POST["cuotas"] or $_POST["cuotas"]=="" or $_POST["cuotas"]<1){
+		$cuotas=0;
+	}
+
+
 	$q='insert into stock_movimiento_interno_datos set apellido="'.$_POST["apellido"].'",
 																		nombre="'.$_POST["nombre"].'",
 																		direccion="'.$_POST["direccion"].'",
 																		localidad="'.$_POST["localidad"].'",
-																		cuotas="'.$_POST["cuotas"].'",
+																		cuotas='.$cuotas.',
 																		numero_movimiento="'.$n_movimiento.'",
 																		fecha="'.$fecha.'",
 																		hora="'.$hora.'"
