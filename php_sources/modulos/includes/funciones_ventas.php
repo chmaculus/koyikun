@@ -136,4 +136,31 @@ function verifica_autorizacion($numero){
 #---------------------------------------------------------------------------
 
 
+
+#---------------------------------------------------------------------------
+function trae_totales_presupuesto_franquicia($numero_envio){
+	$q='select sum(cantidad * contado) as tot,  
+				(sum(cantidad * contado) - sum(((cantidad * contado) * 30) / 100)) as descuento
+            from stock_movimiento_interno
+			where numero_envio="'.$numero_envio.'"';
+    // echo "<td>".$q."</td>";
+    $res=mysql_query($q);
+    if(mysql_error()){
+        echo "<td>".mysql_error()."</td>";
+    }
+    // echo "<td>rows: ".mysql_num_rows($res)."</td>";
+	// $array=mysql_fetch_array($res);
+    $array[0]=mysql_result($res,0,0);
+    $array[1]=mysql_result($res,0,1);
+
+    $a=array("total" => round($array[0],0),
+    "descuento" => round($array[1],0)
+    );
+    // echo "<td>a:".print_r($a,true)."</td>";
+
+	return $a;
+}
+#---------------------------------------------------------------------------
+
+
 ?>

@@ -1,4 +1,5 @@
 AuthType Basic
 AuthName "Password Required"
 AuthUserFile /etc/htaccess/devel.htaccess
-Require User megatron 
+Require valid-user
+#Require User megatron 

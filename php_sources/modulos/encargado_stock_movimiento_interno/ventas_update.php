@@ -92,6 +92,7 @@ if($_POST["accion"]=="FINALIZAR"){
 	
 	verifica_valor(12);
 	$n_movimiento=get_valor(12);	
+	set_valor(12, ($n_movimiento + 1) );
 
 	$query='select * from ventas_temp where id_session="'.$id_session.'"';
 	$result=mysql_query($query) or die(mysql_error()." ".$query);
@@ -153,7 +154,7 @@ if($_POST["accion"]=="FINALIZAR"){
 		#---------------------------------------------------------------------------------
 
 	}
-	set_valor(12, ($n_movimiento + 1) );
+	
 
 	if(!$_POST["cuotas"] or $_POST["cuotas"]=="" or $_POST["cuotas"]<1){
 		$cuotas=0;
