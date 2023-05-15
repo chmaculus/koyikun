@@ -9,7 +9,6 @@ include_once("../../includes/funciones_stock.php");
 include_once("../../includes/funciones_precios.php");
 include_once("../../includes/funciones_articulos.php");
 include_once("../../includes/funciones_valores.php");
-include_once("../../includes/funciones_varias.php");
 include_once("../includes/funciones_costos.php");
 
 $id_session=$_COOKIE["id_session"];
