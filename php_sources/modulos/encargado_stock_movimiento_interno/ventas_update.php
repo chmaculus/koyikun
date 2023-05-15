@@ -9,6 +9,7 @@ include_once("../../includes/funciones_stock.php");
 include_once("../../includes/funciones_precios.php");
 include_once("../../includes/funciones_articulos.php");
 include_once("../../includes/funciones_valores.php");
+include_once("../../includes/funciones_varias.php");
 include_once("../includes/funciones_costos.php");
 
 $id_session=$_COOKIE["id_session"];
@@ -126,7 +127,14 @@ if($_POST["accion"]=="FINALIZAR"){
 		#--------------------------------------------------------------------------------------------------------
 		/* query movimientos de stock origen / destino */
 		//echo "q: ".$q."<br><br>".chr(13);
-		mysql_query($q)or die(mysql_error()." ".$q);
+		mysql_query($q);
+		if(mysql_error()){
+			log_this("stock_interno_listado".date("Ym").".log",$q);
+			log_this("stock_interno_listado".date("Ym").".log",mysql_error());
+			echo "<br>".$q."<br>";
+			echo mysql_error()."<br>";
+		}
+		
 
 		verifica_tabla_stock($row["id_articulos"], 1);
 		//verifica_tabla_stock($row["id_articulos"], 32);

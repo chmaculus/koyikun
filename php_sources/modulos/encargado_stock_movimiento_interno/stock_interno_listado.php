@@ -1,11 +1,12 @@
 <?php 
 include_once("../../includes/connect.php");
-include_once("../../includes/funciones_ventas2.php");
+include_once("../../includes/funciones_ventas.php");
 include_once("../../login/login_verifica.inc.php");
 include_once("seguridad.inc.php");
 include("base.php");
 
 $q='select distinct numero_envio,nombre, apellido, fecha, hora from stock_movimiento_interno order by fecha desc, hora desc';
+// 
 $res=mysql_query($q);
 
 

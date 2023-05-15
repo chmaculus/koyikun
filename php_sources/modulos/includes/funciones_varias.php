@@ -113,12 +113,19 @@ function trae_tipo($numero_pedido,$sucursal){
 
 #---------------------------------------
 function log_this($file, $var) {
-        $pfile = fopen($file, 'a+');
-        if (is_array($var)) {
-            fwrite($pfile, date("Y-m-d H:i:s")." ".print_r($var, true) . " \n");
-        } else {
-            fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
-        }
+        $path='/var/log/koyi/';
+        $pfile = fopen($path.$file, 'w+');
+        fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
+        fclose($pfile);
+}
+#---------------------------------------
+    
+
+#---------------------------------------
+function log_temp($file, $var) {
+        $path='/var/log/koyi/';
+        $pfile = fopen($path.$file, 'a+');
+        fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
         fclose($pfile);
 }
 #---------------------------------------
