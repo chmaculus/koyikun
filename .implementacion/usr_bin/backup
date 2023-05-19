@@ -1,0 +1,69 @@
+#!/bin/sh
+
+#-----------------------------
+#variables
+fecha=`date +%Y"-"%m"-"%d_%H%I`
+source_path="/home/php/KoyiKun0.30"
+backup_path="/home/php/backups"
+#backup_mate_path="/home/php/mate"
+#workdir="/tmp/temp1"
+
+database="koyikun"
+#-----------------------------
+
+#echo "borra basura"
+#rm `find $source_path -name "*~"`
+#echo "copia source"
+
+#echo "crea tar source"
+#rm -fR $backup_path/backup_koyi_$fecha".tar.gz" >/dev/null
+#rm -fR $backup_path/backup_koyi_$fecha".tar" >/dev/null
+#tar -cf $backup_path/backup_koyi_$fecha".tar" $source_path
+#echo "comprime"
+#gzip -9 $backup_path/backup_koyi_$fecha".tar" 
+
+#echo "encripta"
+#gpg --yes --batch --passphrase=maculuss -c $backup_path/backup_koyi_$fecha".tar" 
+#echo "copia disco2"
+#cp $backup_path/backup_koyi_$fecha".tar.gz" /mnt/backup/backups/
+
+
+
+echo "mysqldump ko"
+rm -fR $backup_path/tablas/koyikun_$fecha.sql.gz>/dev/null
+mysqldump -u root -pmaculuss koyikun>$backup_path/tablas/koyikun_$fecha.sql
+
+echo "comprime ko"
+gzip -9 $backup_path/tablas/koyikun_$fecha.sql
+
+#echo "copia disco2"
+#cp $backup_path/tablas/koyikun_$fecha.sql.gz /mnt/backup/backups/tablas/
+#ln -sf $backup_path/tablas/koyikun_$fecha.sql.gz $backup_path/tablas/last.sql.gz
+#ln -sf $backup_path/tablas/koyikun_$fecha.sql.gz /var/www/last.sql.gz
+
+#echo "encrypta ko"
+#gpg --yes --batch --passphrase=maculuss -c $backup_path/tablas/koyikun_$fecha.sql.gz
+
+
+
+#echo "mysqldump mate"
+#rm -fR $backup_mate_path/mate_$fecha.sql.gz>/dev/null
+#rm -fR $backup_mate_path/mate_$fecha.sql.gz.pgp>/dev/null
+#mysqldump -u root -pmaculuss material_cam>$backup_mate_path/mate_$fecha.sql
+#echo $backup_mate_path/mate_$fecha.sql
+
+#echo "comprime mate"
+#gzip -9 $backup_mate_path/mate_$fecha.sql
+
+#echo "encrypta mate"
+#gpg --yes --batch --passphrase=maculuss -c $backup_mate_path/mate_$fecha.sql.gz
+
+#echo 'up mate'
+#megaput $backup_mate_path/mate_$fecha.sql.gz.gpg --path=/Root/backup -u lobux78@gmail.com -p lps127aa
+
+
+
+
+
+
+
