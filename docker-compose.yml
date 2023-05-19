@@ -1,0 +1,32 @@
+version: "3.3"
+services:
+#  db:
+#    image: mysql:5.7.36
+    #env_file: ./.env
+#    environment:
+#      - MYSQL_USER=my_user_app
+#      - MYSQL_PASSWORD=MyP4ssw0rdS3cr3t
+#      - MYSQL_ROOT_PASSWORD=S3cUr1Ty
+#      - MYSQL_DATABASE=test_foca
+#    container_name: db-mysql
+#    restart: unless-stopped
+#    volumes:
+#      - my-db:/var/lib/mysql
+#    ports:
+#      - 3306:3306
+  php-sac:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: koyikun
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html       # Probar el proyecto en el directorio raiz.
+      - ./log:/var/log
+      #- ./uploads:/var/www/html/uploads
+volumes:
+  log: {}
+  #uploads: {}
+  #my-db:
