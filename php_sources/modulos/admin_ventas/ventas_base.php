@@ -32,6 +32,10 @@ if($jerarquia!="0"){
 	<A HREF="listado_x_vendedor.php"><button>Listado x vendedor</button></A>
 </td>
 
+<td>
+	<A HREF="listado_general2.php"><button>Listado general</button></A>
+</td>
+
 </tr></table>
 
 </center>
