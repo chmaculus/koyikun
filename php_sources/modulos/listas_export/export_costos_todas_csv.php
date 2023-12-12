@@ -5,13 +5,13 @@ include_once("../../includes/funciones_costos.php");
 $fecha=date("Y-n-d");
 $hora=date("H_i_s");
 
-$user_path='/var/www/temp/listas/';
+$user_path='/var/www/html/listas/';
 
 
 	
 	//$aa=str_replace("'"," ",$arr0["marca"]);
-	$aa=str_replace('"'," ",$aa);
-	$nombre_archivo='listas_web_general.csv';
+	// $aa=str_replace('"'," ",$aa);
+	$nombre_archivo='listas_odoo.csv';
 	$fopen = fopen($user_path.$nombre_archivo, 'w');
 
 	$header = '"ID"';
@@ -24,18 +24,21 @@ $user_path='/var/www/temp/listas/';
 	$header .= ';"clasificacion"';
 	$header .= ';"Sub clasificacion"';
 	$header .= ';"Codigo barra"';
-	$header .= ';"Imagen"';
+	$header .= ';"Costo"';
+	$header .= ';"Des1"';
+	$header .= ';"Des2"';
+	$header .= ';"Des3"';
+	$header .= ';"Des4"';
+	$header .= ';"Des5"';
+	$header .= ';"Des6"';
+	$header .= ';"IVA"';
+	$header .= ';"Margen"';
+	$header .= ';"Descuento"';
 	$header .= ';"Contado"';
-	$header .= ';"Tarjeta"';
-	$header .= ';"Peluquero"';
-	$header .= ';"Mayorista"';
-	$header .= ';"Publicado"';
-	$header .= ';"Categoria Web"';
-	$header .= ';"Sub-categoria Web"';
 	$header .= chr(10);
 	fwrite($fopen, $header);
 
-	$query='select * from articulos order by marca, clasificacion, subclasificacion, contenido, presentacion, descripcion';
+	$query='select * from articulos where marca!="" order by marca, clasificacion, subclasificacion, contenido, presentacion, descripcion';
 	$result = mysql_query($query)or die(mysql_error());
 	$rows2=mysql_num_rows($result);
 	//echo "rows2: ".$rows2.$query.chr(10);
@@ -48,41 +51,35 @@ $user_path='/var/www/temp/listas/';
 		$array_costo=array_costo( $array_articulo["id"] );
 		
 		$precio=calcula_precio_venta( $array_costo );
-		$tarjeta=($precio * 1.2) ;
 
-		$porc_peluquero=get_listas_porcentaje($array_articulo["id"], 4);
-		$porc_mayorista=get_listas_porcentaje($array_articulo["id"], 5);
+		// $porc_peluquero=get_listas_porcentaje($array_articulo["id"], 4);
+		// $porc_mayorista=get_listas_porcentaje($array_articulo["id"], 5);
 
-		$peluquero=((($precio * $porc_peluquero["porcentaje"])/100) + $precio) ;
-		$mayorista=((($precio * $porc_mayorista["porcentaje"])/100) + $precio) ;
+		// $peluquero=((($precio * $porc_peluquero["porcentaje"])/100) + $precio) ;
+		// $mayorista=((($precio * $porc_mayorista["porcentaje"])/100) + $precio) ;
 
 		$linea='"'.$array_articulo["id"].'"';
 		$linea.=';"'.$array_articulo["codigo_interno"].'"';
-		$linea.=';"'.$array_articulo["marca"].'"';
-		$linea.=';"'.str_replace('"','',$array_articulo["descripcion"]).'"';
-		$linea.=';"'.str_replace('"','',$array_articulo["color"]).'"';
-		$linea.=';"'.$array_articulo["contenido"].'"';
-		$linea.=';"'.$array_articulo["presentacion"].'"';
-		$linea.=';"'.$array_articulo["clasificacion"].'"';
-		$linea.=';"'.$array_articulo["subclasificacion"].'"';
-		$linea.=';"'.$array_articulo["codigo_barra"].'"';
-		$linea.=';"'.$array_articulo["id"].'.jpg"';
+		$linea.=';"'.strtoupper($array_articulo["marca"]).'"';
+		$linea.=';"'.str_replace('"','',strtoupper($array_articulo["descripcion"])).'"';
+		$linea.=';"'.str_replace('"','',strtoupper($array_articulo["color"])).'"';
+		$linea.=';"'.strtoupper($array_articulo["contenido"]).'"';
+		$linea.=';"'.strtoupper($array_articulo["presentacion"]).'"';
+		$linea.=';"'.strtoupper($array_articulo["clasificacion"]).'"';
+		$linea.=';"'.strtoupper($array_articulo["subclasificacion"]).'"';
+		$linea.=';"'.strtoupper($array_articulo["codigo_barra"]).'"';
+		$linea.=';"'.elimina_decimal($array_costo["precio_costo"]).'"';
+		$linea.=';"'.$array_costo["descuento1"].'"';
+		$linea.=';"'.$array_costo["descuento2"].'"';
+		$linea.=';"'.$array_costo["descuento3"].'"';
+		$linea.=';"'.$array_costo["descuento4"].'"';
+		$linea.=';"'.$array_costo["descuento5"].'"';
+		$linea.=';"'.$array_costo["descuento6"].'"';
+		$linea.=';"'.str_replace(".", ",", $array_costo["iva"]).'"';
+		$linea.=';"'.$array_costo["margen"].'"';
+		$linea.=';"'.elimina_decimal(trae_descuento($array_costo["margen"])).'"';
+		$linea.=';"'.elimina_decimal($precio).'"';
 
-		$linea.=';"'.str_replace(',','.',round($precio,2)).'"';
-		$linea.=';"'.str_replace(',','.',round($tarjeta,2)).'"';
-
-		$linea.=';"'.str_replace(',','.',round($peluquero,2)).'"';
-		$linea.=';"'.str_replace(',','.',round($mayorista,2)).'"';
-
-		$linea.=';"publish"';
-		if($array_articulo["id_web"]!=""){
-			$array_categoria=categoria_web($array_articulo["id_web"]);
-			$linea.=';"'.strtoupper($array_categoria["categoria"]).'"';
-			$linea.=';"'.strtoupper($array_categoria["subcategoria"]).'"';
-		}else{
-			$linea.=";";
-			$linea.=";";
-		}
 
 		$linea.=chr(10);
 		$data = $linea;
@@ -130,5 +127,27 @@ function categoria_web($id_categorias_web){
 }
 #-----------------------------------------------------------------
 
+
+function elimina_decimal($value){
+	// return $value;
+    $aa=explode(".",$value);
+    // echo "val $value | $aa[0]\n";
+    return $aa[0];
+}
+
+function trae_descuento($margen){
+    $q='select descuento from margenes_descuentos where margen='.$margen;
+    $res=mysql_query($q);
+    if(mysql_error()){
+        echo $q."\n";
+        echo mysql_error()."\n";
+    }
+    $rows=mysql_num_rows($res);
+    if($rows<1){
+        echo "rows: $rows \n";
+    }
+    $r=mysql_result($res,0,0);
+    return $r;
+}
 
 ?>

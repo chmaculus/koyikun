@@ -115,9 +115,9 @@ function calcula_precio_venta( $array_costos ){
 	$temp1=( ( $temp1 * ( $array_costos["descuento5"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["descuento6"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["descuento7"] * -1 ) ) / 100 )+ $temp1;
-	$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
-	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
-	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
+	//$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
+	//$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
+	//$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * $array_costos["iva"] ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
 	return round($temp1,6);
@@ -146,13 +146,15 @@ function get_listas_porcentaje($id_articulos, $id_lista){
                 echo mysql_error();
         }
         $rows=mysql_num_rows($result);
-        if($rows==1){
+		if(isset($rows)){
+			if($rows==1){
                 $array_listas=mysql_fetch_array($result);
-                $array_listas["rows"];
-        }else{
+	            //$array_listas["rows"];
+    	    }else{
                 $array_listas["porcentaje"]=0;
-                $array_listas["rows"];
-        }
+                //$array_listas["rows"];
+        	}
+		} 
 return $array_listas;
 }
 
