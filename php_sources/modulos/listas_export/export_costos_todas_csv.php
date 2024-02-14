@@ -33,6 +33,7 @@ $user_path='/var/www/html/listas/';
 	$header .= ';"Des6"';
 	$header .= ';"IVA"';
 	$header .= ';"Margen"';
+	$header .= ';"Profesionales"';
 	$header .= ';"Descuento"';
 	$header .= ';"Contado"';
 	$header .= chr(10);
@@ -77,6 +78,7 @@ $user_path='/var/www/html/listas/';
 		$linea.=';"'.$array_costo["descuento6"].'"';
 		$linea.=';"'.str_replace(".", ",", $array_costo["iva"]).'"';
 		$linea.=';"'.$array_costo["margen"].'"';
+		$linea.=';"'.trae_desc2($array_articulo["codigo_interno"]).'"';
 		$linea.=';"'.elimina_decimal(trae_descuento($array_costo["margen"])).'"';
 		$linea.=';"'.elimina_decimal($precio).'"';
 
@@ -149,5 +151,24 @@ function trae_descuento($margen){
     $r=mysql_result($res,0,0);
     return $r;
 }
+
+
+function trae_desc2($id_articulo){
+	$q='select numero from temp1 where id='.$id_articulo;	
+	$res=mysql_query($q);
+	$rows=mysql_num_rows($res);
+	if($rows>0){
+		$aa=mysql_result($res,0,0);
+		if($aa>0){
+			return $aa;
+		}else{
+			return 0;
+		}
+	}else{
+		return 0;
+	}
+
+}
+
 
 ?>
