@@ -21,33 +21,47 @@ insert_or_update_ventas_temp_valores($array);
 
 
 
-	#-------------------------------------------
-	#redirecciona a venta finaliza en caso que se haya llamado desde venta actual 
-	if(!$_POST["tipo_pago"]){
-		Header ("location: venta_paso2.php?pago=NO");
-		exit;   	
-	}
-	#-------------------------------------------
+#-------------------------------------------
+#redirecciona a venta finaliza en caso que se haya llamado desde venta actual 
+if(!$_POST["tipo_pago"]){
+	Header ("location: venta_paso2.php?pago=NO");
+	exit;   	
+}
+#-------------------------------------------
 
 
-	if($_POST["tipo_pago"]=="contado"){	
-		Header ("location: venta_paso5.php?tipo_pago=co");
+if($_POST["tipo_pago"]=="contado"){	
+	Header ("location: venta_paso5.php?tipo_pago=co");
 
-	}
-
-
-	if($_POST["tipo_pago"]=="debito"){	
-		Header ("location: venta_paso5.php?tipo_pago=de");
-	}
+}
 
 
-	///////////////////////
-	// pago tarjeta
-	///////////////////////
-	if($_POST["tipo_pago"]=="tarjeta"){	
-		Header ("location: venta_paso4_tarjetas.php?tipo_pago=ta");
-	}
-	////////////////////////
-	
+if($_POST["tipo_pago"]=="debito"){	
+	Header ("location: venta_paso5.php?tipo_pago=de");
+}
+
+
+if($_POST["tipo_pago"]=="electronico"){	
+	$total=$_POST["total_contado"]; 
+}
+
+
+
+
+///////////////////////
+// pago tarjeta
+///////////////////////
+if($_POST["tipo_pago"]=="tarjeta"){	
+	Header ("location: venta_paso4_tarjetas.php?tipo_pago=ta");
+}
+if($_POST["tipo_pago"]=="tarjeta1p"){	
+	Header ("location: venta_paso4_tarjetas.php?tipo_pago=ta1p");
+}
+
+if($_POST["tipo_pago"]=="tarjeta2p"){	
+	Header ("location: venta_paso4_tarjetas.php?tipo_pago=ta2p");
+}
+////////////////////////
+
 
 ?>

@@ -34,10 +34,22 @@
 		$total=$_POST["total_contado"]; 
 	}
 
-	if($_POST["tipo_pago"]=="tarjeta"){	
-		$total=$_POST["total_tarjeta"]; 
+	// if($_POST["tipo_pago"]=="tarjeta"){	
+	// 	$total=$_POST["total_tarjeta"]; 
+	// }
+	
+	if($_POST["tipo_pago"]=="electronico"){	
+		$total=$_POST["total_contado"]; 
+	}
+	if($_POST["tipo_pago"]=="tarjeta1p"){	
+		$total=$_POST["total_contado"]; 
 	}
 
+	if($_POST["tipo_pago"]=="tarjeta2p"){	
+		$total=$_POST["total_tarjeta2p"]; 
+	}
+
+	
 	if($_POST["tipo_pago"]=="tarj6"){	
 		$por_tarj=get_valor(7);
 		$total_tarjeta=((($total_contado * $por_tarj) / 100 ) + $total_contado);
@@ -243,13 +255,13 @@
 	#-----------------------------------------------------
 
 	#-----------------------------------------------------
-	if($_POST["tipo_pago"]=="tarj6"){
-		$por_tarj=get_valor(10);
+	if($_POST["tipo_pago"]=="tarjeta1p"){
+		$por_tarj=get_valor(6);
 	
 		$porcentaje_credito=$por_tarj;
 		$dif=($total_contado * $porcentaje_credito ) / 100 ;  
 		$query='insert into ventas set cantidad="1", 
-													marca="Dif x financiacion Credito 6 pagos",
+													marca="Dif x tarjeta 1 pago",
 													descripcion="Credito",
 													numero_venta="'.$numero_venta.'",
 													tipo_pago="'.$_POST["tipo_pago"].'",
@@ -262,6 +274,32 @@
 		mysql_query($query) or die(mysql_error()." ".$query);
 	}
 	#-----------------------------------------------------
+
+
+	#-----------------------------------------------------
+	if($_POST["tipo_pago"]=="tarjeta2p"){
+		$por_tarj=get_valor(7);
+	
+		$porcentaje_credito=$por_tarj;
+		$dif=($total_contado * $porcentaje_credito ) / 100 ;  
+		$query='insert into ventas set cantidad="1", 
+													marca="Dif x tarjeta 2/3 pagos",
+													descripcion="Credito",
+													numero_venta="'.$numero_venta.'",
+													tipo_pago="'.$_POST["tipo_pago"].'",
+													precio_unitario="'.$dif.'",
+													sucursal="'.$nombre_sucursal.'",
+													vendedor="'.$vendedor.'",
+													fecha="'.$fecha.'",
+													hora="'.$hora.'"
+		';
+		mysql_query($query) or die(mysql_error()." ".$query);
+	}
+	#-----------------------------------------------------
+
+
+
+
 
 	$query='delete from ventas_temp where id_session="'.$id_session.'"';
 	mysql_query($query) or die(mysql_error()." ".$query);

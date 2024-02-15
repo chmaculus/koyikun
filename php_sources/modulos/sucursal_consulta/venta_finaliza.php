@@ -134,7 +134,7 @@ while($row=mysql_fetch_array($result)){
 	echo "<td>".$tarjeta."</td>";
 	echo "<td>".($tarjeta * $row["cantidad"] )."</td>";
 	$total_contado=$total_contado + ( $contado * $row["cantidad"] ); 
-	$total_tarjeta=$total_tarjeta + ( $tarjeta * $row["cantidad"] ); 
+  	$total_tarjeta=$total_tarjeta + ( $tarjeta * $row["cantidad"] ); 
 	echo "</tr>".chr(13);
 }
 #-------------------------------------------------------------------
@@ -157,18 +157,35 @@ echo '<td><font1>Débito</font1></td>';
 echo '<td><font1>$'.$total_contado.'</font1></td>';
 echo '</tr>';
 
-	#----------------------
-	$por_tarj=get_valor(7);
-	$total_tarjeta=((($total_contado * $por_tarj) / 100 ) + $total_contado);
 echo '<tr>';
-echo '<td><input type="radio" name="tipo_pago" value="tarjeta" id="radio08"></td>';
-echo '<td><font1>Tarjeta hasta 3 pagos</font1></td>';
-echo '<td><font1>$'.round($total_tarjeta,2).'</font1></td>';
-echo '<td><font1>3 pagos de $'.round(($total_tarjeta /3),2).'</font1></td>';
+echo '<td><input type="radio" name="tipo_pago" value="electronico" id="radio08"></td>';
+echo '<td><font1>Electrónico</font1></td>';
+echo '<td><font1>$'.$total_contado.'</font1></td>';
 echo '</tr>';
-	#----------------------
 
-	#----------------------
+#----------------------
+$por_tarj=get_valor(6);
+$total_tarjeta=((($total_contado * $por_tarj) / 100 ) + $total_contado);
+echo '<tr>';
+echo '<td><input type="radio" name="tipo_pago" value="tarjeta1p" id="radio08"></td>';
+echo '<td><font1>Tarjeta 1 pago</font1></td>';
+echo '<td><font1>$'.round($total_tarjeta,0).'</font1></td>';
+echo '</tr>';
+#----------------------
+
+#----------------------
+$por_tarj=get_valor(7);
+$total_tarjeta=((($total_contado * $por_tarj) / 100 ) + $total_contado);
+echo '<tr>';
+echo '<td><input type="radio" name="tipo_pago" value="tarjeta2p" id="radio08"></td>';
+echo '<td><font1>Tarjeta 2 ó 3 pagos</font1></td>';
+echo '<td><font1>$'.round($total_tarjeta,2).'</font1></td>';
+echo '<td><font1>2 pagos de $'.round(($total_tarjeta / 2),0).'</font1><br>';
+echo '<font1>3 pagos de $'.round(($total_tarjeta / 3),0).'</font1></td>';
+echo '</tr>';
+#----------------------
+
+#----------------------
 // 	$por_tarj=get_valor(10);
 // 	$tarj6=((($total_contado * $por_tarj) / 100 ) + $total_contado);
 // echo '<tr>';
@@ -177,7 +194,7 @@ echo '</tr>';
 // echo '<td><font1>$'.round($tarj6,2).'</font1></td>';
 // echo '<td><font1>6 pagos de $'.round(($tarj6 /6),2).'</font1></td>';
 // echo '</tr>';
-	#----------------------
+#----------------------
 
 echo '</table>';
 #-------------------------------------------
@@ -279,7 +296,11 @@ echo '<tr><td><font1>Descuento NO AUTORIZADO</font1></td>';
 echo '</table><br>';
 
 echo '<input type="hidden" name="total_contado" value="'.$total_contado.'">';
-echo '<input type="hidden" name="total_tarjeta" value="'.$total_tarjeta.'">';
+echo '<input type="hidden" name="electronico" value="'.$total_contado.'">';
+echo '<input type="hidden" name="total_tarjeta" value="'.$total_contado.'">';
+echo '<input type="hidden" name="total_tarjeta1p" value="'.$total_contado.'">';
+echo '<input type="hidden" name="total_tarjeta2p" value="'.$total_tarjeta2p.'">';
+
 
 echo'<input type="submit" name="accion" value="FINALIZAR">';
 

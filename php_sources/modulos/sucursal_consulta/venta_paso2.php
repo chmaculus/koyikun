@@ -20,7 +20,7 @@ include_once("../../includes/funciones_varias.php");
 include_once("../../includes/funciones_ventas.php");
 include_once("../../includes/funciones_stock.php");
 include_once("../../includes/funciones_articulos.php");
-//include_once("includes/funciones_promocion.php");
+// include_once("includes/funciones_promocion.php");
 
 $query='select * from ventas_temp2 where id_session="'.$id_session.'" order by marca, clasificacion, subclasificacion, contenido, presentacion';
 $result=mysql_query($query) or die(mysql_error());
@@ -63,12 +63,33 @@ echo '<td><font1>$'.$total_contado.'</font1></td>';
 echo '</tr>';
 
 echo '<tr>';
-echo '<td><input type="radio" name="tipo_pago" value="tarjeta" id="radio08"></td>';
-echo '<td><font1>Tarjeta</font1></td>';
-echo '<td><font1>Ver cantidad de pagos</font1></td>';
+echo '<td><input type="radio" name="tipo_pago" value="electronico" id="radio08"></td>';
+echo '<td><font1>Electrónico</font1></td>';
+echo '<td><font1>$'.$total_contado.'</font1></td>';
 echo '</tr>';
-echo '</table>';
 
+// echo '<tr>';
+// echo '<td><input type="radio" name="tipo_pago" value="tarjeta" id="radio08"></td>';
+// echo '<td><font1>Tarjeta</font1></td>';
+// echo '<td><font1>Ver cantidad de pagos</font1></td>';
+// echo '</tr>';
+
+echo '<tr>';
+echo '<td><input type="radio" name="tipo_pago" value="tarjeta1p" id="radio08"></td>';
+echo '<td><font1>Tarjeta 1 pago</font1></td>';
+echo '<td><font1>$'.$total_contado.'</font1></td>';
+echo '</tr>';
+
+echo '<tr>';
+$porc_tarj=get_valor(7);
+$total_tarjeta=(($total_contado * $total_tarjeta)/100)+$total_contado;
+echo '<td><input type="radio" name="tipo_pago" value="tarjeta2p" id="radio08"></td>';
+echo '<td><font1>Tarjeta 2 y 3 pagos</font1></td>';
+echo '<td><font1>$'.round($total_tarjeta,0).'</font1></td>';
+echo '</tr>';
+
+
+echo '</table>';
 echo "<br>";
 echo '<input type="submit" name="ACEPTAR" value="ACEPTAR">';
 echo "</form>";
