@@ -113,7 +113,7 @@ function trae_tipo($numero_pedido,$sucursal){
 
 #---------------------------------------
 function log_this($file, $var) {
-        $path='/var/log/koyi/';
+        $path='/tmp/';
         $pfile = fopen($path.$file, 'a+');
         fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
         fclose($pfile);
@@ -123,7 +123,7 @@ function log_this($file, $var) {
 
 #---------------------------------------
 function log_temp($file, $var) {
-        $path='/var/log/koyi/';
+        $path='/tmp/';
         $pfile = fopen($path.$file, 'w+');
         fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
         fclose($pfile);
