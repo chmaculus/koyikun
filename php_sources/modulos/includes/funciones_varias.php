@@ -111,6 +111,36 @@ function trae_tipo($numero_pedido,$sucursal){
 }
 
 
+#---------------------------------------
+function log_this($file, $var) {
+        $path='/tmp/';
+        $pfile = fopen($path.$file, 'a+');
+        fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
+        fclose($pfile);
+}
+#---------------------------------------
+    
+
+#---------------------------------------
+function log_temp($file, $var) {
+        $path='/tmp/';
+        $pfile = fopen($path.$file, 'w+');
+        fwrite($pfile, date("Y-m-d H:i:s")." ".$var . "\n");
+        fclose($pfile);
+}
+#---------------------------------------
+    
+
+#---------------------------------------
+function verifica_vacio($var){
+        if($var=="" or $var==NULL){
+                $var=0;
+        }
+        log_this("/tmp/estadistica.log", "func vacio: ".$var);
+        return $var;
+}
+#---------------------------------------
+
 
 
 
