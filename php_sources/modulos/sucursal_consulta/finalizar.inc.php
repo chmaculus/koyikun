@@ -9,19 +9,19 @@
 		Header ("location: venta_finaliza.php?pago=NO");
 		exit;   	
 	}
-	if(!$_POST["sexo"]){
-		Header ("location: venta_finaliza.php?sexo=NO");
-		exit;   	
-	}
-	if(!$_POST["rango"]){
-		Header ("location: venta_finaliza.php?rango=NO");
-		exit;   	
-	}
-	if(!$_POST["pais"]){
-		Header ("location: venta_finaliza.php?pais=NO");
-		exit;   	
-	}
-	#-------------------------------------------
+	// if(!$_POST["sexo"]){
+	// 	Header ("location: venta_finaliza.php?sexo=NO");
+	// 	exit;   	
+	// }
+	// if(!$_POST["rango"]){
+	// 	Header ("location: venta_finaliza.php?rango=NO");
+	// 	exit;   	
+	// }
+	// if(!$_POST["pais"]){
+	// 	Header ("location: venta_finaliza.php?pais=NO");
+	// 	exit;   	
+	// }
+	// #-------------------------------------------
 //	$total_venta=calcula_total_venta_temp($id_session);
 
 
@@ -66,24 +66,24 @@
 
 
 	#--------------------------------------------------
-	if($_POST["descuento"]!="" OR $_POST["descuento"]!=0){
-		$aaa=verifica_autorizacion($_POST["cod_autoriz"]);
-		if($aaa==0){
-		Header ("location: venta_finaliza.php?autoriz=NO");
-		exit;   	
-		}
-	}
-	$aaa=verifica_autorizacion($_POST["cod_autoriz"]);
-	if($aaa==1){
-			$cod_descuento=get_valor(8);
-			$cod_nuevo=$cod_descuento+3;
-			$q='update valores set valor="'.$cod_nuevo.'" where id=8';
-			mysql_query($q);
-	}
-	#--------------------------------------------------
+	// if($_POST["descuento"]!="" OR $_POST["descuento"]!=0){
+	// 	$aaa=verifica_autorizacion($_POST["cod_autoriz"]);
+	// 	if($aaa==0){
+	// 	Header ("location: venta_finaliza.php?autoriz=NO");
+	// 	exit;   	
+	// 	}
+	// }
+	// $aaa=verifica_autorizacion($_POST["cod_autoriz"]);
+	// if($aaa==1){
+	// 		$cod_descuento=get_valor(8);
+	// 		$cod_nuevo=$cod_descuento+3;
+	// 		$q='update valores set valor="'.$cod_nuevo.'" where id=8';
+	// 		mysql_query($q);
+	// }
+	// #--------------------------------------------------
 
 
-	$descuento=str_replace( "," , "\." , $_POST["descuento"] );
+	// $descuento=str_replace( "," , "\." , $_POST["descuento"] );
 
 	
 	#---------------------------------------------------------------------------
@@ -104,20 +104,20 @@
 		}
 		$precio=$array_precios["precio_base"];
 	
-	if($array_precios["promocion"]=="S"){
-		$array_promocion=get_promo( $row["id_articulos"], $id_sucursal );
-		$promo=$array_promocion["precio_promocion"];
-		$contado=$array_promocion["precio_promocion"];
+	// if($array_precios["promocion"]=="S"){
+	// 	$array_promocion=get_promo( $row["id_articulos"], $id_sucursal );
+	// 	$promo=$array_promocion["precio_promocion"];
+	// 	$contado=$array_promocion["precio_promocion"];
 
-		$contado = $promo;
-		$precio = $promo;
-		// corregir
-		$tarjeta=$promo * ( 20 / 100 ) + $promo;
-		$promocion="  **PROMO AF**";
-		$tr='<tr class="special">';
-	}
+	// 	$contado = $promo;
+	// 	$precio = $promo;
+	// 	// corregir
+	// 	$tarjeta=$promo * ( 20 / 100 ) + $promo;
+	// 	$promocion="  **PROMO AF**";
+	// 	$tr='<tr class="special">';
+	// }
 	
-	$array_stock=stock_sucursal($row["id_articulos"],$id_sucursal);
+		$array_stock=stock_sucursal($row["id_articulos"],$id_sucursal);
 	
 	
 		$precio_costo=calcula_precio_costo( $row["id_articulos"] );
@@ -174,102 +174,102 @@
     	echo "S: ".$_SERVER["SCRIPT_NAME"]."<br><br>";
 	}	
 
-	}//end while
+}//end while
 	
-	#---------------------------------------------------------------------------
+#---------------------------------------------------------------------------
 
 
 
 
-	#-----------------------------------------------------
-	if( $_POST["descuento"] ){
-		$descuento=( ($total - $descuento) * (-1) );
-		$query='insert into ventas set cantidad="1", 
-													marca="Descuento",
-													descripcion="Descuento",
-													numero_venta="'.$numero_venta.'",
-													tipo_pago="'.$_POST["tipo_pago"].'",
-													precio_unitario="'.$descuento.'",
-													sucursal="'.$nombre_sucursal.'",
-													vendedor="'.$vendedor.'",
-													fecha="'.$fecha.'",
-													hora="'.$hora.'"
-		';
-		mysql_query($query) or die(mysql_error()." ".$query);
-	}
-	#-----------------------------------------------------
-	
-	
-
-	#-----------------------------------------------------
-	if($_POST["tipo_pago"]=="debito"){	
-		$porcentaje_debito=get_valor(6);
-		$dif=($total_venta * $porcentaje_debito) / 100;  
-		$query='insert into ventas set cantidad="1", 
-													marca="Dif x financiacion Debito",
-													descripcion="Debito",
-													numero_venta="'.$numero_venta.'",
-													tipo_pago="'.$_POST["tipo_pago"].'",
-													precio_unitario="'.$dif.'",
-													sucursal="'.$nombre_sucursal.'",
-													vendedor="'.$vendedor.'",
-													fecha="'.$fecha.'",
-													hora="'.$hora.'"
-		';
-		mysql_query($query) or die(mysql_error()." ".$query);
-	}
-	#-----------------------------------------------------
-	
-	
-	#-----------------------------------------------------
-	if($_POST["tipo_pago"]=="tarjeta"){
-		$por_tarj=get_valor(7);
-	
-		$porcentaje_credito=$por_tarj;
-		$dif=($total_contado * $porcentaje_credito ) / 100 ;  
-		$query='insert into ventas set cantidad="1", 
-													marca="Dif x financiacion Credito",
-													descripcion="Credito",
-													numero_venta="'.$numero_venta.'",
-													tipo_pago="'.$_POST["tipo_pago"].'",
-													precio_unitario="'.$dif.'",
-													sucursal="'.$nombre_sucursal.'",
-													vendedor="'.$vendedor.'",
-													fecha="'.$fecha.'",
-													hora="'.$hora.'"
-		';
-		mysql_query($query) or die(mysql_error()." ".$query);
-	}
-	#-----------------------------------------------------
-
-	#-----------------------------------------------------
-	if($_POST["tipo_pago"]=="tarj6"){
-		$por_tarj=get_valor(10);
-	
-		$porcentaje_credito=$por_tarj;
-		$dif=($total_contado * $porcentaje_credito ) / 100 ;  
-		$query='insert into ventas set cantidad="1", 
-													marca="Dif x financiacion Credito 6 pagos",
-													descripcion="Credito",
-													numero_venta="'.$numero_venta.'",
-													tipo_pago="'.$_POST["tipo_pago"].'",
-													precio_unitario="'.$dif.'",
-													sucursal="'.$nombre_sucursal.'",
-													vendedor="'.$vendedor.'",
-													fecha="'.$fecha.'",
-													hora="'.$hora.'"
-		';
-		mysql_query($query) or die(mysql_error()." ".$query);
-	}
-	#-----------------------------------------------------
-
-	$query='delete from ventas_temp where id_session="'.$id_session.'"';
+#-----------------------------------------------------
+if( $_POST["descuento"] ){
+	$descuento=( ($total - $descuento) * (-1) );
+	$query='insert into ventas set cantidad="1", 
+												marca="Descuento",
+												descripcion="Descuento",
+												numero_venta="'.$numero_venta.'",
+												tipo_pago="'.$_POST["tipo_pago"].'",
+												precio_unitario="'.$descuento.'",
+												sucursal="'.$nombre_sucursal.'",
+												vendedor="'.$vendedor.'",
+												fecha="'.$fecha.'",
+												hora="'.$hora.'"
+	';
 	mysql_query($query) or die(mysql_error()." ".$query);
+}
+#-----------------------------------------------------
 
-	$query='delete from ventas_temp2 where id_session="'.$id_session.'"';
+
+
+#-----------------------------------------------------
+if($_POST["tipo_pago"]=="debito"){	
+	$porcentaje_debito=get_valor(6);
+	$dif=($total_venta * $porcentaje_debito) / 100;  
+	$query='insert into ventas set cantidad="1", 
+												marca="Dif x financiacion Debito",
+												descripcion="Debito",
+												numero_venta="'.$numero_venta.'",
+												tipo_pago="'.$_POST["tipo_pago"].'",
+												precio_unitario="'.$dif.'",
+												sucursal="'.$nombre_sucursal.'",
+												vendedor="'.$vendedor.'",
+												fecha="'.$fecha.'",
+												hora="'.$hora.'"
+	';
 	mysql_query($query) or die(mysql_error()." ".$query);
+}
+#-----------------------------------------------------
+	
+	
+#-----------------------------------------------------
+if($_POST["tipo_pago"]=="tarjeta"){
+	$por_tarj=get_valor(7);
 
-	incrementa_n_venta($id_sucursal);
+	$porcentaje_credito=$por_tarj;
+	$dif=($total_contado * $porcentaje_credito ) / 100 ;  
+	$query='insert into ventas set cantidad="1", 
+												marca="Dif x financiacion Credito",
+												descripcion="Credito",
+												numero_venta="'.$numero_venta.'",
+												tipo_pago="'.$_POST["tipo_pago"].'",
+												precio_unitario="'.$dif.'",
+												sucursal="'.$nombre_sucursal.'",
+												vendedor="'.$vendedor.'",
+												fecha="'.$fecha.'",
+												hora="'.$hora.'"
+	';
+	mysql_query($query) or die(mysql_error()." ".$query);
+}
+#-----------------------------------------------------
+
+#-----------------------------------------------------
+if($_POST["tipo_pago"]=="tarj6"){
+	$por_tarj=get_valor(10);
+
+	$porcentaje_credito=$por_tarj;
+	$dif=($total_contado * $porcentaje_credito ) / 100 ;  
+	$query='insert into ventas set cantidad="1", 
+												marca="Dif x financiacion Credito 6 pagos",
+												descripcion="Credito",
+												numero_venta="'.$numero_venta.'",
+												tipo_pago="'.$_POST["tipo_pago"].'",
+												precio_unitario="'.$dif.'",
+												sucursal="'.$nombre_sucursal.'",
+												vendedor="'.$vendedor.'",
+												fecha="'.$fecha.'",
+												hora="'.$hora.'"
+	';
+	mysql_query($query) or die(mysql_error()." ".$query);
+}
+#-----------------------------------------------------
+
+$query='delete from ventas_temp where id_session="'.$id_session.'"';
+mysql_query($query) or die(mysql_error()." ".$query);
+
+$query='delete from ventas_temp2 where id_session="'.$id_session.'"';
+mysql_query($query) or die(mysql_error()." ".$query);
+
+incrementa_n_venta($id_sucursal);
 
 	
 

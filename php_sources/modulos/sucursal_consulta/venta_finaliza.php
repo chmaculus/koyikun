@@ -27,25 +27,30 @@ $result=mysql_query($query) or die(mysql_error());
 $rows=mysql_num_rows($result);
 if($rows<1){ exit; }
 
-if($_GET["autoriz"]=="NO"){
-	echo "<alerta1>El codigo de autorizacion no coincide<alerta1><br><br><br>";
-}
+
+
+#---------------------------------------------------
+// if($_GET["autoriz"]=="NO"){
+// 	echo "<alerta1>El codigo de autorizacion no coincide<alerta1><br><br><br>";
+// }
 
 if($_GET["pago"]=="NO"){
 	echo "<alerta1>No ha seleccionado una forma de pago<alerta1><br><br><br>";
 }
 
-if($_GET["sexo"]=="NO"){
-	echo "<alerta1>No ha seleccionado sexo<alerta1><br><br><br>";
-}
+// if($_GET["sexo"]=="NO"){
+// 	echo "<alerta1>No ha seleccionado sexo<alerta1><br><br><br>";
+// }
 
-if($_GET["pais"]=="NO"){
-	echo "<alerta1>No ha seleccionado Pais<alerta1><br><br><br>";
-}
+// if($_GET["pais"]=="NO"){
+// 	echo "<alerta1>No ha seleccionado Pais<alerta1><br><br><br>";
+// }
 
-if($_GET["rango"]=="NO"){
-	echo "<alerta1>No ha seleccionado Rango<alerta1><br><br><br>";
-}
+// if($_GET["rango"]=="NO"){
+// 	echo "<alerta1>No ha seleccionado Rango<alerta1><br><br><br>";
+// }
+#---------------------------------------------------
+
 
 
 
@@ -53,13 +58,13 @@ if($_GET["rango"]=="NO"){
 #-----------------------------------------------------------------------------
 #verifica si existen articulos en promocion
 
-$query='select * from ventas_temp2 where id_session="'.$id_session.'" and promocion="S"';
-$res2=mysql_query($query);
-$rows2=mysql_num_rows($res2);
-if($rows2>0){
-        $promaa1=1;
+// $query='select * from ventas_temp2 where id_session="'.$id_session.'" and promocion="S"';
+// $res2=mysql_query($query);
+// $rows2=mysql_num_rows($res2);
+// if($rows2>0){
+//         $promaa1=1;
 
-}
+// }
 #-----------------------------------------------------------------------------
 
 
@@ -183,61 +188,61 @@ echo '</table>';
 
 #-------------------------------------------
 #datos cliente
-echo '<br><table  class="t1">';
+// echo '<br><table  class="t1">';
 
-echo '<tr>';
-echo '<td>Sexo</td><td>Masculino<input type="radio" name="sexo" value="m" class="radio01"></td><td>Femenino<input type="radio" name="sexo" value="f" class="radio01"></td>';
-echo '</tr>';
-echo '<tr>';
-echo '<td>Rango de edad</td><td>
-<select name="rango">
-<option value="0" selected>Seleccione</option>
-<option value="1">Menos de 20</option>
-<option value="2">Entre 21 y 30</option>
-<option value="3">Entre 31 y 45</option>
-<option value="4">Entre 46 y 60</option>
-<option value="5">Mas de 60</option>
-</select>
-</td>';
-echo '</tr>';
+// echo '<tr>';
+// echo '<td>Sexo</td><td>Masculino<input type="radio" name="sexo" value="m" class="radio01"></td><td>Femenino<input type="radio" name="sexo" value="f" class="radio01"></td>';
+// echo '</tr>';
+// echo '<tr>';
+// echo '<td>Rango de edad</td><td>
+// <select name="rango">
+// <option value="0" selected>Seleccione</option>
+// <option value="1">Menos de 20</option>
+// <option value="2">Entre 21 y 30</option>
+// <option value="3">Entre 31 y 45</option>
+// <option value="4">Entre 46 y 60</option>
+// <option value="5">Mas de 60</option>
+// </select>
+// </td>';
+// echo '</tr>';
 
-echo '<tr>';
-echo '<td>Pais</td>';
-echo '<td>
-<select name="pais">
-<option value="Argentina" selected>Argentina</option>
-<option value="Chile">Chile</option>
-<option value="Brasil">Brasil</option>
-<option value="EEUU">EEUU</option>
-<option value="Europa">Europa</option>
-<option value="Otro">Otro</option>
-</td>';   
-echo '</tr>';
+// echo '<tr>';
+// echo '<td>Pais</td>';
+// echo '<td>
+// <select name="pais">
+// <option value="Argentina" selected>Argentina</option>
+// <option value="Chile">Chile</option>
+// <option value="Brasil">Brasil</option>
+// <option value="EEUU">EEUU</option>
+// <option value="Europa">Europa</option>
+// <option value="Otro">Otro</option>
+// </td>';   
+// echo '</tr>';
 
-echo '</table><br>';
+// echo '</table><br>';
 #-------------------------------------------
 
 
 #-------------------------------------------
 #datos cliente
-echo 'Obtené mas descuentos!!!<br>';
-echo '<br><table  class="t1">';
+// echo 'Obtené mas descuentos!!!<br>';
+// echo '<br><table  class="t1">';
 
-echo '<tr>';
-echo '<td>Nombre</td><td><input type="text" name="nombre" size="30"></td>';   
-echo '</tr>';
-echo '<tr>';
-echo '<td>Celular</td><td><input type="text" name="celular" size="30"></td>';   
-echo '</tr>';
+// echo '<tr>';
+// echo '<td>Nombre</td><td><input type="text" name="nombre" size="30"></td>';   
+// echo '</tr>';
+// echo '<tr>';
+// echo '<td>Celular</td><td><input type="text" name="celular" size="30"></td>';   
+// echo '</tr>';
 
-echo '<tr>';
-echo '<td>Localidad</td><td><input type="text" name="localidad"></td>';   
-echo '</tr>';
-echo '<tr>';
-echo '<td>Provincia</td><td><input type="text" name="provincia" value="Mendoza"></td>';   
-echo '</tr>';
+// echo '<tr>';
+// echo '<td>Localidad</td><td><input type="text" name="localidad"></td>';   
+// echo '</tr>';
+// echo '<tr>';
+// echo '<td>Provincia</td><td><input type="text" name="provincia" value="Mendoza"></td>';   
+// echo '</tr>';
 
-echo '</table><br>';
+// echo '</table><br>';
 #-------------------------------------------
 
 
@@ -260,17 +265,17 @@ echo '<td><input type="text" name="cod_autoriz" size="5"></td> <td>Autorizacion 
 
 
 //echo '<td>promaa: '.$promaa1.'</td>';
-if($promaa1<1){
-echo '<tr><td><font1>Descuento: </font1></td>';
-        echo '<td><input type="text" name="descuento" size="5"></td></tr>';
-        echo '<tr><td><font1>INGRESO CODIGO DE AUTORIZACION </font1></td>';
-        echo '<td><input type="text" name="cod_autoriz" size="5"></td> <td>Autorizacion N°</td> <td>'.$cod_descuento.'</td></tr>';
-}else{
-echo '<tr><td><font1>Descuento NO AUTORIZADO</font1></td>';
-        echo '<td></td></tr>';
-        echo '<tr><td><font1>Existen articulos en promocion</font1></td>';
-        echo '<td></td></tr>';
-}
+// if($promaa1<1){
+// echo '<tr><td><font1>Descuento: </font1></td>';
+//         echo '<td><input type="text" name="descuento" size="5"></td></tr>';
+//         echo '<tr><td><font1>INGRESO CODIGO DE AUTORIZACION </font1></td>';
+//         echo '<td><input type="text" name="cod_autoriz" size="5"></td> <td>Autorizacion N°</td> <td>'.$cod_descuento.'</td></tr>';
+// }else{
+// echo '<tr><td><font1>Descuento NO AUTORIZADO</font1></td>';
+//         echo '<td></td></tr>';
+//         echo '<tr><td><font1>Existen articulos en promocion</font1></td>';
+//         echo '<td></td></tr>';
+// }
 
 
 

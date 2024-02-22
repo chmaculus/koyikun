@@ -27,7 +27,7 @@ $fecha=date("Y-n-d");
 $array_articulos=detalle_articulo($id_articulos);
 $array_precios=precio_sucursal2($id_articulos,$id_sucursal);
 
-
+log_this("aa.log",print_r($array_precios,true));
 
 
 
@@ -106,7 +106,15 @@ $query='insert into ventas_temp2 set id_session="'.$id_session.'",
 
 
 echo $query."<br>";
-mysql_query($query)or die(mysql_error()." - ".$query);
+mysql_query($query);
+
+if(mysql_error()){
+	echo "Q: ".$query."<br><br>";
+	echo "E: ".mysql_error()."<br><br>";
+	echo "S: ".$_SERVER["SCRIPT_NAME"]."<br><br>";
+	exit;
+}	
+
 
 elimina_duplicados($id_session);
 
