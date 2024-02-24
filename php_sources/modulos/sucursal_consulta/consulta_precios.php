@@ -77,7 +77,8 @@ if($_POST["buscar"]=="Buscar"){
 if (!$_POST["busqueda"]) {
         echo '<font1>Busqueda vacia</font1>';
         echo "<br>";
-        echo '<iframe height="555" width="555" src="slideshow_imagenes.php"></iframe>';
+		/* iframe de lanzamientos*/
+        // echo '<iframe height="555" width="555" src="slideshow_imagenes.php"></iframe>';
         //include("lanzamientos.inc.php");
         exit;
 }
@@ -139,21 +140,25 @@ while($row=mysql_fetch_array($result)){
 
 $div=(($rows / 3)+1);
 
-echo '<table border="1">';
-$count=0;
-for($j=1;$j<=$div;$j++){
-	echo '<tr valign="top">';
-	for($i=0;$i<=2;$i++){
-		//echo "<td>".$array_articulos[$count]["id"]."</td>";
-		echo "<td>";
-		include("articulo_muestra.inc.php");
-		echo "</td>".chr(10).chr(10);
-		$count++;
-		if($count==$rows){break;}
-	} 
-	echo '</tr>';
-} 
-echo '</table>';
+
+#---------------------------------------------
+
+// echo '<table border="1">';
+// $count=0;
+// for($j=1;$j<=$div;$j++){
+// 	echo '<tr valign="top">';
+// 	for($i=0;$i<=2;$i++){
+// 		//echo "<td>".$array_articulos[$count]["id"]."</td>";
+// 		echo "<td>";
+// 		include("articulo_muestra.inc.php");
+// 		echo "</td>".chr(10).chr(10);
+// 		$count++;
+// 		if($count==$rows){break;}
+// 	} 
+// 	echo '</tr>';
+// } 
+// echo '</table>';
+#---------------------------------------------
 
 
 

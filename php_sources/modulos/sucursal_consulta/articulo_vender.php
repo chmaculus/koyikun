@@ -27,6 +27,8 @@ $fecha=date("Y-n-d");
 $array_articulos=detalle_articulo($id_articulos);
 $array_precios=precio_sucursal2($id_articulos,$id_sucursal);
 
+$contado=$array_precios["precio_base"];
+
 log_this("aa.log",print_r($array_precios,true));
 
 
@@ -36,36 +38,31 @@ log_this("aa.log",print_r($array_precios,true));
 
 
 
-	#------------------------------------------------------------
-	if($array_precios["promocion"]=="S"){
-		$array_promo=get_promo( $id_articulos, $id_sucursal);
-		$epoch_fecha_fin=strtotime($array_promo["fecha_finaliza"]);
-		$epoch_fecha=strtotime($fecha);
+#------------------------------------------------------------
+// if($array_precios["promocion"]=="S"){
+// 	$array_promo=get_promo( $id_articulos, $id_sucursal);
+// 	$epoch_fecha_fin=strtotime($array_promo["fecha_finaliza"]);
+// 	$epoch_fecha=strtotime($fecha);
 
-		if($array_promo["habilitado"]=="S" and $array_promo!="N"){
-			if($epoch_fecha_fin > $epoch_fecha ){
-				//es promo
-				$contado = $array_promo["precio_promocion"];
-				$promocion="  **PROMO AF**";
-				$tr='<tr class="special">';
-				$promo="S";
-				
-			}else{
-				//promo vencida
-				$promo="N";
-				$contado=$array_precios["precio_base"];
-				$qq='update precios set promocion="N" where id_articulo="'.$row["id"].'" and id_sucursal="'.$id_sucursal.'"';
-				//echo "q: ".$qq."<br>";
-				mysql_query($qq);
-			}
-		}
-
-
-
-
-
-	}	
-	#------------------------------------------------------------
+// 	if($array_promo["habilitado"]=="S" and $array_promo!="N"){
+// 		if($epoch_fecha_fin > $epoch_fecha ){
+// 			//es promo
+// 			$contado = $array_promo["precio_promocion"];
+// 			$promocion="  **PROMO AF**";
+// 			$tr='<tr class="special">';
+// 			$promo="S";
+			
+// 		}else{
+// 			//promo vencida
+// 			$promo="N";
+// 			$contado=$array_precios["precio_base"];
+// 			$qq='update precios set promocion="N" where id_articulo="'.$row["id"].'" and id_sucursal="'.$id_sucursal.'"';
+// 			//echo "q: ".$qq."<br>";
+// 			mysql_query($qq);
+// 		}
+// 	}
+// }	
+#------------------------------------------------------------
 
 
 
