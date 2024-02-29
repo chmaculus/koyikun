@@ -132,7 +132,12 @@ if(mysql_error()){
 
 #------------------------------------------------------
 while($row=mysql_fetch_array($result)){
-        $array_articulos[]=$row;
+	$array_precios=precio_sucursal( $id, $id_sucursal );
+	if($array_precios["rows"]<1){
+		$array_precios=precio_sucursal( $id, 1 );
+	}
+	
+        // $array_articulos[]=$row;
 }
 #------------------------------------------------------
 
