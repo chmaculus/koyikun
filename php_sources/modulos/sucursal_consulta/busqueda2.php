@@ -65,31 +65,45 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 //echo "query: ".$query."<br>";
 
 
+echo '<table class="t1">';
 
 #------------------------------------------------------
 while($row=mysql_fetch_array($result)){
-        $array_articulos[]=$row;
+	$array_precios=precio_sucursal( $row["id"], $id_sucursal );
+	if($array_precios["rows"]<1){
+		$array_precios=precio_sucursal( $row["id"], 1 );
+	}
+	echo '<tr>';
+	echo 	"<td>".$row["id"]."</td>";	
+	echo 	"<td>".$row["marca"]."</td>";	
+	echo 	"<td>".$row["descripcion"]."</td>";	
+	echo 	"<td>".$row["clasificacion"]."</td>";	
+	echo 	"<td>$ ".round($array_precios["precio_base"],0).",00</td>";	
+	echo '<td><A HREF="articulo_vender.php?id_articulo='.$row["id"].'" ><img src="botones/vender.jpeg" alt="" width="55px" heigh="9px"></A></td>';
+	echo '</tr>';
+	
+	// $array_articulos[]=$row;
 }
 #------------------------------------------------------
+echo "</table>";
 
 
+// $div=(($numrows / 3)+1);
 
-$div=(($numrows / 3)+1);
-
-echo '<table border="1">';
-$count=0;
-for($j=1;$j<=$div;$j++){
-	echo '<tr valign="top">';
-	for($i=0;$i<=2;$i++){
-		//echo "<td>".$array_articulos[$count]["id"]."</td>";
-		echo "<td>";
-		include("articulo_muestra.inc.php");
-		echo "</td>".chr(10).chr(10);
-		$count++;
-		if($count==$rows){break;}
-	} 
-	echo '</tr>';
-} 
+// echo '<table border="1">';
+// $count=0;
+// for($j=1;$j<=$div;$j++){
+// 	echo '<tr valign="top">';
+// 	for($i=0;$i<=2;$i++){
+// 		//echo "<td>".$array_articulos[$count]["id"]."</td>";
+// 		echo "<td>";
+// 		include("articulo_muestra.inc.php");
+// 		echo "</td>".chr(10).chr(10);
+// 		$count++;
+// 		if($count==$rows){break;}
+// 	} 
+// 	echo '</tr>';
+// } 
 echo '</table>';
 
 

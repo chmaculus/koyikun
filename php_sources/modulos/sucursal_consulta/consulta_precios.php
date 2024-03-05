@@ -130,20 +130,29 @@ if(mysql_error()){
 	echo mysql_error()." ".$SCRIPT_NAME;
 }
 
+echo '<table class="t1">';
 #------------------------------------------------------
 while($row=mysql_fetch_array($result)){
-	$array_precios=precio_sucursal( $id, $id_sucursal );
+	$array_precios=precio_sucursal( $row["id"], $id_sucursal );
 	if($array_precios["rows"]<1){
-		$array_precios=precio_sucursal( $id, 1 );
+		$array_precios=precio_sucursal( $row["id"], 1 );
 	}
+	echo '<tr>';
+	echo 	"<td>".$row["id"]."</td>";	
+	echo 	"<td>".$row["marca"]."</td>";	
+	echo 	"<td>".$row["descripcion"]."</td>";	
+	echo 	"<td>".$row["clasificacion"]."</td>";	
+	echo 	"<td>$ ".round($array_precios["precio_base"],0).",00</td>";	
+	echo '<td><A HREF="articulo_vender.php?id_articulo='.$row["id"].'" ><img src="botones/vender.jpeg" alt="" width="55px" heigh="9px"></A></td>';
+	echo '</tr>';
 	
-        // $array_articulos[]=$row;
+	// $array_articulos[]=$row;
 }
 #------------------------------------------------------
+echo "</table>";
 
 
-
-$div=(($rows / 3)+1);
+// $div=(($rows / 3)+1);
 
 
 #---------------------------------------------
