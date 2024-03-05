@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" href="style.css" type="text/css">
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-  <title>Tablabla articulos By Christian Máculus</title>
+  <title>Tablabla articulos By Christian Mï¿½culus</title>
 </head>
 
 
@@ -15,7 +15,6 @@
 	<tr>
 		<td><A href="articulos_ingreso.php"><button>Ingresar</button></a></td>
 		<td><A href="articulos_busqueda.php"><button>Buscar</button></a></td>
-		<td><A href="articulos_listado.php"><button>Listado</button></a></td>
 	</tr>
 </table>
 </center>
