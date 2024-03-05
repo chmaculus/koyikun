@@ -3,6 +3,6 @@
 <head>
 	<link rel="stylesheet" href="style.css" type="text/css">
 	<link rel="stylesheet" href="estructura.css" type="text/css">
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
   <title>Xzone modificacion de descuentos</title>
 </head>

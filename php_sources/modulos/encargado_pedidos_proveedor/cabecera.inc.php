@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
         <link rel="stylesheet" href="style.css" type="text/css">
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
   <title></title>
         <link type="text/css" href="js/themes/base/ui.all.css" rel="stylesheet" />
         <script type="text/javascript" src="js/jquery-1.3.2.js"></script>
