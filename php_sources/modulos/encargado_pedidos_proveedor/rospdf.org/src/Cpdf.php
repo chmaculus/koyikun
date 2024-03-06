@@ -126,7 +126,7 @@ class Cpdf
      *
      * @var string default encoding is IS0-8859-1
      */
-    public $targetEncoding = 'ISO-8859-1';
+    public $targetEncoding = 'UTF-8';
     /**
      * set this to true allows TTF font being parsed as unicode in PDF output.
      * This also converts all text output into utf16_be.

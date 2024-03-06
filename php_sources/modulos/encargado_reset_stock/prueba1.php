@@ -13,7 +13,7 @@ include_once("../../includes/funciones_precios.php");
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<link rel="stylesheet" href="css/estructura.css" type="text/css">
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
   <title>Xzone modificacion de descuentos</title>
 </head>
 
