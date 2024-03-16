@@ -1,20 +1,19 @@
 <?php
 include_once("../../includes/connect.php");
-include_once("barcode.php");
 
 include("../../login/login_verifica.inc.php");
 include_once("../seguridad.inc.php"); 
 
-include_once("includes/cabecera.inc.php");?>
+include_once("cabecera.inc.php");?>
 
 <script language="javascript" src="js/jquery-1.3.min.js"></script>
-<script language="javascript" src="js/funciones.js"></script>
+<script language="javascript" src="funciones.js"></script>
 
 
 <body>
 
 <center>
-<titulo>Modificacion de costos</titulo>
+<titulo>Asignar categoria Web X grupo</titulo>
 
 <?php
 include_once("../../includes/funciones_costos.php");
@@ -24,7 +23,7 @@ $fecha=date("Y-n-d");
 
 
 echo '<form action="'.$_SERVER["SCRIPT_NAME"].'" method="post">';
-include("includes/select.inc.php");
+include("select.inc.php");
 echo '<input type="submit" name="ACEPTAR" value="ACEPTAR"><br>';
 echo "</form>";
 
@@ -47,7 +46,7 @@ $numrows=mysql_num_rows($result);
 
 echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 
-echo '<form method="post" action="costos_update.php" name="form_costos" target="_self" id="form_costos">';
+echo '<form method="post" action="update.php" name="form_costos" target="_self" id="form_costos">';
 ?>
 
 <table class="t1">
@@ -60,12 +59,39 @@ echo '<form method="post" action="costos_update.php" name="form_costos" target="
 	<th>Clasificacion</th>
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
+	<th>P./venta</th>
+	<th>Fecha Fab</th>
+	<th>Fecha Ger</th>
 </tr>
 
 <?php
 while($row=mysql_fetch_array($result)){
-	$seguimiento=seguimiento_stock($row["id"]);
-	echo "<tr>";
+	$array_costos=precio_costo( $row["id"] );
+	$array_precios=precio_sucursal($row["id"],"1");
+	
+	if( $array_costos=="0" OR $array_costos["precio_costo"]=="" OR $array_costos["precio_costo"]==NULL OR $array_costos["precio_costo"]=="0"  ){
+		$fecha=$array_precios["fecha"];
+		$array_costos["precio_costo"]="0";
+		$precio_venta=$array_precios["precio_base"];
+	}else{
+		//$array_costos["precio_costo"]=rand("101","999");
+		$precio_venta=calcula_precio_venta( $array_costos );
+		$fecha=$array_costos["fecha"];
+	}
+
+	$costo_ultima_actualizacion=costo_ultima_actualizacion($row["id"], $fecha );
+	if($costo_ultima_actualizacion==0){
+		echo "<tr>";
+	}
+	
+	if($costo_ultima_actualizacion==1){
+		echo '<tr class="precaucion">';
+	}
+	
+	if($costo_ultima_actualizacion==2){
+		echo '<tr class="grave">';
+	}
+	
 	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["codigo_interno"].'</td>';
 	echo '<td>'.$row["descripcion"].'</td>';
@@ -73,40 +99,22 @@ while($row=mysql_fetch_array($result)){
 	echo '<td>'.$row["presentacion"].'</td>';
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
-	if($row["codigo_barra"]>0){
-		echo '<td><img src="barcode.php?encode=EAN-13&bdata='.$row["codigo_barra"].'&height=25&scale=2&bgcolor=%23FFFFEC&color=%23333366&type=jpg" alt="" /><br>';
-		echo $row["codigo_barra"].'</td>';
-
-	}else{
-		echo "<td></td>";
-	}
-	//echo '<td><A HREF="seguimiento_stock.php?id_articulo='.$row["id"].'" onClick="return popup(this, \'notes\')"><button>'.$seguimiento.'</button></A></td>';
+	echo '<td>'.$row["codigo_barra"].'</td>';
+	echo '<td>'.$array_precios["precio_base"].'</td>';
 	echo "</tr>".chr(13);
 }
-
-
-
-function seguimiento_stock($id_articulo){
-	$q='select * from seguimiento_stock where id_articulo="'.$id_articulo.'"';
-	$r=mysql_query($q);
-	if(mysql_error()){
-		echo mysql_error();
-	}
-	$rows=mysql_num_rows($r);
-	return $rows;
-}
-
-
-
-
-
-
 ?>
 </table>
 
+<br><br>Use whith very very very much caution!<br><br>
+<input type="hidden" name="query" value="<?php echo base64_encode($query); ?>">
+<?php
+include("includes/categorias_web.inc.php");
+?>
+
 
 <input type="hidden" name="marca" value="<?php echo $_POST["marca"]; ?>">
-<input type="hidden" name="query" value="<?php echo base64_encode($query); ?>">
+<input type="submit" name="APLICAR" value="APLICAR">
 </form>
 
 </center>

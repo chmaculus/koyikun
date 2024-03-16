@@ -26,22 +26,28 @@ $header_abre='<html>
 $header_cierra="</table>";
 
 $header = "<tr>";
+$header .= "<td>ID</td>";
 $header .= "<td>Codigo</td>";
 $header .= "<td>Marca</td>";
 $header .= "<td>Descripcion</td>";
 $header .= "<td>Contenido</td>";
 $header .= "<td>Presentacion</td>";
 $header .= "<td>clasificacion</td>";
-$header .= "<td>subclasificacion</td>";
+$header .= "<td>Sub clasificacion</td>";
+$header .= "<td>Precio</td>";
+$header .= "<td>Fecha</td>";
+$header .= "<td>Hora</td>";
 
 fwrite($fopen, $header_abre);
 fwrite($fopen, $header);
 
 while($array_articulo=mysql_fetch_array($result)){
 	$array_costo=array_costo( $array_articulo["id"] );
-	$precio_costo=calcula_precio_costo( $array_articulo["id"] );
+	$precio=calcula_precio_venta( $array_costo );
+	$precio=($precio * 1.2) ;
 	$linea="<tr>";
 
+	$linea.="<td>".$array_articulo["id"]."</td>";
 	$linea.="<td>".$array_articulo["codigo_interno"]."</td>";
 	$linea.="<td>".$array_articulo["marca"]."</td>";
 	$linea.="<td>".$array_articulo["descripcion"]."</td>";
@@ -49,6 +55,9 @@ while($array_articulo=mysql_fetch_array($result)){
 	$linea.="<td>".$array_articulo["presentacion"]."</td>";
 	$linea.="<td>".$array_articulo["clasificacion"]."</td>";
 	$linea.="<td>".$array_articulo["subclasificacion"]."</td>";
+
+	$linea.="<td>".str_replace('.',',',round($precio,2))."</td>";
+
 	
 	$linea.="<td>".$array_costo["fecha"]."</td>";
 	$linea.="<td>".$array_costo["hora"]."</td>";
@@ -63,5 +72,28 @@ fclose($fopen);
 header('Location: /temp/'.$nombre_archivo);
 
 
+
+
+
+/*
+#---------------------------------------------------------------------------------------------
+function calcula_precio_venta( $array_costos ){
+	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
+	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento3"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento4"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento5"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento6"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento7"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * $array_costos["iva"] ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
+	return round($temp1,6);
+}
+#---------------------------------------------------------------------------------------------
+
+*/
 
 ?>

@@ -10,7 +10,7 @@ $fecha=date("Y-n-d");
 $hora=date("H_i_s");
 
 $user_path='/var/www/temp/';
-$nombre_archivo='listado_precios_'.$fecha.'__'.$hora.'.xls';
+$nombre_archivo='listado_costos_'.$fecha.'_'.$hora.'.xls';
 $fopen = fopen($user_path.$nombre_archivo, 'w');
 
 $query='select * from articulos order by marca, clasificacion, subclasificacion, descripcion';
@@ -34,6 +34,24 @@ $header .= "<td>Presentacion</td>";
 $header .= "<td>clasificacion</td>";
 $header .= "<td>subclasificacion</td>";
 
+$header .= "<td>Costo</td>";
+$header .= "<td>Desc1</td>";
+$header .= "<td>Desc2</td>";
+$header .= "<td>Desc3</td>";
+$header .= "<td>Desc4</td>";
+$header .= "<td>Desc5</td>";
+$header .= "<td>Desc6</td>";
+$header .= "<td>Desc7</td>";
+$header .= "<td>Desc8</td>";
+$header .= "<td>Desc9</td>";
+$header .= "<td>Desc10</td>";
+$header .= "<td>I.V.A.</td>";
+$header .= "<td>Margen</td>";
+$header .= "<td>P. costo</td>";
+$header .= "<td>Fecha</td>";
+$header .= "<td>Hora</td>";
+$header .= "</tr>".chr(13);
+
 fwrite($fopen, $header_abre);
 fwrite($fopen, $header);
 
@@ -50,6 +68,20 @@ while($array_articulo=mysql_fetch_array($result)){
 	$linea.="<td>".$array_articulo["clasificacion"]."</td>";
 	$linea.="<td>".$array_articulo["subclasificacion"]."</td>";
 	
+	$linea.="<td>".str_replace('.',',',$array_costo["precio_costo"])."</td>";
+	$linea.="<td>".$array_costo["descuento1"]."</td>";
+	$linea.="<td>".$array_costo["descuento2"]."</td>";
+	$linea.="<td>".$array_costo["descuento3"]."</td>";
+	$linea.="<td>".$array_costo["descuento4"]."</td>";
+	$linea.="<td>".$array_costo["descuento5"]."</td>";
+	$linea.="<td>".$array_costo["descuento6"]."</td>";
+	$linea.="<td>".$array_costo["descuento7"]."</td>";
+	$linea.="<td>".$array_costo["descuento8"]."</td>";
+	$linea.="<td>".$array_costo["descuento9"]."</td>";
+	$linea.="<td>".$array_costo["descuento10"]."</td>";
+	$linea.="<td>".$array_costo["iva"]."</td>";
+	$linea.="<td>".$array_costo["margen"]."</td>";
+	$linea.="<td>".str_replace('.',',',$precio_costo)."</td>";
 	$linea.="<td>".$array_costo["fecha"]."</td>";
 	$linea.="<td>".$array_costo["hora"]."</td>";
 	$linea.="</tr>".chr(13);

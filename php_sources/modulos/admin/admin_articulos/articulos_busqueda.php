@@ -15,6 +15,7 @@ $hasta=$_POST["hasta"];
 
 
 include('../../includes/connect.php');
+include('../../includes/funciones_precios.php');
 ?>
 
 </body>
@@ -41,6 +42,7 @@ $query='select * from articulos where descripcion like "%'.$_POST["busqueda"].'%
 													clasificacion like "%'.$_POST["busqueda"].'%" or
 													subclasificacion like "%'.$_POST["busqueda"].'%" or
 													marca like "%'.$_POST["busqueda"].'%" or
+													id like "%'.$_POST["busqueda"].'%" or
 													codigo_barra like "%'.$_POST["busqueda"].'%"
 														order by marca, clasificacion, descripcion
 													
@@ -93,6 +95,7 @@ echo '<br><font1>Mostrando Resultados desde: '.($desde+1).' Hasta: '.$hasta.' de
 
 echo '<table class="t1">';
 echo '<tr>';
+	echo '<th>ID</th>';
 	echo '<th>Codigo</th>';
 	echo '<th>Marca</th>';
 	echo '<th>Descripcion</th>';
@@ -101,6 +104,8 @@ echo '<tr>';
 	echo '<th>Clasificacion</th>';
 	echo '<th>Subclasificacion</th>';
 	echo '<th>Fecha</th>';
+	echo '<th>Precio</th>';
+	echo '<th>porcentaje tarjeta</th>';
 	echo '<th></th>';
 	echo '<th></th>';
 echo '</tr>'.chr(13);
@@ -109,7 +114,9 @@ echo '</tr>'.chr(13);
 
 #muestra resultados
 while($row=mysql_fetch_array($result)){
+    $array_precio=precio_sucursal2($row["id"]);
 	echo "<tr>";
+	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["codigo_interno"].'</td>';
 	echo '<td>'.$row["marca"].'</td>';
 	echo '<td>'.$row["descripcion"].'</td>';
@@ -117,6 +124,9 @@ while($row=mysql_fetch_array($result)){
 	echo '<td>'.$row["presentacion"].'</td>';
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
+	echo '<td>'.$array_precio["precio_base"].'</td>';
+	echo '<td>'.$array_precio["porcentaje_tarjeta"].'</td>';
+	echo '<td>'.$row["fecha"].'</td>';
 	accion($row["id"]);
 	echo "</tr>".chr(13);
 }
@@ -141,7 +151,9 @@ function accion($id_articulos){
 #devuelve 2 columnas en la tabla
 	echo '<td><a href="articulos_ingreso.php?id_articulos='.$id_articulos.'">Modificar</a></td>';
 	echo '<td><a href="articulos_eliminar.php?id_articulos='.$id_articulos.'">Eliminar</a></td>';
-	echo '<td><a href="../admin_promociones/promociones_ingreso.php?id_articulos='.$id_articulos.'">Promocion</a></td>';
+	echo '<td><a href="../admin_promociones/promociones_ingreso.php?id_articulos='.$id_articulos.'">Prom 1</a></td>';
+	echo '<td><a href="../admin_promociones/promociones_ingreso2.php?id_articulos='.$id_articulos.'">Prom 2</a></td>';
+	echo '<td><a href="../admin_promociones/promociones_asociadas.php?id_articulos='.$id_articulos.'">Asociados</a></td>';
 }
 #-----------------------------------------------------------------
 

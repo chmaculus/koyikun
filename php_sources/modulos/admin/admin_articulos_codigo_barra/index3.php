@@ -47,68 +47,7 @@ $numrows=mysql_num_rows($result);
 
 echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 
-echo '<form method="post" action="costos_update.php" name="form_costos" target="_self" id="form_costos">';
 ?>
-
-<table class="t1">
-<tr>
-	<th>ID</th>
-	<th>Cod Int</th>
-	<th>Descripcion</th>
-	<th>Contenido</th>
-	<th>Pesentacion</th>
-	<th>Clasificacion</th>
-	<th>Sub-clasificacion</th>
-	<th>cod barra</th>
-</tr>
-
-<?php
-while($row=mysql_fetch_array($result)){
-	$seguimiento=seguimiento_stock($row["id"]);
-	echo "<tr>";
-	echo '<td>'.$row["id"].'</td>';
-	echo '<td>'.$row["codigo_interno"].'</td>';
-	echo '<td>'.$row["descripcion"].'</td>';
-	echo '<td>'.$row["contenido"].'</td>';
-	echo '<td>'.$row["presentacion"].'</td>';
-	echo '<td>'.$row["clasificacion"].'</td>';
-	echo '<td>'.$row["subclasificacion"].'</td>';
-	if($row["codigo_barra"]>0){
-		echo '<td><img src="barcode.php?encode=EAN-13&bdata='.$row["codigo_barra"].'&height=25&scale=2&bgcolor=%23FFFFEC&color=%23333366&type=jpg" alt="" /><br>';
-		echo $row["codigo_barra"].'</td>';
-
-	}else{
-		echo "<td></td>";
-	}
-	//echo '<td><A HREF="seguimiento_stock.php?id_articulo='.$row["id"].'" onClick="return popup(this, \'notes\')"><button>'.$seguimiento.'</button></A></td>';
-	echo "</tr>".chr(13);
-}
-
-
-
-function seguimiento_stock($id_articulo){
-	$q='select * from seguimiento_stock where id_articulo="'.$id_articulo.'"';
-	$r=mysql_query($q);
-	if(mysql_error()){
-		echo mysql_error();
-	}
-	$rows=mysql_num_rows($r);
-	return $rows;
-}
-
-
-
-
-
-
-?>
-</table>
-
-
-<input type="hidden" name="marca" value="<?php echo $_POST["marca"]; ?>">
-<input type="hidden" name="query" value="<?php echo base64_encode($query); ?>">
-</form>
-
 </center>
 </body>
 </html>
