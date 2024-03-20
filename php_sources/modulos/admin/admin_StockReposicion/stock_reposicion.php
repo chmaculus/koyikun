@@ -1,8 +1,8 @@
 <?php
 
 include_once("../../includes/connect.php");
-include_once("../../login/login_verifica.inc.php");
-include_once("../../includes/seguridad_0.inc.php");
+include_once("../login/login_verifica.inc.php");
+include_once("../seguridad.inc.php");
 
 if($_POST["excel"]){
 	include('export_excel.php');

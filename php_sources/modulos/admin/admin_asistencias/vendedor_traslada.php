@@ -5,7 +5,7 @@
 
 
 <?php
-include_once("../../login/login_verifica.inc.php");
+include_once("../login/login_verifica.inc.php");
 include_once("../../includes/connect.php");
 
 echo "<br><br>";

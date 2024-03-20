@@ -1,4 +1,4 @@
-<?php include_once("../../login/login_verifica.inc.php");
+<?php include_once("../login/login_verifica.inc.php");
 
 include_once("../seguridad.inc.php"); 
 

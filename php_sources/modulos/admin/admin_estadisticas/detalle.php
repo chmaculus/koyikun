@@ -1,6 +1,6 @@
 <?php
 include_once("../../includes/connect.php");
-include_once("../../login/login_verifica.inc.php");
+include_once("../login/login_verifica.inc.php");
 
 #jrarquia 0 coresponde a administrador
 if($jerarquia!="0"){

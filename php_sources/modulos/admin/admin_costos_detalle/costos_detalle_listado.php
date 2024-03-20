@@ -1,7 +1,7 @@
 <?php
 
 include_once("../../includes/connect.php");
-include_once("../../login/login_verifica.inc.php");
+include_once("../login/login_verifica.inc.php");
 include_once("seguridad.inc.php");
 
 include_once("../../includes/funciones_varias.php");
