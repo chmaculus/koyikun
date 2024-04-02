@@ -2,12 +2,7 @@
 include_once("../../includes/connect.php");
 
 include("../../login/login_verifica.inc.php");
-$jerarquia=$_COOKIE["jerarquia"];
-#jrarquia 0 coresponde a administrador
-if($jerarquia!="0"){
-	echo "No tiene Permiso para acceder<br>";
-	exit;
-} 
+include_once("../seguridad.inc.php"); 
 ?>
 
 

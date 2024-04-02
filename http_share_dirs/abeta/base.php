@@ -164,6 +164,7 @@ echo '</tr>';
 echo '<tr>';
 echo '	<td><a target="centro" class="btn2"  href="'.$prefijo.'/admin_costos_modificacion/precios_modifica.php">COST-MOD</a></td>';
 echo '	<td><a target="centro" class="btn2"  href="'.$prefijo.'/admin_ventas/ventas_export.php">EXCEL</a></td>';
+echo '	<td><a target="centro" class="btn2"  href="'.$prefijo.'/admin/admin_costos/index.php">COSTOS</a></td>';
 echo '</tr>';
 
 echo '<tr>';
