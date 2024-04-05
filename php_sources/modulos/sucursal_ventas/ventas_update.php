@@ -139,7 +139,7 @@ function venta_temp_ventas($cantidad, $id_articulos, $numero_venta, $tipo_pago, 
 		$precio=$tarjeta;
 	}
 	$costo=calcula_precio_costo( $id_articulos );
-	$query='insert into ventas set cantidad="'.$cantidad.'",
+	$query='insert into ventas_pendientes set cantidad="'.$cantidad.'",
 												numero_venta="'.$numero_venta.'",
 												marca="'.comilla($descripcion["marca"]).'",
 												descripcion="'.comilla($descripcion["descripcion"]).$promocion.'",
@@ -162,9 +162,6 @@ function venta_temp_ventas($cantidad, $id_articulos, $numero_venta, $tipo_pago, 
 	
 	$id_sucursal=id_sucursal($sucursal);
 	seguimiento_x_venta($id_articulos, $cantidad, $id_sucursal, $numero_venta, $vendedor);	
-	
-	
-
 }
 #-------------------------------------------------------------------------------------------------
 
