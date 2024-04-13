@@ -54,7 +54,11 @@ $total_venta=total( $sucursal, fecha_conv("/",$_POST["fecha_desde"]), fecha_conv
 echo '<font1>Total Venta desde '.$_POST["fecha_desde"].' Hasta '.$_POST["fecha_hasta"].' '.$total_venta.'</font1><br>';
 echo '<font1>Sucursal: '.$sucursal.'</font1><br>'.chr(13);
 
-$query='select * from ventas where fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'"order by marca, clasificacion, subclasificacion, contenido, presentacion';
+$query='select *,count(*) as cc from ventas where 
+					fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" 
+					and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'" 
+					group by id_articulos
+					order by cc desc';
 $result=mysql_query($query)or die(mysql_error());
 
 
@@ -85,6 +89,7 @@ while($row=mysql_fetch_array($result)){
     echo '<td>'.$row["contenido"].'</td>';
     echo '<td>'.$row["presentacion"].'</td>';
     echo '<td>'.$row["precio_unitario"].'</td>';
+    echo '<td>'.$row["cc"].'</td>';
     echo "</tr>".chr(10);
 }
 

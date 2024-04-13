@@ -16,25 +16,16 @@ if($jerarquia!="0"){
 
 <table><tr>
 
-<td>
-	<A HREF="ventas_listado.php"><button>Listado</button></A>
-</td>
+<td>	<A HREF="ventas_listado.php"><button>Listado</button></A></td>
 
-<td>
-	<A HREF="listado_x_marca.php"><button>Listado x marca</button></A>
-</td>
+<td>	<A HREF="listado_x_marca.php"><button>Listado x marca</button></A></td>
 
-<td>
-	<A HREF="listado_x_cantidad_ventas.php"><button>cantidad de ventas</button></A>
-</td>
+<td>	<A HREF="listado_x_cantidad_ventas.php"><button>cantidad de ventas</button></A></td>
 
-<td>
-	<A HREF="listado_x_vendedor.php"><button>Listado x vendedor</button></A>
-</td>
+<td>	<A HREF="listado_x_vendedor.php"><button>Listado x vendedor</button></A></td>
 
-<td>
-	<A HREF="listado_general2.php"><button>Listado general</button></A>
-</td>
+<td><A HREF="listado_general2.php"><button>Listado general</button></A></td>
+<td><A HREF="listado_general3.php"><button>Listado general 2</button></A></td>
 
 </tr></table>
 
