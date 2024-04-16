@@ -88,8 +88,8 @@ echo "</tr>";
 while($row=mysql_fetch_array($result)){
 	$array_costo=array_costo($row["id_articulos"]);
 	$descuento=trae_margen_des($array_costo["margen"]);
-	$precio_venta=calcula_precio_venta($array_costo);
-	$costo_fran=$precio_venta-($precio_venta * $descuento / 100);
+	// $precio_venta=calcula_precio_venta($array_costo);
+	$costo_fran=$row["precio_unitario"]-($row["precio_unitario"] * $descuento / 100);
 
     echo "<tr>";
     echo '<td>'.$row["id_articulos"].'</td>';
