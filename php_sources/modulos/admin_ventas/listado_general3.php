@@ -80,12 +80,13 @@ echo "<tr>";
     echo "<th>Costo unitario</th>";
     echo "<th>Costo total</th>";
     echo "<th>Venta total</th>";
+    echo "<th>Venta - costo</th>";
 
 echo "</tr>";
 
 
 while($row=mysql_fetch_array($result)){
-	$array_costos=array_costo($row["id_articulos"]);
+	$array_costo=array_costo($row["id_articulos"]);
 	$descuento=trae_margen_des($array_costo["margen"]);
 	$precio_venta=calcula_precio_venta($array_costo);
 	$costo_fran=$precio_venta-($precio_venta * $descuento / 100);
@@ -103,10 +104,11 @@ while($row=mysql_fetch_array($result)){
     echo '<td>'.$row["cc"].'</td>';
     echo '<td>'.$row["precio_unitario"].'</td>';
     echo '<td>'.$descuento.'</td>';
-    echo '<td>'.$costo_fran.'</td>';
-    echo '<td>'.($row["cc"] * $costo_fran).'</td>';
-    echo '<td>'.($row["precio_unitario"] * $row["cc"]).'</td>';
-    echo '<td>'.($row["precio_unitario"] * $row["cc"]) - ($row["cc"] * $costo_fran).'</td>';
+    echo '<td>'.round($costo_fran,0).'</td>';
+    echo '<td>'.round(($row["cc"] * $costo_fran),0).'</td>';
+    echo '<td>'.round(($row["precio_unitario"] * $row["cc"]),0).'</td>';
+	$tttt=round(($row["precio_unitario"] * $row["cc"]) - ($row["cc"] * $costo_fran),0);
+    echo '<td>'.$tttt.'</td>';
 		
     echo "</tr>".chr(10);
 }
