@@ -122,6 +122,7 @@ while($row=mysql_fetch_array($result)){
 	
 
 
+
 	// $costo=calcula_precio_costo( $row["id_articulo"] );
 	$ma=( $row["tres"] * 1.2 );
 	$m=explode(".",$ma);
@@ -134,6 +135,8 @@ while($row=mysql_fetch_array($result)){
 	
 	$tot_reponer=$tot_reponer+($costo * $reposicion);
 	$inmovilizado=round(($stock1 * $costo_fran),0);
+	$total_inmovilizado=round($total_inmovilizado+$inmovilizado,0);
+
 	// echo "vvvv: ".$inmovilizado."<br>";
 	$tot_inmovilizado=$tot_inmovilizado+$costo_fran;
 	$ultimo_ingreso=trae_ultima_compra($row["id_articulo"]);
@@ -325,7 +328,7 @@ echo '<tr>';
 echo "<td><font1>Total unidades reponer:</td></font1><td><font1>".$total_reponer."</td></font1>";
 echo '</tr>';
 echo '<tr>';
-echo "<td><font1>Total inmovilizado:</td></font1><td><font1> ".$tot_inmovilizado."</td></font1>";
+echo "<td><font1>Total inmovilizado:</td></font1><td><font1> ".$total_inmovilizado."</td></font1>";
 echo '</tr>';
 echo '</table>';
 
