@@ -129,6 +129,10 @@ echo "<tr>";
 echo "<td>Total Venta</td>";
 echo "<td>".round($total_venta,2)."</td>";
 echo "</tr>";
+echo "<tr>";
+echo "<td>Diferencia</td>";
+echo "<td>".round(($total_venta - $total_costo),2)."</td>";
+echo "</tr>";
 echo '</table>';
 
 
