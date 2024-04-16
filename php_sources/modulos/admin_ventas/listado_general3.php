@@ -1,8 +1,9 @@
 <?php
 
-include("ventas_base.php");
-include("../../includes/connect.php");
-include("../../includes/funciones_varias.php");
+include_once("ventas_base.php");
+include_once("../../includes/connect.php");
+include_once("../../includes/funciones_varias.php");
+include_once("../../includes/funciones_costos.php");
 
 $mes_anio=date("n/Y");
 
@@ -73,11 +74,22 @@ echo "<tr>";
     echo "<th>cantidad</th>";
     echo "<th>contenido</th>";
     echo "<th>presentacion</th>";
-    echo "<th>precio_unitario</th>";
+    echo "<th>Cantidad</th>";
+    echo "<th>Precio unitario</th>";
+    echo "<th>Descuento</th>";
+    echo "<th>Costo unitario</th>";
+    echo "<th>Costo total</th>";
+    echo "<th>Venta total</th>";
+
 echo "</tr>";
 
 
 while($row=mysql_fetch_array($result)){
+	$array_costos=array_costo($row["id_articulos"]);
+	$descuento=trae_margen_des($array_costo["margen"]);
+	$precio_venta=calcula_precio_venta($array_costo);
+	$costo_fran=$precio_venta-($precio_venta * $descuento / 100);
+
     echo "<tr>";
     echo '<td>'.$row["id_articulos"].'</td>';
     echo '<td>'.$row["marca"].'</td>';
@@ -88,8 +100,14 @@ while($row=mysql_fetch_array($result)){
     echo '<td>'.$row["cantidad"].'</td>';
     echo '<td>'.$row["contenido"].'</td>';
     echo '<td>'.$row["presentacion"].'</td>';
-    echo '<td>'.$row["precio_unitario"].'</td>';
     echo '<td>'.$row["cc"].'</td>';
+    echo '<td>'.$row["precio_unitario"].'</td>';
+    echo '<td>'.$descuento.'</td>';
+    echo '<td>'.$costo_fran.'</td>';
+    echo '<td>'.($row["cc"] * $costo_fran).'</td>';
+    echo '<td>'.($row["precio_unitario"] * $row["cc"]).'</td>';
+    echo '<td>'.($row["precio_unitario"] * $row["cc"]) - ($row["cc"] * $costo_fran).'</td>';
+		
     echo "</tr>".chr(10);
 }
 

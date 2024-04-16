@@ -135,6 +135,13 @@ function verifica_vacio($var){
 #---------------------------------------
 
 
+function trae_margen_des($margen){
+	$q='select descuento from margenes_descuentos where margen='.$margen;
+	$res=mysql_query($q);
+	$rr=mysql_result($res,0,0);
+	return $rr;
+}
+
 
 
 ?>
