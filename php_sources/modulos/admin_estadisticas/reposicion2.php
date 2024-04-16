@@ -117,7 +117,7 @@ while($row=mysql_fetch_array($result)){
 	$descuento=trae_margen_des($array_costo["margen"]);
 	$precio_venta=calcula_precio_venta($array_costo);
 	
-	
+	// echo "vvvv: ".$descuento."<br>";
 	$costo_fran=$precio_venta-($precio_venta * $descuento / 100);
 	
 
@@ -410,10 +410,10 @@ function calcula_precio_costo( $id_articulos ){
 #---------------------------------------------------------------------------------------------
 
 function trae_margen_des($margen){
-	$q='select * from margenes_descuentos where margen='.$margen;
+	$q='select descuento from margenes_descuentos where margen='.$margen;
 	$res=mysql_query($q);
 	$rr=mysql_result($res,0,0);
-	return $res;
+	return $rr;
 }
 
 
