@@ -103,19 +103,36 @@ while($row=mysql_fetch_array($result)){
     echo '<td>'.$row["presentacion"].'</td>';
     echo '<td>'.$row["cc"].'</td>';
     echo '<td>'.$row["precio_unitario"].'</td>';
+	// $total_unitario=$total_unitario+$row["precio_unitario"];
     echo '<td>'.$descuento.'</td>';
-    echo '<td>'.round($costo_fran,0).'</td>';
-    echo '<td>'.round(($row["cc"] * $costo_fran),0).'</td>';
-    echo '<td>'.round(($row["precio_unitario"] * $row["cc"]),0).'</td>';
-	$tttt=round(($row["precio_unitario"] * $row["cc"]) - ($row["cc"] * $costo_fran),0);
+	// $total_costo=$total_costo+$costo_fran;
+    echo '<td>'.round($costo_fran,2).'</td>';
+	$total_costo=$total_costo+($row["cc"] * $costo_fran);
+    echo '<td>'.round(($row["cc"] * $costo_fran),2).'</td>';
+    $total_venta=$total_venta+($row["precio_unitario"] * $row["cc"]);
+	echo '<td>'.round(($row["precio_unitario"] * $row["cc"]),2).'</td>';
+	$tttt=round(($row["precio_unitario"] * $row["cc"]) - ($row["cc"] * $costo_fran),2);
+
     echo '<td>'.$tttt.'</td>';
 		
     echo "</tr>".chr(10);
 }
+// echo "<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>".chr(10);
+echo '</table>';
 
-echo '</table></center>';
+echo '<table class="t1">';
+echo "<tr>";
+echo "<td>Total Costo</td>";
+echo "<td>".round($total_costo,2)."</td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td>Total Venta</td>";
+echo "<td>".round($total_venta,2)."</td>";
+echo "</tr>";
+echo '</table>';
 
 
+echo "</center>";
 
 #-----------------------------------------------------------------
 function calcula_total_marca($marca, $sucursal ,$fecha_desde, $fecha_hasta){
