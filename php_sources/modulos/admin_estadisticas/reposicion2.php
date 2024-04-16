@@ -103,7 +103,8 @@ echo "<tr>";
     echo "<th>Ultimo ingreso</th>";
     echo "<th></th>";
     echo "<th>Total $ pedir</th>";
-    echo "<th>Inmovilizado</th>";
+    echo "<th>Inmovilizado costo</th>";
+    echo "<th>Inmovilizado venta</th>";
 echo "</tr>";
 
 echo '<form action="listado_reposicion2.php" method="post">';
@@ -135,7 +136,9 @@ while($row=mysql_fetch_array($result)){
 	
 	$tot_reponer=$tot_reponer+($costo * $reposicion);
 	$inmovilizado=round(($stock1 * $costo_fran),0);
+	$inmovilizado_venta=round(($stock1 * $precio_venta),0);
 	$total_inmovilizado=round($total_inmovilizado+$inmovilizado,0);
+	$total_inmovilizado_venta=round($total_inmovilizado_venta+$inmovilizado_venta,0);
 
 	// echo "vvvv: ".$inmovilizado."<br>";
 	$tot_inmovilizado=$tot_inmovilizado+$costo_fran;
@@ -316,6 +319,7 @@ while($row=mysql_fetch_array($result)){
     $pedir=($reposicion * $costo);
     echo '<td><input type="text" name="totalpedir'.$row["id_articulo"].'" id="totalpedir'.$row["id_articulo"].'" value="'.$pedir.'" size="5"></td>';
     echo '<td>$'.$inmovilizado.'</td>';
+    echo '<td>$'.$inmovilizado_venta.'</td>';
     echo "</tr>".chr(10).chr(10);
 }
 echo '</table>';
@@ -328,7 +332,10 @@ echo '<tr>';
 echo "<td><font1>Total unidades reponer:</td></font1><td><font1>".$total_reponer."</td></font1>";
 echo '</tr>';
 echo '<tr>';
-echo "<td><font1>Total inmovilizado:</td></font1><td><font1> ".$total_inmovilizado."</td></font1>";
+echo "<td><font1>Total inmovilizado costo:</td></font1><td><font1> ".$total_inmovilizado."</td></font1>";
+echo '</tr>';
+echo '<tr>';
+echo "<td><font1>Total inmovilizado venta:</td></font1><td><font1> ".$total_inmovilizado_venta."</td></font1>";
 echo '</tr>';
 echo '</table>';
 
