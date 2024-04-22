@@ -16,10 +16,18 @@ echo "<br><br>";
 
 verifica_tabla_stock( $_POST["id_articulos"], $id_sucursal );
 
+if($_POST["minimo"]<1){
+	$minimo=0;
+}
+if($_POST["maximo"]<1){
+	$maximo=0;
+}
+
+
 $q='update stock set 
 		    stock="'.$_POST["stock_nuevo"].'", 
-		    minimo="'.$_POST["minimo"].'", 
-		    maximo="'.$_POST["maximo"].'", 
+		    minimo="'.$minimo.'", 
+		    maximo="'.$maximo.'", 
 		    fecha="'.$fecha.'", 
 		    hora="'.$hora.'" where id_articulo="'.$_POST["id_articulos"].'" and id_sucursal="'.$id_sucursal.'"';
 mysql_query($q);
