@@ -24,9 +24,9 @@ if($_POST["maximo"]<1 or $_POST["maximo"]==""){
 }
 
 $q='update stock set 
-		    stock="'.$_POST["stock_nuevo"].'", 
-		    minimo="'.$minimo.'", 
-		    maximo="'.$maximo.'", 
+		    stock='.$_POST["stock_nuevo"].', 
+		    minimo='.$minimo.', 
+		    maximo='.$maximo.', 
 		    fecha="'.$fecha.'", 
 		    hora="'.$hora.'" where id_articulo="'.$_POST["id_articulos"].'" and id_sucursal="'.$id_sucursal.'"';
 mysql_query($q);
