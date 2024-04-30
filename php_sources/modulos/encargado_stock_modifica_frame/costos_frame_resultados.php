@@ -82,7 +82,7 @@ while($row=mysql_fetch_array($result)){
 	// echo '<td><form action="stock_modifica.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="stock" value="stock" /></form></td>';
 	echo '<td>';if($seg>0){ echo '<form action="aa.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="seguir" value="seguir '.$seg.'" /></form>';} echo '</td>';
 	echo '<td><input type="text" name="stock'.$row["id"].'" value="'.$array_stock["stock"].'" size="3"></td>';
-	$fijo=($array_stock["stock"] - $array_stock["maximo"]);
+	$fijo=($array_stock["maximo"] - $array_stock["stock"] );
 	if($fijo<0){
 		$fijo=0;
 	}
