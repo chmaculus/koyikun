@@ -60,7 +60,7 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>Fecha</th>
 	<th>Hora</th>
 </tr>
-<form action="costos_update.php" method="post" enctype="multipart/form-data">
+<form action="stock_update2.php" method="post" enctype="multipart/form-data">
 
 
 <?php
@@ -98,6 +98,7 @@ while($row=mysql_fetch_array($result)){
 
 echo "</table>";
 echo '<input type="hidden" name="query" value="'.base64_encode($query).'">';
+echo '<input type="submit" name="ACEPTAR" value="ACEPTAR">';
 echo "</form>";
 
 
