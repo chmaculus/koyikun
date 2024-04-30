@@ -53,14 +53,14 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
 	<th>Acc.</th>
-	<th>Acc.</th>
 	<th>Stock</th>
 	<th>Fijo</th>
 	<th>Minimo</th>
 	<th>Maximo</th>
 	<th>Fecha</th>
 	<th>Hora</th>
-
+</tr>
+<form action="costos_update.php" method="post" enctype="multipart/form-data">
 
 
 <?php
@@ -79,18 +79,31 @@ while($row=mysql_fetch_array($result)){
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
 	echo '<td>'.$row["codigo_barra"].'</td>';
-	echo '<td><form action="stock_modifica.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="stock" value="stock" /></form></td>';
+	// echo '<td><form action="stock_modifica.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="stock" value="stock" /></form></td>';
 	echo '<td>';if($seg>0){ echo '<form action="aa.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="seguir" value="seguir '.$seg.'" /></form>';} echo '</td>';
-	echo '<td>'.$array_stock["stock"].'</td>';
-	echo '<td>'.$array_stock["fijo"].'</td>';
-	echo '<td>'.$array_stock["minimo"].'</td>';
-	echo '<td>'.$array_stock["maximo"].'</td>';
+	echo '<td><input type="text" name="stock'.$row["id"].'" value="'.$array_stock["stock"].'" size="3"></td>';
+	echo '<td><input type="text" name="fijo'.$row["id"].'" value="'.$array_stock["fijo"].'" size="3"></td>';
+	echo '<td><input type="text" name="minimo'.$row["id"].'" value="'.$array_stock["minimo"].'" size="3"></td>';
+	echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
+	// echo '<td>'.$array_stock["minimo"].'</td>';
+	// echo '<td>'.$array_stock["maximo"].'</td>';
 	echo '<td>'.$array_stock["fecha"].'</td>';
 	echo '<td>'.$array_stock["hora"].'</td>';
 
 
 	echo "</tr>".chr(13);
 }
+
+
+
+echo "</table>";
+echo '<input type="hidden" name="query" value="'.base64_encode($query).'">';
+echo "</form>";
+
+
+
+
+
 
 
 
@@ -192,17 +205,6 @@ function seg_stock($id_articulo, $id_sucursal){
 
 
 ?>
-
-
-
-
-
-
-
-
-
-</table>
-
 </center>
 </body>
 </html>
