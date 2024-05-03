@@ -54,7 +54,7 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>cod barra</th>
 	<th>Acc.</th>
 	<th>Stock</th>
-	<th>Fijo</th>
+	<th>Sugerido</th>
 	<th>Minimo</th>
 	<th>Maximo</th>
 	<th>Fecha</th>
