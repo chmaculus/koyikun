@@ -92,6 +92,7 @@ while($row=mysql_fetch_array($result)){
 	echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
 	echo '<td>';
 	include("rotacion.inc.php");
+	
 	echo '</td>';
 	// echo '<td>'.$array_stock["minimo"].'</td>';
 	// echo '<td>'.$array_stock["maximo"].'</td>';
