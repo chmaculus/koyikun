@@ -80,7 +80,7 @@ echo "<tr>";
     echo "<th>Reponer</th>";
     echo "<th>Ingreso</th>";
     echo "<th>Rotacion</th>";
-    echo "<th>costo</th>";
+    // echo "<th>costo</th>";
     echo "<th>Total $ pedir</th>";
     echo "<th>Inmovilizado</th>";
 echo "</tr>";
@@ -91,7 +91,7 @@ while($row=mysql_fetch_array($result)){
 	$array_articulo=array_articulos($row["id_articulo"]);
 	$stock=stock_sucursal($row["id_articulo"],1);
 	$stock1=$stock[stock];
-	$costo=calcula_precio_costo( $row["id_articulo"] );
+	// $costo=calcula_precio_costo( $row["id_articulo"] );
 	$ma=( $row["tres"] * 1.2 );
 	$m=explode(".",$ma);
 	$maximo=$m[0];
@@ -194,7 +194,7 @@ while($row=mysql_fetch_array($result)){
 		echo "</td>";
     ///////////////////////////////////////////////////////////////////////////////////
     
-    echo '<td><input type="text" name="costo'.$row["id_articulo"].'" id="costo'.$row["id_articulo"].'" onchange="cal2('.$row["id_articulo"].');" value="'.$costo.'" size="5"></td>';
+    // echo '<td><input type="text" name="costo'.$row["id_articulo"].'" id="costo'.$row["id_articulo"].'" onchange="cal2('.$row["id_articulo"].');" value="'.$costo.'" size="5"></td>';
     $pedir=($reposicion * $costo);
     echo '<td><input type="text" name="totalpedir'.$row["id_articulo"].'" id="totalpedir'.$row["id_articulo"].'" value="'.$pedir.'" size="5"></td>';
     echo '<td>$'.$inmovilizado.'</td>';
