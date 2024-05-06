@@ -5,7 +5,7 @@ if(mysql_error()){
 	echo $q."<br>";
 	echo mysql_error();
 }
-echo "<td> $q </td>";
+// echo "<td> $q </td>";
 $array_estadistica=mysql_fetch_array();
 
 echo '<table class="t1">';
