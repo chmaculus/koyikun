@@ -35,9 +35,18 @@ while($row=mysql_fetch_array($result)){
     seguimiento stock
     */
     $stock_anterior=stock_sucursal($row["id"],$id_sucursal);
+    if($stock_anterior["stock"]<0){
+        $anterior=0;
+    }else{
+        $anterior=$stock_anterior["stock"];
+    }
+
+    $nuevo=$anterior+verifica_vacio($_POST["stock".$row["id"]]);
+
+
     verifica_tabla_stock( $row["id"], $id_sucursal );
     $query='update stock set
-    stock="'.verifica_vacio($_POST["stock".$row["id"]]).'",
+    stock="'.$nuevo.'",
     maximo="'.verifica_vacio($_POST["maximo".$row["id"]]).'",
     minimo="'.verifica_vacio($_POST["minimo".$row["id"]]).'",
     fijo="'.verifica_vacio($_POST["fijo".$row["id"]]).'",
@@ -62,71 +71,6 @@ if(!mysql_error()){
 
 
 exit;
-
-
-#----------------------------------------
-$q='select * from stock where id_articulo="'.$_POST["id_articulos"].'" and id_sucursal="'.$id_sucursal.'"';
-$result=mysql_query($q);
-if(mysql_error()){echo mysql_error()."<br>".$query."<br>".$_SERVER["SCRIPT_NAME"]."<br>";}
-$rows=mysql_num_rows($result);
-
-$array_stock=mysql_fetch_array($result);
-$stock_anterior=$array_stock["stock"];
-
-//echo "rows: ".$rows."<br>";
-
-#----------------------------------------
-if($rows<1){
-	$query='insert into stock set
-							id_articulo="'.verifica_vacio($_POST["id_articulos"]).'",
-							stock="'.verifica_vacio($_POST["stock"]).'",
-							maximo="'.verifica_vacio($_POST["maximo"]).'",
-							minimo="'.verifica_vacio($_POST["minimo"]).'",
-							fijo="'.verifica_vacio($_POST["fijo"]).'",
-							id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'",
-							fecha="'.$fecha.'",
-							hora="'.$hora.'"';
-}
-
-if($rows==1){
-	$query='update stock set
-							stock="'.verifica_vacio($_POST["stock"]).'",
-							maximo="'.verifica_vacio($_POST["maximo"]).'",
-							minimo="'.verifica_vacio($_POST["minimo"]).'",
-							fijo="'.verifica_vacio($_POST["fijo"]).'",
-							fecha="'.$fecha.'",
-							hora="'.$hora.'"
-								where id_articulo="'.verifica_vacio($_POST["id_articulos"]).'" and 
-									id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'"
-							';
-}
-
-if($rows>1){
-	$q1='delete from stock where id_articulo="'.$_POST["id_articulos"].'" and id_sucursal="'.$_POST["id_sucursal"].'"';
-	mysql_query($q1);
-	$query='insert into stock set
-							id_articulo="'.verifica_vacio($_POST["id_articulos"]).'",
-							stock="'.verifica_vacio($_POST["stock"]).'",
-							maximo="'.verifica_vacio($_POST["maximo"]).'",
-							minimo="'.verifica_vacio($_POST["minimo"]).'",
-							fijo="'.verifica_vacio($_POST["fijo"]).'",
-							id_sucursal="'.verifica_vacio($_POST["id_sucursal"]).'",
-							fecha="'.$fecha.'",
-							hora="'.$hora.'"';
-}
-
-
-
-
-mysql_query($query);
-//echo "q: ".$query."<br>";
-	if(mysql_error()){	
-   	 echo $query."<br>";
-    	echo mysql_error()."<br>";
-    	echo $_SERVER["SCRIPT_NAME"]."<br>";
-	}
-
-#----------------------------------------
 
 
 
