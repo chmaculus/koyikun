@@ -16,11 +16,15 @@ echo "<br><br>";
 
 verifica_tabla_stock( $_POST["id_articulos"], $id_sucursal );
 
-if($_POST["minimo"]<1){
+if($_POST["minimo"]<1 or $_POST["minimo"]==""){
 	$minimo=0;
+}else{
+	$minimo=$_POST["minimo"];
 }
-if($_POST["maximo"]<1){
+if($_POST["maximo"]<1 or $_POST["maximo"]==""){
 	$maximo=0;
+}else{
+	$maximo=$_POST["maximo"];
 }
 
 
