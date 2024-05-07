@@ -22,6 +22,9 @@ $u_doce=date("Y-n-d",$ultimo_doce);
 
 include("../includes/connect.php");
 
+$file_log="/logs/estadistica".date("YmdHi").".log";
+
+
 echo "elimina datos anteriores".chr(10);
 $q0='drop table if exists ventas_estadistica';
 mysql_query($q0);
@@ -70,11 +73,11 @@ echo "elimina datos anteriores 2 ".chr(10);
 $q0='drop table if exists ventas_estadistica_datos';
 $res=mysql_query($q0);
 if(mysql_error()){
-	log_this("/tmp/estadistica.log",$q);
-	log_this("/tmp/estadistica.log",mysql_error());
+	log_this($file_log,$q);
+	log_this($file_log,mysql_error());
 }
-log_this("/tmp/estadistica.log",$q);
-log_this("/tmp/estadistica.log","rows: ".mysql_num_rows($res));
+log_this($file_log,$q);
+log_this($file_log,"rows: ".mysql_num_rows($res));
 
 echo "crea tabla nueva2".chr(10);
 $q0='create table ventas_estadistica_datos(
@@ -102,8 +105,8 @@ $t_doce=tot2($u_doce);
 
 
 
-// log_this("/tmp/estadistica.log","vacioj: ".verifica_vacio("jejejeje"));
-// log_this("/tmp/estadistica.log","vacio: ".verifica_vacio());
+// log_this($file_log,"vacioj: ".verifica_vacio("jejejeje"));
+// log_this($file_log,"vacio: ".verifica_vacio());
 
 if($t_mes[1] != ""){
 
@@ -121,7 +124,7 @@ if($t_mes[1] != ""){
 							fecha="'.verifica_vacio($fecha).'"
 		';
 
-		log_this("/tmp/estadistica.log",$q1);
+		log_this($file_log,$q1);
 		//echo $q1.chr(10);
 		mysql_query($q1);
 		if(mysql_error()){
@@ -135,10 +138,10 @@ echo "genera estadisticas".chr(10);
 
 
 $q='select * from articulos where discontinuo!="S" or discontinuo<=>NULL order by marca';
-log_this("/tmp/estadistica.log","asdf1".$q);
+log_this($file_log,"asdf1".$q);
 echo $q.chr(10);
 $res=mysql_query($q);
-log_this("/tmp/estadistica.log","rows: ".mysql_num_rows($res));
+log_this($file_log,"rows: ".mysql_num_rows($res));
 
 while($row=mysql_fetch_array($res)){
 	$stock=stock_sucursal($row["id"],1);
@@ -164,7 +167,7 @@ while($row=mysql_fetch_array($res)){
 	$seis=$a[0];
 	$rent_tres=$a[3];
 	$tot_seis=$a[1];
-	if(!isset($rent_seis)){$rent_mes=0;}
+	if(!isset($rent_seis)){$rent_seis=0;}
 	if(!isset($tot_seis)){$tot_seis=0;}
 
 	$a=tot($row[0],$u_nueve);
@@ -181,53 +184,56 @@ while($row=mysql_fetch_array($res)){
 	if(!isset($rent_doce)){$rent_doce=0;}
 	if(!isset($tot_doce)){$tot_doce=0;}
 
-	log_this("/tmp/estadistica.log","mes: ".$mes);
-	log_this("/tmp/estadistica.log","verifica_vacio: ".verifica_vacio("asdf:".$mes));
+	log_this($file_log,"mes: ".$mes);
+	log_this($file_log,"verifica_vacio: ".verifica_vacio("asdf:".$mes));
 	//if($mes!="" and $mes!=NULL){
 
-			$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
-																	id_articulo="'.$row["id"].'", 
-																	descripcion="'.addslashes($row["descripcion"]).'",
-																	clasificacion="'.addslashes($row["clasificacion"]).'",
-																	subclasificacion="'.addslashes($row["subclasificacion"]).'",
-																	mes="'.verifica_vacio($mes).'", 
-																	tot_mes="'.verifica_vacio($tot_mes).'", 
-																	rent_mes="'.verifica_vacio($rent_mes).'", 
-																	tres="'.verifica_vacio($tres).'", 
-																	tot_tres="'.verifica_vacio($tot_tres).'", 
-																	rent_tres="'.verifica_vacio($rent_tres).'", 
-																	seis="'.verifica_vacio($seis).'", 
-																	tot_seis="'.verifica_vacio($tot_seis).'", 
-																	rent_seis="'.verifica_vacio($rent_seis).'", 
-																	nueve="'.verifica_vacio($nueve).'", 
-																	tot_nueve="'.verifica_vacio($tot_nueve).'", 
-																	rent_nueve="'.verifica_vacio($rent_nueve).'", 
-																	doce="'.verifica_vacio($doce).'",
-																	tot_doce="'.verifica_vacio($tot_doce).'",
-																	rent_doce="'.verifica_vacio($rent_doce).'",
-																	costo="'.verifica_vacio($costo).'",
-																	stock="'.verifica_vacio($stock1).'",
-																	inmovilizado="'.verifica_vacio($inmovilizado).'"
-																	';
-			
+	$q2='insert into ventas_estadistica set marca="'.$row["marca"].'", 
+															id_articulo="'.$row["id"].'", 
+															descripcion="'.addslashes($row["descripcion"]).'",
+															clasificacion="'.addslashes($row["clasificacion"]).'",
+															subclasificacion="'.addslashes($row["subclasificacion"]).'",
+															mes="'.verifica_vacio($mes).'", 
+															tot_mes="'.verifica_vacio($tot_mes).'", 
+															rent_mes="'.verifica_vacio($rent_mes).'", 
+															tres="'.verifica_vacio($tres).'", 
+															tot_tres="'.verifica_vacio($tot_tres).'", 
+															rent_tres="'.verifica_vacio($rent_tres).'", 
+															seis="'.verifica_vacio($seis).'", 
+															tot_seis="'.verifica_vacio($tot_seis).'", 
+															rent_seis="'.verifica_vacio($rent_seis).'", 
+															nueve="'.verifica_vacio($nueve).'", 
+															tot_nueve="'.verifica_vacio($tot_nueve).'", 
+															rent_nueve="'.verifica_vacio($rent_nueve).'", 
+															doce="'.verifica_vacio($doce).'",
+															tot_doce="'.verifica_vacio($tot_doce).'",
+															rent_doce="'.verifica_vacio($rent_doce).'",
+															costo="'.verifica_vacio($costo).'",
+															stock="'.verifica_vacio($stock1).'",
+															inmovilizado="'.verifica_vacio($inmovilizado).'"
+															';
+
+	if($mes>0){
+		log_this($file_log,"q2: ".$q2);
+	}
 
 
-			
+	
 
-			mysql_query($q2);
-				if(mysql_error()){
-					echo mysql_error();
-					log_this("/tmp/estadistica.log","its here".$q1);
-					log_this("/tmp/estadistica.log",mysql_error());
-				}
-				$count++;
-				if($count>=100){
-					$count2++;
-					echo ($count * $count2).chr(10);
-					$count=0;
-				}
-	//	echo $q2.chr(10);
-	//}
+	mysql_query($q2);
+		if(mysql_error()){
+			echo mysql_error();
+			log_this($file_log,"its here".$q1);
+			log_this($file_log,mysql_error());
+		}
+		$count++;
+		if($count>=100){
+			$count2++;
+			echo ($count * $count2).chr(10);
+			$count=0;
+		}
+//	echo $q2.chr(10);
+//}
 
 }
 

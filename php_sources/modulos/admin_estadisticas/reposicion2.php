@@ -1,6 +1,7 @@
 
 <?php
 include_once("../../includes/connect.php");
+// include_once("../../includes/funciones_costos.php");
 
 include_once("../../login/login_verifica.inc.php");
 $jerarquia=$_COOKIE["jerarquia"];
@@ -70,9 +71,9 @@ function trae_ultima_compra($id_articulo){
     $rows=mysql_num_rows($r);
     if($rows>0){
         $array=mysql_fetch_array($r);
-	return $array;
+		return $array;
     }else{
-	return NULL;
+		return NULL;
     }
 }
 
@@ -101,18 +102,29 @@ echo "<tr>";
     echo "<th>web</th>";
     echo "<th>Ultimo ingreso</th>";
     echo "<th></th>";
-    echo "<th>costo</th>";
     echo "<th>Total $ pedir</th>";
-    echo "<th>Inmovilizado</th>";
+    echo "<th>Inmovilizado costo</th>";
+    echo "<th>Inmovilizado venta</th>";
 echo "</tr>";
 
 echo '<form action="listado_reposicion2.php" method="post">';
 
 while($row=mysql_fetch_array($result)){
 	$array_articulo=array_articulos($row["id_articulo"]);
-	$stock=stock_sucursal($row["id_articulo"],1);
-	$stock1=$stock[stock];
-	$costo=calcula_precio_costo( $row["id_articulo"] );
+	$stock=stock_sucursal($row["id_articulo"],33);
+	
+	$stock1=$stock["stock"];
+	$array_costo=array_costo($row["id_articulo"]);
+	$descuento=trae_margen_des($array_costo["margen"]);
+	$precio_venta=calcula_precio_venta($array_costo);
+	
+	// echo "vvvv: ".$descuento."<br>";
+	$costo_fran=$precio_venta-($precio_venta * $descuento / 100);
+	
+
+
+
+	// $costo=calcula_precio_costo( $row["id_articulo"] );
 	$ma=( $row["tres"] * 1.2 );
 	$m=explode(".",$ma);
 	$maximo=$m[0];
@@ -123,8 +135,13 @@ while($row=mysql_fetch_array($result)){
 	$total_reponer=$total_reponer+$reposicion;
 	
 	$tot_reponer=$tot_reponer+($costo * $reposicion);
-	$inmovilizado=($stock1 * $costo);
-	$tot_inmovilizado=$tot_inmovilizado+$inmovilizado;
+	$inmovilizado=round(($stock1 * $costo_fran),0);
+	$inmovilizado_venta=round(($stock1 * $precio_venta),0);
+	$total_inmovilizado=round($total_inmovilizado+$inmovilizado,0);
+	$total_inmovilizado_venta=round($total_inmovilizado_venta+$inmovilizado_venta,0);
+
+	// echo "vvvv: ".$inmovilizado."<br>";
+	$tot_inmovilizado=$tot_inmovilizado+$costo_fran;
 	$ultimo_ingreso=trae_ultima_compra($row["id_articulo"]);
 
 	if($stock["stock"] >0 AND $stock["stock"] < $row["mes"]){
@@ -299,10 +316,10 @@ while($row=mysql_fetch_array($result)){
 		$reposicion=0;
 	}    
     
-    echo '<td><input type="text" name="costo'.$row["id_articulo"].'" id="costo'.$row["id_articulo"].'" onchange="cal2('.$row["id_articulo"].');" value="'.$costo.'" size="5"></td>';
     $pedir=($reposicion * $costo);
     echo '<td><input type="text" name="totalpedir'.$row["id_articulo"].'" id="totalpedir'.$row["id_articulo"].'" value="'.$pedir.'" size="5"></td>';
     echo '<td>$'.$inmovilizado.'</td>';
+    echo '<td>$'.$inmovilizado_venta.'</td>';
     echo "</tr>".chr(10).chr(10);
 }
 echo '</table>';
@@ -315,7 +332,10 @@ echo '<tr>';
 echo "<td><font1>Total unidades reponer:</td></font1><td><font1>".$total_reponer."</td></font1>";
 echo '</tr>';
 echo '<tr>';
-echo "<td><font1>Total inmovilizado:</td></font1><td><font1> ".$tot_inmovilizado."</td></font1>";
+echo "<td><font1>Total inmovilizado costo:</td></font1><td><font1> ".$total_inmovilizado."</td></font1>";
+echo '</tr>';
+echo '<tr>';
+echo "<td><font1>Total inmovilizado venta:</td></font1><td><font1> ".$total_inmovilizado_venta."</td></font1>";
 echo '</tr>';
 echo '</table>';
 
@@ -396,6 +416,48 @@ function calcula_precio_costo( $id_articulos ){
 	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["iva"] ) ) / 100 )+ $temp1;
 	return round($temp1,2);
+}
+#---------------------------------------------------------------------------------------------
+
+function trae_margen_des($margen){
+	$q='select descuento from margenes_descuentos where margen='.$margen;
+	$res=mysql_query($q);
+	$rr=mysql_result($res,0,0);
+	return $rr;
+}
+
+
+
+#---------------------------------------------------------------------------------------------
+function array_costo($id_articulos){
+	$query='select * from costos where id_articulos="'.$id_articulos.'"';
+	$result=mysql_query($query);
+	$rows=mysql_num_rows($result);
+	if($rows=="1"){
+		$array=mysql_fetch_array($result);
+		return $array;
+	}else{
+		return "0";
+	}
+}
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
+function calcula_precio_venta( $array_costos ){
+	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
+	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento3"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento4"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento5"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento6"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento7"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * $array_costos["iva"] ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
+	return round($temp1,6);
 }
 #---------------------------------------------------------------------------------------------
 

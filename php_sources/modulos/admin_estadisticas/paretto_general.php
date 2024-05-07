@@ -149,7 +149,6 @@ echo "<tr>";
     echo "<th>Maximo</th>";
     echo "<th>stock</th>";
     echo "<th>Reponer</th>";
-    echo "<th>costo</th>";
     echo "<th>Inmovilizado</th>";
 echo "</tr>";
 
@@ -158,7 +157,6 @@ while($row=mysql_fetch_array($result)){
 	$array_articulo=array_articulos($row["id_articulo"]);
 	$stock=stock_sucursal($row["id_articulo"],1);
 	$stock1=$stock[stock];
-	$costo=calcula_precio_costo( $row["id_articulo"] );
 	$ma=( $row["tres"] * 1.2 );
 	$m=explode(".",$ma);
 	$maximo=$m[0];
@@ -205,7 +203,6 @@ while($row=mysql_fetch_array($result)){
     echo '<td>'.$maximo.'</td>';
     echo '<td>'.$stock["stock"].'</td>';
     echo '<td>'.$reposicion.'</td>';
-    echo '<td>$'.$costo.'</td>';
     echo '<td>$'.$inmovilizado.'</td>';
     echo "</tr>".chr(10);
 }
