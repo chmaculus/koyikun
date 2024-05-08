@@ -15,13 +15,15 @@ echo '<tr>'.chr(10);
 	echo '<td><a target="centro" href="'.$prefijo.'/encargado_stock_modifica_frame/index.php"><img src="./botones/STOCK_POR_MARCA.png"></a></td>';
 	// echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_pedidos/pedidos_base.php"><img src="./botones/PEDIDOS_SUCURSALES.png"></a></td>'.chr(10);
 	// echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_movimiento_interno/base.php"><button>MOV INTERNO</button></a></td>'.chr(10);
-echo '</tr>';
+	echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_modifica_noframe/export_stock_sugerido.php"><button>STOCK GENERAL SUGERIDO</button></a></td>'.chr(10);
+	echo '</tr>';
 
 echo '<tr>';
 	echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_reset_stock/index.php"><img src="./botones/RESET_STOCK.png"></a></td>'.chr(10);
 	// echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_pedidos_proveedor/index.php"><img src="./botones/PEDIDOS_PROVEEDORES.png"></a></td>'.chr(10);
 	echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_pedidos_recepcion/index.php"><img src="./botones/PEDIDOS_RECEPCION.png"></a></td>'.chr(10);
 	// echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_seguimiento1/index.php"><img src="./botones/SEGUIMIENTO_STOCK.png"></a></td>'.chr(10);
+	echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_modifica_noframe/export_stock_sugerido.php"><button>STOCK GENERAL SUGERIDO</button></a></td>'.chr(10);
 	echo '<td><a target="centro" href="./login/login_finaliza.php"><img src="./botones/CERRAR_SESION.png"></a></td>'.chr(10);
 echo '</tr>';
 	
