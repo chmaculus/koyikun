@@ -51,6 +51,7 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 <tr>
 	<th>ID</th>
 	<th>Cod Int</th>
+	<th>Marca</th>
 	<th>Descripcion</th>
 	<th>Color</th>
 	<th>Contenido</th>
@@ -59,6 +60,7 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
 	<th>Stock</th>
+	<th>Sugerido</th>
 	<th>Minimo</th>
 	<th>Maximo</th>
 	<th>Mes</th>
@@ -84,6 +86,7 @@ while($row=mysql_fetch_array($result)){
 	echo "<tr>";
 	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["codigo_interno"].'</td>';
+	echo '<td>'.$row["marca"].'</td>';
 	echo '<td>'.$row["descripcion"].'</td>';
 	echo '<td>'.$row["color"].'</td>';
 	echo '<td>'.$row["contenido"].'</td>';
@@ -102,6 +105,16 @@ while($row=mysql_fetch_array($result)){
 	// echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
 
 	echo '<td>'.$array_stock["stock"].'</td>';
+    if($array_stock["stock"]<0){
+        $stock=0;
+    }else{
+        $stock=$array_stock["stock"];
+    }
+    $sugerido=($array_stock["maximo"] - $stock);
+    if($sugerido<0){
+        $sugerido=0;
+    }
+    echo '<td>'.$sugerido.'</td>';
 	echo '<td>'.$array_stock["minimo"].'</td>';
 	echo '<td>'.$array_stock["maximo"].'</td>';
 	include("rotacion_export.inc.php");
