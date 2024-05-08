@@ -47,7 +47,7 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 
 ?>
 
-<table class="t1">
+<table border="1">
 <tr>
 	<th>ID</th>
 	<th>Cod Int</th>
