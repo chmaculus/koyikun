@@ -30,6 +30,23 @@ function array_costo($id_articulos){
 
 
 #---------------------------------------------------------------------------------------------
+function margen_descuento($margen){
+	$query='select * from margenes_descuentos where margen="'.$margen.'"';
+	$result=mysql_query($query);
+	$rows=mysql_num_rows($result);
+	// echo $rows."\n";
+	if($rows=="1"){
+		$array=mysql_fetch_assoc($result);
+		// echo print_r($array,true);
+		return $array;
+	}else{
+		return "0";
+	}
+}
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
 function calcula_precio_venta( $array_costos ){
 	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
 	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
@@ -43,7 +60,42 @@ function calcula_precio_venta( $array_costos ){
 	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * $array_costos["iva"] ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
-	return round($temp1,6);
+	return round($temp1,0);
+}
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
+function calcula_precio_venta_siva( $array_costos ){
+	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
+	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento3"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento4"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento5"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento6"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento7"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
+	return round($temp1,0);
+}
+#---------------------------------------------------------------------------------------------
+
+
+#---------------------------------------------------------------------------------------------
+function calcula_precio_costo_siva( $array_costos ){
+	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
+	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento3"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento4"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento5"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento6"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento7"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento8"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento9"] * -1 ) ) / 100 )+ $temp1;
+	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
+	return round($temp1,0);
 }
 #---------------------------------------------------------------------------------------------
 

@@ -31,15 +31,17 @@ $user_path='/var/www/html/listas/';
 	$header .= ';"Des4"';
 	$header .= ';"Des5"';
 	$header .= ';"Des6"';
+	$header .= ';"Costo S/IVA"';
+	$header .= ';"Costo Mayorista S/IVA"';
+	$header .= ';"Porcentaje mayorista"';
 	$header .= ';"IVA"';
-	$header .= ';"Margen"';
-	$header .= ';"Profesionales"';
+	$header .= ';"Margen AF"';
 	$header .= ';"Descuento"';
 	$header .= ';"Contado"';
 	$header .= chr(10);
 	fwrite($fopen, $header);
 
-	$query='select * from articulos where marca!="" order by marca, clasificacion, subclasificacion, contenido, presentacion, descripcion';
+	$query='select * from articulos where marca!="" order by marca, clasificacion, subclasificacion, contenido, presentacion, descripcion ';
 	$result = mysql_query($query)or die(mysql_error());
 	$rows2=mysql_num_rows($result);
 	//echo "rows2: ".$rows2.$query.chr(10);
@@ -52,6 +54,24 @@ $user_path='/var/www/html/listas/';
 		$array_costo=array_costo( $array_articulo["id"] );
 		
 		$precio=calcula_precio_venta( $array_costo );
+		$preciosiva=calcula_precio_costo_siva( $array_costo );
+		$array_descuento=margen_descuento($array_costo["margen"]);
+
+		$temp1=($precio-($precio * $array_descuento["descuento"] / 100) ) ;
+		$costo_mayorista_siva=$temp1;
+		if($array_costo["iva"]>1){
+			$divid=($array_costo["iva"] / 100 )+1;
+			$costo_mayorista_siva=round(($temp1 / $divid ),0);
+			$costo_mayorista_civa=round($costo_mayorista_siva+($costo_mayorista_siva * $array_costo["iva"] / 100 ),0);
+			$porc_mayorista=round(((($precio / $costo_mayorista_civa) -1) * 100),0);
+		}else{
+			$costo_mayorista_siva="revisar";
+			
+		}
+		
+
+		echo $array_articulo["id"]." des: ".$costo_mayorista_civa." porc may ".$porc_mayorista."\n";
+		// $costo_mayorista_siva=($precio-($precio * $array_descuento["descuento"] / 100) / $array_costo["iva"]);
 
 		// $porc_peluquero=get_listas_porcentaje($array_articulo["id"], 4);
 		// $porc_mayorista=get_listas_porcentaje($array_articulo["id"], 5);
@@ -76,9 +96,12 @@ $user_path='/var/www/html/listas/';
 		$linea.=';"'.$array_costo["descuento4"].'"';
 		$linea.=';"'.$array_costo["descuento5"].'"';
 		$linea.=';"'.$array_costo["descuento6"].'"';
+		$linea.=';"'.$preciosiva.'"';//precio af sin iva
+		$linea.=';"'.$costo_mayorista_siva.'"';//precio mayorista sin iva
+		$linea.=';"'.$porc_mayorista.'"';//porcentaje mayorista
+		
 		$linea.=';"'.str_replace(".", ",", $array_costo["iva"]).'"';
 		$linea.=';"'.$array_costo["margen"].'"';
-		$linea.=';"'.trae_desc2($array_articulo["codigo_interno"]).'"';
 		$linea.=';"'.elimina_decimal(trae_descuento($array_costo["margen"])).'"';
 		$linea.=';"'.elimina_decimal($precio).'"';
 
