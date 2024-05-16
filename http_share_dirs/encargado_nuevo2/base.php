@@ -28,6 +28,7 @@ echo '</tr>';
 echo "<tr>";
 echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_modifica_noframe/export_stock_sugerido.php"><button>STOCK GENERAL SUGERIDO</button></a></td>'.chr(10);
 echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_modifica_noframe/export_stock.php"><button>STOCK GENERAL</button></a></td>'.chr(10);
+echo '<td><a class="heading" target="centro" href="'.$prefijo.'/encargado_stock_modifica_noframe/stock_general_valorizado.php"><button>STOCK GENERAL VALORIZADO</button></a></td>'.chr(10);
 echo "</tr>";
 
 
