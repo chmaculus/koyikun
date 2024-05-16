@@ -31,7 +31,8 @@ $nombre_sucursal=nombre_sucursal($id_sucursal);
 
 echo "Sucursal: $nombre_sucursal <br>";
 
-$query='select * from articulos order by marca, 
+$query='select * from articulos where marca="colorage" 
+order by marca, 
                 clasificacion, 
                 subclasificacion, 
                 descripcion';
@@ -59,15 +60,9 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>Clasificacion</th>
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
+	<th>Costo</th>
 	<th>Stock</th>
-	<!-- <th>Sugerido</th>
-	<th>Minimo</th>
-	<th>Maximo</th>
-	<th>Mes</th>
-	<th>Tres</th>
-	<th>Seis</th>
-	<th>Nueve</th>
-	<th>Doce</th> -->
+	<th>Sub total</th>
 </tr>
 
 
@@ -80,6 +75,7 @@ while($row=mysql_fetch_array($result)){
 
 echo date("Y-m-d H:i:s")."<br>";
 $count=0;
+/*
 foreach($array_articulos as $row){
     $count++;
 
@@ -115,21 +111,44 @@ echo "total costo".$totcosto."<br>";
 
 
 exit;
+*/
 
-
-
+$count=0;
 foreach($array_articulos as $row){
+	echo "<tr>";
+	$count++;
+
 	//$precio_costo=calcula_precio_costo( array_costo($row["id"]) );
 	// $seg=seg_stock($row["id"], 33);
 	$array_stock=stock_sucursal($row["id"],33);
-    
+	$array_costo=array_costo($row["id"]);
+	// echo "<td>".print_r($array_costo,true)."</td>";
 
-	$fijo=($array_stock["maximo"] - $array_stock["stock"] );
-	if($fijo<1){
-		$fijo=0;
+	if($array_stock["stock"]<0){
+        $stock=0;
+    }else{
+        $stock=$array_stock["stock"];
 	}
-	
-	echo "<tr>";
+
+	if($array_costo["precio_costo"]>0 and $array_costo["iva"]>0 and $array_costo["margen"]>0){
+		// echo "<td>if1</td>";
+		$array_descuento=trae_descuento_franquicia($array_costo["margen"]);
+		$costo_franquicia=calcula_precio_costo_franquicia( $array_costo, $array_descuento["descuento"] );
+		if($stock>0){
+			// echo "<td>if2</td>";
+			$subtot=$costo_franquicia * $stock;
+		}else{
+			// echo "<td>if3</td>";
+			$subtot=0;
+		}
+		
+	}else{
+		// echo "<td>if4</td>";
+		$subtot=0;
+	}
+
+
+
 	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["codigo_interno"].'</td>';
 	echo '<td>'.$row["marca"].'</td>';
@@ -140,32 +159,9 @@ foreach($array_articulos as $row){
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
 	echo '<td>'.$row["codigo_barra"].'</td>';
-	// echo '<td><form action="stock_modifica.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="stock" value="stock" /></form></td>';
-	// if($fijo>0){
-	// 	echo '<td><font color="#007603" size="10px">'.$fijo.'</font></td>'.chr(10);
-	// }else{
-	// 	echo '<td><font color="#000000">'.$fijo.'</font></td>'.chr(10);
-	// }
-	
-	// echo '<td><input type="text" name="minimo'.$row["id"].'" value="'.$array_stock["minimo"].'" size="3"></td>';
-	// echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
-
+    echo '<td>'.$costo_franquicia.'</td>';
 	echo '<td>'.$array_stock["stock"].'</td>';
-    if($array_stock["stock"]<0){
-        $stock=0;
-    }else{
-        $stock=$array_stock["stock"];
-    }
-    $sugerido=($array_stock["maximo"] - $stock);
-    if($sugerido<0){
-        $sugerido=0;
-    }
-    echo '<td>'.$sugerido.'</td>';
-	echo '<td>'.$array_stock["minimo"].'</td>';
-	echo '<td>'.$array_stock["maximo"].'</td>';
-	// include("rotacion_export.inc.php");
-	// echo '<td>'.$array_stock["fecha"].'</td>';
-	// echo '<td>'.$array_stock["hora"].'</td>';
+	echo '<td>'.$subtot.'</td>';
 
 
 	echo "</tr>".chr(13);
