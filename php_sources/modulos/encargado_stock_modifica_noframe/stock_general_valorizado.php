@@ -31,7 +31,7 @@ $nombre_sucursal=nombre_sucursal($id_sucursal);
 
 echo "Sucursal: $nombre_sucursal <br>";
 
-$query='select * from articulos where marca="colorage" 
+$query='select * from articulos where marca!="" 
 order by marca, 
                 clasificacion, 
                 subclasificacion, 
@@ -75,7 +75,7 @@ while($row=mysql_fetch_array($result)){
 
 echo date("Y-m-d H:i:s")."<br>";
 $count=0;
-/*
+
 foreach($array_articulos as $row){
     $count++;
 
@@ -107,11 +107,9 @@ foreach($array_articulos as $row){
     
 }
 
-echo "total costo".$totcosto."<br>";
+echo "total costo: ".$totcosto."<br>";
 
 
-exit;
-*/
 
 $count=0;
 foreach($array_articulos as $row){
