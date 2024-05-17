@@ -186,11 +186,13 @@ function calcula_precio_costo( $id_articulos ){
 
 function trae_descuento_franquicia($margen){
 	$query='select * from margenes_descuentos where margen="'.$margen.'"';
-	// echo $query."<br>";
+	// log_this("/logs/precio1.log","margen: ".$margen);
+	// log_this("/logs/precio1.log","query: ".$query);
 	$result=mysql_query($query);
 	$rows=mysql_num_rows($result);
 	if($rows>0){
 		$descuento=mysql_fetch_assoc($result);
+		// log_this("/logs/precio1.log","desc: ".print_r($descuento,true));
 		return $descuento;
 	}else{
 		return "0";
@@ -201,6 +203,8 @@ function trae_descuento_franquicia($margen){
 #---------------------------------------------------------------------------------------------
 function calcula_precio_costo_franquicia( $array_costos, $array_descuento ){
 	// echo "des: ".$array_descuento."<br>";
+	// log_this("/logs/precio1.log",print_r($array_costos,true));
+	// log_this("/logs/precio1.log","desc: ".$array_descuento["descuento"]);
 	$temp1=( ( $array_costos["precio_costo"] * ( $array_costos["descuento1"] * -1 ) ) / 100 )+ $array_costos["precio_costo"];
 	$temp1=( ( $temp1 * ( $array_costos["descuento2"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["descuento3"] * -1 ) ) / 100 )+ $temp1;
@@ -213,7 +217,9 @@ function calcula_precio_costo_franquicia( $array_costos, $array_descuento ){
 	$temp1=( ( $temp1 * ( $array_costos["descuento10"] * -1 ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * ( $array_costos["iva"] ) ) / 100 )+ $temp1;
 	$temp1=( ( $temp1 * $array_costos["margen"] ) / 100 )+ $temp1;
+	// log_this("/logs/precio1.log","koyi: ".$temp1);
 	$temp1=( ( $temp1 * ( $array_descuento["descuento"] * -1 ) ) / 100 )+ $temp1;
+	// log_this("/logs/precio1.log","franq: ".$temp1);
 	return round($temp1,0);
 }
 #---------------------------------------------------------------------------------------------

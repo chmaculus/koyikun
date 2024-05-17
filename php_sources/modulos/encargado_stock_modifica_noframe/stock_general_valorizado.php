@@ -120,7 +120,7 @@ foreach($array_articulos as $row){
 	// $seg=seg_stock($row["id"], 33);
 	$array_stock=stock_sucursal($row["id"],33);
 	$array_costo=array_costo($row["id"]);
-	echo "<td>".print_r($array_costo,true)."</td>";
+	// echo "<td>".print_r($array_costo,true)."</td>";
 
 	if($array_stock["stock"]<0){
         $stock=0;
@@ -132,8 +132,10 @@ foreach($array_articulos as $row){
 		// echo "<td>if1</td>";
 
 		$array_descuento=trae_descuento_franquicia($array_costo["margen"]);
-		$costo_franquicia=calcula_precio_costo_franquicia( $array_costo, $array_descuento["descuento"] );
-		echo "<td> margen ".$array_costo["margen"]."<br>costo fran ".$costo_franquicia."<br>descue ".$array_descuento["descuento"]."</td>";
+		// log_this("/logs/precio1.log","desc: ".print_r($array_descuento,true));
+		// log_this("/logs/precio1.log","desc22: ".$array_descuento["descuento"]);
+		$costo_franquicia=calcula_precio_costo_franquicia( $array_costo, $array_descuento );
+		// echo "<td> margen ".$array_costo["margen"]."<br>costo fran ".$costo_franquicia."<br>descue ".$array_descuento["descuento"]."</td>";
 		// echo "<td>costo fran ".$costo_franquicia."</td>";
 		if($stock>0){
 			// echo "<td>if2</td>";
