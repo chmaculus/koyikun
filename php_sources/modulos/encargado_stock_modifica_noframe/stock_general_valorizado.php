@@ -1,6 +1,7 @@
 <?php
 
 include_once("../../includes/connect.php");
+include_once("seguridad.inc.php");
 include_once("cabecera.inc.php");
 
 include_once("../../includes/funciones_varias.php");
