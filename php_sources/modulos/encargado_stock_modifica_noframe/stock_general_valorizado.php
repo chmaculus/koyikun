@@ -98,7 +98,7 @@ foreach($array_articulos as $row){
         // echo $row["id"]." ".$row["marca"]." ".$row["descripcion"]." ".$row["clasificacion"]."<br>";
         $array_descuento=trae_descuento_franquicia($array_costo["margen"]);
         // echo "ppp".print_r($array_descuento,true);
-        $costo=calcula_precio_costo_franquicia( $array_costo, $array_descuento["descuento"] );
+        $costo=calcula_precio_costo_franquicia( $array_costo, $array_descuento );
         $totcosto=$totcosto+$costo;
 }
     if($count>100){
@@ -107,7 +107,7 @@ foreach($array_articulos as $row){
     
 }
 
-echo "total costo: ".$totcosto."<br>";
+// echo "total costo: ".$totcosto."<br>";
 
 
 
@@ -140,6 +140,7 @@ foreach($array_articulos as $row){
 		if($stock>0){
 			// echo "<td>if2</td>";
 			$subtot=$costo_franquicia * $stock;
+			$sumsbtot=$sumsbtot+$subtot;
 		}else{
 			// echo "<td>if3</td>";
 			$subtot=0;
@@ -174,10 +175,9 @@ foreach($array_articulos as $row){
 
 
 echo "</table>";
-// echo '<input type="hidden" name="id_sucursal" value="'.$id_sucursal.'">';
-// echo '<input type="hidden" name="query" value="'.base64_encode($query).'">';
-// echo '<input type="submit" name="ACEPTAR" value="ACEPTAR">';
-// echo "</form>";
+
+
+echo "Total $sumsbtot <br>";
 
 
 
