@@ -178,7 +178,7 @@ foreach($array_articulos as $row){
 echo "</table>";
 
 
-echo "Total $sumsbtot <br>";
+echo "Total $".number_format($sumsbtot, 2, ',', '.')." <br>";
 
 
 
