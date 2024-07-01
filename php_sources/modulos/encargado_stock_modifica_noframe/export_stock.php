@@ -10,9 +10,6 @@ include_once("../../includes/funciones_precios.php");
 
 ?>
 
-<script language="javascript" src="js/jquery-1.3.min.js"></script>
-<script language="javascript" src="funciones.js"></script>
-
 
 <body>
 
@@ -26,29 +23,7 @@ include_once("../../includes/funciones_precios.php");
 $fecha=date("Y-n-d");
 
 
-echo '<form action="'.$_SERVER["SCRIPT_NAME"].'" method="post" >';
 
-echo '<table>';
-echo '<tr>';
-
-
-
-echo '<td>';
-include("select.inc.php");
-echo '</td>';
-
-
-echo '</tr>';
-echo '</table>';
-
-
-echo "</form>";
-
-if(!$_POST["id_sucursal"] or !$_POST["marca"]){
-    exit;
-}else{
-    $id_sucursal=$_POST["id_sucursal"];
-}
 
 $fecha=date("Y-n-d");
 $nombre_sucursal=nombre_sucursal($id_sucursal);
@@ -56,18 +31,10 @@ $nombre_sucursal=nombre_sucursal($id_sucursal);
 
 echo "Sucursal: $nombre_sucursal <br>";
 
-#---------------------------------------------------------------
-if($_POST["marca"]!="" AND $_POST["clasificacion"]=="" AND $_POST["subclasificacion"]=="" ){
-	$query='select * from articulos where marca="'.$_POST["marca"].'" order by marca, clasificacion, subclasificacion, descripcion';
-}
-
-if($_POST["marca"]!="" AND $_POST["clasificacion"]!="" AND $_POST["subclasificacion"]=="" ){
-	$query='select * from articulos where marca="'.$_POST["marca"].'" and clasificacion="'.$_POST["clasificacion"].'" order by marca, clasificacion, subclasificacion, descripcion';
-}
-
-if($_POST["marca"]!="" AND $_POST["clasificacion"]!="" AND $_POST["subclasificacion"]!="" ){
-	$query='select * from articulos where marca="'.$_POST["marca"].'" and clasificacion="'.$_POST["clasificacion"].'" and subclasificacion="'.$_POST["subclasificacion"].'" order by marca, clasificacion, subclasificacion, descripcion';
-}
+$query='select * from articulos order by marca, 
+                clasificacion, 
+                subclasificacion, 
+                descripcion';
 
 $result=mysql_query($query)or die(mysql_error());
 $numrows=mysql_num_rows($result);
@@ -80,10 +47,11 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 
 ?>
 
-<table class="t1">
+<table border="1">
 <tr>
 	<th>ID</th>
 	<th>Cod Int</th>
+	<th>Marca</th>
 	<th>Descripcion</th>
 	<th>Color</th>
 	<th>Contenido</th>
@@ -91,13 +59,15 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 	<th>Clasificacion</th>
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
-	<th>Acc.</th>
-	<th>Ingresar</th>
+	<th>Stock</th>
 	<th>Sugerido</th>
 	<th>Minimo</th>
 	<th>Maximo</th>
-	<th>Fecha</th>
-	<th>Hora</th>
+	<th>Mes</th>
+	<th>Tres</th>
+	<th>Seis</th>
+	<th>Nueve</th>
+	<th>Doce</th>
 </tr>
 <form action="stock_update2.php" method="post" enctype="multipart/form-data">
 
@@ -105,8 +75,8 @@ echo '<br>Cantidad de articulos: '.$numrows.'<br>';
 <?php
 while($row=mysql_fetch_array($result)){
 	//$precio_costo=calcula_precio_costo( array_costo($row["id"]) );
-	$seg=seg_stock($row["id"], $id_sucursal);
-	$array_stock=stock_sucursal($row["id"],$id_sucursal);
+	// $seg=seg_stock($row["id"], 33);
+	$array_stock=stock_sucursal($row["id"],33);
 
 	$fijo=($array_stock["maximo"] - $array_stock["stock"] );
 	if($fijo<1){
@@ -116,6 +86,7 @@ while($row=mysql_fetch_array($result)){
 	echo "<tr>";
 	echo '<td>'.$row["id"].'</td>';
 	echo '<td>'.$row["codigo_interno"].'</td>';
+	echo '<td>'.$row["marca"].'</td>';
 	echo '<td>'.$row["descripcion"].'</td>';
 	echo '<td>'.$row["color"].'</td>';
 	echo '<td>'.$row["contenido"].'</td>';
@@ -124,26 +95,31 @@ while($row=mysql_fetch_array($result)){
 	echo '<td>'.$row["subclasificacion"].'</td>';
 	echo '<td>'.$row["codigo_barra"].'</td>';
 	// echo '<td><form action="stock_modifica.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="stock" value="stock" /></form></td>';
-	echo '<td>';if($seg>0){ echo '<form action="aa.php" method="post" target="FrameMedio2"><input type="hidden" name="id_articulos" value="'.$row["id"].'" /> <input type="hidden" name="id_sucursal" value="'.$id_sucursal.'" /><input type="submit" name="seguir" value="seguir '.$seg.'" /></form>';} echo '</td>';
-	echo '<td>';
-    include("select_cantidad.inc.php");
-    echo '</td>';
-	if($fijo>0){
-		echo '<td><font color="#007603" size="10px">'.$fijo.'</font></td>'.chr(10);
-	}else{
-		echo '<td><font color="#000000">'.$fijo.'</font></td>'.chr(10);
-	}
+	// if($fijo>0){
+	// 	echo '<td><font color="#007603" size="10px">'.$fijo.'</font></td>'.chr(10);
+	// }else{
+	// 	echo '<td><font color="#000000">'.$fijo.'</font></td>'.chr(10);
+	// }
 	
-	echo '<td><input type="text" name="minimo'.$row["id"].'" value="'.$array_stock["minimo"].'" size="3"></td>';
-	echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
-	echo '<td>';
-	include("rotacion.inc.php");
+	// echo '<td><input type="text" name="minimo'.$row["id"].'" value="'.$array_stock["minimo"].'" size="3"></td>';
+	// echo '<td><input type="text" name="maximo'.$row["id"].'" value="'.$array_stock["maximo"].'" size="3"></td>';
 
-	echo '</td>';
-	// echo '<td>'.$array_stock["minimo"].'</td>';
-	// echo '<td>'.$array_stock["maximo"].'</td>';
-	echo '<td>'.$array_stock["fecha"].'</td>';
-	echo '<td>'.$array_stock["hora"].'</td>';
+	echo '<td>'.$array_stock["stock"].'</td>';
+    if($array_stock["stock"]<0){
+        $stock=0;
+    }else{
+        $stock=$array_stock["stock"];
+    }
+    $sugerido=($array_stock["maximo"] - $stock);
+    if($sugerido<0){
+        $sugerido=0;
+    }
+    echo '<td>'.$sugerido.'</td>';
+	echo '<td>'.$array_stock["minimo"].'</td>';
+	echo '<td>'.$array_stock["maximo"].'</td>';
+	include("rotacion_export.inc.php");
+	// echo '<td>'.$array_stock["fecha"].'</td>';
+	// echo '<td>'.$array_stock["hora"].'</td>';
 
 
 	echo "</tr>".chr(13);

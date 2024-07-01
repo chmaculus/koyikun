@@ -1,12 +1,14 @@
 <?php
 
 echo '<table class="t1">';
+/*
 	echo '<tr>';
 	echo '<td>Sucursal</td>';
 	echo "<td>";
 	include("sucursal_select.inc.php");
 	echo "</td>";
 	echo '</tr>';
+*/
 
 	echo '<td>Marca</td>';
 
