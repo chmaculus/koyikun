@@ -22,7 +22,7 @@ echo '<td>Total</td>';
 echo '<td>C/Desc.</td>';
 echo '<td>Fecha</td>';
 echo '<td>Hora</td>';
-echo '	</tr>';
+echo '	</tr>'.chr(10);
 
 
 while($row=mysql_fetch_array($res)){

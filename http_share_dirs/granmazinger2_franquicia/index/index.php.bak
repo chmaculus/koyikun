@@ -1,0 +1,1240 @@
+<?php
+include("cabecera.inc.php");
+//include("../../includes/funciones_varias.php");
+
+/*
+$hora=time();
+
+$ultimo_mes=$hora-(60 * 60 * 24 * 30);
+$ultimo_tres=$hora-(60 * 60 * 24 * 30 * 3);
+$ultimo_seis=$hora-(60 * 60 * 24 * 30 * 6);
+$ultimo_nueve=$hora-(60 * 60 * 24 * 30 * 9 );
+$ultimo_doce=$hora-(60 * 60 * 24 * 365);
+
+
+
+$fecha=date("Y-n-d");
+
+$u_mes=date("Y-n-d",$ultimo_mes);
+$u_tres=date("Y-n-d",$ultimo_tres);
+$u_seis=date("Y-n-d",$ultimo_seis);
+$u_nueve=date("Y-n-d",$ultimo_nueve);
+$u_doce=date("Y-n-d",$ultimo_doce);
+
+
+*/
+
+
+
+
+echo '<center>';
+
+if($_POST["fecha"]){
+	$fecha=fecha_conv( "/", $_POST["fecha"] );
+}else{
+	$fecha=date("Y-n-d");
+}
+
+$zzaa=explode("-",$fecha);
+$mes=$zzaa[1];
+$anio=$zzaa[0];
+
+$fecha_desde=$anio."-".$mes."-01";
+$fecha_hasta=$anio."-".$mes."-31";
+
+echo '<form method="POST" action="'.$_SERVER["SCRIPT_NAME"].'">';
+echo 'Fecha: <input type="text" name="fecha" id="fecha" size="10" value="'.fecha_conv( "-", $fecha ).'">';
+echo '<input type="submit" name="ACEPTAR" value="ACEPTAR">';
+echo '</form>';
+
+
+include("connect.php");
+
+$saldo=get_saldo();
+
+
+
+$q='select distinct sucursal from ventas where fecha="'.$fecha.'" order by sucursal';
+$result=mysql_query($q);
+
+echo "Fecha: ".$_POST["fecha"];
+echo '<table border="1">';
+
+while($row=mysql_fetch_array($result)){
+	$total_clientes_dia=calcula_total_clientes_sucursal( $fecha, $row["sucursal"] );
+
+
+	# manana
+	$hora_desde="08:00:00";
+	$hora_hasta="14:00:00";
+
+	$total_efectivo=calcula_tot_ef( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_efectivo=calcula_cantidad_ef( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$total_debito=calcula_tot_debito( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_debito=calcula_cantidad_debito( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$total_tarjeta=calcula_tot_tarj( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_tarjeta=calcula_cantidad_tarj( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$tot_cli_man=($cantidad_efectivo + $cantidad_debito + $cantidad_tarjeta);
+
+	$porc_efectivo=round(( $cantidad_efectivo * 100 ) / $tot_cli_man , 2);
+	$porc_debito=round(( $cantidad_debito * 100 ) / $tot_cli_man , 2);
+	$porc_tarjeta=round(( $cantidad_tarjeta * 100 ) / $tot_cli_man , 2);
+
+	$gastos_suc=trae_gastos_sucursal( $fecha, $row["sucursal"]);
+
+	echo "	<tr>";
+	echo "	<td>";//abre sucursal
+	///////////muestra resultados manana	
+
+	echo '<table class="t1">';//abre tabla turno
+
+	echo '<tr class="especial" id="especial">';
+	echo '<td>TM</td>';
+	echo '<td>'.$row["sucursal"]."</td>";
+	echo "</tr>";
+
+	echo "<tr>";
+	echo "<td>TE</td><td>".$total_efectivo."</td>";
+	echo "<td>".$cantidad_efectivo."</td>";
+	echo "<td>".$porc_efectivo."%</td>";
+	echo "</tr>";
+
+	echo "<tr>";
+	echo "<td>TT</td><td>".$total_tarjeta."</td>";
+	echo "<td>".$cantidad_tarjeta."</td>";
+	echo "<td>".$porc_tarjeta."%</td>";
+	echo "</tr>".chr(13);
+	
+	echo "<tr>";
+	echo "<td>TD</td><td>".$total_debito."</td>";
+	echo "<td>".$cantidad_debito."</td>";
+	echo "<td>".$porc_debito."%</td>";
+	echo "</tr>".chr(13);
+	
+	$total_manana=( $total_efectivo + $total_tarjeta + $total_debito);
+	echo "<tr>";
+	echo "<td>TT2</td><td>".$total_manana."</td>";
+	echo "<td>".$tot_cli_man."</td>";
+	echo "</tr>".chr(13);
+
+	$zm=trae_z( $fecha, id_sucursal($row["sucursal"]) , "ZM");
+	echo "<tr>";
+	echo "<td>XM</td>";
+	echo "<td>".$zm."</td>";
+	echo "</tr>".chr(13);
+
+	totales_vendedor( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	
+	
+	echo '</table>';
+
+
+	/////////// fin muestra resultados manana	
+	
+	
+	echo "</td>";
+
+	echo "<td>";
+	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	echo "</td>";
+	
+	#---------------------------------------------------------------	
+	# TARDE
+	#---------------------------------------------------------------	
+	
+	# tarde
+	$hora_desde="14:00:01";
+	$hora_hasta="22:00:00";
+
+	$total_efectivo=calcula_tot_ef( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_efectivo=calcula_cantidad_ef( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$total_debito=calcula_tot_debito( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_debito=calcula_cantidad_debito( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$total_tarjeta=calcula_tot_tarj( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+	$cantidad_tarjeta=calcula_cantidad_tarj( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	$tot_cli_man=($cantidad_efectivo + $cantidad_debito + $cantidad_tarjeta);
+
+	$porc_efectivo=round(( $cantidad_efectivo * 100 ) / $tot_cli_man , 2);
+	$porc_debito=round(( $cantidad_debito * 100 ) / $tot_cli_man , 2);
+	$porc_tarjeta=round(( $cantidad_tarjeta * 100 ) / $tot_cli_man , 2);
+
+	$zt=trae_z( $fecha, id_sucursal($row["sucursal"]) , "ZT");
+
+	echo "<td>";
+	//echo "</td>";
+	/////////////////////////muestra resultados tarde
+	echo '<table class="t1">';//abre tabla turno
+
+	///tarde
+	echo "<tr>";
+	echo "<td>TT</td>";
+	echo "<td>".$row["sucursal"]."</td>";
+
+	echo '<table class="t1">';
+	echo "<tr>";
+	echo "<td>TE</td><td>".$total_efectivo."</td>";
+	echo "<td>".$cantidad_efectivo."</td>";
+	echo "<td>".$porc_efectivo."%</td>";
+	echo "</tr>";
+
+	echo "<tr>";
+	echo "<td>TT</td><td>".$total_tarjeta."</td>";
+	echo "<td>".$cantidad_tarjeta."</td>";
+	echo "<td>".$porc_tarjeta."%</td>";
+	echo "</tr>".chr(13);
+
+	echo "<tr>";
+	echo "<td>TD</td><td>".$total_debito."</td>";
+	echo "<td>".$cantidad_debito."</td>";
+	echo "<td>".$porc_debito."%</td>";
+
+	echo "</tr>".chr(13);
+
+	$total_tarde=( $total_efectivo + $total_tarjeta + $total_debito );
+	echo "<tr>";
+	echo "<td>TT2</td><td>".$total_tarde."</td>";
+	echo "<td>".$tot_cli_man."</td>";
+	echo "</tr>".chr(13);
+
+	$tts=( $total_manana + $total_tarde );
+	echo '<tr class="especial" id="especial">';
+	echo '<td>TTS</td>';
+	echo '<td>'.$tts.'</td>';
+
+		echo '<td>TC</td>';
+		echo '<td>'. $total_clientes_dia .'</td>';
+
+	echo '<tr>';
+		echo '<td>VT</td>';
+		echo '<td>'.round($tts / $total_clientes_dia ,2).'</td>';
+	echo '</tr>';
+
+	echo "<tr>";
+	echo "<td>XT</td>";
+	echo "<td>".$zt."</td>";
+	echo "</tr>".chr(13);
+
+	totales_vendedor( $fecha, $row["sucursal"], $hora_desde, $hora_hasta );
+
+	echo "</table>";
+	
+	/////////////////////////fin muestra resultados tarde
+	echo "<td>";
+	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	echo "</td>";
+
+	echo "<td>";
+	echo '<table class="t1">';
+	$acum_mes=acumulado_mes($fecha , $row["sucursal"]);
+
+		echo '<tr class="especial" id="especial">';
+		echo '<td>ACT</td>';
+		echo '<td>'.$acum_mes.'</td>';
+
+	echo '</tr>';
+
+
+	$acum_mes_ant=acumulado_mes_anterior($fecha , $row["sucursal"]);
+	echo '<tr>';
+		echo '<td>ANT</td>';
+		echo '<td>'.$acum_mes_ant.'</td>';
+	echo '</tr>';
+
+
+
+	$zz=($acum_mes * 100) / $acum_mes_ant; 
+	echo '<tr>';
+		echo '<td>COM</td>';
+		echo '<td>'.round($zz,2).'%</td>';
+	echo '</tr>';
+	
+	$acudi=calcula_total_dias_sucursal( $fecha, $row["sucursal"] );
+	$prom1=($acum_mes / $acudi);
+	echo '<tr>';
+		echo '<td>AcuDi</td>';
+		echo '<td>'.$acudi.'</td>';
+	echo '</tr>';
+
+	echo '<tr>';
+		echo '<td>Prom</td>';
+		echo '<td>'.round($prom1,2).'</td>';
+	echo '</tr>';
+
+	echo '<tr>';
+		echo '<td>Proy</td>';
+		echo '<td>'.round($prom1 * 26,2).'</td>';
+	echo '</tr>';
+
+	$tasa_crecim=round(((($prom1 * 26) * 100) / $acum_mes_ant)-100,2);
+	echo '<tr>';
+		echo '<td>Com2</td>';
+		echo '<td>'.$tasa_crecim.'%</td>';
+	echo '</tr>';
+
+	echo "<tr>";
+	echo "<td>TX</td>";
+	echo "<td>".($zm + $zt)."</td>";
+	echo "</tr>".chr(13);
+
+	$fa=explode("-",$fecha);
+	$fecha_desde=$fa[0]."-".$fa[1]."-01";
+	$fecha_hasta=$fa[0]."-".$fa[1]."-31";
+	$rentabilidad=rentabilidad($row["sucursal"], $fecha_desde, $fecha_hasta);
+	echo '<tr>';
+		echo '<td>Rbrt</td>';
+		echo '<td>'.round($rentabilidad,2).'</td>';
+	echo '</tr>';
+
+	echo "<tr>";
+	echo "<td>Rbrut-G</td>";
+	echo "<td>".round(($rentabilidad - $gastos_suc ),2)."</td>";
+	echo "</tr>".chr(13);
+
+	echo "<tr>";
+	echo "<td>G</td>";
+	echo "<td>".round($gastos_suc,2)."</td>";
+	echo "</tr>".chr(13);
+
+	echo "<tr>";
+	echo "<td>G.ant</td>";
+	echo "<td>".round(trae_gastos_sucursal_mes_ant( $fecha, $row["sucursal"]),2)."</td>";
+	echo "</tr>".chr(13);
+
+
+	$qa='select valor from cuota_alquiler where sucursal="'.$row["sucursal"].'"';
+	$aa=mysql_fetch_array(mysql_query($qa));
+	$influ=(($aa[0] * 100) / 	$acum_mes_ant) ;
+	echo "<tr>";
+	echo "<td>A Influ</td>";
+	echo "<td>".round($influ,2)."</td>";
+	echo "</tr>".chr(13);
+
+	echo '</table>'.chr(13);//cierra tabla turno
+	# //tarde
+
+	if($tasa_crecim>0){
+		echo '<img src="arriba.jpg" width="140" height="140">';
+	}
+	if($tasa_crecim<0){
+		echo '<img src="abajo.jpg" width="140" height="140">';
+	}
+
+	echo chr(13);
+
+
+
+////////////////////////////////////////
+	//echo "<td>";
+/*
+	echo "<td>";
+	echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+	echo "</td>";
+*/
+	//echo "<td>";
+/*
+	echo '<table class="t1"';
+	$q='select distinct marca from ventas where sucursal="'.$row["sucursal"].'" and fecha>="'.$fecha_desde.'" and fecha<="'.$fecha_hasta.'" order by marca';
+	$res5=mysql_query($q);
+	while($row5=mysql_fetch_array($res5)){
+		$q='select sum(cantidad * precio_unitario) from ventas where marca="'.$row5["marca"].'" and sucursal="'.$row["sucursal"].'" and fecha>="'.$fecha_desde.'" and fecha<="'.$fecha_hasta.'" order by marca';
+		$res6=mysql_query($q);
+		if(mysql_error()){
+			echo '<td>'.mysql_error().'</td>';
+		}
+		$tottt=mysql_result($res6,0,0);
+		echo '<tr>';
+		echo '<td>'.$row5["marca"].'</td>';
+		echo '<td>'.$tottt.'</td>';
+		echo '</tr>';
+	}
+	echo '</table>';
+	echo "</td>";
+*/
+	//echo "</td>";
+////////////////////////////////////////
+
+}
+
+echo "</table>".chr(13);
+
+$acum_mes=acumulado_mes2($fecha , $row["sucursal"]);
+$acum_mes_ant=acumulado_mes_anterior2($fecha , $row["sucursal"]);
+
+$zz=($acum_mes * 100) / $acum_mes_ant; 
+$cli=calcula_total_clientes( $fecha, $sucursal );
+$toto=calcula_total_total( $fecha );
+
+echo '<table class="t1">';
+echo "<tr>";
+echo "<td>";
+echo '<table class="t1">';
+echo '<tr>';
+echo "<td>Total dia</td><td>".$toto."</td>";
+echo '</tr>';
+
+	echo '<tr class="especial" id="especial">';
+echo "<td>ACT</td><td>".$acum_mes."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>ANT</td><td>".$acum_mes_ant."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>COM</td><td>".round($zz,2)."%</td>";
+echo '</tr>';
+
+$za1=calcula_total_dias_todas($fecha);
+echo '<tr>';
+echo "<td>AcuDi</td><td>".$za1."</td>";
+echo '</tr>';
+
+$proy=round((($acum_mes / $za1) * 26),2);
+echo '<tr>';
+echo "<td>Proy</td><td>".$proy."</td>";
+echo '</tr>';
+
+$com2=round(($proy / $acum_mes_ant),2);
+echo '<tr>';
+echo "<td>Com2</td><td>".$com2."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>Tcli</td><td>".$cli."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>Vtk</td><td>".round(($toto / $cli),2)."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>T.Gast</td><td>".round(trae_gastos_total( $fecha, $sucursal),2)."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>T.Gast Ant</td><td>".round(trae_gastos_total_ant( $fecha, $sucursal),2)."</td>";
+echo '</tr>';
+
+echo '<tr>';
+echo "<td>T.Z</td><td>".round(suma_z($fecha),2)."</td>";
+echo '</tr>';
+
+
+#-------------------------------------------
+$qa='select sum(valor) from cuota_alquiler';
+$arr=mysql_fetch_array(mysql_query($qa));
+$tinflu=($arr[0] * 100) / $acum_mes_ant;
+#-------------------------------------------
+echo '<tr>';
+echo "<td>A influ TT</td><td>".round($tinflu,2)."</td>";
+echo '</tr>';
+
+
+
+##   mas un  1  mes 
+#-------------------------------------------
+
+$desde=sumafecha("-2 month",$fecha_desde);
+$hasta=sumafecha("-2 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "-2: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+##   mas un  1  mes 
+#-------------------------------------------
+
+$desde=sumafecha("-1 month",$fecha_desde);
+$hasta=sumafecha("-1 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+
+
+
+
+
+##   1 actual 
+#-------------------------------------------
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$fecha_desde.'" and fecha_vencimiento<="'.$fecha_hasta.'" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$aabb=explode("-",$fecha_desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+##   mas un  1  mes 
+#-------------------------------------------
+
+$desde=sumafecha("1 month",$fecha_desde);
+$hasta=sumafecha("1 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+##   mas un  2  mes 
+#-------------------------------------------
+$desde=sumafecha("2 month",$fecha_desde);
+$hasta=sumafecha("2 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+##   mas un  3  mes 
+#-------------------------------------------
+
+
+$desde=sumafecha("3 month",$fecha_desde);
+$hasta=sumafecha("3 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+
+
+##   mas un  4  mes 
+#-------------------------------------------
+$desde=sumafecha("4 month",$fecha_desde);
+$hasta=sumafecha("4 month",$fecha_hasta);
+
+$aabb=explode("-",$desde);
+$anio=$aabb[0];
+$mes=$aabb[1];
+//$fecha->add(new DateInterval('P10D'));
+
+//$fecha->add(new DateInterval('P10D'));
+
+$query='select sum(importe) from gastos.banco where fecha_vencimiento>="'.$desde.'" and fecha_vencimiento<="'.$anio.'-'.$mes.'-31" and cuenta!="Proyeccion"';
+//echo "zaza: ".$query."<br>";
+$result=mysql_query($query);
+
+if(mysql_error()){
+	echo mysql_error();
+}
+$tot=mysql_fetch_array($result);
+echo '<tr>';
+echo '<td>CHE '.$mes."-".$anio.'</td><td>'.round($tot[0],2).'</td>';
+echo '</tr>';
+#-------------------------------------------
+
+
+$sBANK=trae_valor2("sBANK");
+$ResEFE=trae_valor2("ResEFE");
+$SS=trae_valor2("SS");
+$Ch=trae_valor2("Ch");
+$Doc=trae_valor2("Doc");
+$Cheq=trae_valor2("cheq");
+
+$TotalRES= $sBANK + $ResEFE + $SS + $Ch + $Doc + $Cheq + $saldo; 
+
+echo	"<tr>";
+echo	"<td>S:</td><td>".$saldo."</td>";
+echo  "</tr>";
+
+
+echo "</td>";
+echo "</table>";
+echo "<td>";
+echo '<table class="t1">';
+echo '<font size="5">RANKING DEL DIA</font>';
+totales_vendedor2($fecha);
+echo "</td>";
+echo "</table>";
+
+
+echo "<td>";
+echo '<table class="t1">';
+echo '<font size="5">RANKING DEL MES</font>';
+totales_vendedor2_mes($fecha);
+echo "</td>";
+echo "</table>";
+
+
+#------------------------------------------------
+#EFECTIVO
+#------------------------------------------------
+#------------------------------------------------
+function calcula_tot_ef( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="CO"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function calcula_cantidad_ef( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select distinct numero_venta from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="CO"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	return $total;
+}
+#------------------------------------------------
+
+
+
+
+#------------------------------------------------
+#TARJETA
+#------------------------------------------------
+#------------------------------------------------
+function calcula_tot_tarj( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="TA"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function calcula_cantidad_tarj( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select distinct numero_venta from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="TA"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	return $total;
+}
+#------------------------------------------------
+
+
+
+
+#------------------------------------------------
+#DEBITO
+#------------------------------------------------
+#------------------------------------------------
+function calcula_tot_debito( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="DE"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function calcula_cantidad_debito( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q='select distinct numero_venta from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" and tipo_pago="DE"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	return $total;
+}
+#------------------------------------------------
+
+
+
+
+#------------------------------------------------
+function calcula_total_total( $fecha ){
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha="'.$fecha.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function calcula_total_clientes_sucursal( $fecha, $sucursal ){
+	$q='select distinct numero_venta from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	return $total;
+}
+#------------------------------------------------
+
+
+#------------------------------------------------
+function acumulado_mes( $fecha, $sucursal ){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" and sucursal="'.$sucursal.'"';
+	//echo $q;
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function acumulado_mes_anterior( $fecha, $sucursal ){
+	$epoch=strtotime($fecha);
+	$nuevafecha = strtotime ( '-1 month' , strtotime ( $fecha ) ) ;
+//	$aa=explode("-",$fecha);
+	$nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+	$aa=explode("-",$nuevafecha);
+
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	if($mes==-1){
+		$mes=12;
+	}
+
+	$bb=$aa[0]."-".( $mes);
+	//$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'01" and fecha <= "'.$bb.'31" and sucursal="'.$sucursal.'"';
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31"  and sucursal="'.$sucursal.'"';
+	echo "<td>".$fecha." ".$q."</td>";
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+return $total;
+}	
+
+#------------------------------------------------
+
+
+
+
+#------------------------------------------------
+function acumulado_mes2( $fecha, $sucursal ){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	//$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'01" and fecha <= "'.$bb.'31" and sucursal="'.$sucursal.'"';
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" ';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+	return $total;
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function acumulado_mes_anterior2( $fecha, $sucursal ){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1] -1;
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".( $mes);
+	$q='select sum( cantidad * precio_unitario ) from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" ';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+#------------------------------------------------
+function calcula_total_clientes( $fecha, $sucursal ){
+	$q='select distinct numero_venta,sucursal from ventas where fecha="'.$fecha.'" and sucursal!=88';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+#------------------------------------------------
+function calcula_total_dias_sucursal( $fecha, $sucursal ){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	$q='select distinct fecha from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" and sucursal="'.$sucursal.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+#------------------------------------------------
+function calcula_total_dias_todas( $fecha ){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	
+	$q='select distinct fecha from ventas where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" ';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_num_rows($result);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+#------------------------------------------------
+function trae_z( $fecha, $sucursal , $z){
+	$q='select importe from reportes_caja where fecha ="'.$fecha.'" and sucursal="'.$sucursal.'" and motivo="'.$z.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//echo $q;
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+#------------------------------------------------
+function trae_gastos_sucursal( $fecha, $sucursal){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	$q='select sum(monto) from gastos.gastos where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" and categoria="'.$sucursal.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+#------------------------------------------------
+function trae_gastos_sucursal_mes_ant( $fecha, $sucursal){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1] -1;
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".( $mes);
+	$q='select sum(monto) from gastos.gastos where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31" and categoria="'.$sucursal.'"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+#------------------------------------------------
+function trae_gastos_total( $fecha, $sucursal){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1];
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".$mes;
+	$q='select sum(monto) from gastos.gastos where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+	//echo $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+#------------------------------------------------
+function trae_gastos_total_ant( $fecha, $sucursal){
+	$aa=explode("-",$fecha);
+	$mes=$aa[1] -1;
+	if($mes>0 AND $mes< 10){
+		$mes="0".$mes;
+	}
+	$bb=$aa[0]."-".( $mes);
+	$q='select sum(monto) from gastos.gastos where fecha >= "'.$bb.'-01" and fecha <= "'.$bb.'-31"';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+	//echo $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+#------------------------------------------------
+function suma_z( $fecha){
+	$q='select sum(importe) from reportes_caja where fecha ="'.$fecha.'" and ( motivo ="ZM" or motivo ="ZT")';
+	$result=mysql_query($q)or die(mysql_error());
+	$total=mysql_result($result,0);
+	//return $q;
+	//echo $q;
+return $total;
+}	
+#------------------------------------------------
+
+
+
+#---------------------------------------------------------------------------------------------
+function fecha_conv($separador, $fecha){
+	$f=explode($separador, $fecha);
+
+	if($separador=="/"){
+		$fecha=$f[2]."-".$f[1]."-".$f[0];
+	}
+
+	if($separador=="-"){
+		$fecha=$f[2]."/".$f[1]."/".$f[0];
+	}
+return $fecha;
+}
+#---------------------------------------------------------------------------------------------
+
+#-----------------------------------------------------------------
+function nombre_sucursal($id_sucursal){
+	$query='select * from sucursales where id="'.$id_sucursal.'"';
+	$array_suc=mysql_fetch_array(mysql_query($query));
+return $array_suc["sucursal"];
+}
+#-----------------------------------------------------------------
+
+#-----------------------------------------------------------------
+function id_sucursal($sucursal){
+	$query='select * from sucursales where sucursal="'.$sucursal.'"';
+	$array_suc=mysql_fetch_array(mysql_query($query));
+	
+return $array_suc["id"];
+}
+#-----------------------------------------------------------------
+
+#-----------------------------------------------------------------
+function nombre_vendedor($vendedor){
+	$query='select * from vendedores where numero="'.$vendedor.'"';
+	$res=mysql_query($query);
+	$rows=mysql_num_rows($res);
+	if($rows<1){
+		$array="NULL";
+		return $array;
+	}else{
+		$array=mysql_fetch_array($res);
+		//echo $query;
+		return $array;
+	}
+}
+#-----------------------------------------------------------------
+
+#------------------------------------------------
+function totales_vendedor( $fecha, $sucursal, $hora_desde, $hora_hasta ){
+	$q0='select distinct vendedor from ventas where fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'" order by vendedor';
+	$r0=mysql_query($q0);
+	while($row=mysql_fetch_array($r0)){
+		$q1='select sum(cantidad * precio_unitario) from ventas where vendedor="'.$row[0].'" and fecha="'.$fecha.'" and sucursal="'.$sucursal.'" and hora>="'.$hora_desde.'" and hora<="'.$hora_hasta.'"';
+		$r1=mysql_query($q1);
+		$tot=mysql_result($r1,0,0);
+		$array=nombre_vendedor($row[0]);
+		if($array!="NULL"){
+			$nombre=$array["nombres"]." ".$array["apellido"];
+		}else{
+			$nombre=$row[0];
+		}
+		echo "<tr>";
+				if(file_exists ( "./vendedores/".$array["id"].".jpg" )==1){
+		echo '<td><A HREF="detalle.php?id_articulo='.$$array["id"].'" onClick="return popup(this, \'notes\')">
+		<img  src="./vendedores/'.$array["id"].'".jpg" width="100" height="100">
+		</A></td>';
+
+
+		//echo '<td><img src="./imagenes/miniaturas/'.$row["id"].'".jpg" alt=""></td>';
+		
+	}else{
+	echo '<td></td>';
+	}
+
+		echo "<td>Vend: ".$nombre."</td>";
+		echo "<td>$".$tot."</td>";
+		echo "</tr>";
+	}
+}
+#------------------------------------------------
+
+
+#------------------------------------------------
+function totales_vendedor2( $fecha ){
+	$q4='truncate table temp_vendedores ';
+	mysql_query($q4);
+	
+	$q0='select distinct vendedor from ventas where fecha="'.$fecha.'" order by vendedor';
+	$r0=mysql_query($q0);
+	if(mysql_error()){echo mysql_error();}
+	while($row=mysql_fetch_array($r0)){
+		$q1='select sum(cantidad * precio_unitario) from ventas where vendedor="'.$row[0].'" and fecha="'.$fecha.'"';
+		$r1=mysql_query($q1);
+		if(mysql_error()){echo mysql_error();}
+		$tot=mysql_result($r1,0,0);
+		$q3='insert into temp_vendedores set numero="'.$row[0].'", total="'.$tot.'"';
+		mysql_query($q3);
+		if(mysql_error()){echo mysql_error();}
+	}
+	$q4='select * from temp_vendedores order by total desc';
+	$r1=mysql_query($q4);
+	if(mysql_error()){echo mysql_error();}
+
+	while($row=mysql_fetch_array($r1)){
+		$count++;
+		$array=nombre_vendedor($row["numero"]);
+		if($array!="NULL"){
+			$nombre=$array["nombres"]." ".$array["apellido"];
+		}else{
+			$nombre=$row["numero"];
+		}
+		echo "<tr>";
+				if(file_exists ( "./vendedores/".$array["id"].".jpg" )==1){
+		echo '<td><A HREF="detalle.php?id_articulo='.$$array["id"].'" onClick="return popup(this, \'notes\')">
+		<img  src="./vendedores/'.$array["id"].'".jpg" width="100" height="100">
+		</A></td>';
+	}else{
+	echo '<td></td>';
+	}
+
+		echo "<td>".$count." Vend: ".$nombre."</td>";
+		echo "<td>$".$row["total"]."</td>";
+		echo "</tr>";
+		}
+	
+	
+}
+#------------------------------------------------
+
+#------------------------------------------------
+function totales_vendedor2_mes( $fecha ){
+	$fa=explode("-",$fecha);
+	$fecha_desde=$fa[0]."-".$fa[1]."-01";
+	$fecha_hasta=$fa[0]."-".$fa[1]."-31";
+	$q4='truncate table temp_vendedores ';
+	mysql_query($q4);
+	
+	$q0='select distinct vendedor from ventas where fecha>="'.$fa[0]."-".$fa[1].'-01" and fecha<="'.$fa[0]."-".$fa[1].'-31" order by vendedor';
+	$r0=mysql_query($q0);
+	if(mysql_error()){echo mysql_error();}
+
+	while($row=mysql_fetch_array($r0)){
+		$q1='select sum(cantidad * precio_unitario) from ventas where vendedor="'.$row[0].'" and fecha>="'.$fa[0]."-".$fa[1].'-01" and fecha<="'.$fa[0]."-".$fa[1].'-31"';
+		$r1=mysql_query($q1);
+		if(mysql_error()){echo mysql_error();}
+		$tot=mysql_result($r1,0,0);
+		$q3='insert into temp_vendedores set numero="'.$row[0].'", total="'.$tot.'"';
+		mysql_query($q3);
+		if(mysql_error()){echo mysql_error();}
+	}
+	$q4='select * from temp_vendedores order by total desc';
+	$r1=mysql_query($q4);
+	if(mysql_error()){echo mysql_error();}
+	while($row=mysql_fetch_array($r1)){
+		$count++;
+		$array=nombre_vendedor($row["numero"]);
+		if($array!="NULL"){
+			$nombre=$array["nombres"]." ".$array["apellido"];
+		}else{
+			$nombre=$row["numero"];
+		}
+		echo "<tr>";
+
+		if(file_exists ( "./vendedores/".$array["id"].".jpg" )==1){
+		echo '<td><A HREF="detalle.php?id_articulo='.$$array["id"].'" onClick="return popup(this, \'notes\')">
+		<img  src="./vendedores/'.$array["id"].'".jpg" width="100" height="100">
+		</A></td>';
+	}else{
+	echo '<td></td>';
+	}
+	$dias=dias_vendedor($row["numero"], $fecha_desde, $fecha_hasta);
+	$promedio=$row["total"] / $dias;
+		echo "<td>".$count." Vend: ".$row["vendedor"]." ".$nombre."</td>";
+		echo "<td>$".$row["total"]."</td>";
+		echo "<td>D ".$dias."</td>";
+		echo "<td>Prom: $".round($promedio,2)."</td>";
+		echo "<td>Proy: $".round(($promedio * 26),2)."</td>";
+		
+		echo "</tr>";
+		}
+	
+	
+}
+#------------------------------------------------
+
+#-----------------------------------------------------------------
+function dias_vendedor($vendedor, $fecha_desde, $fecha_hasta){
+	$q1='select  distinct fecha from ventas where vendedor="'.$vendedor.'" and fecha>="'.$fecha_desde.'" and fecha<="'.$fecha_hasta.'"';
+	$r=mysql_query($q1);
+	$rows=mysql_num_rows($r);
+return $rows;
+}				
+#-----------------------------------------------------------------
+
+#-----------------------------------------------------------------
+function rentabilidad( $sucursal, $fecha_desde, $fecha_hasta ){
+	$query='select sum(  (cantidad * precio_unitario) - ( cantidad * costo) ) from ventas where sucursal="'.$sucursal.'" and fecha>="'.$fecha_desde.'" and fecha<="'.$fecha_hasta.'"';
+	$result=mysql_query($query)or die(mysql_error());
+	$total=mysql_result($result,0);	
+return $total;
+}				
+#-----------------------------------------------------------------
+
+function sumafecha ($suma,$fechaInicial)
+{
+  $fecha = !empty($fechaInicial) ? $fechaInicial : date('Y-m-d'); 
+  $nuevaFecha = strtotime ($suma , strtotime ( $fecha ) ) ;
+  $nuevaFecha = date ( 'Y-m-d' , $nuevaFecha );
+  return $nuevaFecha;
+}
+
+#-------------------------------------------------
+function trae_valor($anio,$mes,$tipo) {
+	if($mes>=1 AND $mes<=9 ){
+		$mes1="0".$mes;
+	}else{
+		$mes1=$mes;
+	}
+	$q='select * from gastos.datos_banco where (anio_mes like "'.$anio."-".$mes1.'%" or anio_mes like "'.$anio."-".$mes.'%") and tipo="'.$tipo.'"';
+	echo "<td>".$q."</td>";
+	$res=mysql_query($q);
+	if(mysql_error()){
+		echo mysql_error();
+	}
+	$array=mysql_fetch_array($res);
+	return $array["valor"];
+}
+#-------------------------------------------------
+
+#-------------------------------------------------
+function trae_valor2($tipo) {
+	if($mes>=1 AND $mes<=9 ){
+		$mes1="0".$mes;
+	}
+	$q='select * from gastos.datos_banco where tipo="'.$tipo.'"';
+	//echo $q."<br>";
+	$res=mysql_query($q);
+	if(mysql_error()){
+		echo mysql_error();
+	}
+	$array=mysql_fetch_array($res);
+//	echo "valor: ".$tipo." ".$array["valor"]."<br>";
+	//echo "q: ".$q."<br>";
+	return $array["valor"];
+}
+
+#-------------------------------------------------
+
+
+
+#-------------------------------------------------
+function get_saldo(){
+    $q='select * from gastos.gastos order by fecha2 desc, hora desc limit 0,1';
+    $r=mysql_query($q);
+    $array=mysql_fetch_array($r);
+    return $array["saldo"];
+}
+#-------------------------------------------------
+
+
+
+
+
+?>

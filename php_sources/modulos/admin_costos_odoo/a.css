@@ -1,0 +1,22 @@
+
+table.t1 tr.precaucion td  {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #B6A000;
+}
+table.t1 tr.grave td  {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: #B1B1B1 #B1B1B1 #B1B1B1 #B1B1B1;
+    background-color: #000000;
+    -moz-border-radius: 0px 0px 0px 0px;
+    font-size: 15px;
+    color: #FF4444;
+}
+   

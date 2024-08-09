@@ -180,15 +180,9 @@ function trae_total_ventas_mes_anio($mes,$anio){
         }
         if($rows<1){
                 $contado=mysql_result(mysql_query('select sum(cantidad*precio_unitario) from ventas where tipo_pago="co" and fecha>="'.$anio.'-'.$mes.'-01" and fecha<="'.$anio.'-'.$mes.'-31"'),0,0);
-				if($contado<1){
-					$contado=0;
-				}
                 $debito=mysql_result(mysql_query('select sum(cantidad*precio_unitario) from ventas where tipo_pago="de" and fecha>="'.$anio.'-'.$mes.'-01" and fecha<="'.$anio.'-'.$mes.'-31"'),0,0);
-				if($debito<1){
-					$contado=0;
-				}
                 $tarjeta=mysql_result(mysql_query('select sum(cantidad*precio_unitario) from ventas where tipo_pago="ta" and fecha>="'.$anio.'-'.$mes.'-01" and fecha<="'.$anio.'-'.$mes.'-31"'),0,0);
-                $q='insert into ventas_historico_global set mes="'.$mes.'", anio="'.$anio.'", contado='.$contado.', debito='.$debito.', tarjeta='.$tarjeta;
+                $q='insert into ventas_historico_global set mes="'.$mes.'", anio="'.$anio.'", contado="'.$contado.'", debito="'.$debito.'", tarjeta="'.$tarjeta.'"';
                 mysql_query($q);
                 if(mysql_error()){echo mysql_error().PHP_EOL.chr(10);}
 //                echo $q."<br>".chr(10);

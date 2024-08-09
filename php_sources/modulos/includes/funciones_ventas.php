@@ -140,7 +140,7 @@ function verifica_autorizacion($numero){
 #---------------------------------------------------------------------------
 function trae_totales_presupuesto_franquicia($numero_envio){
 	$q='select sum(cantidad * contado) as tot,  
-				(sum(cantidad * contado) - sum(((cantidad * contado) * 30) / 100)) as descuento
+				(sum(cantidad * contado) - sum(((cantidad * contado) * descuento) / 100)) as descuento
             from stock_movimiento_interno
 			where numero_envio="'.$numero_envio.'"';
     // echo "<td>".$q."</td>";
