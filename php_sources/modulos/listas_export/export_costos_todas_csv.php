@@ -21,6 +21,8 @@ $user_path='/var/www/html/listas/';
 	$header .= ';"Color"';
 	$header .= ';"Contenido"';
 	$header .= ';"Presentacion"';
+	$header .= ';"Categoria"';
+	$header .= ';"Subcategoria"';
 	$header .= ';"clasificacion"';
 	$header .= ';"Sub clasificacion"';
 	$header .= ';"Codigo barra"';
@@ -86,6 +88,21 @@ $user_path='/var/www/html/listas/';
 		$linea.=';"'.str_replace('"','',strtoupper($array_articulo["color"])).'"';
 		$linea.=';"'.strtoupper($array_articulo["contenido"]).'"';
 		$linea.=';"'.strtoupper($array_articulo["presentacion"]).'"';
+
+		#--------------------------------
+		if($array_articulo["id_web"] > 0 ){
+			$resaa=mysql_query("select * from categorias_web where id=".$array_articulo["id_web"]);
+			$categoria=mysql_result($resaa,0,1);
+			$subcategoria=mysql_result($resaa,0,2);
+			$linea.=';"'.strtoupper($categoria).'"';
+			$linea.=';"'.strtoupper($subcategoria).'"';
+		}else{
+			$linea.=';""';
+			$linea.=';""';
+		}
+		#--------------------------------
+	
+	
 		$linea.=';"'.strtoupper($array_articulo["clasificacion"]).'"';
 		$linea.=';"'.strtoupper($array_articulo["subclasificacion"]).'"';
 		$linea.=';"'.strtoupper($array_articulo["codigo_barra"]).'"';

@@ -69,6 +69,8 @@ echo '<form method="post" action="costos_update.php" name="form_costos" target="
 	<th>Color</th>
 	<th>Contenido</th>
 	<th>Pesentacion</th>
+	<th>Categoria</th>
+	<th>Sub-categoria</th>
 	<th>Clasificacion</th>
 	<th>Sub-clasificacion</th>
 	<th>cod barra</th>
@@ -126,6 +128,16 @@ while($row=mysql_fetch_array($result)){
 	echo '<td>'.$row["color"].'</td>';
 	echo '<td>'.$row["contenido"].'</td>';
 	echo '<td>'.$row["presentacion"].'</td>';
+	if($row["id_web"] > 0 ){
+		$resaa=mysql_query("select * from categorias_web where id=".$row["id_web"]);
+		$categoria=mysql_result($resaa,0,1);
+		$subcategoria=mysql_result($resaa,0,2);
+		echo '<td>'.$categoria.'</td>';
+		echo '<td>'.$subcategoria.'</td>';
+	}else{
+		echo '<td></td>';
+		echo '<td></td>';
+	}
 	echo '<td>'.$row["clasificacion"].'</td>';
 	echo '<td>'.$row["subclasificacion"].'</td>';
 	echo '<td>'.$row["codigo_barra"].'</td>';
