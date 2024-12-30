@@ -62,9 +62,9 @@ echo '<font1>Total Venta desde '.$_POST["fecha_desde"].' Hasta '.$_POST["fecha_h
 echo '<font1>Sucursal: '.$sucursal.'</font1><br>'.chr(13);
 
 if($_POST["id_sucursal"]==""){
-	$query='select distinct numero_venta from ventas where fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'"order by numero_venta';
+	$query='select numero_venta from ventas where fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'" group by sucursal,numero_venta';
 }else{
-	$query='select distinct numero_venta from ventas where sucursal="'.$sucursal.'" and fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'"order by numero_venta';
+	$query='select numero_venta from ventas where sucursal="'.$sucursal.'" and fecha>="'.fecha_conv("/",$_POST["fecha_desde"]).'" and fecha<="'.fecha_conv("/",$_POST["fecha_hasta"]).'" group by sucursal,numero_venta';
 }
 $result=mysql_query($query)or die(mysql_error());
 $rows=mysql_num_rows($result);
