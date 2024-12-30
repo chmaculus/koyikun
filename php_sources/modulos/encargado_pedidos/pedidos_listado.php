@@ -38,10 +38,10 @@ from pedidos
 		pedidos.zona="3") 
 			order by fecha, sucursal';
 
-$query='select distinct pedidos.numero_pedido, pedidos.sucursal, pedidos.fecha 
-from pedidos 
-	where (pedidos.estado is NULL or pedidos.finalizado !="S")  
-			order by fecha, sucursal LIMIT 0,10';
+//$query='select distinct pedidos.numero_pedido, pedidos.sucursal, pedidos.fecha 
+//from pedidos 
+//	where (pedidos.estado is NULL or pedidos.finalizado !="S")  
+//			order by fecha, sucursal LIMIT 0,10';
 			
 
 echo $query."<br>";
