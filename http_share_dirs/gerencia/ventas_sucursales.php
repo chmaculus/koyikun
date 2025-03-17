@@ -59,33 +59,7 @@ $fecha_hasta=$anio."-".$mes."-31";
 
 
 
-$qz='select distinct numero_venta from ventas where fecha>=".$fecha_desde." and  fecha<=".$fecha_hasta."';
-$rowact=mysql_num_rows(mysql_query($qz));
 
-$fecha_adesde=($anio -1)."-".$mes."-01";
-$fecha_ahasta=($anio -1)."-".$mes."-31";
-
-$qz='select distinct numero_venta from ventas where fecha>=".$fecha_adesde." and  fecha<=".$fecha_ahasta."';
-$rowant=mysql_num_rows(mysql_query($qz));
-
-echo '<table class="t1">';
-echo '<tr>';
-
-echo "<td>Ventas $mes año anterio</td>";
-
-echo "<td>";
-echo $rowant;
-echo "</td>";
-
-echo "<td>Ventas $mes año actual</td>";
-
-echo "<td>";
-echo $rowact;
-echo "</td>";
-
-echo '</tr>';
-echo "</table>";
-echo "<br>";
 
 
 
@@ -112,6 +86,54 @@ echo "<br>";
 
 $days = array('Dom', 'Lun', 'Mar', 'Mie','Jue','Vie', 'Sab');
 //echo date('Y-m-d', strtotime($days[$day], strtotime($date)));
+
+
+
+
+#-------------------------------------------------------------------------------
+$qz='select distinct numero_venta from ventas where fecha>="'.$fecha_desde.'" and  fecha<="'.$fecha_hasta.'"';
+// echo $qz."<br>";
+$rowact=mysql_num_rows(mysql_query($qz));
+
+$fecha_adesde=($anio -1)."-".$mes."-01";
+$fecha_ahasta=($anio -1)."-".$mes."-31";
+
+$qz='select distinct numero_venta from ventas where fecha>="'.$fecha_adesde.'" and  fecha<="'.$fecha_ahasta.'"';
+// echo $qz."<br>";
+$rowant=mysql_num_rows(mysql_query($qz));
+
+echo '<table class="t1">';
+echo '<tr>';
+
+echo "<td>anterior</td>";
+
+echo "<td>";
+echo $rowant;
+echo "</td>";
+
+echo "</tr>";
+echo "<tr>";
+
+
+echo "<td>actual</td>";
+
+echo "<td>";
+echo $rowact;
+echo "</td>";
+
+echo "</tr>";
+echo "<tr>";
+
+echo "<td>dif</td>";
+
+echo "<td>";
+echo ($rowact - $rowant);
+echo "</td>";
+
+echo '</tr>';
+echo "</table>";
+echo "<br>";
+#-------------------------------------------------------------------------------
 
 
 

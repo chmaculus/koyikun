@@ -49,7 +49,7 @@ var loaded = true;
 //      2. Title to be used in menu.
 //      3. Source URL. Can be full URI or a relative URL.
 
-<?php $tiempo=120;?>
+<?php $tiempo=300;?>
 slides[1] = new Array(<?php echo $tiempo; ?>, "Ventas sucursales", "ventas_sucursales.php");
 
 
