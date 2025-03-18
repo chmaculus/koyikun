@@ -46,6 +46,7 @@ $total_mes_anterior_todas=mysql_result($result,0);
 
 
 $qqq='select sum(cantidad * precio_unitario) from ventas where fecha="'.$fecha.'" and sucursal!="157 AP OnLine" ';
+// echo $qqq."<br>";
 $total_dia=mysql_result(mysql_query($qqq),0,0);
 
 
@@ -74,14 +75,7 @@ echo '</form>';
 echo '<td>TTT</td>';
 echo '<td><font size="3px"> '.round($total_dia,2 ).'</font></td>';
 echo "</tr>".chr(13);
-
 echo "</table>";
-
-echo "<br>";
-
-
-
-
 
 
 $days = array('Dom', 'Lun', 'Mar', 'Mie','Jue','Vie', 'Sab');
@@ -91,6 +85,8 @@ $days = array('Dom', 'Lun', 'Mar', 'Mie','Jue','Vie', 'Sab');
 
 
 #-------------------------------------------------------------------------------
+#-----------------
+#anio
 $qz='select distinct numero_venta from ventas where fecha>="'.$fecha_desde.'" and  fecha<="'.$fecha_hasta.'"';
 // echo $qz."<br>";
 $rowact=mysql_num_rows(mysql_query($qz));
@@ -101,36 +97,95 @@ $fecha_ahasta=($anio -1)."-".$mes."-31";
 $qz='select distinct numero_venta from ventas where fecha>="'.$fecha_adesde.'" and  fecha<="'.$fecha_ahasta.'"';
 // echo $qz."<br>";
 $rowant=mysql_num_rows(mysql_query($qz));
+#fin anio
+#-----------------
+
 
 echo '<table class="t1">';
+
 echo '<tr>';
-
-echo "<td>anterior</td>";
-
+echo "<td>Y -1</td>";
 echo "<td>";
 echo $rowant;
 echo "</td>";
 
-echo "</tr>";
-echo "<tr>";
+echo "</tr><tr>";
 
-
-echo "<td>actual</td>";
+echo "<td>act</td>";
 
 echo "<td>";
 echo $rowact;
 echo "</td>";
 
-echo "</tr>";
-echo "<tr>";
+echo "</tr><tr>";
 
 echo "<td>dif</td>";
 
 echo "<td>";
 echo ($rowact - $rowant);
 echo "</td>";
-
 echo '</tr>';
+
+
+
+#-----------------
+#mes
+$mesmm=($mes -1);
+if($mesmm==0){
+	$mesmm=12;
+}
+$fecha_adesde=$anio."-".$mesmm."-01";
+$fecha_ahasta=$anio."-".$mesmm."-31";
+
+$qz='select distinct numero_venta from ventas where fecha>="'.$fecha_desde.'" and  fecha<="'.$fecha_hasta.'"';
+// echo $qz."<br>";
+$rowact=mysql_num_rows(mysql_query($qz));
+
+
+$qz='select distinct numero_venta from ventas where fecha>="'.$fecha_adesde.'" and  fecha<="'.$fecha_ahasta.'"';
+// echo $qz."<br>";
+$rowant=mysql_num_rows(mysql_query($qz));
+#end mes
+#-----------------
+
+
+
+echo '<tr>';
+echo "<td>M -1</td>";
+
+echo "<td>";
+echo $rowant;
+echo "</td>";
+
+echo "</tr><tr>";
+
+echo "<td>M act</td>";
+
+echo "<td>";
+echo $rowact;
+echo "</td>";
+
+echo "</tr><tr>";
+
+echo "<td>dif</td>";
+
+echo "<td>";
+echo ($rowact - $rowant);
+echo "</td>";
+echo '</tr>';
+
+
+
+
+
+
+
+
+
+
+
+
+
 echo "</table>";
 echo "<br>";
 #-------------------------------------------------------------------------------
