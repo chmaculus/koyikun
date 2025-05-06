@@ -105,12 +105,12 @@ while($row=mysql_fetch_array($result)){
 	echo '</td>';
 	#-----------------------------------------
 
-$countaa++;
-	if($countaa<=6){	
+// $countaa++;
+	// if($countaa<=6){	
 		echo '<td><A HREF="pedidos_detalle.php?numero_pedido='.$row["numero_pedido"].'&sucursal='.$row["sucursal"].'"><button>Detalle</button></A></td>';
-	}else{
-		echo '<td><img src="nohab.jpg" width="150" height="100"></td>';
-	}	
+	// }else{
+		// echo '<td><img src="nohab.jpg" width="150" height="100"></td>';
+	// }	
     
     echo "</tr>".chr(10);
     $count++;
