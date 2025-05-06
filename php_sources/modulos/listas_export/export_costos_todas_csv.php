@@ -40,6 +40,7 @@ $user_path='/var/www/html/listas/';
 	$header .= ';"Margen AF"';
 	$header .= ';"Descuento"';
 	$header .= ';"Contado"';
+	$header .= ';"Categoria odoo"';
 	$header .= chr(10);
 	fwrite($fopen, $header);
 
@@ -122,6 +123,7 @@ $user_path='/var/www/html/listas/';
 		$linea.=';"'.elimina_decimal(trae_descuento($array_costo["margen"])).'"';
 		$linea.=';"'.elimina_decimal($precio).'"';
 
+		$linea.=';"'.strtoupper($array_articulo["marca"]).'-'.$array_costo["margen"].'"';
 
 		$linea.=chr(10);
 		$data = $linea;
