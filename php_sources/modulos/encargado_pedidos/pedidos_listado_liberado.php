@@ -21,7 +21,7 @@ $hora=date("H:i:s");
 
 $time_stamp=time($fecha);
 
-include("pedidos_base.php");
+include("pedidos_base3.php");
 
 
 
@@ -103,7 +103,8 @@ while($row=mysql_fetch_array($result)){
 		include("marcas.inc.php");
 	echo '</td>';
 	#-----------------------------------------
-//$countaa++;
+//
+$countaa++;
 //	if($countaa<=4){	
 		echo '<td><A HREF="pedidos_detalle.php?numero_pedido='.$row["numero_pedido"].'&sucursal='.$row["sucursal"].'"><button>Detalle</button></A></td>';
 //	}else{
