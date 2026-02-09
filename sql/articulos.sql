@@ -120,3 +120,44 @@ alter table stock_seguimiento add index destino(destino);
 alter table stock_seguimiento add index tipo(tipo);
 #-----------------------------------------------------------
 
+
+
+
+#-----------------------------------------------------------
+drop table viajante_clientes;
+create table viajante_clientes (
+	id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	id_viajante MEDIUMINT UNSIGNED,
+	apellido varchar(30),
+	nombres varchar(30),
+	localidad varchar(20),
+	codigo_postal varchar(10),
+	celular varchar(20),
+	fecha date,
+	hora time,
+	PRIMARY KEY (id)
+);
+alter table viajante_clientes add index apellido(apellido);
+#-----------------------------------------------------------
+
+
+
+#-----------------------------------------------------------
+drop table viajante_visitas;
+create table viajante_visitas (
+	id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+	id_clientes MEDIUMINT UNSIGNED,
+	id_viajante MEDIUMINT UNSIGNED,
+	compro varchar(1),
+	detalle text,
+	marcas_ofrecidas text,
+	fecha_visita date,
+	hora_visita time,
+	fecha date,
+	hora time,
+	PRIMARY KEY (id)
+);
+alter table viajante_visitas add index id_clientes(id_clientes);
+alter table viajante_visitas add index id_viajante(id_viajante);
+alter table viajante_visitas add index fecha(fecha);
+#-----------------------------------------------------------

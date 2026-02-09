@@ -1,6 +1,6 @@
 <?php
 // Ruta del archivo CSV
-$archivo = "/tmp/nat.csv";
+$archivo = "/tmp/city_girl.csv";
 
 // Verifica que el archivo exista
 if (!file_exists($archivo)) {
@@ -19,17 +19,23 @@ if ($handle) {
 
         // Separa la línea por punto y coma
         $cam = explode(";", $linea);
+        /*
+        MARCA	CODIGO INTERNO	DETALLE	COSTO	DT1 	IVA	CLASIFICACION	SUBCLASIFICACION
 
+        */
+
+        $q='delete from articulos where codigo_interno="'.$cam[1].'"';
+        echo $q.";\n";
         // Muestra los campos
-        $q='insert into articulos set codigo_interno="'.$cam[0].'", 
-        clasificacion="'.strtoupper($cam[7]).'",
-        subclasificacion="",
-        contenido="'.strtoupper($cam[5]).'",
-        color="'.strtoupper($cam[4]).'",
-        presentacion="'.strtoupper($cam[5]).'",
-        marca="'.strtoupper($cam[1]).'",
-        descripcion="'.strtoupper($cam[3]).'",
-        codigo_barra="'.$cam[2].'"
+        $q='insert into articulos set codigo_interno="'.$cam[1].'", 
+        clasificacion="'.strtoupper($cam[6]).'",
+        subclasificacion="'.strtoupper($cam[7]).'",
+        contenido="",
+        color="",
+        presentacion="",
+        marca="'.strtoupper($cam[0]).'",
+        descripcion="'.strtoupper($cam[2]).'",
+        codigo_barra=""
         ';
 
         echo $q.";\n";

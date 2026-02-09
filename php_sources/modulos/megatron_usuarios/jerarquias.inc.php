@@ -7,6 +7,7 @@
 	<input type="radio" name="jerarquia" value="6" <?php if( $array_usuarios["jerarquia"]=="6" ){ echo "checked"; } ?> ><font1>Deposito</font1><br>
 	<input type="radio" name="jerarquia" value="7" <?php if( $array_usuarios["jerarquia"]=="7" ){ echo "checked"; } ?> ><font1>Consulta</font1><br>
 	<input type="radio" name="jerarquia" value="8" <?php if( $array_usuarios["jerarquia"]=="8" ){ echo "checked"; } ?> ><font1>Profesional</font1><br>
-	<input type="radio" name="jerarquia" value="8" <?php if( $array_usuarios["jerarquia"]=="9" ){ echo "checked"; } ?> ><font1>Mayorista</font1><br>
-	<input type="radio" name="jerarquia" value="8" <?php if( $array_usuarios["jerarquia"]=="10" ){ echo "checked"; } ?> ><font1>Publico</font1><br>
-	<input type="radio" name="jerarquia" value="8" <?php if( $array_usuarios["jerarquia"]=="11" ){ echo "checked"; } ?> ><font1>Franquicia</font1><br>
+	<input type="radio" name="jerarquia" value="9" <?php if( $array_usuarios["jerarquia"]=="9" ){ echo "checked"; } ?> ><font1>Mayorista</font1><br>
+	<input type="radio" name="jerarquia" value="10" <?php if( $array_usuarios["jerarquia"]=="10" ){ echo "checked"; } ?> ><font1>Publico</font1><br>
+	<input type="radio" name="jerarquia" value="11" <?php if( $array_usuarios["jerarquia"]=="11" ){ echo "checked"; } ?> ><font1>Franquicia</font1><br>
+	<input type="radio" name="jerarquia" value="12" <?php if( $array_usuarios["jerarquia"]=="12" ){ echo "checked"; } ?> ><font1>Viajantes</font1><br>
