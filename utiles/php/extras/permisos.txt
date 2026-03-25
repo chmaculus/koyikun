@@ -1,0 +1,15 @@
+
+sudo su
+su - postgres
+psql pixie
+
+CREATE USER cam WITH PASSWORD 'lps';
+GRANT ALL PRIVILEGES ON DATABASE pixie to cam;
+ALTER USER cam WITH PASSWORD 'lps';
+
+funca
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO cam;
+
+
+
+
