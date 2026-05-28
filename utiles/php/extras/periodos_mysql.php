@@ -15,7 +15,7 @@ $config = array(
 
 // Configuración de exportación
 $export_config = array(
-	'filename' => '/logs/ventas_mysql_koyi.json',
+	'filename' => '/logs/ventas_mysql_koyi2024.json',
 	'pretty_print' => true,
 	'include_metadata' => true
 );
@@ -40,6 +40,7 @@ try {
 			id_articulos, 
 			marca,
 			descripcion,
+			color,
 			clasificacion,
 			subclasificacion,
 			SUM(CASE 
@@ -78,6 +79,7 @@ try {
 		FROM ventas 
 		WHERE fecha IS NOT NULL 
 		  AND cantidad > 0
+		  and (marca='color age' or marca='framesi')
 		GROUP BY id_articulos, marca, descripcion, clasificacion, subclasificacion
 		ORDER BY cantidad_1_mes DESC, marca, descripcion
 	";
